@@ -24,10 +24,10 @@
 
 .title {
   margin: 12px 0 18px;
-  font-size: 36px;
+  font-size: clamp(23px, 3.3vw + 12px, 36px);
   font-weight: 700;
   letter-spacing: -0.8px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .desc {
@@ -59,9 +59,5 @@
 @media (max-width: 600px) {
   .handoff {
     padding: 48px 20px;
-  }
-
-  .title {
-    font-size: 26px;
   }
 }

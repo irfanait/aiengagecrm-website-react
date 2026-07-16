@@ -1,5 +1,6 @@
 import Button from '../../atoms/Button/Button';
 import { CTA_LINKS } from '../../../utils/constants';
+import { fluidFontSize } from '../../../styles/fluidType';
 import styles from './CTASection.module.css';
 
 /**
@@ -29,7 +30,7 @@ export default function CTASection({
               {eyebrow}
             </div>
           )}
-          <h2 className={styles.title} style={{ fontSize: titleSize, maxWidth: centered ? 640 : 560 }}>
+          <h2 className={styles.title} style={{ fontSize: fluidFontSize(titleSize), maxWidth: centered ? 640 : 560 }}>
             {title}
           </h2>
           {description && (

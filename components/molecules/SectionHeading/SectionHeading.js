@@ -1,3 +1,4 @@
+import { fluidFontSize } from '../../../styles/fluidType';
 import styles from './SectionHeading.module.css';
 
 /**
@@ -17,9 +18,10 @@ export default function SectionHeading({
   className = '',
 }) {
   const wrapClass = layout === 'centered' ? styles.centered : layout === 'split' ? styles.split : styles.stack;
+  const fluidSize = fluidFontSize(titleSize);
 
   const heading = (
-    <h2 className={`${styles.title} ${dark ? styles.titleDark : ''}`} style={{ fontSize: titleSize, maxWidth: titleMaxWidth }}>
+    <h2 className={`${styles.title} ${dark ? styles.titleDark : ''}`} style={{ fontSize: fluidSize, maxWidth: titleMaxWidth }}>
       {title}
     </h2>
   );
@@ -38,7 +40,7 @@ export default function SectionHeading({
           {label && <span className={`${styles.label} ${dark ? styles.labelDark : ''}`}>{label}</span>}
           <h2
             className={`${styles.title} ${dark ? styles.titleDark : ''}`}
-            style={{ fontSize: titleSize, maxWidth: titleMaxWidth, margin: '12px auto 0' }}
+            style={{ fontSize: fluidSize, maxWidth: titleMaxWidth, margin: '12px auto 0' }}
           >
             {title}
           </h2>

@@ -27,10 +27,10 @@
 
 .title {
   margin: 0 0 20px;
-  font-size: 48px;
-  line-height: 1.14;
+  font-size: clamp(28px, 4.5vw + 14px, 48px);
+  line-height: 1.18;
   font-weight: 700;
-  letter-spacing: -1.4px;
+  letter-spacing: -1.2px;
   color: var(--color-text);
 }
 
@@ -80,11 +80,6 @@
 @media (max-width: 600px) {
   .hero {
     padding: 40px 20px 48px;
-  }
-
-  .title {
-    font-size: 32px;
-    letter-spacing: -1px;
   }
 
   .ctaRow {

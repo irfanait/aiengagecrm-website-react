@@ -23,8 +23,8 @@
 
 .quote {
   margin: 0 0 32px;
-  font-size: 30px;
-  line-height: 1.45;
+  font-size: clamp(20px, 2.4vw + 12px, 30px);
+  line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.6px;
   color: var(--color-text);
@@ -105,9 +105,5 @@
 @media (max-width: 600px) {
   .section {
     padding: 56px 20px;
-  }
-
-  .quote {
-    font-size: 22px;
   }
 }

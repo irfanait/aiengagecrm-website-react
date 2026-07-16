@@ -75,15 +75,17 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <Link href={CTA_LINKS.login} className={styles.loginLink}>
-            Login
-          </Link>
-          <Button href={CTA_LINKS.tryFree} variant="outlineDark" className={styles.ctaOutline}>
-            Try for Free
-          </Button>
-          <Button href={CTA_LINKS.bookDemo} variant="dark" className={styles.ctaDark}>
-            Book a Demo
-          </Button>
+          <div className={styles.desktopActions}>
+            <Link href={CTA_LINKS.login} className={styles.loginLink}>
+              Login
+            </Link>
+            <Button href={CTA_LINKS.tryFree} variant="outlineDark">
+              Try for Free
+            </Button>
+            <Button href={CTA_LINKS.bookDemo} variant="dark">
+              Book a Demo
+            </Button>
+          </div>
           <button type="button" className={styles.hamburger} aria-label="Open menu" onClick={() => setDrawerOpen(true)}>
             <Icon name="menu" size={22} />
           </button>
