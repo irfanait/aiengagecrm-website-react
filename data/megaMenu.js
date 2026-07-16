@@ -1,5 +1,6 @@
-// Mirrors SiteHeader.dc.html's `menu` data exactly (category -> icon -> feature list).
-// Feature tuples are [name, icon, description, href].
+// Mirrors the design source's full 15-category mega menu (Home v2.dc.html `menu` data).
+// Feature tuples are [name, icon, description, href]. Only features with a real, built
+// page get a route; everything else points at '#' until that page exists.
 export const MEGA_MENU = [
   {
     name: 'WhatsApp Business',
@@ -64,8 +65,11 @@ export const MEGA_MENU = [
       ['Pipeline Management', 'view_kanban', 'Track deals across every stage of your process.', '#'],
       ['Deal Management', 'handshake', 'Manage values, closing dates and ownership.', '#'],
       ['Task Management', 'task_alt', 'Create, assign and monitor sales tasks.', '#'],
+      ['Follow-Up Management', 'event_repeat', 'Never miss a scheduled follow-up again.', '#'],
+      ['Team Pipelines', 'groups', 'Separate pipelines for teams and departments.', '#'],
       ['Payment Links', 'link', 'Share secure payment links from deal records.', '#'],
       ['Product Catalog', 'inventory_2', 'A structured catalog of products and pricing.', '#'],
+      ['Stage Transition Rules', 'rule', 'Require actions before deals move forward.', '#'],
       ['AI Sales Forecasting', 'query_stats', 'Predict future sales from pipeline activity.', '#'],
     ],
   },
@@ -90,6 +94,8 @@ export const MEGA_MENU = [
       ['WhatsApp Automation', 'chat', 'Trigger messages for leads, deals and events.', '/whatsapp/automation'],
       ['Appointment Reminders', 'alarm', 'Automatic reminders before every meeting.', '#'],
       ['Lead Nurturing', 'trending_up', 'Guide leads through follow-up sequences.', '#'],
+      ['Customer Onboarding', 'waving_hand', 'Automate welcome messages and setup tasks.', '#'],
+      ['Deal Stage Automation', 'move_up', 'Trigger actions when a deal changes stage.', '#'],
       ['AI-Powered Automation', 'auto_awesome', 'Let AI decide actions and personalize responses.', '#'],
     ],
   },
@@ -98,12 +104,53 @@ export const MEGA_MENU = [
     icon: 'neurology',
     href: '#',
     features: [
+      ['Smart Summaries', 'summarize', 'Quick summaries of conversations and records.', '#'],
       ['AI Agent', 'smart_toy', 'Automate conversations and routine tasks.', '/whatsapp/ai-agent'],
       ['AI Chatbot', 'forum', 'Answer website inquiries and capture leads.', '#'],
+      ['AI Lead Qualification', 'fact_check', 'Evaluate incoming leads automatically.', '#'],
       ['AI Email Assistant', 'edit_note', 'Write, improve and personalize emails with AI.', '#'],
       ['AI Insights', 'insights', 'Discover patterns and risks across CRM data.', '#'],
       ['AI Call Transcription', 'graphic_eq', 'Turn recorded calls into searchable transcripts.', '#'],
+      ['AI Sales Insights', 'lightbulb', 'Deal activity, intent and next-step suggestions.', '#'],
       ['AI Forecasting', 'query_stats', 'Predict sales outcomes from historical data.', '#'],
+    ],
+  },
+  {
+    name: 'Calling',
+    icon: 'call',
+    href: '#',
+    features: [
+      ['Business Phone Numbers', 'dialpad', 'Local, international or department numbers.', '#'],
+      ['Outbound & Inbound Calling', 'phone_forwarded', 'Make and receive calls inside your CRM.', '#'],
+      ['Smart Call Routing', 'alt_route', 'Direct calls to the right team or department.', '#'],
+      ['Call Management', 'phone_in_talk', 'Track outcomes, notes, ownership & follow-ups.', '#'],
+      ['AI Call Transcription', 'graphic_eq', 'Readable transcripts of customer calls.', '#'],
+      ['Recording, Logs & Analytics', 'monitoring', 'Record calls and monitor team performance.', '#'],
+    ],
+  },
+  {
+    name: 'Mobile App',
+    icon: 'smartphone',
+    href: '#',
+    features: [
+      ['Android App', 'android', 'Manage leads and conversations on Android.', '#'],
+      ['iOS App', 'phone_iphone', 'Secure CRM access from iPhone and iPad.', '#'],
+      ['Push Notifications', 'notifications_active', 'Instant alerts for leads, messages and tasks.', '#'],
+      ['Mobile AI', 'auto_awesome', 'AI assistance and insights on the go.', '#'],
+    ],
+  },
+  {
+    name: 'Data Management',
+    icon: 'database',
+    href: '#',
+    features: [
+      ['Import & Export', 'import_export', 'Move records using CSV or spreadsheets.', '#'],
+      ['Products', 'inventory_2', 'Maintain product and service information.', '#'],
+      ['Forms', 'list_alt', 'Structured forms to collect CRM information.', '#'],
+      ['Audit Logs', 'receipt_long', 'Track user actions and record changes.', '#'],
+      ['Sheet View', 'table', 'Update records in a spreadsheet-style layout.', '#'],
+      ['Data Mapping', 'swap_horiz', 'Match imported fields to CRM properties.', '#'],
+      ['AI Data Cleanup', 'cleaning_services', 'Find duplicate or outdated records automatically.', '#'],
     ],
   },
   {
@@ -113,8 +160,12 @@ export const MEGA_MENU = [
     features: [
       ['Dashboards', 'dashboard', 'Key metrics on customizable visual dashboards.', '#'],
       ['Sales Reports', 'bar_chart', 'Revenue, conversions and pipeline performance.', '#'],
+      ['Campaign Reports', 'campaign', 'Delivery, engagement and conversion metrics.', '#'],
       ['Funnel Reports', 'filter_alt', 'How leads move through every stage.', '#'],
       ['Team Performance', 'groups', 'Compare activity, response times and results.', '#'],
+      ['KPIs', 'speed', 'Track your most important indicators.', '#'],
+      ['Target Meters', 'track_changes', 'Progress against team and individual goals.', '#'],
+      ['Charts', 'pie_chart', 'Visualize CRM data with clear charts.', '#'],
     ],
   },
   {
@@ -125,8 +176,36 @@ export const MEGA_MENU = [
       ['Meta Ads', 'sync_alt', 'Sync leads from Facebook & Instagram ads.', '#'],
       ['Google Ads', 'ads_click', 'Capture leads from Google campaigns.', '#'],
       ['WhatsApp', 'chat', 'Inboxes, automation, broadcasts & AI chat.', '/whatsapp'],
-      ['Stripe & Razorpay', 'credit_card', 'Accept and track customer payments.', '#'],
+      ['Plivo', 'call', 'Cloud calling and messaging capabilities.', '#'],
+      ['Twilio', 'sms', 'Calls, SMS and communication workflows.', '#'],
+      ['Stripe', 'credit_card', 'Accept and track customer payments.', '#'],
+      ['Razorpay', 'currency_rupee', 'Online payments linked to CRM records.', '#'],
       ['APIs & Webhooks', 'api', 'Connect external apps and real-time updates.', '#'],
+    ],
+  },
+  {
+    name: 'Customization',
+    icon: 'tune',
+    href: '#',
+    features: [
+      ['Custom Fields', 'edit_attributes', 'Store information specific to your business.', '#'],
+      ['Custom Modules', 'widgets', 'Dedicated modules for unique processes.', '#'],
+      ['Custom Pipelines', 'account_tree', 'Pipelines that match how you actually sell.', '#'],
+      ['Roles & Permissions', 'admin_panel_settings', 'Control what each user and team can manage.', '#'],
+      ['Branding', 'palette', 'Apply your business identity to the CRM.', '#'],
+      ['Custom Tags', 'sell', 'Flexible tags for organizing records.', '#'],
+      ['Custom Views', 'view_list', 'Saved views with your filters and layouts.', '#'],
+    ],
+  },
+  {
+    name: 'Security & Compliance',
+    icon: 'shield',
+    href: '#',
+    features: [
+      ['User Roles', 'badge', 'Structured access levels by responsibility.', '#'],
+      ['Audit Logs', 'receipt_long', 'A transparent history of account changes.', '#'],
+      ['Data Backup', 'cloud_done', 'Secure and reliable business data backups.', '#'],
+      ['Two-Factor Authentication', 'lock', 'An extra verification step for every account.', '#'],
     ],
   },
 ];
