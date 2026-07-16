@@ -23,11 +23,6 @@ export default function WhatsAppAutomationPage() {
       />
 
       <WhatsAppHero
-        breadcrumbItems={[
-          { label: 'Home', href: '/' },
-          { label: 'WhatsApp Business', href: '/whatsapp' },
-          { label: page.breadcrumbLabel, href: '/whatsapp/automation' },
-        ]}
         icon={page.icon}
         iconBg={page.iconBg}
         iconColor={page.iconColor}

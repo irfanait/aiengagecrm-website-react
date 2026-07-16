@@ -26,11 +26,6 @@ export default function WhatsAppAIAgentPage() {
       />
 
       <WhatsAppHero
-        breadcrumbItems={[
-          { label: 'Home', href: '/' },
-          { label: 'WhatsApp Business', href: '/whatsapp' },
-          { label: page.breadcrumbLabel, href: '/whatsapp/ai-agent' },
-        ]}
         icon={page.icon}
         iconBg={page.iconBg}
         iconColor={page.iconColor}

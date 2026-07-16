@@ -1,5 +1,5 @@
 .hero {
-  padding: 84px 40px 0;
+  padding: 56px 40px 0;
 }
 
 .inner {
@@ -60,7 +60,7 @@
   font-size: 13px;
   font-weight: 400;
   color: var(--color-text-subtle);
-  margin-bottom: 64px;
+  margin-bottom: 44px;
   flex-wrap: wrap;
 }
 
@@ -83,7 +83,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 56px 20px 0;
+    padding: 40px 20px 0;
   }
 }
 

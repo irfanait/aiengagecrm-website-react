@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Button from '../../atoms/Button/Button';
 import Container from '../../common/Container/Container';
 import MegaMenu from '../MegaMenu/MegaMenu';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import { NAV_LINKS } from '../../../data/navLinks';
-import { CTA_LINKS, SITE_BY } from '../../../utils/constants';
+import { CTA_LINKS } from '../../../utils/constants';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -34,24 +35,18 @@ export default function Header() {
     closeTimer.current = setTimeout(() => setMenuOpen(false), 180);
   };
 
+  const closeMenuNow = () => {
+    clearTimeout(closeTimer.current);
+    setMenuOpen(false);
+  };
+
   useEffect(() => () => clearTimeout(closeTimer.current), []);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <Container className={styles.bar}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoMark}>
-            <Icon name="equalizer" size={20} color="#fff" />
-          </span>
-          <span className={styles.logoText}>
-            <span className={styles.logoTitleRow}>
-              <span className={styles.logoName}>
-                <span className={styles.logoAi}>Ai</span>Engage
-              </span>
-              <span className={styles.logoCrm}>CRM</span>
-            </span>
-            <span className={styles.logoBy}>BY {SITE_BY}</span>
-          </span>
+          <Image src="/brand/logo.svg" alt="AiEngage CRM" width={150} height={37} className={styles.logoImg} priority />
         </Link>
 
         <nav className={styles.nav}>
@@ -61,13 +56,14 @@ export default function Header() {
                 <Link
                   href={link.href}
                   className={`${styles.navLink} ${styles.navTrigger} ${menuOpen ? styles.navTriggerActive : ''}`}
+                  onClick={closeMenuNow}
                 >
                   {link.label}
                   <Icon name="keyboard_arrow_down" size={17} className={`${styles.chevron} ${menuOpen ? styles.chevronOpen : ''}`} />
                 </Link>
               </div>
             ) : (
-              <Link key={link.label} href={link.href} className={styles.navLink}>
+              <Link key={link.label} href={link.href} className={styles.navLink} onClick={closeMenuNow}>
                 {link.label}
               </Link>
             )
@@ -91,7 +87,7 @@ export default function Header() {
           </button>
         </div>
 
-        {menuOpen && <MegaMenu onMouseEnter={openMenu} onMouseLeave={closeMenu} />}
+        {menuOpen && <MegaMenu onMouseEnter={openMenu} onMouseLeave={closeMenu} onNavigate={closeMenuNow} />}
       </Container>
 
       <MobileMenu open={drawerOpen} onClose={() => setDrawerOpen(false)} />

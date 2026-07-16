@@ -23,31 +23,9 @@
   margin-bottom: 18px;
 }
 
-.brandMark {
-  width: 32px;
+.brandLogo {
   height: 32px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brandName {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--color-dark-text);
-}
-
-.brandAi {
-  color: var(--color-primary-dark-accent);
-}
-
-.brandCrm {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--color-primary-dark-accent);
-  letter-spacing: 1px;
+  width: auto;
 }
 
 .brandDesc {

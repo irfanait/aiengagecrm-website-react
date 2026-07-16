@@ -27,57 +27,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--color-text);
   flex-shrink: 0;
 }
 
-.logoMark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoText {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logoTitleRow {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-
-.logoName {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--color-text);
-}
-
-.logoAi {
-  color: var(--color-primary);
-}
-
-.logoCrm {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--color-primary);
-  letter-spacing: 1px;
-}
-
-.logoBy {
-  font-size: 9px;
-  font-weight: 500;
-  color: var(--color-text-faint);
-  letter-spacing: 1.2px;
-  margin-top: 4px;
+.logoImg {
+  height: 34px;
+  width: auto;
 }
 
 /* ---- Nav ---- */
@@ -174,17 +129,7 @@
     padding: 0 20px;
   }
 
-  .logoBy {
-    display: none;
-  }
-
-  .logoName {
-    font-size: 17px;
-  }
-}
-
-@media (max-width: 360px) {
-  .logoCrm {
-    display: none;
+  .logoImg {
+    height: 28px;
   }
 }

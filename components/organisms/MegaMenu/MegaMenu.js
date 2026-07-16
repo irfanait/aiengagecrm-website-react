@@ -11,7 +11,7 @@ import styles from './MegaMenu.module.css';
  * Open/close is owned by Header (hover intent with debounce); this component only tracks
  * which category is active, mirroring the design's `activeCat` state.
  */
-export default function MegaMenu({ onMouseEnter, onMouseLeave }) {
+export default function MegaMenu({ onMouseEnter, onMouseLeave, onNavigate }) {
   const [activeCat, setActiveCat] = useState(0);
   const active = MEGA_MENU[activeCat];
 
@@ -43,14 +43,14 @@ export default function MegaMenu({ onMouseEnter, onMouseLeave }) {
         <div className={styles.details}>
           <div className={styles.detailsHeader}>
             <div className={styles.detailsTitle}>{active.name}</div>
-            <Link href={active.href} className={styles.viewAll}>
+            <Link href={active.href} className={styles.viewAll} onClick={onNavigate}>
               View overview
               <Icon name="arrow_forward" size={16} />
             </Link>
           </div>
           <div className={styles.featureGrid}>
             {active.features.map(([name, icon, desc, href]) => (
-              <Link key={name} href={href} className={styles.featureItem}>
+              <Link key={name} href={href} className={styles.featureItem} onClick={onNavigate}>
                 <span className={styles.featureIcon}>
                   <Icon name={icon} size={20} color="var(--color-primary)" />
                 </span>

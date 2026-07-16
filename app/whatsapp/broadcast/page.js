@@ -23,11 +23,6 @@ export default function WhatsAppBroadcastPage() {
       />
 
       <WhatsAppHero
-        breadcrumbItems={[
-          { label: 'Home', href: '/' },
-          { label: 'WhatsApp Business', href: '/whatsapp' },
-          { label: page.breadcrumbLabel, href: '/whatsapp/broadcast' },
-        ]}
         icon={page.icon}
         iconBg={page.iconBg}
         iconColor={page.iconColor}

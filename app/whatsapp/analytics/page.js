@@ -23,11 +23,6 @@ export default function WhatsAppAnalyticsPage() {
       />
 
       <WhatsAppHero
-        breadcrumbItems={[
-          { label: 'Home', href: '/' },
-          { label: 'WhatsApp Business', href: '/whatsapp' },
-          { label: page.breadcrumbLabel, href: '/whatsapp/analytics' },
-        ]}
         icon={page.icon}
         iconBg={page.iconBg}
         iconColor={page.iconColor}

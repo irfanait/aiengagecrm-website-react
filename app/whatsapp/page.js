@@ -19,7 +19,6 @@ export default function WhatsAppHubPage() {
       <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'WhatsApp Business', path: '/whatsapp' }])} />
 
       <WhatsAppHero
-        breadcrumbItems={[{ label: 'Home', href: '/' }, { label: 'Features', href: '#' }, { label: 'WhatsApp Business', href: '/whatsapp' }]}
         icon="chat"
         iconBg="var(--color-green-tint)"
         iconColor="var(--color-whatsapp)"

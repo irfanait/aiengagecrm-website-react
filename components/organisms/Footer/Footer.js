@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Icon from '../../atoms/Icon/Icon';
+import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { FOOTER_COLUMNS, FOOTER_SOCIALS } from '../../../data/footerLinks';
 import { SITE_BY } from '../../../utils/constants';
@@ -14,12 +14,7 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.brandRow}>
-              <span className={styles.brandMark}>
-                <Icon name="equalizer" size={17} color="#fff" />
-              </span>
-              <span className={styles.brandName}>
-                <span className={styles.brandAi}>Ai</span>Engage <span className={styles.brandCrm}>CRM</span>
-              </span>
+              <Image src="/brand/logo-light.svg" alt="AiEngage CRM" width={150} height={37} className={styles.brandLogo} />
             </div>
             <p className={styles.brandDesc}>
               An AI-first CRM that helps businesses capture leads, engage customers, automate communication and grow
