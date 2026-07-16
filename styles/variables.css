@@ -1,0 +1,90 @@
+/*
+  Design tokens extracted from the "Home v2" design source.
+  Brand primary overridden to #FF5F38 per brand guidelines (design source used #F4500A);
+  every other neutral / semantic color matches the design file exactly.
+*/
+:root {
+  /* ---- Brand primary (orange) ---- */
+  --color-primary: #ff5f38;
+  --color-primary-hover: #e8502b;
+  --color-primary-active: #c2431f;
+  --color-primary-tint: #fff1ec;
+  --color-primary-tint-border: #ffd9cb;
+  --color-primary-highlight: #ffcbb8;
+  --color-primary-dark-accent: #ff7a54;
+  --color-primary-dark-accent-hover: #ff9270;
+  --color-primary-shadow: rgba(255, 95, 56, 0.5);
+
+  /* ---- Neutrals (warm off-white system) ---- */
+  --color-bg: #faf7f1;
+  --color-bg-white: #ffffff;
+  --color-text: #1d1812;
+  --color-text-secondary: #3e362c;
+  --color-text-muted: #655a4e;
+  --color-text-subtle: #877a6c;
+  --color-text-faint: #95887a;
+  --color-border: #e8e0d2;
+  --color-border-light: #efe8dc;
+  --color-border-dashed: #d8cdbd;
+  --color-divider: #e0d6c6;
+  --color-dot: #c9bca9;
+
+  /* ---- Dark sections ---- */
+  --color-dark-bg: #000923;
+  --color-dark-bg-alt: #000923;
+  --color-dark-card: #332414;
+  --color-dark-border: #362e24;
+  --color-dark-border-alt: #3a3226;
+  --color-dark-border-strong: #4a4034;
+  --color-dark-text: #faf7f1;
+  --color-dark-text-muted: #a99c8c;
+  --color-dark-text-subtle: #877a6c;
+  --color-dark-line: #c9bca9;
+
+  /* ---- Semantic accents ---- */
+  --color-green: #1faf64;
+  --color-green-tint: #e4f5ec;
+  --color-whatsapp: #128c4b;
+  --color-whatsapp-light: #b7e9cc;
+  --color-whatsapp-bubble-bg: #ece5dd;
+  --color-whatsapp-bubble-in: #ffffff;
+  --color-whatsapp-bubble-out: #dcf8c6;
+  --color-blue: #2a6fdb;
+  --color-blue-tint: #e8f0fe;
+  --color-purple: #6b4ee6;
+  --color-purple-tint: #f0ebfb;
+  --color-purple-tint-strong: #c9b3ec;
+  --color-red: #d64545;
+  --color-red-tint: #fdebeb;
+  --color-yellow-tint: #fffbe6;
+  --color-yellow-border: #f5e9b8;
+  --color-yellow-text: #8a7a32;
+
+  /* ---- Radii ---- */
+  --radius-pill: 999px;
+  --radius-xl: 22px;
+  --radius-lg: 20px;
+  --radius-md: 18px;
+  --radius-sm: 14px;
+  --radius-xs: 10px;
+  --radius-2xs: 8px;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 18px 44px -24px rgba(40, 24, 10, 0.18);
+  --shadow-panel: 0 24px 60px -26px rgba(40, 24, 10, 0.28);
+  --shadow-menu: 0 30px 70px -20px rgba(40, 24, 10, 0.25);
+  --shadow-mock: 0 -20px 60px -30px rgba(40, 24, 10, 0.15);
+  --shadow-cta: 0 12px 28px -10px var(--color-primary-shadow);
+  --shadow-fab: 0 14px 30px -10px var(--color-primary-shadow);
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --container-pad: 40px;
+  --header-height: 78px;
+
+  /* ---- Breakpoints (reference only, used in media queries directly) ---- */
+  --bp-desktop: 1280px;
+  --bp-laptop: 1120px;
+  --bp-tablet: 900px;
+  --bp-mobile: 600px;
+}

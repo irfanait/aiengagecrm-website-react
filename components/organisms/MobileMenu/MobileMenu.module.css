@@ -1,0 +1,62 @@
+.drawerBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 24px;
+}
+
+.navLink {
+  display: block;
+  padding: 13px 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.collapseWrap {
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 4px;
+}
+
+.collapseHeader {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.catFeatureLink {
+  display: flex;
+  gap: 10px;
+  padding: 9px 4px;
+  color: var(--color-text-secondary);
+}
+
+.catFeatureName {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text);
+  display: block;
+}
+
+.catFeatureDesc {
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+  font-weight: 300;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.actions :global(.ant-btn) {
+  width: 100%;
+}

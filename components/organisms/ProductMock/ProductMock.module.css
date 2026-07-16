@@ -1,0 +1,644 @@
+.mockShell {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.tabBar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.tabPill {
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: var(--radius-pill);
+  padding: 10px 19px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: all 0.18s ease;
+}
+
+.tabPillActive {
+  background: var(--color-dark-bg);
+  border-color: var(--color-dark-bg);
+  color: #fff;
+  font-weight: 600;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 22px 22px 0 0;
+  border-bottom: none;
+  box-shadow: var(--shadow-mock);
+  padding: 26px 30px 0;
+  text-align: left;
+  min-height: 352px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  gap: 26px;
+}
+
+/* ---- generic building blocks reused across tabs ---- */
+.col {
+  flex: 1.4;
+}
+
+.colHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.colTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chipMuted {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-faint);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+.metaRight {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-faint);
+}
+
+.sideCol {
+  flex-shrink: 0;
+  border-left: 1px solid var(--color-border-light);
+  padding-left: 24px;
+  padding-bottom: 22px;
+}
+
+.sideHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.sideTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Pipeline board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.boardCol {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.boardColWon {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+}
+
+.boardColHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.boardColHeadWon {
+  color: var(--color-primary-active);
+}
+
+.boardCard {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 9px;
+  margin-bottom: 7px;
+}
+
+.boardColWon .boardCard {
+  border-color: var(--color-primary-tint-border);
+}
+
+.boardCardName {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.boardCardMeta {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* AI activity feed */
+.feedList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.feedItem {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 11px 12px;
+  display: flex;
+  gap: 9px;
+}
+
+.feedText {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* Inbox tab */
+.inboxList {
+  width: 225px;
+  flex-shrink: 0;
+  padding-right: 20px;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.inboxItem {
+  border-radius: 10px;
+  padding: 10px 11px;
+  margin-bottom: 8px;
+}
+
+.inboxItemActive {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+}
+
+.inboxItemInactive {
+  background: var(--color-bg);
+}
+
+.inboxItemTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inboxItemName {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.inboxItemTag {
+  font-size: 8.5px;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 2px 7px;
+  background: #fff;
+}
+
+.inboxItemPreview {
+  font-size: 10px;
+  color: var(--color-text-subtle);
+  margin-top: 4px;
+}
+
+.chatCol {
+  flex: 1;
+  padding: 0 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.bubbleIn {
+  align-self: flex-start;
+  max-width: 78%;
+  background: var(--color-bg);
+  border-radius: 12px 12px 12px 3px;
+  padding: 10px 13px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.bubbleOutWrap {
+  align-self: flex-end;
+  max-width: 78%;
+}
+
+.bubbleOutTag {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: right;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.bubbleOut {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+  border-radius: 12px 12px 3px 12px;
+  padding: 10px 13px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.qualifiedTag {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-green);
+  background: var(--color-green-tint);
+  border-radius: var(--radius-pill);
+  padding: 5px 13px;
+  margin-top: 4px;
+}
+
+.summaryBlock {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-bottom: 9px;
+}
+
+.summaryBlockAlert {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+}
+
+.summaryLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.summaryLabelAlert {
+  color: var(--color-primary-active);
+}
+
+.summaryText {
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* Reports tab */
+.statRow3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.statCard {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.statCardLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+}
+
+.statCardValue {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0 2px;
+}
+
+.statCardDelta {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 96px;
+  padding: 0 4px;
+}
+
+.bar {
+  flex: 1;
+  background: #f1e8db;
+  border-radius: 6px 6px 0 0;
+}
+
+.barActive {
+  background: #ffb088;
+}
+
+.barPeak {
+  background: var(--color-primary);
+}
+
+.funnelRow {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.funnelLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.funnelLabelName {
+  color: var(--color-text-muted);
+}
+
+.funnelTrack {
+  height: 8px;
+  border-radius: var(--radius-pill);
+}
+
+.targetCard {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.targetTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.targetTrack {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: #efe5d6;
+}
+
+.targetFill {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+}
+
+/* Sync tab */
+.syncSources {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.syncSourceItem {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.syncSourceName {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.syncSourceStatus {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-green);
+}
+
+.syncCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.syncOrb {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-fab);
+}
+
+.syncCenterTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.syncCenterDesc {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-text-faint);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.landedList {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.landedItem {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.landedTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landedName {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.landedTime {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.landedMeta {
+  font-size: 10px;
+  color: var(--color-text-subtle);
+  margin-top: 3px;
+}
+
+/* Workflow tab */
+.flowCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flowNode {
+  width: 100%;
+  max-width: 430px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.flowTag {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 3px 8px;
+}
+
+.flowNodeLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flowNodeMeta {
+  margin-left: auto;
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.flowArrow {
+  color: var(--color-dot);
+  padding: 3px 0;
+}
+
+.flowBranch {
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  gap: 10px;
+}
+
+.flowBranchCard {
+  flex: 1;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.flowBranchYes {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+}
+
+.flowBranchNo {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+}
+
+.flowBranchLabel {
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.flowBranchText {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.perfList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.perfRow {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 11px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perfLabel {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.perfValue {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    overflow-x: auto;
+  }
+
+  .row {
+    min-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mockShell {
+    display: none;
+  }
+}

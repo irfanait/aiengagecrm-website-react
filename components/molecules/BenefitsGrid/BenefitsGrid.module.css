@@ -1,0 +1,107 @@
+.section {
+  padding: 84px 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heading {
+  margin: 0 0 48px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.eyebrow {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+}
+
+.cardCompact {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 14px 0 8px;
+}
+
+.cardTitleSm {
+  font-size: 16px;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.cardDescSm {
+  font-size: 13px;
+}
+
+.cols3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cols4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.extra {
+  margin-top: 40px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 40px;
+}
+
+@media (max-width: 900px) {
+  .cols3,
+  .cols4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .extra {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .cols3,
+  .cols4 {
+    grid-template-columns: 1fr;
+  }
+}

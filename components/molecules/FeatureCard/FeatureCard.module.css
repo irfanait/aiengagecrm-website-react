@@ -1,0 +1,73 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  color: var(--color-text);
+  display: block;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+.linked {
+  cursor: pointer;
+}
+
+.dark {
+  background: var(--color-dark-bg);
+  border-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+.compact {
+  padding: 24px;
+}
+
+.icon {
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  letter-spacing: -0.2px;
+}
+
+.titleSm {
+  font-size: 16px;
+  margin: 14px 0 8px;
+}
+
+.desc {
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.descSm {
+  font-size: 13px;
+  margin: 0;
+}
+
+.descDark {
+  color: var(--color-dark-text-muted);
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.learnMoreDark {
+  color: var(--color-primary-dark-accent);
+}

@@ -1,0 +1,99 @@
+.btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: auto !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: none;
+}
+
+.md {
+  font-size: 14px !important;
+  padding: 11px 22px !important;
+}
+
+.lg {
+  font-size: 15.5px !important;
+  padding: 15px 32px !important;
+}
+
+/* Filled primary (orange) */
+.primary {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+.primary:hover {
+  background: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: #fff !important;
+}
+.primaryShadow {
+  box-shadow: var(--shadow-cta) !important;
+}
+
+/* Filled dark (header "Book a Demo") */
+.dark {
+  background: var(--color-dark-bg) !important;
+  border-color: var(--color-dark-bg) !important;
+  color: #fff !important;
+}
+.dark:hover {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+/* Outline on light bg, dark text/border */
+.outlineDark {
+  background: transparent !important;
+  border: 1.5px solid var(--color-text) !important;
+  color: var(--color-text) !important;
+}
+.outlineDark:hover {
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Outline on light bg, neutral border, white fill (hero/section CTAs) */
+.outline {
+  background: #fff !important;
+  border: 1.5px solid var(--color-border-dashed) !important;
+  color: var(--color-text) !important;
+}
+.outline:hover {
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Outline on dark section background */
+.outlineOnDark {
+  background: transparent !important;
+  border: 1.5px solid var(--color-dark-border-strong) !important;
+  color: var(--color-dark-text) !important;
+}
+.outlineOnDark:hover {
+  border-color: var(--color-primary-dark-accent) !important;
+  color: var(--color-primary-dark-accent) !important;
+}
+
+/* Plain text link with arrow, e.g. "Learn more ->" */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-bottom: 1.5px solid var(--color-primary);
+  padding-bottom: 3px;
+  width: fit-content;
+}
+.link:hover {
+  color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}

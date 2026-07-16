@@ -1,0 +1,14 @@
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

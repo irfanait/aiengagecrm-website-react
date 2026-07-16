@@ -1,0 +1,15 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: var(--radius-pill);
+  padding: 7px 15px;
+  margin-bottom: 22px;
+  width: fit-content;
+}
+
+.label {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
