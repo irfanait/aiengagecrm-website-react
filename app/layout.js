@@ -17,9 +17,6 @@ const lexendDeca = Lexend_Deca({
 export const metadata = {
   ...buildMetadata(seoData.home),
   metadataBase: new URL(SITE_URL),
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function RootLayout({ children }) {
