@@ -15,3 +15,12 @@
   font-size: 14px;
   gap: 9px;
 }
+
+.itemTop {
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.itemMuted {
+  color: var(--color-text-muted);
+}

@@ -30,11 +30,14 @@ export default function CTASection({
               {eyebrow}
             </div>
           )}
-          <h2 className={styles.title} style={{ fontSize: fluidFontSize(titleSize), maxWidth: centered ? 640 : 560 }}>
+          <h2
+            className={styles.title}
+            style={{ fontSize: fluidFontSize(titleSize), marginLeft: centered ? 'auto' : undefined, marginRight: centered ? 'auto' : undefined }}
+          >
             {title}
           </h2>
           {description && (
-            <p className={styles.desc} style={centered ? { marginLeft: 'auto', marginRight: 'auto' } : undefined}>
+            <p className={styles.desc} style={centered ? { maxWidth: 600, marginLeft: 'auto', marginRight: 'auto' } : undefined}>
               {description}
             </p>
           )}

@@ -4,10 +4,10 @@ export const FOOTER_COLUMNS = [
     heading: 'PRODUCTS',
     links: [
       { label: 'WhatsApp Business', href: '/whatsapp' },
-      { label: 'Lead Management', href: '#' },
-      { label: 'Sales Pipeline', href: '#' },
-      { label: 'Built-In Calling', href: '#' },
-      { label: 'AI & Automation', href: '#' },
+      { label: 'Lead Management', href: '/lead-management' },
+      { label: 'Sales Pipeline', href: '/sales-pipeline' },
+      { label: 'Built-In Calling', href: '/calling' },
+      { label: 'AI & Automation', href: '/automation' },
       { label: 'Reports & Analytics', href: '#' },
     ],
   },
@@ -48,4 +48,5 @@ export const FOOTER_SOCIALS = [
   { label: 'in', name: 'LinkedIn', href: 'https://www.linkedin.com/company/aiengagecrm' },
   { label: 'X', name: 'X (Twitter)', href: 'https://twitter.com/aiengagecrm' },
   { label: 'ig', name: 'Instagram', href: 'https://www.instagram.com/aiengagecrm' },
+  { label: 'yt', name: 'YouTube', href: 'https://www.youtube.com/@aiengagecrm' },
 ];

@@ -1,0 +1,167 @@
+.section {
+  padding: 80px 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.alt {
+  background: var(--color-bg-white);
+}
+
+.row {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.rowReverse {
+  flex-direction: row-reverse;
+}
+
+.visual {
+  flex: 1;
+  min-width: 0;
+}
+
+.text {
+  flex: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: clamp(24px, 2.6vw + 16px, 34px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.leadDesc {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.desc {
+  margin: 0 0 14px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.desc:last-of-type {
+  margin-bottom: 0;
+}
+
+.listGroups {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.listGroup {
+  min-width: 220px;
+}
+
+.listHeading {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 24px 0 12px;
+}
+
+.listHeadingMuted {
+  font-weight: 600;
+  color: var(--color-text-faint);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 22px;
+}
+
+.listGridSingle {
+  grid-template-columns: 1fr;
+}
+
+.keyBenefits {
+  margin-top: 32px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.keyBenefitsHeading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.keyBenefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 28px;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  /* Text reads before the decorative mock on every section, regardless of desktop side. */
+  .text {
+    order: 1;
+    width: 100%;
+  }
+
+  .visual {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .listGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .keyBenefits {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -14,7 +14,7 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.brandRow}>
-              <Image src="/brand/logo-light.svg" alt="AiEngage CRM" width={150} height={37} className={styles.brandLogo} />
+              <Image src="/brand/logo-light.svg" alt="AiEngage CRM" width={202} height={48} className={styles.brandLogo} />
             </div>
             <p className={styles.brandDesc}>
               An AI-first CRM that helps businesses capture leads, engage customers, automate communication and grow

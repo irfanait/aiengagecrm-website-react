@@ -1,0 +1,343 @@
+// Content for the Multichannel Communication page — a single scrolling page with anchor-linked
+// sections, mirroring the WhatsApp Business page's structure (see data/whatsappPages.js).
+
+export const MC_HERO = {
+  badge: { icon: 'forum', label: 'MULTICHANNEL COMMUNICATION', bg: '#fff3ea', iconColor: 'var(--color-primary)', textColor: 'var(--color-primary-hover)' },
+  titleLead: 'Never Miss A Lead Across Calls, Emails, And ',
+  titleAccent: 'WhatsApp',
+  description: 'Keep every call, email, WhatsApp chat, and follow-up connected so your team always knows what happened and what to do next.',
+};
+
+export const MC_TRUST_ITEMS = [
+  { icon: 'mail', label: 'Email, calls & WhatsApp in one CRM', color: 'var(--color-blue)' },
+  { icon: 'history', label: 'One timeline per customer', color: 'var(--color-primary)' },
+  { icon: 'bolt', label: 'Automated follow-ups', color: 'var(--color-green)' },
+  { icon: 'psychology', label: 'AI sentiment insights', color: 'var(--color-purple)' },
+];
+
+export const MC_SECTIONS = [
+  {
+    id: 'mass-email',
+    index: '01',
+    eyebrow: 'MASS EMAIL',
+    titleLead: 'Mass ',
+    titleAccent: 'Email',
+    mockKey: 'MassEmailMock',
+    reverse: false,
+    leadParagraph: 'Reach Leads And Customers With Targeted Email Campaigns.',
+    paragraphs: [
+      'Send offers, newsletters, payment reminders, product updates, event invitations, follow-ups, and re-engagement campaigns directly from your CRM.',
+      'Create targeted audiences using lead stages, customer segments, tags, locations, campaign sources, purchase history, or custom fields. Keep every campaign connected to the contacts and customer activity that matter.',
+    ],
+    lists: [
+      {
+        heading: 'Send Campaigns For',
+        items: [
+          'Offers and promotions',
+          'Newsletters and announcements',
+          'Product and service updates',
+          'Payment and booking reminders',
+          'Lead nurturing campaigns',
+          'Re-engagement campaigns',
+          'Event invitations',
+          'Customer updates',
+          'Personalized outreach',
+          'Post-purchase communication',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'built-in-calling',
+    index: '02',
+    eyebrow: 'BUILT-IN CALLING',
+    titleLead: 'Built-In ',
+    titleAccent: 'Calling',
+    mockKey: 'CallingMock',
+    reverse: true,
+    leadParagraph: 'Call Leads And Customers Directly From Your CRM.',
+    paragraphs: [
+      'Give your team the right context before every call by showing customer details, previous conversations, open deals, tasks, and follow-up history in one place.',
+      'Every call stays linked to the relevant contact, lead, or deal. Your sales team can log call outcomes, add notes, schedule the next action, and make sure no important conversation is forgotten.',
+    ],
+    lists: [
+      {
+        heading: 'Make Every Call More Productive',
+        items: [
+          'Click-to-call from profiles',
+          'View customer details before calling',
+          'Track call history for every lead',
+          'Save call notes and outcomes',
+          'Record important calls',
+          'Schedule follow-ups after calls',
+          'Create tasks from call discussions',
+          'Track missed calls',
+          'Keep calls linked to deals',
+          'Manager visibility into team activity',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'whatsapp-integration',
+    index: '03',
+    eyebrow: 'WHATSAPP INTEGRATION',
+    titleLead: 'WhatsApp ',
+    titleAccent: 'Integration',
+    mockKey: 'WhatsAppIntegrationMock',
+    reverse: false,
+    leadParagraph: 'Bring WhatsApp Conversations Into Your CRM.',
+    paragraphs: [
+      'Connect customer chats with the right lead, deal, or contact record so your team always knows who they are speaking with and what happened earlier.',
+      'Instead of managing customer communication through separate devices or personal WhatsApp accounts, your team can keep chats organized, assign conversations, track replies, and follow up faster.',
+    ],
+    lists: [
+      {
+        heading: 'Stay Connected On WhatsApp',
+        items: [
+          'Link chats to customer profiles',
+          'View complete message history',
+          'Assign conversations to team members',
+          'Track customer replies',
+          'Send updates and reminders',
+          'Continue chats with full lead context',
+          'Capture leads from WhatsApp',
+          'Keep sales & support chats organized',
+          'Track WhatsApp follow-ups',
+          'Maintain one complete customer record',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'emails',
+    index: '04',
+    eyebrow: 'EMAILS',
+    titleLead: '',
+    titleAccent: 'Emails',
+    mockKey: 'EmailsMock',
+    reverse: true,
+    leadParagraph: 'Manage Individual Customer Emails From One Place.',
+    paragraphs: [
+      'Send, receive, and track one-to-one emails without switching between inboxes and CRM tools.',
+      "Before replying, your team can view the customer's contact details, past emails, WhatsApp chats, call activity, deals, tasks, notes, and enquiry history. This helps every reply feel more informed and more personal.",
+    ],
+    lists: [
+      {
+        heading: 'Keep Email Conversations Organized',
+        items: [
+          'Send and receive customer emails',
+          'View complete email history',
+          'Link emails to contacts and deals',
+          'See customer details while replying',
+          'Track important sales discussions',
+          'Manage support conversations',
+          'Create follow-up tasks from emails',
+          'Add internal notes for your team',
+          'Avoid missed replies',
+          'Keep every discussion in context',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'templates',
+    index: '05',
+    eyebrow: 'TEMPLATES',
+    titleLead: 'Email & Message ',
+    titleAccent: 'Templates',
+    mockKey: 'TemplatesMock',
+    reverse: false,
+    leadParagraph: 'Help Your Team Reply Faster With Ready-To-Use Templates.',
+    paragraphs: [
+      'Create templates for sales outreach, first responses, follow-ups, payment reminders, appointment confirmations, quotations, support replies, and customer updates.',
+      'Your team can use approved templates in seconds while still personalizing each message with customer information. This saves time, reduces repetitive work, and keeps every customer-facing message consistent.',
+    ],
+    lists: [
+      {
+        heading: 'Respond Faster With Ready Templates',
+        items: [
+          'Sales outreach messages',
+          'First-response emails',
+          'Follow-up messages',
+          'WhatsApp replies',
+          'Appointment reminders',
+          'Payment reminders',
+          'Quotation-sharing emails',
+          'Support response templates',
+          'Welcome messages',
+          'Onboarding communication',
+          'Personalized messages using customer details',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'follow-ups',
+    index: '06',
+    eyebrow: 'AUTOMATED FOLLOW-UPS',
+    titleLead: 'Automated ',
+    titleAccent: 'Follow-Ups',
+    mockKey: 'FollowUpsMock',
+    reverse: true,
+    leadParagraph: 'Never Let A Lead Go Cold Because A Follow-Up Was Missed.',
+    paragraphs: [
+      'Automate follow-up messages, reminders, and task creation based on customer actions, lead stages, missed calls, form submissions, deal activity, or time delays.',
+      'AiEngage helps your team stay consistent without manually tracking every next step. Leads receive timely communication, sales representatives know what to do next, and important opportunities stay active.',
+    ],
+    lists: [
+      {
+        heading: 'Keep Conversations Moving Automatically',
+        items: [
+          'Follow up after new lead enquiries',
+          'Send reminders after missed calls',
+          'Reconnect when leads do not respond',
+          'Trigger messages after quotations',
+          'Remind customers about payments',
+          'Follow up after website form submissions',
+          'Send appointment and demo reminders',
+          'Create tasks for your sales team',
+          'Re-engage inactive deals',
+          'Trigger communication after lead stage changes',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'timeline',
+    index: '07',
+    eyebrow: 'COMMUNICATION TIMELINE',
+    titleLead: 'Communication ',
+    titleAccent: 'Timeline',
+    mockKey: 'TimelineMock',
+    reverse: false,
+    leadParagraph: 'See Every Customer Interaction In One Clear Timeline.',
+    paragraphs: [
+      'From the first enquiry to the latest follow-up, AiEngage brings together calls, emails, WhatsApp chats, notes, tasks, deal updates, forms, payments, and team actions in one place.',
+      'Your team can quickly understand the complete customer journey without searching through different tools, inboxes, or spreadsheets.',
+    ],
+    lists: [
+      {
+        heading: 'See The Full Conversation Journey',
+        items: [
+          'Lead form submissions',
+          'WhatsApp messages',
+          'Calls and call recordings',
+          'Emails sent and received',
+          'Notes added by team members',
+          'Tasks created or completed',
+          'Follow-up reminders',
+          'Lead stage changes',
+          'Deal updates',
+          'Quotations shared',
+          'Payment updates',
+          'Booking confirmations',
+          'Campaign interactions',
+          'Automation activity',
+          'Tag and owner changes',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'push-notifications',
+    index: '08',
+    eyebrow: 'PUSH NOTIFICATIONS',
+    titleLead: 'Push ',
+    titleAccent: 'Notifications',
+    mockKey: 'PushNotificationsMock',
+    reverse: true,
+    leadParagraph: 'Keep Your Team Updated The Moment Something Important Happens.',
+    paragraphs: [
+      'Send instant alerts when a new lead arrives, a customer replies, a task is due, a deal changes stage, or a follow-up needs attention.',
+      'Your team can respond faster, stay connected while working remotely, and avoid missing high-intent opportunities.',
+    ],
+    lists: [
+      {
+        heading: 'Never Miss An Important Update',
+        items: [
+          'New lead enquiries',
+          'WhatsApp replies',
+          'Incoming customer emails',
+          'Missed calls',
+          'Task reminders',
+          'Follow-up due dates',
+          'Deal stage changes',
+          'Quotation updates',
+          'Payment updates',
+          'Appointment reminders',
+          'Campaign responses',
+          'Lead assignments',
+          'Team mentions',
+          'Internal updates',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sentiment-analysis',
+    index: '09',
+    eyebrow: 'AI SENTIMENT ANALYSIS',
+    titleLead: 'AI ',
+    titleAccent: 'Sentiment Analysis',
+    mockKey: 'SentimentMock',
+    reverse: false,
+    leadParagraph: 'Understand How Customers Feel Before You Reply.',
+    paragraphs: [
+      'AiEngage can analyse customer messages and conversations to identify whether they appear positive, neutral, frustrated, urgent, or unhappy.',
+      'This helps your team prioritize critical conversations, respond with the right tone, and prevent small issues from becoming lost customers.',
+    ],
+    lists: [
+      {
+        heading: 'Respond With The Right Context',
+        items: [
+          'Identify unhappy customers early',
+          'Spot urgent support conversations',
+          'Recognize high-intent buyers',
+          'Detect negative feedback patterns',
+          'Prioritize conversations that need attention',
+          'Understand customer mood across channels',
+          'Help teams choose the right response tone',
+          'Identify at-risk leads and customers',
+          'Improve sales and support response quality',
+          'Escalate important conversations faster',
+        ],
+      },
+    ],
+  },
+];
+
+export const MC_BENEFITS_HEADING = 'Turn Every Conversation Into A Better Customer Experience';
+
+export const MC_BENEFITS = [
+  'One place for email, calls, WhatsApp, and follow-ups',
+  'Complete communication history for every customer',
+  'Faster replies with full customer context',
+  'Mass email campaigns from your CRM',
+  'Built-in calling for sales and support teams',
+  'Connected WhatsApp conversations',
+  'Ready-to-use email and message templates',
+  'Automated follow-up workflows',
+  'Unified communication timeline',
+  'Instant push notifications',
+  'AI-powered sentiment insights',
+  'Better coordination across sales, support, and marketing',
+  'More personalized customer conversations',
+  'Fewer missed leads and follow-ups',
+];
+
+export const MC_INDUSTRIES = [
+  { icon: 'apartment', label: 'Real Estate', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
+  { icon: 'memory', label: 'IT Services', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
+  { icon: 'medical_services', label: 'Healthcare', bg: 'var(--color-green-tint)', color: 'var(--color-whatsapp)' },
+  { icon: 'school', label: 'Education', bg: 'var(--color-purple-tint)', color: 'var(--color-purple)' },
+  { icon: 'flight_takeoff', label: 'Tours & Travels', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
+  { icon: 'account_balance', label: 'Finance', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
+];
+
+export const MC_FINAL_CTA = {
+  titleLead: 'Keep Every Customer Conversation ',
+  titleAccent: 'Connected',
+  titleTrail: ' In One CRM',
+  description: 'Bring email, calls, and WhatsApp together so your team always has full context and never misses a follow-up.',
+};

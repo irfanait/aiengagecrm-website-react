@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
-import { LinkButton } from '../../atoms/Button/Button';
 import Container from '../../common/Container/Container';
 import SectionHeading from '../../molecules/SectionHeading/SectionHeading';
 import { INTEGRATIONS } from '../../../data/homeContent';
@@ -12,15 +12,21 @@ export default function Integrations() {
         <SectionHeading index="07" label="INTEGRATIONS" title="" className={styles.tagOnly} />
         <div className={styles.headerRow}>
           <h2 className={styles.title}>Plays well with the tools you already use.</h2>
-          <LinkButton href="#">Browse all 100+ integrations</LinkButton>
+          <span className={styles.allCount}>All 100+ integrations</span>
         </div>
 
         <div className={styles.grid}>
           {INTEGRATIONS.map((item) => (
             <div key={item.label} className={styles.item}>
-              <span className={styles.mark} style={{ background: item.bg, color: item.color }}>
-                {item.icon ? <Icon name={item.icon} size={19} /> : item.letter}
-              </span>
+              {item.logo ? (
+                <span className={styles.logoMark}>
+                  <Image src={item.logo} alt={item.label} width={22} height={22} className={styles.logoImg} />
+                </span>
+              ) : (
+                <span className={styles.mark} style={{ background: item.bg, color: item.color }}>
+                  <Icon name={item.icon} size={19} />
+                </span>
+              )}
               <span className={styles.label}>{item.label}</span>
             </div>
           ))}

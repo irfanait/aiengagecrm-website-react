@@ -119,27 +119,44 @@ export const INDUSTRIES = [
   { icon: 'handshake', label: 'Agencies' },
 ];
 
-export const TESTIMONIAL = {
-  quote: 'AiEngage CRM has completely transformed the way we manage leads and customers. The automation and WhatsApp integration save us hours every day and help us close more deals.',
-  highlight: 'save us hours every day',
-  name: 'Yogendra Prajapati',
-  role: 'Co-Founder',
-  initials: 'YP',
-  stats: [
-    { value: '2000+', label: 'businesses' },
-    { value: '100+', label: 'integrations' },
-    { value: '24/7', label: 'AI agent' },
-  ],
-};
+export const TESTIMONIALS = [
+  {
+    quote:
+      'We were getting inquiries from different channels, and keeping track of them was challenging for us. After using AiEngage CRM, all our inquiries were organized in one place, and our team was able to follow up and close deals faster.',
+    name: 'Nitin Maheshwari',
+    role: 'Marketing Manager, Micro Mitti',
+    avatar: '/testimonials/Nitin.webp',
+  },
+  {
+    quote:
+      'We wanted a better way to connect with customers on WhatsApp. With AiEngage CRM, we were able to send bulk messages and run campaigns smoothly without worrying about numbers getting blocked. It made customer communication much easier.',
+    name: 'Yogendra Mahajan',
+    role: 'CMO, Micro Mitti',
+    avatar: '/testimonials/Yogendra.webp',
+  },
+  {
+    quote:
+      'Customer data was spread across different tools, which made things confusing. AiEngage CRM helped us keep all customer data in one place, giving our team a clear view of every interaction and making it easier to manage relationships.',
+    name: 'Anurag Pandey',
+    role: 'Founder & CEO, ControlF5',
+    avatar: '/testimonials/Anurag.webp',
+  },
+];
+
+export const TESTIMONIAL_STATS = [
+  { value: '2000+', label: 'businesses' },
+  { value: '100+', label: 'integrations' },
+  { value: '24/7', label: 'AI agent' },
+];
 
 export const INTEGRATIONS = [
-  { label: 'WhatsApp', letter: 'W', bg: 'var(--color-green-tint)', color: 'var(--color-green)' },
-  { label: 'Meta Ads', letter: 'M', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
-  { label: 'Google Ads', letter: 'G', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { label: 'Stripe', letter: 'S', bg: 'var(--color-purple-tint)', color: 'var(--color-purple)' },
-  { label: 'Razorpay', letter: 'R', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
-  { label: 'Twilio', letter: 'T', bg: 'var(--color-red-tint)', color: 'var(--color-red)' },
-  { label: 'Plivo', letter: 'P', bg: 'var(--color-green-tint)', color: 'var(--color-green)' },
+  { label: 'WhatsApp', logo: '/brand/integrations/whatsapp.svg' },
+  { label: 'Meta Ads', logo: '/brand/integrations/meta.svg' },
+  { label: 'Google Ads', logo: '/brand/integrations/googleads.svg' },
+  { label: 'Stripe', logo: '/brand/integrations/stripe.svg' },
+  { label: 'Razorpay', logo: '/brand/integrations/razorpay.svg' },
+  { label: 'Twilio', logo: '/brand/integrations/twilio.svg' },
+  { label: 'Plivo', icon: 'call', bg: 'var(--color-green-tint)', color: 'var(--color-green)' },
   { label: 'Open APIs', icon: 'api', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
   { label: 'Webhooks', icon: 'webhook', bg: '#F1EDE7', color: 'var(--color-text-muted)' },
 ];

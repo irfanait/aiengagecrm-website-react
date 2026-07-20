@@ -1,0 +1,316 @@
+/* Page-specific mock visuals for Multichannel Communication. Shared card/panel/avatar/journey
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.split {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+}
+
+.sidePanel {
+  width: 150px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  box-shadow: var(--shadow-panel);
+}
+
+.sidePanelLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.sidePanelName {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.sidePanelMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+  margin-bottom: 10px;
+}
+
+.sidePanelRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Templates */
+.templateGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.templateChip {
+  border-radius: var(--radius-xs);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.previewBox {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xs);
+  padding: 14px;
+  background: var(--color-bg);
+}
+
+.previewLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  margin-bottom: 8px;
+}
+
+.previewText {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.mergeTag {
+  background: #ffe1d6;
+  color: var(--color-primary-hover);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-weight: 600;
+}
+
+/* Tagged automation journey (trigger/wait/message/task labels) */
+.journeyStepTagged {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.journeyTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.journeyTitle {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+/* Email campaign composer (mass email) */
+.audienceLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  margin-bottom: 8px;
+}
+
+.emailPreview {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.emailPreviewHead {
+  background: var(--color-bg);
+  padding: 10px 13px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.emailSubjectLabel {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.emailSubjectText {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.emailPreviewBody {
+  padding: 14px 13px;
+}
+
+.skeletonLine {
+  height: 8px;
+  background: var(--color-border-light);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.emailCta {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 7px 16px;
+}
+
+/* Timeline */
+.timelineRow {
+  display: flex;
+  gap: 12px;
+}
+
+.timelineIconCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timelineIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-2xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timelineLine {
+  width: 2px;
+  flex: 1;
+  background: var(--color-border);
+  margin: 2px 0;
+}
+
+.timelineBody {
+  padding-bottom: 16px;
+}
+
+.timelineTitle {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.timelineMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+}
+
+/* Push notifications (phone mock) */
+.phoneFrame {
+  width: 280px;
+  max-width: 100%;
+  background: var(--color-dark-bg);
+  border-radius: 32px;
+  padding: 14px;
+  box-shadow: 0 30px 60px -28px rgba(40, 24, 10, 0.5);
+}
+
+.phoneScreen {
+  background: var(--color-bg);
+  border-radius: 22px;
+  padding: 18px 14px;
+  min-height: 360px;
+}
+
+.phoneClock {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.phoneTime {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.phoneDate {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.notifCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 11px 12px;
+  box-shadow: 0 4px 14px -8px rgba(40, 24, 10, 0.25);
+  display: flex;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.notifCard:last-child {
+  margin-bottom: 0;
+}
+
+.notifIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notifTitle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.notifMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+  line-height: 1.4;
+}
+
+/* Sentiment analysis */
+.sentimentRow {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.sentimentPreview {
+  font-size: 11px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sentimentTag {
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 4px 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .sidePanel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .phoneFrame {
+    width: 100%;
+  }
+}

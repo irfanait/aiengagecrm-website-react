@@ -1,0 +1,757 @@
+/* Page-specific mock visuals for Mobile App: phone-shell hardware chrome + per-OS app screens.
+   Shared card/avatar/tagPill utility classes live in WhatsAppMocks.module.css. */
+
+.shell {
+  position: relative;
+  width: 250px;
+  background: #1c1c1e;
+  border-radius: 42px;
+  padding: 8px 8px 10px;
+  box-shadow:
+    0 24px 48px rgba(0, 9, 35, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.sideButton {
+  position: absolute;
+  border-radius: 2px;
+  background: #1c1c1e;
+}
+
+.screen {
+  position: relative;
+  border-radius: 34px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cameraDot {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #000;
+  z-index: 6;
+}
+
+.notchPill {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 26px;
+  background: #000;
+  border-radius: 14px;
+  z-index: 6;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.homeIndicator {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 0 7px;
+}
+
+.homeIndicatorBar {
+  width: 90px;
+  height: 4px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Android: Leads list screen ---- */
+.androidStatus {
+  background: var(--color-primary);
+  padding: 22px 14px 8px;
+  color: #fff;
+}
+
+.androidHeader {
+  background: var(--color-primary);
+  padding: 2px 15px 13px;
+  color: #fff;
+}
+
+.androidHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.androidHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.androidHeaderTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.androidHeaderIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.androidBody {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.leadRow {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.leadAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.leadName {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.leadMeta {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.leadTag {
+  font-size: 8.5px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 3px 7px;
+  flex-shrink: 0;
+}
+
+.fab {
+  position: absolute;
+  right: 14px;
+  bottom: 58px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px -6px rgba(244, 80, 10, 0.6);
+}
+
+.tabBar {
+  background: #fff;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  justify-content: space-around;
+  padding: 9px 0 11px;
+}
+
+/* ---- iOS: Contact detail screen ---- */
+.iosStatus {
+  padding: 13px 18px 0;
+  color: var(--color-text);
+}
+
+.iosNavRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.iosBody {
+  padding: 0 15px 12px;
+}
+
+.iosTitle {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.profileBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.profileAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profileMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.actionRow {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.actionBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border-radius: 10px;
+  padding: 8px 0;
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+.segmentRow {
+  display: flex;
+  background: var(--color-bg);
+  border-radius: 9px;
+  padding: 3px;
+  margin-bottom: 12px;
+}
+
+.segmentActive {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: #fff;
+  border-radius: 7px;
+  padding: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.segmentInactive {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--color-text-faint);
+  padding: 5px;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.activityIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activityTitle {
+  font-size: 9.5px;
+  font-weight: 600;
+}
+
+.activityMeta {
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+/* ---- Push notifications: lock screen ---- */
+.lockScreen {
+  position: relative;
+  border-radius: 34px;
+  overflow: hidden;
+  background: linear-gradient(165deg, #12224a, #000923);
+  padding: 18px 12px 16px;
+}
+
+.lockStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--color-dark-line);
+  font-weight: 600;
+  padding: 2px 6px 0;
+}
+
+.lockClock {
+  text-align: center;
+  color: #fff;
+  margin: 14px 0 18px;
+}
+
+.lockTime {
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.lockDate {
+  font-size: 12px;
+  color: var(--color-dark-line);
+  margin-top: 5px;
+}
+
+.notifCard {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 7px 10px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.notifIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notifHeadRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifApp {
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.notifTime {
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+.notifBody {
+  font-size: 9.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* ---- Hero: two overlapping straight phones + floating badges ---- */
+.heroStack {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  height: 470px;
+}
+
+.floatBadge {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 7px 12px;
+  box-shadow: 0 10px 24px -14px rgba(40, 24, 10, 0.35);
+  white-space: nowrap;
+}
+
+.badgeNewLead {
+  top: 30px;
+  left: -66px;
+}
+
+.badgeWhatsApp {
+  top: 170px;
+  left: 200px;
+}
+
+.badgeTaskDue {
+  top: 400px;
+  left: -46px;
+}
+
+.miniShell {
+  position: absolute;
+  background: #fff;
+  border-radius: 34px;
+  padding: 6px 6px 8px;
+  width: 220px;
+  box-shadow:
+    0 24px 48px rgba(0, 9, 35, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.miniShellBack {
+  top: 15px;
+  left: 175px;
+  z-index: 1;
+}
+
+.miniShellFront {
+  top: 30px;
+  left: 0;
+  z-index: 2;
+  box-shadow:
+    0 24px 48px rgba(0, 9, 35, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.miniScreen {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.miniNotchPill {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 18px;
+  background: #000;
+  border-radius: 10px;
+  z-index: 6;
+}
+
+.miniNotchDot {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+  z-index: 6;
+}
+
+/* Back phone: dark profile header */
+.miniProfileHead {
+  background: var(--color-dark-bg);
+  padding: 12px 13px 14px;
+  color: #fff;
+}
+
+.miniStatusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 8px;
+  color: var(--color-dark-text-muted);
+  margin-bottom: 10px;
+}
+
+.miniProfileBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.miniProfileAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.miniProfileName {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.miniProfileMeta {
+  font-size: 8px;
+  color: var(--color-dark-text-muted);
+}
+
+.miniBody {
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.miniActionRow {
+  display: flex;
+  gap: 4px;
+}
+
+.miniActionBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 7.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+
+.miniSegmentRow {
+  display: flex;
+  gap: 3px;
+  background: #f3ede2;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.miniSegmentActive {
+  flex: 1;
+  text-align: center;
+  font-size: 7.5px;
+  font-weight: 600;
+  color: var(--color-dark-bg);
+  background: #fff;
+  border-radius: 4px;
+  padding: 3px 0;
+}
+
+.miniSegmentInactive {
+  flex: 1;
+  text-align: center;
+  font-size: 7.5px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  padding: 3px 0;
+}
+
+.miniActivityList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.miniActivityRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.miniActivityIcon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.miniActivityTitle {
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+.miniActivityMeta {
+  font-size: 7px;
+  color: var(--color-text-faint);
+}
+
+.miniFollowUp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-primary-tint);
+  border: 1px solid #f6c9ba;
+  border-radius: 7px;
+  padding: 5px 8px;
+}
+
+.miniFollowUpLabel {
+  font-size: 8px;
+  color: #c0503a;
+  font-weight: 600;
+}
+
+.miniFollowUpValue {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* Front phone: leads list */
+.miniListHead {
+  background: #fff;
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.miniListHeadRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miniListTitle {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.miniListBody {
+  background: var(--color-bg);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.miniLeadRow {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.miniLeadAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.miniLeadName {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.miniLeadMeta {
+  font-size: 7.5px;
+  color: var(--color-text-faint);
+}
+
+.miniLeadTag {
+  font-size: 7px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 5px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .heroStack {
+    width: 300px;
+    height: 370px;
+    margin: 0 auto;
+  }
+
+  .miniShell {
+    width: 165px;
+  }
+
+  .miniShellBack {
+    top: 11px;
+    left: 131px;
+  }
+
+  .miniShellFront {
+    top: 22px;
+    left: 0;
+  }
+
+  .floatBadge {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .badgeNewLead {
+    top: 22px;
+    left: -50px;
+  }
+
+  .badgeWhatsApp {
+    top: 127px;
+    left: 150px;
+  }
+
+  .badgeTaskDue {
+    top: 300px;
+    left: -35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shell {
+    width: 220px;
+  }
+}

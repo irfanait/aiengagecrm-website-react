@@ -19,6 +19,21 @@
   margin-bottom: 4px;
 }
 
+/* Align the accordion trigger row with the plain nav links' padding (13px 4px) — antd's
+   default header padding + expand-icon gutter otherwise indents "Features"/"Why AiEngage". */
+.collapseWrap :global(.ant-collapse-header) {
+  padding: 13px 4px !important;
+  align-items: center !important;
+}
+
+.collapseWrap :global(.ant-collapse-expand-icon) {
+  padding-inline-end: 6px !important;
+}
+
+.collapseWrap :global(.ant-collapse-content-box) {
+  padding: 0 !important;
+}
+
 .collapseHeader {
   display: flex;
   align-items: center;
@@ -26,6 +41,11 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
+}
+
+.nestedWrap {
+  padding-left: 10px;
+  border-left: 1px solid var(--color-border-light);
 }
 
 .catFeatureLink {

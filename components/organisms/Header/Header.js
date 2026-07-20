@@ -7,6 +7,7 @@ import Icon from '../../atoms/Icon/Icon';
 import Button from '../../atoms/Button/Button';
 import Container from '../../common/Container/Container';
 import MegaMenu from '../MegaMenu/MegaMenu';
+import NavDropdown from '../NavDropdown/NavDropdown';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import { NAV_LINKS } from '../../../data/navLinks';
 import { CTA_LINKS } from '../../../utils/constants';
@@ -14,7 +15,7 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [openKey, setOpenKey] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const closeTimer = useRef(null);
 
@@ -25,19 +26,19 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const openMenu = () => {
+  const openMenu = (key) => {
     clearTimeout(closeTimer.current);
-    setMenuOpen(true);
+    setOpenKey(key);
   };
 
   const closeMenu = () => {
     clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setMenuOpen(false), 180);
+    closeTimer.current = setTimeout(() => setOpenKey(null), 180);
   };
 
   const closeMenuNow = () => {
     clearTimeout(closeTimer.current);
-    setMenuOpen(false);
+    setOpenKey(null);
   };
 
   useEffect(() => () => clearTimeout(closeTimer.current), []);
@@ -46,28 +47,63 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <Container className={styles.bar}>
         <Link href="/" className={styles.logo}>
-          <Image src="/brand/logo.svg" alt="AiEngage CRM" width={150} height={37} className={styles.logoImg} priority />
+          <Image src="/brand/logo.svg" alt="AiEngage CRM" width={180} height={44} className={styles.logoImg} priority />
         </Link>
 
         <nav className={styles.nav}>
-          {NAV_LINKS.map((link) =>
-            link.isMegaMenuTrigger ? (
-              <div key={link.label} onMouseEnter={openMenu} onMouseLeave={closeMenu}>
-                <Link
-                  href={link.href}
-                  className={`${styles.navLink} ${styles.navTrigger} ${menuOpen ? styles.navTriggerActive : ''}`}
-                  onClick={closeMenuNow}
+          {NAV_LINKS.map((link) => {
+            if (link.isMegaMenuTrigger) {
+              const isOpen = openKey === link.label;
+              return (
+                <div key={link.label} onMouseEnter={() => openMenu(link.label)} onMouseLeave={closeMenu}>
+                  <Link
+                    href={link.href}
+                    className={`${styles.navLink} ${styles.navTrigger} ${isOpen ? styles.navTriggerActive : ''}`}
+                    onClick={closeMenuNow}
+                  >
+                    {link.label}
+                    <Icon name="keyboard_arrow_down" size={17} className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ''}`} />
+                  </Link>
+                  {isOpen && <MegaMenu onMouseEnter={() => openMenu(link.label)} onMouseLeave={closeMenu} onNavigate={closeMenuNow} />}
+                </div>
+              );
+            }
+
+            if (link.isDropdownTrigger) {
+              const isOpen = openKey === link.label;
+              return (
+                <div
+                  key={link.label}
+                  className={styles.navTriggerWrap}
+                  onMouseEnter={() => openMenu(link.label)}
+                  onMouseLeave={closeMenu}
                 >
-                  {link.label}
-                  <Icon name="keyboard_arrow_down" size={17} className={`${styles.chevron} ${menuOpen ? styles.chevronOpen : ''}`} />
-                </Link>
-              </div>
-            ) : (
+                  <Link
+                    href={link.href}
+                    className={`${styles.navLink} ${styles.navTrigger} ${isOpen ? styles.navTriggerActive : ''}`}
+                    onClick={closeMenuNow}
+                  >
+                    {link.label}
+                    <Icon name="keyboard_arrow_down" size={17} className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ''}`} />
+                  </Link>
+                  {isOpen && (
+                    <NavDropdown
+                      items={link.dropdownItems}
+                      onMouseEnter={() => openMenu(link.label)}
+                      onMouseLeave={closeMenu}
+                      onNavigate={closeMenuNow}
+                    />
+                  )}
+                </div>
+              );
+            }
+
+            return (
               <Link key={link.label} href={link.href} className={styles.navLink} onClick={closeMenuNow}>
                 {link.label}
               </Link>
-            )
-          )}
+            );
+          })}
         </nav>
 
         <div className={styles.actions}>
@@ -86,8 +122,6 @@ export default function Header() {
             <Icon name="menu" size={22} />
           </button>
         </div>
-
-        {menuOpen && <MegaMenu onMouseEnter={openMenu} onMouseLeave={closeMenu} onNavigate={closeMenuNow} />}
       </Container>
 
       <MobileMenu open={drawerOpen} onClose={() => setDrawerOpen(false)} />

@@ -19,15 +19,72 @@
 
 .content {
   flex: 1;
+  min-width: 0;
+}
+
+.carousel {
+  margin-bottom: 8px;
+}
+
+.carousel :global(.slick-dots) {
+  position: static !important;
+  bottom: auto !important;
+  margin: 28px 0 0 !important;
+  justify-content: flex-start !important;
+}
+
+.carousel :global(.slick-dots li) {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 4px 0 0 !important;
+}
+
+.carousel :global(.slick-dots li button) {
+  width: 8px !important;
+  height: 8px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: var(--color-border-dashed) !important;
+  opacity: 1 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+}
+
+.carousel :global(.slick-dots li button::before),
+.carousel :global(.slick-dots li button::after) {
+  display: none !important;
+}
+
+.carousel :global(.slick-dots li.slick-active button) {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--color-primary) !important;
+}
+
+.slide {
+  padding-right: 8px;
+}
+
+.quoteIcon {
+  margin-bottom: 18px;
 }
 
 .quote {
-  margin: 0 0 32px;
+  margin: 0 0 24px;
   font-size: clamp(20px, 2.4vw + 12px, 30px);
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.6px;
   color: var(--color-text);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -41,14 +98,18 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: var(--color-dark-bg);
-  color: #fff;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
   flex-shrink: 0;
+  background: var(--color-dark-bg);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .name {
@@ -66,13 +127,21 @@
 }
 
 .stats {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 20px;
+  padding-top: 20px;
+  margin-top: 12px;
+  border-top: 1px solid var(--color-border-light);
   font-size: 13px;
   font-weight: 500;
   color: var(--color-text-subtle);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .statValue {
@@ -96,7 +165,6 @@
   }
 
   .stats {
-    margin-left: 0;
     width: 100%;
     flex-wrap: wrap;
   }

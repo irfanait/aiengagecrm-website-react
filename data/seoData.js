@@ -21,56 +21,72 @@ export const seoData = {
     path: '/whatsapp',
     title: 'WhatsApp Business CRM | Shared Inbox, Broadcast & AI Agent | AiEngage',
     description:
-      'Turn WhatsApp into your busiest sales channel — one shared inbox, multiple numbers, broadcasts, automation, analytics and a 24/7 AI Agent, inside AiEngage CRM.',
+      'WhatsApp for smarter sales and stronger customer connections — shared team inbox, multiple numbers, broadcasts, automation, flows, segmentation and a 24/7 AI Agent, inside AiEngage CRM.',
     keywords: ['WhatsApp CRM', 'WhatsApp Business API', 'WhatsApp automation', 'WhatsApp AI agent'],
     image: '/og/whatsapp.png',
   },
-  whatsappTeamInbox: {
-    path: '/whatsapp/shared-inbox',
-    title: 'WhatsApp Team Inbox | Shared Inbox for Sales Teams | AiEngage CRM',
+  multichannelCommunication: {
+    path: '/multichannel-communication',
+    title: 'Multichannel Communication CRM | Email, Calling & WhatsApp | AiEngage',
     description:
-      'One shared WhatsApp inbox for your whole team. Assign chats to the right rep, leave private notes, and make sure no customer is ever left waiting.',
-    keywords: ['WhatsApp shared inbox', 'WhatsApp team inbox', 'WhatsApp collaboration'],
-    image: '/og/whatsapp-team-inbox.png',
+      'Keep every call, email, WhatsApp chat, and follow-up connected in one CRM — mass email, built-in calling, templates, automated follow-ups and AI sentiment analysis.',
+    keywords: ['multichannel communication', 'email and calling CRM', 'unified customer communication', 'communication timeline'],
+    image: '/og/multichannel-communication.png',
   },
-  whatsappNumbers: {
-    path: '/whatsapp/numbers',
-    title: 'Multiple WhatsApp Numbers | Manage Every Team On WhatsApp | AiEngage CRM',
+  customerManagement: {
+    path: '/customer-management',
+    title: 'Customer Management CRM | Contacts, Segments & 360° Profiles | AiEngage',
     description:
-      'Run separate WhatsApp numbers for sales, support and different branches — each with its own inbox, team and automations, managed from one AiEngage account.',
-    keywords: ['multiple WhatsApp numbers', 'WhatsApp business numbers', 'WhatsApp API numbers'],
-    image: '/og/whatsapp-numbers.png',
+      'Manage every contact, customer segment, 360° profile, and interaction timeline from one connected CRM. Centralize customer data and personalize every conversation.',
+    keywords: ['customer management software', 'contact management CRM', 'customer segments', '360 customer profile', 'customer timeline'],
+    image: '/og/customer-management.png',
   },
-  whatsappBroadcast: {
-    path: '/whatsapp/broadcast',
-    title: 'WhatsApp Broadcast Messaging | Reach Thousands Instantly | AiEngage CRM',
+  leadManagement: {
+    path: '/lead-management',
+    title: 'Lead Management Software | Capture, Assign & Score Leads | AiEngage',
     description:
-      'Send approved WhatsApp template messages to your whole audience — offers, launches, reminders and updates — then track who received, read and replied.',
-    keywords: ['WhatsApp broadcast', 'WhatsApp bulk messaging', 'WhatsApp campaigns'],
-    image: '/og/whatsapp-broadcast.png',
+      'Capture, assign, and convert every lead faster — lead capture forms, automatic assignment, AI lead scoring, Meta & Google Ads sync, round-robin routing and AI lead qualification.',
+    keywords: ['lead management software', 'lead capture forms', 'lead assignment', 'lead scoring', 'round robin lead distribution'],
+    image: '/og/lead-management.png',
   },
-  whatsappAutomation: {
-    path: '/whatsapp/automation',
-    title: 'WhatsApp Automation | Automated Follow-Ups & Workflows | AiEngage CRM',
+  salesPipeline: {
+    path: '/sales-pipeline',
+    title: 'Sales Pipeline Software | Deal, Task & Payment Tracking | AiEngage',
     description:
-      'Trigger WhatsApp messages the moment something happens — a new lead, a booked meeting, a pending payment. Set it once and let AiEngage handle every follow-up.',
-    keywords: ['WhatsApp automation', 'WhatsApp workflows', 'automated WhatsApp follow-up'],
-    image: '/og/whatsapp-automation.png',
+      'Manage every deal from enquiry to closure — custom sales pipelines, deal management, task and follow-up tracking, payment tracking, product catalog, stage transition rules and AI sales forecasting.',
+    keywords: ['sales pipeline software', 'deal management CRM', 'sales forecasting', 'kanban sales pipeline', 'payment tracking CRM'],
+    image: '/og/sales-pipeline.png',
   },
-  whatsappAnalytics: {
-    path: '/whatsapp/analytics',
-    title: 'WhatsApp Analytics & Reporting | Track Team Performance | AiEngage CRM',
+  marketingCampaigns: {
+    path: '/marketing-campaigns',
+    title: 'Marketing Campaigns Software | Email, WhatsApp & AI | AiEngage',
     description:
-      "Track delivery, read and response rates, measure how fast your team replies, and see which campaigns and agents drive the most conversations.",
-    keywords: ['WhatsApp analytics', 'WhatsApp reporting', 'WhatsApp performance tracking'],
-    image: '/og/whatsapp-analytics.png',
+      'Create, send, and track marketing campaigns from one place — email campaigns, WhatsApp campaigns, an AI campaign builder and cross-channel campaign insights.',
+    keywords: ['marketing campaign software', 'email marketing CRM', 'WhatsApp marketing campaigns', 'AI campaign builder', 'campaign analytics'],
+    image: '/og/marketing-campaigns.png',
   },
-  whatsappAiAgent: {
-    path: '/whatsapp/ai-agent',
-    title: 'AI Agent for WhatsApp | 24/7 AI Sales Rep | AiEngage CRM',
+  automation: {
+    path: '/automation',
+    title: 'Automation Software | Workflows, Email & WhatsApp | AiEngage',
     description:
-      'The AI Agent answers inquiries, asks your qualifying questions, marks leads qualified and books meetings automatically — all on WhatsApp, all on its own.',
-    keywords: ['WhatsApp AI agent', 'AI chatbot WhatsApp', 'AI lead qualification'],
-    image: '/og/whatsapp-ai-agent.png',
+      'Automate routine communication, tasks, lead journeys, and deal actions — workflow automation, email and WhatsApp automation, appointment reminders, lead nurturing and AI-powered next-best-actions.',
+    keywords: ['CRM automation', 'workflow automation software', 'email automation', 'WhatsApp automation', 'lead nurturing automation'],
+    image: '/og/automation.png',
+  },
+  calling: {
+    path: '/calling',
+    title: 'Built-In Calling Software | Call, Record & Track | AiEngage',
+    description:
+      'Bring all your business calls into one CRM — multi-country business numbers, smart call routing, one-click calling, call recording and transcription, and calling analytics.',
+    keywords: ['CRM calling software', 'built-in calling', 'call recording CRM', 'call routing', 'business phone numbers'],
+    image: '/og/calling.png',
+  },
+  mobileApp: {
+    path: '/mobile-app',
+    title: 'Mobile CRM App | Android & iOS | AiEngage',
+    description:
+      'AiEngage mobile app gives your team access to leads, customers, tasks, follow-ups, chats, and sales activity while they are away from their desk — Android, iOS and instant push notifications.',
+    keywords: ['mobile CRM app', 'Android CRM app', 'iOS CRM app', 'CRM push notifications', 'sales app'],
+    image: '/og/mobile-app.png',
   },
 };

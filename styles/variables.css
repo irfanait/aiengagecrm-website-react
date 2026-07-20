@@ -29,17 +29,17 @@
   --color-divider: #e0d6c6;
   --color-dot: #c9bca9;
 
-  /* ---- Dark sections ---- */
+  /* ---- Dark sections (navy) ---- */
   --color-dark-bg: #000923;
   --color-dark-bg-alt: #000923;
-  --color-dark-card: #332414;
-  --color-dark-border: #362e24;
-  --color-dark-border-alt: #3a3226;
-  --color-dark-border-strong: #4a4034;
+  --color-dark-card: #0f1b3a;
+  --color-dark-border: #1b2a4d;
+  --color-dark-border-alt: #22335c;
+  --color-dark-border-strong: #2a3a5e;
   --color-dark-text: #faf7f1;
-  --color-dark-text-muted: #a99c8c;
-  --color-dark-text-subtle: #877a6c;
-  --color-dark-line: #c9bca9;
+  --color-dark-text-muted: #98a3be;
+  --color-dark-text-subtle: #7c88a6;
+  --color-dark-line: #c2cad9;
 
   /* ---- Semantic accents ---- */
   --color-green: #1faf64;
@@ -59,6 +59,7 @@
   --color-yellow-tint: #fffbe6;
   --color-yellow-border: #f5e9b8;
   --color-yellow-text: #8a7a32;
+  --color-yellow-icon: #c79a18;
 
   /* ---- Radii ---- */
   --radius-pill: 999px;
@@ -78,7 +79,7 @@
   --shadow-fab: 0 14px 30px -10px var(--color-primary-shadow);
 
   /* ---- Layout ---- */
-  --container-max: 1280px;
+  --container-max: 1360px;
   --container-pad: 40px;
   --header-height: 78px;
 

@@ -1,0 +1,631 @@
+/* Page-specific mock visuals for Calling. Shared card/panel/avatar/stat/tagPill utility
+   classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.headRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+
+.headIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.headTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.headMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+}
+
+/* Connected numbers grid */
+.numberGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.numberCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 11px 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.numberCardActive {
+  background: var(--color-primary-tint);
+  border: 1.5px solid #ff9f80;
+}
+
+.numberFlag {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.numberName {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.numberMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.numberMetaActive {
+  font-size: 10px;
+  color: var(--color-primary-hover);
+  font-weight: 600;
+}
+
+.ringIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.darkRow {
+  margin-top: 14px;
+  background: var(--color-dark-bg);
+  border-radius: 12px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.darkRowIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.darkRowTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.darkRowMeta {
+  font-size: 10px;
+  color: var(--color-dark-text-muted);
+}
+
+.darkRowTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-green);
+  background: #0e2a1c;
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+}
+
+/* Provider chip row */
+.chipRow {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 13px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chipDashed {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-primary-tint);
+  border: 1px dashed #ff9f80;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Table (numbers list / leads list) */
+.table {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRowHot {
+  background: #fff7f3;
+}
+
+.tableCellStrong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.footerRow {
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 10px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* Call timeline stat grid */
+.statGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.statBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+
+.statBoxLabel {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.statBoxValue {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.transcriptBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 12px 13px;
+}
+
+.transcriptHead {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.transcriptLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.transcriptLine {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.transcriptFlag {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  background: var(--color-yellow-tint);
+  border-radius: 7px;
+  padding: 6px 9px;
+}
+
+.actionRow {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 9px;
+  padding: 8px;
+}
+
+/* Ring type toggle */
+.toggleRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.toggleActive {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 9px;
+  padding: 9px;
+}
+
+.toggleInactive {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  padding: 9px;
+}
+
+.smallLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.agentRow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.agentIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.agentName {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.agentMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.dotOnline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-green);
+  flex-shrink: 0;
+}
+
+/* One-click calling mini cards */
+.miniCardRow {
+  margin-top: 12px;
+  display: flex;
+  gap: 9px;
+}
+
+.miniCard {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 11px;
+}
+
+.miniCardHead {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+
+.miniCardTag {
+  font-size: 10px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.miniCardName {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.miniCardMeta {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Player bar (call recording) */
+.playerRow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 13px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.playIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.playerTrack {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--color-border-light);
+  position: relative;
+}
+
+.playerFill {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--color-primary);
+}
+
+.playerKnob {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+.playerTimes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.speedTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: #f3ede2;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* Analytics bar chart */
+.chartCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.chartHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.chartHeadLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.chartHeadMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  height: 78px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.barLabel {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.resultRow {
+  display: flex;
+  gap: 8px;
+}
+
+.resultBlock {
+  flex: 1;
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+
+.resultLabel {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.resultValue {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Calling + CRM unified timeline */
+.unifiedHead {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #fff;
+}
+
+.unifiedBody {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.unifiedRow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unifiedIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.unifiedTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.unifiedMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.unifiedTime {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.darkStatRow {
+  display: flex;
+  gap: 9px;
+}
+
+.darkStatBlock {
+  flex: 1;
+  background: var(--color-dark-bg);
+  border-radius: 11px;
+  padding: 10px 12px;
+}
+
+.darkStatLabel {
+  font-size: 9px;
+  color: var(--color-dark-text-muted);
+  font-weight: 600;
+}
+
+.darkStatValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .numberGrid {
+    grid-template-columns: 1fr;
+  }
+}

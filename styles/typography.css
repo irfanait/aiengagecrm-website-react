@@ -68,6 +68,14 @@
   color: var(--color-text-muted);
 }
 
+.textAccent {
+  color: var(--color-primary);
+}
+
+.textAccentDark {
+  color: var(--color-primary-dark-accent);
+}
+
 .highlight {
   position: relative;
   white-space: nowrap;

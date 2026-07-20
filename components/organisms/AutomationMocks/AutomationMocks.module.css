@@ -1,0 +1,601 @@
+/* Page-specific mock visuals for Automation. Shared card/panel/avatar/stat/journey utility
+   classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.vLine {
+  width: 2px;
+  height: 17px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.branchConnectors {
+  width: 72%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.branchRow {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.branchCard {
+  flex: 1;
+  border-radius: 11px;
+  border: 1px solid var(--color-border-light);
+  padding: 11px;
+}
+
+.branchCardHead {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+
+.branchTag {
+  font-size: 8.5px;
+  font-weight: 700;
+}
+
+.branchLabel {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.triggerNode {
+  width: 100%;
+  background: var(--color-dark-bg);
+  border-radius: 11px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.triggerIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-2xs);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.triggerTag {
+  font-size: 9px;
+  color: var(--color-dark-text-muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.triggerLabel {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.conditionNode {
+  width: 100%;
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+  border-radius: 11px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.conditionLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.actionNode {
+  width: 100%;
+  background: var(--color-green-tint);
+  border: 1px solid #bfe6cf;
+  border-radius: 11px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.actionLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.miniRow {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 11px;
+}
+
+.footerMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+}
+
+.footerAction {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Numbered timeline (email journeys) */
+.numTimeline {
+  position: relative;
+  padding-left: 26px;
+}
+
+.numTimelineLine {
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  bottom: 14px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.numTimelineStep {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.numTimelineStep:last-child {
+  margin-bottom: 0;
+}
+
+.numBadge {
+  position: absolute;
+  left: -26px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.numCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 11px 13px;
+}
+
+.numCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.numCardTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.numCardMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+  margin-top: 3px;
+}
+
+.statBlockWhite {
+  background: #fff;
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+
+/* Calendar / appointment reminders */
+.calendarHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.calendarTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.slotRow {
+  display: flex;
+  gap: 11px;
+  align-items: stretch;
+}
+
+.slotTime {
+  width: 48px;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 10px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+  padding-top: 11px;
+}
+
+.slotTimeActive {
+  color: var(--color-primary-hover);
+  font-weight: 700;
+}
+
+.slotCard {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 10px 12px;
+  opacity: 0.6;
+}
+
+.slotCardTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.slotCardHighlight {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 11px;
+  padding: 11px 13px;
+  box-shadow: var(--shadow-cta);
+  opacity: 1;
+}
+
+.slotCardHeadRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.slotCardHeadTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.slotCardPerson {
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slotChecklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slotCheckRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.remindRow {
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.remindLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+}
+
+.statBanner {
+  margin-top: 12px;
+  background: var(--color-green-tint);
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+}
+
+/* Lead nurturing / onboarding progress */
+.scoreBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.scoreHeadRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.scoreLabel {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.scoreValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+}
+
+.scoreDelta {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.progressTrack {
+  height: 8px;
+  border-radius: 5px;
+  background: var(--color-border-light);
+}
+
+.progressFill {
+  height: 8px;
+  border-radius: 5px;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stepRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.stepRowDone {
+  background: #f0f7f2;
+  border: 1px solid #c7e6d4;
+}
+
+.stepRowActive {
+  background: var(--color-primary-tint);
+  border: 1.5px solid #ff9f80;
+}
+
+.stepRowPending {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  opacity: 0.6;
+}
+
+.stepTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.stepStatus {
+  font-size: 9.5px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.flagBanner {
+  margin-top: 14px;
+  background: var(--color-dark-bg);
+  border-radius: 10px;
+  padding: 10px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.flagText {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Deal stage automation */
+.stageRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.stagePill {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  background: var(--color-bg);
+  border-radius: 6px;
+  padding: 5px 9px;
+}
+
+.stagePillWon {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-whatsapp);
+  border-radius: 6px;
+  padding: 5px 9px;
+}
+
+.triggeredLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+}
+
+.dealActionRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.dealActionIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-2xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dealActionLabel {
+  flex: 1;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+/* AI-powered automation */
+.aiHeadRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.aiHeadIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-2xs);
+  background: var(--color-purple-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aiHeadTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.aiCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px 13px;
+}
+
+.aiCardHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 8px;
+}
+
+.aiCardName {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aiCardTag {
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 3px 8px;
+  flex-shrink: 0;
+}
+
+.aiCardText {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+
+.aiCardActions {
+  display: flex;
+  gap: 7px;
+}
+
+.aiBtnPrimary {
+  flex: 1;
+  text-align: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 7px;
+}
+
+.aiBtnSecondary {
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 10.5px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 7px 12px;
+}
+
+.aiMiniRow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.aiMiniLabel {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.aiMiniTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  flex-shrink: 0;
+}

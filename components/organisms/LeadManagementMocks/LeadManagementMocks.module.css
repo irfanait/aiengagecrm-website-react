@@ -1,0 +1,383 @@
+/* Page-specific mock visuals for Lead Management. Reuses avatarCircle/numRow/condRow/audienceCard/
+   syncCard/crmSyncCard from WhatsAppMocks.module.css and sentimentRow/sentimentTag from
+   MultichannelMocks.module.css rather than duplicating them. */
+
+.notifyHead {
+  background: var(--color-dark-bg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notifyIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notifyTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.notifyTag {
+  margin-left: auto;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-dark-bg);
+  background: #4ed08a;
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  flex-shrink: 0;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.cardHeadTitle {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* Lead capture form preview */
+.formField {
+  border: 1px solid var(--color-border-light);
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  color: var(--color-text);
+}
+
+.formFieldRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-muted);
+}
+
+.formSubmit {
+  background: var(--color-primary);
+  border-radius: 9px;
+  padding: 11px;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.flowArrowCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.darkResultBar {
+  background: var(--color-dark-bg);
+  border-radius: 12px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.darkResultIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.darkResultLabel {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Assignment rule */
+.ruleBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 9px;
+}
+
+.ruleBoxLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.ruleTagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11.5px;
+}
+
+.ruleTag {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-weight: 600;
+}
+
+.ruleTagJoin {
+  color: var(--color-dot);
+  align-self: center;
+}
+
+.assignBox {
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.assignBoxLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary-hover);
+  margin-bottom: 8px;
+}
+
+.ruleLogRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+/* Lead scoring */
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px 13px;
+}
+
+.scoreName {
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.scoreValue {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.signalsLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.signalRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.signalLabel {
+  width: 80px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.signalTrack {
+  flex: 1;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--color-border-light);
+}
+
+.signalFill {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--color-primary);
+}
+
+/* Lead sources donut */
+.donut {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.donutCenter {
+  position: absolute;
+  inset: 26px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donutPercent {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.donutCenterLabel {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  flex: 1;
+  font-weight: 500;
+}
+
+.legendValue {
+  font-weight: 700;
+}
+
+/* Import leads mapping */
+.mapRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mapField {
+  flex: 1;
+  font-size: 11.5px;
+  font-weight: 500;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 8px 11px;
+}
+
+.mapFieldTarget {
+  font-weight: 600;
+  background: var(--color-primary-tint);
+  border-color: var(--color-primary-tint-border);
+}
+
+/* Round-robin */
+.rotationRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.rotationAvatarCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.rotationAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rotationName {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.rotationLogRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-bg);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 11.5px;
+}
+
+/* AI lead qualification */
+.qualCard {
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 13px 15px;
+}
+
+.qualCardAlert {
+  border-color: #ffdcc4;
+  background: #fff9f5;
+}
+
+.qualCardHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.qualCardName {
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.qualTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+}
+
+.qualDesc {
+  font-size: 10.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.45;
+}

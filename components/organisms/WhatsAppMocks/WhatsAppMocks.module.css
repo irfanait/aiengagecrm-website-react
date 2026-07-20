@@ -15,9 +15,21 @@
   padding: 22px;
 }
 
+/* Feature-section mocks fill their column (matches the design source, which gives them
+   no fixed width at all) instead of sitting at the hero's fixed 400px. Kept as a separate
+   modifier so the hero's ChatMock is unaffected. Source order after .card makes it win.
+   flex-shrink:1 overrides .card's flex-shrink:0 — needed when this sits next to a fixed-width
+   side panel in a flex row (e.g. WhatsApp Integration / Emails mocks), so it shrinks to share
+   the row instead of overflowing past it. */
+.cardFluid {
+  width: 100%;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
 .narrow {
-  width: 420px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 380px;
 }
 
 /* WhatsApp chat header */
@@ -359,9 +371,423 @@
   color: var(--color-text-secondary);
 }
 
+.cardTinted {
+  background: var(--color-bg);
+}
+
+/* Panel header row shared by team-inbox / numbers / broadcast mocks */
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.panelTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Team inbox's header sits directly on the (unpadded) card, so — unlike .panelHead, which
+   relies on a padded parent — it needs its own inset or the rounded corner clips the text. */
+.inboxHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.pillGreen {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+  background: var(--color-green-tint);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+/* Team inbox rows */
+.inboxList {
+  display: flex;
+  flex-direction: column;
+}
+
+.inboxRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.inboxRowHot {
+  background: #fff7f3;
+}
+
+.avatarCircle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.rowName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rowPreview {
+  font-size: 11.5px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tagPill {
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+  flex-shrink: 0;
+}
+
+.noteBox {
+  margin: 0 18px 18px;
+  background: var(--color-yellow-tint);
+  border: 1px solid var(--color-yellow-border);
+  border-radius: 12px;
+  padding: 11px 13px;
+  display: flex;
+  gap: 9px;
+}
+
+.noteLabel {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-yellow-icon);
+  margin-bottom: 2px;
+}
+
+.noteText {
+  font-size: 11.5px;
+  color: var(--color-yellow-text);
+  line-height: 1.5;
+}
+
+.dotOnline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-green);
+  flex-shrink: 0;
+}
+
+/* Chat management filters + rows */
+.filterRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.filterActive {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: 4px 11px;
+}
+
+.filterChip {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 4px 11px;
+}
+
+.miniTag {
+  font-size: 9.5px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2px 7px;
+}
+
+.priorityTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 3px 8px;
+  flex-shrink: 0;
+}
+
+/* Broadcast */
+.broadcastActions {
+  margin-top: 9px;
+  display: flex;
+  gap: 6px;
+}
+
+.broadcastAction {
+  flex: 1;
+  text-align: center;
+  background: #fff;
+  border-radius: 7px;
+  padding: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+}
+
+.chipRow {
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 9.5px;
+  font-weight: 600;
+}
+
+/* One-to-one messaging */
+.threadCard {
+  flex: 1;
+  background: var(--color-whatsapp-bubble-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  box-shadow: var(--shadow-panel);
+}
+
+.crmCard {
+  width: 170px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: var(--shadow-panel);
+}
+
+.crmHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.crmMetaList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+}
+
+.crmMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Automation journey */
+.journeyStep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.journeyIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-2xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.journeyLabel {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.journeyLine {
+  display: block;
+  width: 2px;
+  height: 16px;
+  background: var(--color-border);
+  margin-left: 17px;
+}
+
+/* Flows & forms */
+.flowFrame {
+  width: 100%;
+  max-width: 360px;
+  background: var(--color-whatsapp-bubble-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-panel);
+}
+
+.flowFormCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.flowField {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.flowSubmit {
+  background: var(--color-whatsapp);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.flowCaption {
+  font-size: 9px;
+  color: #7a9b6e;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Segmentation */
+.condRow {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+}
+
+.condTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+}
+
+.andTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+  background: var(--color-green-tint);
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.audienceCard {
+  margin-top: 16px;
+  background: var(--color-dark-bg);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* CRM integration */
+.syncCard {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.syncIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-2xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.syncStatus {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+}
+
+.crmSyncCard {
+  background: var(--color-dark-bg);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crmSyncIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.liveTag {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-green);
+  background: var(--color-dark-card);
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+}
+
+.chartPanel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px 14px;
+}
+
 @media (max-width: 480px) {
   .card,
   .narrow {
+    width: 100%;
+  }
+
+  .threadCard,
+  .crmCard {
     width: 100%;
   }
 }

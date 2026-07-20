@@ -9,9 +9,11 @@ import { MEGA_MENU } from '../../../data/megaMenu';
 import { CTA_LINKS } from '../../../utils/constants';
 import styles from './MobileMenu.module.css';
 
-/** Mobile navigation: Ant Design Drawer + Collapse accordion mirroring the desktop mega menu. */
+/** Mobile navigation: Ant Design Drawer + Collapse accordion mirroring the desktop mega menu.
+ * Renders NAV_LINKS in the same order as the desktop header — plain links stay plain links,
+ * "Features" and "Why AiEngage" become their own collapsed-by-default accordion panels. */
 export default function MobileMenu({ open, onClose }) {
-  const collapseItems = MEGA_MENU.map((cat) => ({
+  const featureCollapseItems = MEGA_MENU.map((cat) => ({
     key: cat.name,
     label: (
       <span className={styles.collapseHeader}>
@@ -37,15 +39,59 @@ export default function MobileMenu({ open, onClose }) {
   return (
     <Drawer title="Menu" placement="right" onClose={onClose} open={open} size={340}>
       <div className={styles.drawerBody}>
-        {NAV_LINKS.filter((l) => !l.isMegaMenuTrigger).map((link) => (
-          <Link key={link.label} href={link.href} className={styles.navLink} onClick={onClose}>
-            {link.label}
-          </Link>
-        ))}
+        {NAV_LINKS.map((link) => {
+          if (link.isMegaMenuTrigger) {
+            return (
+              <div key={link.label} className={styles.collapseWrap}>
+                <Collapse
+                  ghost
+                  items={[
+                    {
+                      key: link.label,
+                      label: <span className={styles.collapseHeader}>{link.label}</span>,
+                      children: (
+                        <div className={styles.nestedWrap}>
+                          <Collapse ghost items={featureCollapseItems} />
+                        </div>
+                      ),
+                    },
+                  ]}
+                />
+              </div>
+            );
+          }
 
-        <div className={styles.collapseWrap}>
-          <Collapse ghost items={collapseItems} />
-        </div>
+          if (link.isDropdownTrigger) {
+            return (
+              <div key={link.label} className={styles.collapseWrap}>
+                <Collapse
+                  ghost
+                  items={[
+                    {
+                      key: link.label,
+                      label: <span className={styles.collapseHeader}>{link.label}</span>,
+                      children: (
+                        <div>
+                          {link.dropdownItems.map((item) => (
+                            <Link key={item.label} href={item.href} className={styles.navLink} onClick={onClose}>
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ),
+                    },
+                  ]}
+                />
+              </div>
+            );
+          }
+
+          return (
+            <Link key={link.label} href={link.href} className={styles.navLink} onClick={onClose}>
+              {link.label}
+            </Link>
+          );
+        })}
 
         <div className={styles.actions}>
           <Button href={CTA_LINKS.tryFree} variant="outlineDark" onClick={onClose}>

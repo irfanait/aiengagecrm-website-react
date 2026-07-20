@@ -31,7 +31,7 @@
 }
 
 .logoImg {
-  height: 34px;
+  height: 44px;
   width: auto;
 }
 
@@ -48,8 +48,9 @@
   color: var(--color-text-secondary);
   font-size: 14px;
   font-weight: 500;
-  padding: 10px 14px;
+  padding: 10px 11px;
   border-radius: 8px;
+  white-space: nowrap;
   transition: color 0.15s ease;
 }
 
@@ -61,6 +62,10 @@
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.navTriggerWrap {
+  position: relative;
 }
 
 .navTriggerActive {
@@ -130,6 +135,6 @@
   }
 
   .logoImg {
-    height: 28px;
+    height: 34px;
   }
 }
