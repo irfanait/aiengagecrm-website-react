@@ -1,0 +1,447 @@
+/* Page-specific mock visuals for Reports & Analytics. Shared card/panel/avatar/stat/tagPill
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.headTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.headChip {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headChipRow {
+  display: flex;
+  gap: 6px;
+}
+
+.headChipDashed {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-primary-tint);
+  border: 1px dashed #ff9f80;
+  border-radius: 7px;
+  padding: 4px 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Stat grid */
+.statGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.statGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-top: 11px;
+}
+
+.statBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 10px 11px;
+}
+
+.statBoxWhite {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+
+.statLabel {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.statDelta {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* Trend chart card */
+.chartCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 13px 14px;
+}
+
+.chartCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.chartCardTitle {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chartCardMeta {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.chartMonthRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+.chartLegendRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 9px;
+}
+
+.chartLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.5px;
+  color: var(--color-text-muted);
+}
+
+.legendSwatch {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Dual-panel row (line + donut) */
+.dualRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.dualPanel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 12px;
+}
+
+.dualPanelTitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.donutLegend {
+  font-size: 8.5px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.donutLegendRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legendDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.activityPanel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 11px 13px;
+}
+
+.activityTitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+}
+
+.activityDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activityTime {
+  color: var(--color-text-faint);
+  font-size: 9px;
+}
+
+/* Table */
+.table {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fbf8f2;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 10.5px;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRowTotal {
+  display: flex;
+  align-items: center;
+  padding: 11px 13px;
+  border-top: 2px solid var(--color-border);
+  font-size: 11px;
+  background: var(--color-dark-bg);
+}
+
+/* Funnel */
+.funnelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.funnelBar {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 9px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.funnelDrop {
+  font-size: 9px;
+  color: var(--color-text-faint);
+}
+
+.funnelLabel {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.funnelValue {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.darkFootRow {
+  margin-top: 14px;
+  background: var(--color-dark-bg);
+  border-radius: 11px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkFootLabel {
+  font-size: 10.5px;
+  color: var(--color-dark-text-muted);
+}
+
+.darkFootValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary-dark-accent);
+}
+
+/* Leaderboard */
+.repRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.repName {
+  font-weight: 600;
+}
+
+.repMeta {
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+/* KPI cards */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.kpiCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.kpiHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.kpiLabel {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.kpiBadgeUp {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+  background: var(--color-green-tint);
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.kpiBadgeDown {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #c0503a;
+  background: #fbe7e1;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.kpiValue {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.kpiTarget {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  margin: 5px 0 4px;
+}
+
+.kpiTrack {
+  height: 5px;
+  border-radius: 3px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.kpiFill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+/* Target meters */
+.meterGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.meterCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 13px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meterTitle {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* Chart library grid */
+.libGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.libCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 11px;
+}
+
+.libCardActive {
+  background: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 11px;
+}
+
+.libCardTitle {
+  font-size: 9.5px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.libCenter {
+  display: flex;
+  justify-content: center;
+}

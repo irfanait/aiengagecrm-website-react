@@ -1,0 +1,607 @@
+/* Page-specific mock visuals for Security & Compliance. Shared card/panel/avatar/tagPill
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.panelHead {
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg);
+}
+
+.panelHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panelHeadTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.panelHeadBtn {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 6px;
+  padding: 4px 9px;
+}
+
+.colLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.statGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.statGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.statBox {
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 11px;
+}
+
+.statLabel {
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 9px;
+  padding: 8px 10px;
+}
+
+.activityIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activityTitle {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.activityMeta {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.activityTime {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.footRow {
+  padding: 10px 15px;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg);
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.footRowSimple {
+  padding: 10px 15px;
+  border-top: 1px solid var(--color-border-light);
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+  background: #fff;
+}
+
+.viewAll {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* User roles table + side panel */
+.rolesRow {
+  display: flex;
+  gap: 12px;
+}
+
+.rolesTableCard {
+  flex: 1.6;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5px;
+}
+
+.userThead {
+  background: var(--color-bg);
+}
+
+.userTh {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--color-text-faint);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.userTr {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.userTrHighlight {
+  border-top: 1px solid var(--color-border-light);
+  background: #fff6f1;
+}
+
+.userTd {
+  padding: 8px 6px;
+}
+
+.userNameCell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.userEmail {
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+.roleChip {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 3px 7px;
+}
+
+.statusActive {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+}
+
+.statusInvited {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+}
+
+.assignCard {
+  width: 176px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-panel);
+  padding: 13px;
+}
+
+.assignHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.assignName {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.assignRole {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.permRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleOn {
+  width: 28px;
+  height: 16px;
+  border-radius: 99px;
+  background: var(--color-green);
+  position: relative;
+}
+
+.toggleOff {
+  width: 28px;
+  height: 16px;
+  border-radius: 99px;
+  background: var(--color-border-dashed);
+  position: relative;
+}
+
+.toggleKnobOn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.toggleKnobOff {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.saveRoleBtn {
+  margin-top: 13px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Audit log (dark) */
+.darkShell {
+  width: 95%;
+  background: #0b1530;
+  border: 1px solid var(--color-dark-border);
+  border-radius: 16px;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  left: 12px;
+}
+
+.darkHead {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.darkHeadTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.darkHeadTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.darkChip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.5px;
+  color: var(--color-dark-text-muted);
+  background: var(--color-dark-card);
+  border-radius: 7px;
+  padding: 5px 9px;
+}
+
+.darkFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.darkFilterActive {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #0b1530;
+  background: var(--color-primary-dark-accent);
+  border-radius: 99px;
+  padding: 3px 9px;
+}
+
+.darkFilterChip {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--color-dark-text-muted);
+  background: var(--color-dark-card);
+  border-radius: 99px;
+  padding: 3px 9px;
+}
+
+.logTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.logTh {
+  text-align: left;
+  padding: 8px 5px;
+  color: var(--color-dark-text-subtle);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.logTr {
+  border-top: 1px solid var(--color-dark-border);
+}
+
+.logTd {
+  padding: 7px 5px;
+  color: var(--color-dark-text-muted);
+}
+
+.logTdStrong {
+  padding: 7px 5px;
+  color: var(--color-dark-line);
+}
+
+.actionTag {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.darkFoot {
+  padding: 10px 15px;
+  border-top: 1px solid var(--color-dark-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkFootMeta {
+  font-size: 9px;
+  color: var(--color-dark-text-subtle);
+}
+
+.darkPageDots {
+  display: flex;
+  gap: 5px;
+}
+
+.darkPageDot {
+  font-size: 9px;
+  color: var(--color-dark-text-muted);
+  background: var(--color-dark-card);
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.darkPageDotActive {
+  font-size: 9px;
+  font-weight: 700;
+  color: #0b1530;
+  background: var(--color-primary-dark-accent);
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+/* Data backup */
+.backupStatRow {
+  margin-bottom: 12px;
+}
+
+.backupStatBox {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.backupTableCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.backupTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5px;
+}
+
+.backupThead {
+  background: var(--color-bg);
+}
+
+.backupTh {
+  text-align: left;
+  padding: 7px 11px;
+  color: var(--color-text-faint);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.backupTr {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.backupTd {
+  padding: 7px 5px;
+  color: var(--color-text-muted);
+}
+
+.backupTdStrong {
+  padding: 7px 11px;
+  font-weight: 600;
+}
+
+.statusTag {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 2px 7px;
+}
+
+.restoreBanner {
+  background: var(--color-dark-bg);
+  border-radius: 11px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.restoreLeft {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.restoreTitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.restoreMeta {
+  font-size: 8.5px;
+  color: var(--color-dark-text-muted);
+}
+
+.restoreBtn {
+  font-size: 9px;
+  font-weight: 700;
+  color: #0b1530;
+  background: var(--color-primary-dark-accent);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+/* Two-factor authentication */
+.methodRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.methodIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.methodTitle {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.methodMeta {
+  font-size: 9px;
+  color: var(--color-text-faint);
+}
+
+.methodOn {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+  background: var(--color-green-tint);
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+.methodOff {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  background: #f3ede2;
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+.enforcementCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.enforcementRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.enforcementRow:last-child {
+  border-bottom: none;
+}
+
+.enforcementName {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.enforcementActive {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+}
+
+.enforcementPending {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #c0503a;
+}

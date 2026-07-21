@@ -89,4 +89,44 @@ export const seoData = {
     keywords: ['mobile CRM app', 'Android CRM app', 'iOS CRM app', 'CRM push notifications', 'sales app'],
     image: '/og/mobile-app.png',
   },
+  dataManagement: {
+    path: '/data-management',
+    title: 'Data Management Software | Import, Forms & Audit Logs | AiEngage',
+    description:
+      'Import and export records, manage a product catalog and forms, track every change with audit logs, work in Sheet View, map imported fields, and clean up data with AI — all inside AiEngage CRM.',
+    keywords: ['CRM data management', 'CRM import export', 'CRM audit logs', 'CRM sheet view', 'AI data cleanup'],
+    image: '/og/data-management.png',
+  },
+  reportsAnalytics: {
+    path: '/reports-analytics',
+    title: 'Reports & Analytics Software | Dashboards & KPIs | AiEngage',
+    description:
+      'Real-time dashboards, sales and campaign reports, funnel and team performance tracking, KPI scorecards, target meters, and visual charts — all inside AiEngage CRM.',
+    keywords: ['CRM reports and analytics', 'sales dashboard software', 'funnel report', 'KPI tracking', 'CRM charts'],
+    image: '/og/reports-analytics.png',
+  },
+  integrations: {
+    path: '/integrations',
+    title: 'Integrations | Meta, Google, WhatsApp, Stripe & More | AiEngage',
+    description:
+      'Connect AiEngage CRM with Meta and Google Lead Ads, WhatsApp, Gmail, Plivo, Twilio, Stripe, Razorpay, Zapier, and your own systems via APIs and webhooks — all synced in real time.',
+    keywords: ['CRM integrations', 'Meta lead ads integration', 'WhatsApp CRM integration', 'Zapier CRM', 'CRM API and webhooks'],
+    image: '/og/integrations.png',
+  },
+  customization: {
+    path: '/customization',
+    title: 'CRM Customization | Fields, Modules, Roles & Branding | AiEngage',
+    description:
+      'Customize AiEngage CRM to fit your business — custom fields, custom modules, custom pipelines, role-based permissions, branding, custom tags, and saved custom views.',
+    keywords: ['CRM customization', 'custom fields CRM', 'custom modules', 'role-based CRM permissions', 'CRM branding'],
+    image: '/og/customization.png',
+  },
+  securityCompliance: {
+    path: '/security-compliance',
+    title: 'Security & Compliance | Roles, Audit Logs & Backup | AiEngage',
+    description:
+      'Manage customer data with role-based access control, full audit trails, reliable data backup, and two-factor authentication — built into AiEngage CRM.',
+    keywords: ['CRM security', 'role-based access control', 'CRM audit log', 'CRM data backup', 'two-factor authentication CRM'],
+    image: '/og/security-compliance.png',
+  },
 };

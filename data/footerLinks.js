@@ -8,7 +8,7 @@ export const FOOTER_COLUMNS = [
       { label: 'Sales Pipeline', href: '/sales-pipeline' },
       { label: 'Built-In Calling', href: '/calling' },
       { label: 'AI & Automation', href: '/automation' },
-      { label: 'Reports & Analytics', href: '#' },
+      { label: 'Reports & Analytics', href: '/reports-analytics' },
     ],
   },
   {

@@ -1,0 +1,251 @@
+/* Page-specific mock visuals for Integrations: the hero hub diagram and the data-sync dashboard.
+   Shared card/tagPill utility classes live in WhatsAppMocks.module.css. */
+
+.hubHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.hubTitle {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hubStage {
+  position: relative;
+  height: 250px;
+}
+
+.hubCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: var(--color-dark-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-shadow: 0 14px 30px -10px rgba(0, 9, 35, 0.5);
+  z-index: 2;
+}
+
+.hubCenterLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hubNode {
+  position: absolute;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 8px 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 3;
+}
+
+.hubNodeIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.hubNodeName {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.hubNodeStatus {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+}
+
+.hubNodeStatusAlert {
+  font-size: 8px;
+  font-weight: 700;
+  color: #c0503a;
+}
+
+/* Data sync dashboard */
+.syncPanel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  padding: 20px;
+}
+
+.syncHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.syncTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.syncChipRow {
+  display: flex;
+  gap: 8px;
+}
+
+.syncChip {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 5px 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.syncGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+.syncTable {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.syncTableHead {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fbf8f2;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.syncRow {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 11px;
+}
+
+.syncRow:last-child {
+  border-bottom: none;
+}
+
+.syncRowAlert {
+  background: #fff6f3;
+}
+
+.syncSourceIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.syncSourceIconAlert {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: #fbe7e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.syncSourceImg {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.syncStatGrid {
+  display: flex;
+  gap: 10px;
+}
+
+.syncStatBox {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  padding: 11px 13px;
+}
+
+.syncStatLabel {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.syncStatValue {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.syncActivityBox {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  padding: 13px 15px;
+}
+
+.syncActivityTitle {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+
+.syncActivityRow {
+  display: flex;
+  gap: 9px;
+}
+
+.syncActivityDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.syncActivityText {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.syncActivityTime {
+  font-size: 9px;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 900px) {
+  .syncGrid {
+    grid-template-columns: 1fr;
+  }
+}

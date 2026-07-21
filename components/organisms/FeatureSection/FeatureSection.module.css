@@ -7,6 +7,11 @@
   background: var(--color-bg-white);
 }
 
+.dark {
+  background: var(--color-dark-bg);
+  border-bottom-color: var(--color-dark-border);
+}
+
 .row {
   display: flex;
   gap: 60px;
@@ -34,6 +39,10 @@
   margin-bottom: 12px;
 }
 
+.eyebrowDark {
+  color: var(--color-primary-dark-accent);
+}
+
 .title {
   margin: 0 0 16px;
   font-size: clamp(24px, 2.6vw + 16px, 34px);
@@ -42,8 +51,16 @@
   letter-spacing: -1px;
 }
 
+.titleDark {
+  color: var(--color-dark-text);
+}
+
 .accent {
   color: var(--color-primary);
+}
+
+.accentDark {
+  color: var(--color-primary-dark-accent);
 }
 
 .leadDesc {
@@ -54,12 +71,20 @@
   color: var(--color-text);
 }
 
+.leadDescDark {
+  color: var(--color-dark-text);
+}
+
 .desc {
   margin: 0 0 14px;
   font-size: 15.5px;
   line-height: 1.7;
   font-weight: 300;
   color: var(--color-text-muted);
+}
+
+.descDark {
+  color: var(--color-dark-text-muted);
 }
 
 .desc:last-of-type {
@@ -88,6 +113,10 @@
   color: var(--color-text-faint);
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+.listHeadingDark {
+  color: var(--color-dark-text);
 }
 
 .listGrid {

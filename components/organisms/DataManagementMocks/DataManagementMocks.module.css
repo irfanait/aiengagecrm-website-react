@@ -1,0 +1,836 @@
+/* Page-specific mock visuals for Data Management. Shared card/panel/avatar/stat/tagPill
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.headTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.headMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+/* Toolbar (hero) */
+.toolbarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 11px;
+}
+
+.searchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+}
+
+.toolbarBtn {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbarBtnOutline {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbarBtnPrimary {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.selectionBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-primary-tint);
+  border: 1px solid #ffd9c9;
+  border-radius: 9px;
+  padding: 7px 11px;
+  margin-bottom: 11px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.selectionCount {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-primary-hover);
+}
+
+.selectionAction {
+  color: #b06a4a;
+}
+
+.selectionDelete {
+  margin-left: auto;
+  color: #c0503a;
+}
+
+/* Table */
+.table {
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 10px;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCellStrong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.tableCellMuted {
+  color: var(--color-text-muted);
+}
+
+.checkboxCol {
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.checkboxChecked {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxEmpty {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1.5px solid var(--color-border-dashed);
+  display: inline-block;
+}
+
+.paginationRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+.pageDots {
+  display: flex;
+  gap: 5px;
+}
+
+.pageDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: var(--color-text-muted);
+}
+
+.pageDotActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Import panel */
+.dropzone {
+  border: 1.5px dashed #ff9f80;
+  background: #fff7f3;
+  border-radius: 13px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.dropzoneHead {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 11px;
+}
+
+.dropzoneIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffe1d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dropzoneTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.dropzoneMeta {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.progressPct {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-whatsapp);
+}
+
+.progressTrack {
+  height: 6px;
+  border-radius: 4px;
+  background: #ffe1d6;
+}
+
+.progressFill {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--color-primary);
+}
+
+.statGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.statBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px;
+  text-align: center;
+}
+
+.statBoxAlert {
+  background: #fff6f3;
+  border: 1px solid #f6c9ba;
+}
+
+.statBoxValue {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.statBoxLabel {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.exportSection {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 13px;
+}
+
+.exportHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.exportChips {
+  display: flex;
+  gap: 6px;
+}
+
+.exportChipActive {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+
+.exportChip {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+
+.exportRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 9px;
+  padding: 8px 11px;
+}
+
+.exportRowLabel {
+  flex: 1;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.exportRowMeta {
+  font-size: 9px;
+  color: var(--color-text-faint);
+}
+
+/* Product catalog */
+.productHeadRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.darkBanner {
+  margin-top: 12px;
+  background: var(--color-dark-bg);
+  border-radius: 12px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.darkBannerIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.darkBannerTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.darkBannerMeta {
+  font-size: 9.5px;
+  color: var(--color-dark-text-muted);
+}
+
+.darkBannerTag {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-dark-bg);
+  background: var(--color-primary-dark-accent);
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+
+/* Forms builder */
+.formRow {
+  display: flex;
+  gap: 11px;
+}
+
+.fieldPalette {
+  width: 118px;
+  flex-shrink: 0;
+}
+
+.fieldPaletteLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.fieldChip {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 7px 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.fieldChipActive {
+  background: var(--color-primary-tint);
+  border: 1px dashed #ff9f80;
+  border-radius: 8px;
+  padding: 7px 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary-hover);
+}
+
+.formPreview {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.formPreviewTitle {
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+
+.formField {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.formFieldDragging {
+  background: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 6px 14px -6px rgba(244, 80, 10, 0.4);
+}
+
+.formFieldLabel {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.formFieldLabelDragging {
+  font-size: 8.5px;
+  color: var(--color-primary-hover);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.formFieldValue {
+  font-size: 10.5px;
+  color: var(--color-text-secondary);
+}
+
+.formMetaRow {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.formMetaBox {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.formMetaLabel {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.formMetaValue {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Audit log */
+.logRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.logRow:last-child {
+  border-bottom: none;
+}
+
+.logText {
+  font-size: 10.5px;
+}
+
+.logDiff {
+  font-size: 9.5px;
+  margin-top: 2px;
+}
+
+.logDiffOld {
+  color: #c0503a;
+  text-decoration: line-through;
+}
+
+.logDiffNew {
+  color: var(--color-whatsapp);
+  font-weight: 600;
+}
+
+.logTime {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+/* Sheet view */
+.sheetTable {
+  border: 1px solid var(--color-border-dashed);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sheetHeadRow {
+  display: flex;
+  background: var(--color-bg);
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.sheetCol {
+  padding: 8px 10px;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.sheetColCheck {
+  width: 26px;
+  padding: 8px 0;
+  text-align: center;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.sheetRow {
+  display: flex;
+  font-size: 10px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.sheetCell {
+  padding: 9px 10px;
+  border-right: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+}
+
+.sheetCellStrong {
+  padding: 9px 10px;
+  border-right: 1px solid var(--color-border-light);
+  font-weight: 600;
+}
+
+.sheetCellAlert {
+  padding: 9px 10px;
+  border-right: 1px solid var(--color-border-light);
+  color: #c0503a;
+}
+
+.sheetFootRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 11px;
+  font-size: 9.5px;
+  color: var(--color-text-faint);
+}
+
+/* Data mapping */
+.mapColHeadRow {
+  display: flex;
+  padding: 0 4px 8px;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.mapRow {
+  display: flex;
+  align-items: center;
+}
+
+.mapField {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.mapFieldAlert {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #f6c9ba;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.mapArrow {
+  width: 24px;
+  text-align: center;
+}
+
+.mapTarget {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 10.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mapTargetAlert {
+  flex: 1;
+  background: #fff6f3;
+  border: 1.5px solid #f6c9ba;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 10.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #c0503a;
+  font-weight: 600;
+}
+
+.mapWarning {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-dark-bg);
+  border-radius: 11px;
+  padding: 11px 13px;
+}
+
+.mapWarningText {
+  flex: 1;
+  font-size: 10.5px;
+  color: #fff;
+}
+
+.mapWarningSkip {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-dark-text-muted);
+}
+
+/* AI data cleanup */
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-dark-bg);
+  border-radius: 13px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.scoreRing {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scoreRingInner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-dark-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.scoreMax {
+  font-size: 7px;
+  color: var(--color-dark-text-muted);
+}
+
+.scoreLabel {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.scoreMeta {
+  font-size: 10px;
+  color: var(--color-dark-text-muted);
+  margin-top: 2px;
+}
+
+.issueGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.issueCard {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.issueValue {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.issueLabel {
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+.duplicateCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 12px 13px;
+}
+
+.duplicateHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.duplicateLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+}
+
+.duplicateRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.duplicateCol {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  padding: 9px 10px;
+}
+
+.duplicateName {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.duplicateMeta {
+  font-size: 9px;
+  color: var(--color-text-faint);
+}
+
+.mergeBtn {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 8px;
+  padding: 8px 11px;
+  flex-shrink: 0;
+}
