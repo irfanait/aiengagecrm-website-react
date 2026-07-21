@@ -1,0 +1,136 @@
+.section {
+  padding: 84px 40px;
+}
+
+.heading {
+  margin: 0 0 44px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-wrap: balance;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.cardBody {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.resultBar {
+  margin-top: 22px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 26px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.resultLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-text-faint);
+  padding-right: 36px;
+  flex-shrink: 0;
+}
+
+.resultStats {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+.divider {
+  width: 1px;
+  height: 44px;
+  background: var(--color-border);
+}
+
+@media (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resultBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .resultStats {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .resultLabel {
+    padding-right: 0;
+  }
+
+  .resultStats {
+    width: 100%;
+  }
+}

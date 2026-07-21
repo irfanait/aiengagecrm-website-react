@@ -1,8 +1,9 @@
 .wrap {
   position: absolute;
+  /* Flush against the trigger, not offset by a transparent gap — a gap there let whatever
+     page content is scrolled behind show through as a stray strip. */
   top: 100%;
   left: 0;
-  padding-top: 8px;
   z-index: 60;
 }
 

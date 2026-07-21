@@ -64,8 +64,14 @@
   gap: 3px;
 }
 
+/* Stretched to the full header height (not just its Link child's own line height) so the
+   dropdown's `top: 100%` lands exactly at the header's bottom edge instead of mid-header —
+   the child Link stays visually centered via the flex properties below. */
 .navTriggerWrap {
   position: relative;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
 }
 
 .navTriggerActive {

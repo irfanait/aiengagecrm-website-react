@@ -6,7 +6,7 @@ import styles from './IndustriesGrid.module.css';
  * Centered heading + a 4-col grid of industry cards (icon + label), ending in a dark
  * "and many more" card. Used on product feature pages (WhatsApp Business, and future ones).
  */
-export default function IndustriesGrid({ eyebrow, heading, items, columns = 4, showMoreCard = true }) {
+export default function IndustriesGrid({ eyebrow, heading, items, columns = 4, showMoreCard = true, moreNote }) {
   return (
     <section className={styles.section}>
       <Container>
@@ -32,6 +32,7 @@ export default function IndustriesGrid({ eyebrow, heading, items, columns = 4, s
             </span>
           )}
         </div>
+        {moreNote && <div className={styles.moreNote}>{moreNote}</div>}
       </Container>
     </section>
   );

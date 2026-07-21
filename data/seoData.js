@@ -129,4 +129,20 @@ export const seoData = {
     keywords: ['CRM security', 'role-based access control', 'CRM audit log', 'CRM data backup', 'two-factor authentication CRM'],
     image: '/og/security-compliance.png',
   },
+  ai: {
+    path: '/ai',
+    title: 'AI CRM | Smart Summaries, AI Chatbot & Sales Insights | AiEngage',
+    description:
+      'AI built into your CRM — smart conversation summaries, an AI chatbot, lead qualification, AI insights, mobile AI, an email assistant, call transcription, sales insights, and forecasting.',
+    keywords: ['AI CRM', 'AI chatbot', 'AI lead qualification', 'AI sales insights', 'AI sales forecasting', 'CRM email assistant'],
+    image: '/og/ai.png',
+  },
+  about: {
+    path: '/about',
+    title: 'About AiEngage CRM | AI-Powered CRM For Every Lead & Sale',
+    description:
+      'AiEngage CRM brings AI into the complete customer journey — answering questions, qualifying leads, summarizing conversations, and automating follow-ups so no opportunity is missed.',
+    keywords: ['about AiEngage CRM', 'AI powered CRM', 'CRM mission', 'AI sales assistant'],
+    image: '/og/about.png',
+  },
 };

@@ -23,6 +23,10 @@ export default function MobileMenu({ open, onClose }) {
     ),
     children: (
       <div>
+        <Link href={cat.href} className={styles.catOverviewLink} onClick={onClose}>
+          Complete Overview
+          <Icon name="arrow_forward" size={16} />
+        </Link>
         {cat.features.map(([name, icon, desc, href]) => (
           <Link key={name} href={href} className={styles.catFeatureLink} onClick={onClose}>
             <Icon name={icon} size={18} color="var(--color-primary)" />

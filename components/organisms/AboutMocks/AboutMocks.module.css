@@ -1,0 +1,381 @@
+/* Compact mini-visuals shown inside each About page feature card. Shared avatarCircle/tagPill
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.tintedBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 9px;
+}
+
+.tintedBoxPadded {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 11px;
+}
+
+/* Icon-tile grids (AI capabilities / Customization) */
+.iconGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.iconTile {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 7px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconTileLabel {
+  font-size: 8.5px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.iconTileLabelSm {
+  font-size: 7.5px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* WhatsApp chat bubbles */
+.bubbleIn {
+  align-self: flex-start;
+  max-width: 88%;
+  background: var(--color-green-tint);
+  border-radius: 10px 10px 10px 2px;
+  padding: 7px 9px;
+  font-size: 9.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.bubbleOut {
+  align-self: flex-end;
+  max-width: 88%;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 10px 10px 2px 10px;
+  padding: 7px 9px;
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+
+/* Voice calling */
+.callHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.callName {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.callMeta {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.callStatusRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.callDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-whatsapp);
+}
+
+.callStatus {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+}
+
+.callTimer {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.callActions {
+  display: flex;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.callActionBtn {
+  flex: 1;
+  text-align: center;
+  font-size: 8px;
+  color: var(--color-text-muted);
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+  padding: 4px 0;
+}
+
+.callActionEnd {
+  flex: 1;
+  text-align: center;
+  font-size: 8px;
+  color: #fff;
+  background: #c0503a;
+  border-radius: 7px;
+  padding: 4px 0;
+}
+
+.callNoteRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.callNoteBox {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 8.5px;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.callAddNote {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Mobile CRM */
+.mobileShell {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 13px 13px 4px 4px;
+  padding: 12px;
+}
+
+.mobileGreeting {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.mobileName {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mobileStatRow {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.mobileStatBox {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 7px 4px;
+  text-align: center;
+}
+
+.mobileStatValue {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mobileStatLabel {
+  font-size: 7.5px;
+  color: var(--color-text-faint);
+}
+
+.mobileMsgRow {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 9px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobileMsgName {
+  font-size: 9.5px;
+  font-weight: 600;
+}
+
+.mobileMsgPreview {
+  font-size: 8px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobileMsgTime {
+  font-size: 7.5px;
+  color: var(--color-text-faint);
+}
+
+/* Sales pipeline mini kanban */
+.kanbanRow {
+  display: flex;
+  gap: 6px;
+}
+
+.kanbanCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.kanbanBar {
+  height: 8px;
+  border-radius: 2px;
+  margin: 6px 0;
+}
+
+.kanbanColLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+}
+
+.kanbanCard {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: 8px 5px;
+  margin-top: 8px;
+}
+
+.kanbanCardName {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.kanbanCardValue {
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.kanbanMore {
+  font-size: 6.5px;
+  color: var(--color-text-faint);
+  margin-top: 4px;
+}
+
+/* Lead management */
+.leadHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.leadName {
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.leadPhone {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.leadFieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.leadFieldLabel {
+  font-size: 7px;
+  color: var(--color-text-faint);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.leadFieldValue {
+  font-size: 9.5px;
+  font-weight: 600;
+}
+
+/* Multichannel */
+.channelRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.channelIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Automation flow */
+.flowNode {
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.flowArrowRow {
+  display: flex;
+  justify-content: center;
+}
+
+.flowArrowRowSplit {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.flowBranchRow {
+  display: flex;
+  gap: 7px;
+}
+
+.flowBranch {
+  flex: 1;
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+  border-radius: 8px;
+  padding: 6px 7px;
+  font-size: 8px;
+  color: #8a3a26;
+  text-align: center;
+  line-height: 1.3;
+}

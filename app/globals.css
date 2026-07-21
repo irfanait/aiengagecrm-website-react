@@ -10,7 +10,10 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* clip, not hidden: overflow-x: hidden forces overflow-y to compute as auto per spec,
+     turning body into its own scroll container and breaking the header's position: sticky
+     (it sticks relative to body's scrollport instead of the viewport). clip avoids that. */
+  overflow-x: clip;
   background: var(--color-bg);
 }
 

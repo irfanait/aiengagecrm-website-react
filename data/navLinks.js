@@ -1,6 +1,6 @@
 // Top-level header nav. "Features" opens the MegaMenu; "Why AiEngage" opens a small NavDropdown.
 export const NAV_LINKS = [
-  { label: 'About Us', href: '#' },
+  { label: 'About Us', href: '/about' },
   {
     label: 'Why AiEngage',
     href: '#',

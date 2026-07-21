@@ -48,6 +48,16 @@
   border-left: 1px solid var(--color-border-light);
 }
 
+.catOverviewLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 4px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 .catFeatureLink {
   display: flex;
   gap: 10px;

@@ -1,11 +1,12 @@
 .wrap {
   position: absolute;
+  /* Flush against the header, not offset by a transparent gap — a gap there let whatever
+     page content is scrolled behind (e.g. a dark section) show through as a stray strip. */
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 1180px;
   max-width: calc(100vw - 40px);
-  padding-top: 8px;
   z-index: 60;
 }
 

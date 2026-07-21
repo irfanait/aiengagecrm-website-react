@@ -23,19 +23,20 @@ export default function MegaMenu({ onMouseEnter, onMouseLeave, onNavigate }) {
           {MEGA_MENU.map((cat, i) => {
             const isActive = i === activeCat;
             return (
-              <button
+              <Link
                 key={cat.name}
-                type="button"
+                href={cat.href}
                 className={`${styles.categoryItem} ${isActive ? styles.categoryItemActive : ''}`}
                 onMouseEnter={() => setActiveCat(i)}
                 onFocus={() => setActiveCat(i)}
+                onClick={onNavigate}
               >
                 <Icon name={cat.icon} size={19} color={isActive ? 'var(--color-primary)' : 'var(--color-text-secondary)'} />
                 <span className={styles.categoryName}>{cat.name}</span>
                 <span className={`${styles.categoryChevron} ${isActive ? styles.categoryChevronActive : ''}`}>
                   <Icon name="arrow_forward" size={16} color="var(--color-primary)" />
                 </span>
-              </button>
+              </Link>
             );
           })}
         </div>
@@ -44,7 +45,7 @@ export default function MegaMenu({ onMouseEnter, onMouseLeave, onNavigate }) {
           <div className={styles.detailsHeader}>
             <div className={styles.detailsTitle}>{active.name}</div>
             <Link href={active.href} className={styles.viewAll} onClick={onNavigate}>
-              View overview
+              Complete Overview
               <Icon name="arrow_forward" size={16} />
             </Link>
           </div>

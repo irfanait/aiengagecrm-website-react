@@ -76,6 +76,13 @@
   color: var(--color-dark-text);
 }
 
+.moreNote {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-faint);
+  margin-top: 26px;
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
