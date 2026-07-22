@@ -89,6 +89,7 @@ export default function Header() {
                   {isOpen && (
                     <NavDropdown
                       items={link.dropdownItems}
+                      variant={link.dropdownVariant}
                       onMouseEnter={() => openMenu(link.label)}
                       onMouseLeave={closeMenu}
                       onNavigate={closeMenuNow}
@@ -108,7 +109,7 @@ export default function Header() {
 
         <div className={styles.actions}>
           <div className={styles.desktopActions}>
-            <Link href={CTA_LINKS.login} className={styles.loginLink}>
+            <Link href={CTA_LINKS.login} target="_blank" rel="noopener noreferrer" className={styles.loginLink}>
               Login
             </Link>
             <Button href={CTA_LINKS.tryFree} variant="outlineDark">

@@ -16,7 +16,7 @@ export default function ProductHero({ badge, title, description, checklist, dark
         <div className={styles.content}>
           {badge && (
             <div className={styles.badge} style={{ background: badge.bg }}>
-              <Icon name={badge.icon} size={18} color={badge.iconColor} />
+              {badge.icon && <Icon name={badge.icon} size={18} color={badge.iconColor} />}
               <span style={{ color: badge.textColor }}>{badge.label}</span>
             </div>
           )}

@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import PricingPlansSection from '../../components/organisms/PricingPlansSection/PricingPlansSection';
 import StartFreeStrip from '../../components/organisms/StartFreeStrip/StartFreeStrip';
 import PricingComparison from '../../components/organisms/PricingComparison/PricingComparison';
@@ -21,7 +22,13 @@ import {
 
 export const metadata = buildMetadata(seoData.pricing);
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  // Set by proxy.js from the host's IP-geolocation header, when available — 'IN' selects the
+  // India toggle by default; anything else (or no cookie, e.g. local dev) falls back to
+  // PricingPlansSection's own client-side detection.
+  const countryCookie = (await cookies()).get('aie_country')?.value;
+  const initialRegion = countryCookie ? (countryCookie === 'IN' ? 'india' : 'international') : null;
+
   return (
     <>
       <JsonLd
@@ -31,7 +38,7 @@ export default function PricingPage() {
         ])}
       />
 
-      <PricingPlansSection hero={PR_HERO} prices={PR_PRICES} plans={PR_PLANS} featureTable={PR_FEATURE_TABLE} />
+      <PricingPlansSection hero={PR_HERO} prices={PR_PRICES} plans={PR_PLANS} featureTable={PR_FEATURE_TABLE} initialRegion={initialRegion} />
 
       <StartFreeStrip
         title={PR_START_FREE.title}

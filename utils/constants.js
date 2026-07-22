@@ -1,7 +1,7 @@
 export const SITE_NAME = 'AiEngage CRM';
 export const SITE_TAGLINE = 'AI Powered CRM';
 export const SITE_URL = 'https://www.aiengagecrm.com';
-export const SITE_BY = 'AITRILLION';
+export const SITE_BY = 'Aitrillion.com';
 
 export const CONTACT = {
   email: 'hello@aiengagecrm.com',
@@ -17,6 +17,6 @@ export const SOCIAL_LINKS = {
 
 export const CTA_LINKS = {
   bookDemo: '/book-a-demo',
-  tryFree: '/signup',
-  login: 'https://app.aiengagecrm.com/login',
+  tryFree: '/pricing',
+  login: 'https://crm.aitrillion.com/',
 };

@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { FOOTER_COLUMNS, FOOTER_SOCIALS } from '../../../data/footerLinks';
-import { SITE_BY } from '../../../utils/constants';
+import { SITE_BY,
+  SITE_NAME 
+} from '../../../utils/constants';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -45,12 +47,15 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <span className={styles.copyright}>
-            © {year} AiEngage CRM. All rights reserved. by {SITE_BY}
+            © {year} <Link href="/">{SITE_NAME}</Link>. All rights reserved. by{' '}
+            <a href="https://www.aitrillion.com" target="_blank" rel="noreferrer">
+              {SITE_BY}
+            </a>
           </span>
-          <Link href="#" className={styles.legalLink}>
+          <Link href="https://www.aitrillion.com/terms-of-service" target='_blank' className={styles.legalLink}>
             Terms of Use
           </Link>
-          <Link href="#" className={styles.legalLink}>
+          <Link href="https://www.aitrillion.com/privacy-policy" target='_blank' className={styles.legalLink}>
             Privacy Policy
           </Link>
         </div>

@@ -161,4 +161,36 @@ export const seoData = {
     keywords: ['AiEngage CRM updates', 'AiEngage CRM new features', 'CRM changelog', 'AiEngage CRM release notes'],
     image: '/og/whats-new.png',
   },
+  industryRealEstate: {
+    path: '/industries/real-estate',
+    title: 'Real Estate CRM | AI-Powered Lead & Site Visit Automation | AiEngage',
+    description:
+      'AI-powered CRM for real estate — capture property leads from portals, Meta Ads and WhatsApp, qualify buyers with AI, schedule site visits and automate follow-ups.',
+    keywords: ['real estate CRM', 'property lead management', 'real estate AI CRM', 'site visit scheduling software'],
+    image: '/og/industries-real-estate.png',
+  },
+  industryHealthcare: {
+    path: '/industries/healthcare',
+    title: 'Healthcare CRM | AI-Powered Patient Inquiry & Appointment Automation | AiEngage',
+    description:
+      'AI-powered CRM for healthcare providers — capture patient inquiries, respond instantly with AI, schedule appointments and automate follow-ups across every channel.',
+    keywords: ['healthcare CRM', 'patient inquiry management', 'appointment scheduling software', 'healthcare AI CRM'],
+    image: '/og/industries-healthcare.png',
+  },
+  industryToursTravels: {
+    path: '/industries/tours-travels',
+    title: 'Travel Agency CRM | AI-Powered Booking & Inquiry Automation | AiEngage',
+    description:
+      'AI-powered CRM for travel agencies and tour operators — capture travel inquiries, respond instantly with AI, share packages, schedule consultations and automate booking follow-ups.',
+    keywords: ['travel agency CRM', 'tour operator software', 'travel booking automation', 'travel CRM software'],
+    image: '/og/industries-tours-travels.png',
+  },
+  industryFinance: {
+    path: '/industries/finance',
+    title: 'Finance & Insurance CRM | AI-Powered Advisory Automation | AiEngage',
+    description:
+      'AI-powered CRM for finance, insurance and wealth advisory businesses — capture inquiries, qualify opportunities, assign advisors, track documents and automate follow-ups.',
+    keywords: ['finance CRM', 'insurance CRM software', 'financial advisor CRM', 'loan and insurance lead management'],
+    image: '/og/industries-finance.png',
+  },
 };

@@ -117,7 +117,7 @@ export default function MobileMenu({ open, onClose }) {
           <Button href={CTA_LINKS.bookDemo} variant="dark" onClick={onClose}>
             Book a Demo
           </Button>
-          <Link href={CTA_LINKS.login} className={styles.navLink} onClick={onClose}>
+          <Link href={CTA_LINKS.login} target="_blank" rel="noopener noreferrer" className={styles.navLink} onClick={onClose}>
             Login
           </Link>
         </div>
