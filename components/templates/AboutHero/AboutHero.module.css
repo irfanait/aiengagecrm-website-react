@@ -24,7 +24,7 @@
 
 .title {
   margin: 0 0 16px;
-  max-width: 760px;
+  /* max-width: 760px; */
   font-size: clamp(26px, 3.5vw + 12px, 40px);
   line-height: 1.18;
   font-weight: 700;

@@ -76,11 +76,24 @@ export default function MobileMenu({ open, onClose }) {
                       label: <span className={styles.collapseHeader}>{link.label}</span>,
                       children: (
                         <div>
-                          {link.dropdownItems.map((item) => (
-                            <Link key={item.label} href={item.href} className={styles.navLink} onClick={onClose}>
-                              {item.label}
-                            </Link>
-                          ))}
+                          {link.dropdownItems.map((item) =>
+                            item.external ? (
+                              <a
+                                key={item.label}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.navLink}
+                                onClick={onClose}
+                              >
+                                {item.label}
+                              </a>
+                            ) : (
+                              <Link key={item.label} href={item.href} className={styles.navLink} onClick={onClose}>
+                                {item.label}
+                              </Link>
+                            )
+                          )}
                         </div>
                       ),
                     },

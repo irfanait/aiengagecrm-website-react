@@ -145,4 +145,20 @@ export const seoData = {
     keywords: ['about AiEngage CRM', 'AI powered CRM', 'CRM mission', 'AI sales assistant'],
     image: '/og/about.png',
   },
+  pricing: {
+    path: '/pricing',
+    title: 'Pricing | Plans for WhatsApp, Email, Voice & AI CRM | AiEngage',
+    description:
+      'Simple, transparent pricing for AiEngage CRM. Compare Growth, Advance and Custom plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
+    keywords: ['AiEngage CRM pricing', 'CRM plans', 'WhatsApp CRM pricing', 'AI CRM cost'],
+    image: '/og/pricing.png',
+  },
+  whatsNew: {
+    path: '/whats-new',
+    title: 'What’s New on AiEngage CRM? | Latest Features & Updates',
+    description:
+      'Stay ahead with AiEngage CRM’s latest AI-powered features, product enhancements and reports — new updates on Contacts, WhatsApp, AI Agents, Dashboards and more.',
+    keywords: ['AiEngage CRM updates', 'AiEngage CRM new features', 'CRM changelog', 'AiEngage CRM release notes'],
+    image: '/og/whats-new.png',
+  },
 };

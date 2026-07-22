@@ -11,11 +11,24 @@ export default function NavDropdown({ items, onMouseEnter, onMouseLeave, onNavig
   return (
     <div className={styles.wrap} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <div className={styles.panel}>
-        {items.map((item) => (
-          <Link key={item.label} href={item.href} className={styles.item} onClick={onNavigate}>
-            {item.label}
-          </Link>
-        ))}
+        {items.map((item) =>
+          item.external ? (
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.item}
+              onClick={onNavigate}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link key={item.label} href={item.href} className={styles.item} onClick={onNavigate}>
+              {item.label}
+            </Link>
+          )
+        )}
       </div>
     </div>
   );

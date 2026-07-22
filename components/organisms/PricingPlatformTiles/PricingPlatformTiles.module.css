@@ -1,0 +1,176 @@
+.section {
+  padding: 88px 40px;
+}
+
+.headingWrap {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  background: var(--color-primary-tint);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+}
+
+.heading {
+  margin: 16px 0 0;
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-wrap: balance;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 18px;
+}
+
+.whatsappTile {
+  grid-row: span 2;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsappTile::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 70%);
+}
+
+.whatsappIcon {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.whatsappTitle {
+  position: relative;
+  z-index: 1;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.whatsappRule {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  margin: 14px 0 16px;
+}
+
+.whatsappDesc {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.whatsappSpacer {
+  flex: 1;
+  min-height: 24px;
+}
+
+.whatsappChecks {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.whatsappCheckItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.tile {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+}
+
+.tileHighlight {
+  border-color: var(--color-primary);
+}
+
+.tileIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tileTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.tileBody {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsappTile {
+    grid-row: auto;
+  }
+}

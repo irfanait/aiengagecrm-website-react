@@ -17,7 +17,7 @@ export const NAV_LINKS = [
     href: '#',
     isDropdownTrigger: true,
     dropdownItems: [
-      { label: 'Knowledge Base', href: '/knowledge-base' },
+      { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
       { label: "What's New", href: '/whats-new' },
     ],
   },
@@ -34,5 +34,5 @@ export const NAV_LINKS = [
       { label: 'Tours & Travels', href: '/industries/tours-travels' },
     ],
   },
-  { label: 'Pricing', href: '#' },
+  { label: 'Pricing', href: '/pricing' },
 ];
