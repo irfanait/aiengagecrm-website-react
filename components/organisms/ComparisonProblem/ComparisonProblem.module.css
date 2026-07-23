@@ -1,0 +1,75 @@
+.section {
+  padding: 80px 40px;
+  background: #fff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+}
+
+.grid > div:first-child {
+  flex: 48 1 0;
+}
+
+.para {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.leadOut {
+  margin: 4px 0 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.visual {
+  flex: 52 1 0;
+  min-width: 0;
+}
+
+.belowCard {
+  margin: 48px auto 0;
+  max-width: 1200px;
+  border-radius: 18px;
+  padding: 36px 40px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.belowCardHeading {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.belowCardBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 20px;
+  }
+}

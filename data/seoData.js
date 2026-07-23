@@ -193,4 +193,58 @@ export const seoData = {
     keywords: ['finance CRM', 'insurance CRM software', 'financial advisor CRM', 'loan and insurance lead management'],
     image: '/og/industries-finance.png',
   },
+  industryIT: {
+    path: '/industries/it',
+    title: 'IT & Technology CRM | AI-Powered Sales Automation | AiEngage',
+    description:
+      'AI-powered CRM for IT and technology businesses — capture inquiries, qualify leads, assign sales reps, schedule discovery calls and automate proposal follow-ups.',
+    keywords: ['IT CRM software', 'software company CRM', 'IT sales automation', 'IT lead management'],
+    image: '/og/industries-it.png',
+  },
+  industryEducation: {
+    path: '/industries/education',
+    title: 'Education CRM | AI-Powered Admission Automation | AiEngage',
+    description:
+      'AI-powered CRM for schools, colleges and training institutes — capture admission inquiries, automate follow-ups, schedule counselling sessions and grow enrollments.',
+    keywords: ['education CRM', 'admission management software', 'student enquiry management', 'school and college CRM'],
+    image: '/og/industries-education.png',
+  },
+  vsHubspot: {
+    path: '/hubspot-alternative',
+    title: 'AiEngage vs HubSpot | Simpler All-In-One CRM Alternative | AiEngage',
+    description:
+      'See how AiEngage compares to HubSpot — built-in WhatsApp and SMS marketing, native automation, and one connected platform instead of multiple tools.',
+    keywords: ['AiEngage vs HubSpot', 'HubSpot alternative', 'HubSpot CRM comparison'],
+    image: '/og/vs-hubspot.png',
+  },
+  vsZoho: {
+    path: '/zoho-alternative',
+    title: 'AiEngage vs Zoho CRM | A Simpler Alternative to Zoho | AiEngage',
+    description:
+      'See how AiEngage compares to Zoho CRM — ready-to-use workflows, built-in WhatsApp and SMS marketing, and no need to manage multiple Zoho apps.',
+    keywords: ['AiEngage vs Zoho', 'Zoho CRM alternative', 'Zoho CRM comparison'],
+    image: '/og/vs-zoho.png',
+  },
+  vsKeap: {
+    path: '/keap-alternative',
+    title: 'AiEngage vs Keap | A Smarter, More Predictable CRM | AiEngage',
+    description:
+      'See how AiEngage compares to Keap — cost-efficient pricing that does not scale with your contact list, plus built-in AI, WhatsApp and SMS marketing.',
+    keywords: ['AiEngage vs Keap', 'Keap alternative', 'Keap CRM comparison'],
+    image: '/og/vs-keap.png',
+  },
+  bookADemo: {
+    path: '/book-a-demo',
+    title: 'Book a Free AiEngage CRM Demo | AiEngage',
+    description: 'Book your free AiEngage CRM demo and see lead capture, pipeline management, and AI-powered engagement live, tailored to your business.',
+    keywords: ['book a CRM demo', 'AiEngage demo', 'CRM demo request'],
+    image: '/og/book-a-demo.png',
+  },
+  contactUs: {
+    path: '/contact-us',
+    title: 'Contact Us | Talk to Our CRM Experts | AiEngage',
+    description: 'Get in touch with the AiEngage team — email, WhatsApp, or send us a message and we will help you find the right fit for your business.',
+    keywords: ['contact AiEngage', 'AiEngage support', 'CRM sales contact'],
+    image: '/og/contact-us.png',
+  },
 };

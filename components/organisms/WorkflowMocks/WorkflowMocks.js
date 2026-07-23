@@ -367,23 +367,31 @@ const DOC_STATE_BADGE = {
   overdue: { fg: '#c0503a', bg: '#fbe7e1' },
 };
 
-/** Document-collection tracker: customer header, per-document status list, optional reminder CTA. */
-export function DocumentChecklistMock({ initials, avatarBg, avatarFg, name, sub, statusBadge, items, reminderLabel }) {
+const DOC_STATE_LABEL = { received: 'Received', requested: 'Requested', overdue: 'Overdue' };
+
+/** Document-collection tracker: customer header, per-document status list, optional reminder CTA
+ * or a row of nudge chips (e.g. "Today · SMS"). Each item's badge text defaults from `state` but
+ * can be overridden per item (e.g. "Submitted"/"Pending"/"Unpaid") via `badgeLabel`. */
+export function DocumentChecklistMock({ initials, avatarBg, avatarFg, name, sub, statusBadge, items, reminderLabel, nudges }) {
   return (
     <div className={styles.card}>
       <div className={styles.docHeader}>
         <div className={styles.docHeaderLeft}>
-          <span className={styles.docAvatar} style={{ background: avatarBg, color: avatarFg }}>
-            {initials}
-          </span>
+          {initials && (
+            <span className={styles.docAvatar} style={{ background: avatarBg, color: avatarFg }}>
+              {initials}
+            </span>
+          )}
           <div>
             <div className={styles.scoreName}>{name}</div>
             <div className={styles.scorePhone}>{sub}</div>
           </div>
         </div>
-        <span className={styles.scoreBadge} style={{ color: 'var(--color-primary-hover)', background: 'var(--color-primary-tint)' }}>
-          {statusBadge}
-        </span>
+        {statusBadge && (
+          <span className={styles.scoreBadge} style={{ color: 'var(--color-primary-hover)', background: 'var(--color-primary-tint)' }}>
+            {statusBadge}
+          </span>
+        )}
       </div>
       <div className={styles.docItems}>
         {items.map((it) => {
@@ -394,10 +402,10 @@ export function DocumentChecklistMock({ initials, avatarBg, avatarFg, name, sub,
               <Icon name={iconInfo.icon} size={16} color={iconInfo.color} />
               <div className={styles.rowText}>
                 <div className={styles.shareItemTitle}>{it.label}</div>
-                <div className={styles.shareItemSub}>{it.sub}</div>
+                {it.sub && <div className={styles.shareItemSub}>{it.sub}</div>}
               </div>
               <span className={styles.docStatus} style={{ color: badgeInfo.fg, background: badgeInfo.bg }}>
-                {it.state === 'received' ? 'Received' : it.state === 'requested' ? 'Requested' : 'Overdue'}
+                {it.badgeLabel || DOC_STATE_LABEL[it.state]}
               </span>
             </div>
           );
@@ -409,6 +417,199 @@ export function DocumentChecklistMock({ initials, avatarBg, avatarFg, name, sub,
           {reminderLabel}
         </div>
       )}
+      {nudges && (
+        <div className={styles.nudgesRow}>
+          {nudges.map((n) => (
+            <span key={n} className={styles.nudgeChip}>
+              {n}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Step 7 (IT): opportunity header (name + stage + value) + a checklist of pipeline activities,
+ * each with a Done/Pending/Queued status badge. */
+const PIPELINE_ICON = {
+  done: { icon: 'check_circle', color: 'var(--color-green)' },
+  pending: { icon: 'schedule', color: '#c0503a' },
+  queued: { icon: 'radio_button_unchecked', color: 'var(--color-text-faint)' },
+};
+
+const PIPELINE_BADGE = {
+  done: { fg: 'var(--color-primary-hover)', bg: 'var(--color-green-tint)', label: 'Done' },
+  pending: { fg: '#c0503a', bg: '#fbe7e1', label: 'Pending' },
+  queued: { fg: '#6e6154', bg: '#f4ece0', label: 'Queued' },
+};
+
+export function PipelineTrackerMock({ title, sub, value, items }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.docHeader}>
+        <div>
+          <div className={styles.scoreName}>{title}</div>
+          <div className={styles.scorePhone}>{sub}</div>
+        </div>
+        <span className={styles.pipelineValue}>{value}</span>
+      </div>
+      <div className={styles.docItems}>
+        {items.map((it) => {
+          const iconInfo = PIPELINE_ICON[it.state];
+          const badgeInfo = PIPELINE_BADGE[it.state];
+          return (
+            <div key={it.label} className={styles.docItem}>
+              <Icon name={iconInfo.icon} size={15} color={iconInfo.color} />
+              <span className={it.state === 'queued' ? styles.pipelineLabelMuted : styles.pipelineLabel}>{it.label}</span>
+              <span className={styles.docStatus} style={{ color: badgeInfo.fg, background: badgeInfo.bg, marginLeft: 'auto' }}>
+                {badgeInfo.label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/** Step 2 (Education): "auto-send" list — icon + label + channel + Sent status per row, plus a
+ * dashed trigger-condition footer. */
+export function AutoSendMock({ icon, title, sub, items, trigger }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.autoSendHeader}>
+        <span className={styles.shareIconWrap}>
+          <Icon name={icon} size={17} color="var(--color-primary)" />
+        </span>
+        <div className={styles.rowText}>
+          <div className={styles.shareItemTitle}>{title}</div>
+          <div className={styles.shareItemSub}>{sub}</div>
+        </div>
+      </div>
+      <div className={styles.docItems}>
+        {items.map((it) => (
+          <div key={it.label} className={styles.docItem}>
+            <Icon name={it.icon} size={15} color="var(--color-primary)" />
+            <span className={styles.pipelineLabel}>{it.label}</span>
+            <span className={styles.autoSendChannel}>{it.channel}</span>
+            <span className={styles.docStatus} style={{ color: 'var(--color-primary-hover)', background: 'var(--color-green-tint)' }}>{it.status}</span>
+          </div>
+        ))}
+      </div>
+      {trigger && (
+        <div className={styles.triggerNote}>
+          <Icon name="bolt" size={14} color="var(--color-text-faint)" />
+          <span className={styles.triggerNoteText}>
+            {trigger.prefix} <b>{trigger.value}</b>
+          </span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Step 3 (Education): a single day's slot list (one row highlighted/confirmed) + reminder channel chips. */
+export function DaySlotsMock({ dateLabel, sub, slots, remindersLabel = 'REMINDERS', reminders }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <span className={styles.cardTitle}>{dateLabel}</span>
+        <span className={styles.schedMonth}>{sub}</span>
+      </div>
+      <div className={styles.slotsList}>
+        {slots.map((s, i) => (
+          <div key={i} className={`${styles.slotRow} ${s.active ? styles.slotRowActive : ''}`}>
+            <span className={s.active ? styles.slotTimeActive : styles.slotTime}>{s.time}</span>
+            <span className={s.active ? styles.slotLabelActive : styles.slotLabel}>{s.label}</span>
+            {s.confirmed && (
+              <span className={styles.docStatus} style={{ color: 'var(--color-primary-hover)', background: 'var(--color-green-tint)' }}>
+                <Icon name="check_circle" size={11} color="var(--color-green)" /> Confirmed
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+      {reminders && (
+        <div className={styles.remindersRow}>
+          <span className={styles.availabilityHeading} style={{ marginBottom: 0 }}>
+            {remindersLabel}
+          </span>
+          {reminders.map((r) => (
+            <span key={r.label} className={styles.reminderChip}>
+              <Icon name={r.icon} size={11} color="var(--color-primary)" />
+              {r.label}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Step 5 (Education): 3 funnel stat cards (count + label) + a list of applicant rows with a status chip. */
+export function AdmissionFunnelMock({ stats, items }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.funnelStatsRow}>
+        {stats.map((s) => (
+          <div key={s.label} className={styles.funnelStat}>
+            <div className={styles.funnelStatValue}>{s.value}</div>
+            <div className={styles.funnelStatLabel}>{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.docItems}>
+        {items.map((it) => (
+          <div key={it.name} className={styles.funnelRow}>
+            <div className={styles.rowText}>
+              <div className={styles.shareItemTitle}>{it.name}</div>
+              <div className={styles.shareItemSub}>{it.sub}</div>
+            </div>
+            <span className={styles.tag}>{it.status}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Step 6 (Education): success banner + Done/In-Progress checklist + onboarding progress bar. */
+export function EnrollmentProgressMock({ banner, items, progress }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.enrollBanner}>
+        <span className={styles.enrollBannerIcon}>
+          <Icon name={banner.icon} size={17} color="var(--color-green)" />
+        </span>
+        <div>
+          <div className={styles.enrollBannerTitle}>{banner.title}</div>
+          <div className={styles.enrollBannerSub}>{banner.sub}</div>
+        </div>
+      </div>
+      <div className={styles.docItems}>
+        {items.map((it) => (
+          <div key={it.label} className={styles.docItem}>
+            <Icon name={it.done ? 'check_circle' : 'radio_button_unchecked'} size={15} color={it.done ? 'var(--color-green)' : 'var(--color-text-faint)'} />
+            <span className={it.done ? styles.pipelineLabel : styles.pipelineLabelMuted}>{it.label}</span>
+            <span
+              className={styles.docStatus}
+              style={{ color: it.done ? 'var(--color-primary-hover)' : '#6e6154', background: it.done ? 'var(--color-green-tint)' : '#f4ece0', marginLeft: 'auto' }}
+            >
+              {it.status}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className={styles.progressWrap}>
+        <div className={styles.progressLabelRow}>
+          <span>{progress.label}</span>
+          <span className={styles.progressPercent}>{progress.percent}%</span>
+        </div>
+        <div className={styles.progressTrack}>
+          <div className={styles.progressFill} style={{ width: `${progress.percent}%` }} />
+        </div>
+      </div>
     </div>
   );
 }

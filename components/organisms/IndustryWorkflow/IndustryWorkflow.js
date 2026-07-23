@@ -10,6 +10,11 @@ import {
   TimelineMock,
   RequirementCategoriesMock,
   DocumentChecklistMock,
+  PipelineTrackerMock,
+  AutoSendMock,
+  DaySlotsMock,
+  AdmissionFunnelMock,
+  EnrollmentProgressMock,
 } from '../WorkflowMocks/WorkflowMocks';
 import styles from './IndustryWorkflow.module.css';
 
@@ -23,6 +28,11 @@ const MOCKS = {
   timeline: TimelineMock,
   requirementCategories: RequirementCategoriesMock,
   documentChecklist: DocumentChecklistMock,
+  pipelineTracker: PipelineTrackerMock,
+  autoSend: AutoSendMock,
+  daySlots: DaySlotsMock,
+  admissionFunnel: AdmissionFunnelMock,
+  enrollmentProgress: EnrollmentProgressMock,
 };
 
 /**

@@ -1,0 +1,71 @@
+.section {
+  padding: 64px 40px 88px;
+}
+
+.grid {
+  display: flex;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-top: 8px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  background: var(--color-primary-tint);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.16;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.desc {
+  margin: 0 0 32px;
+  max-width: 520px;
+  font-size: 16.5px;
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.formCol {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .formCol {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px 20px 64px;
+  }
+}

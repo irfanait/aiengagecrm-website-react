@@ -1,0 +1,789 @@
+/* ---- scattered collage shell (HubSpot / Zoho problem section) ---- */
+.collage {
+  position: relative;
+  height: 452px;
+}
+
+.collageCard {
+  position: absolute;
+  width: 68%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: 0 20px 44px -22px rgba(40, 24, 10, 0.35);
+  padding: 14px;
+}
+
+.slot0 {
+  top: 0;
+  left: 0;
+  width: 68%;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.slot1 {
+  top: 74px;
+  right: 0;
+  width: 66%;
+  transform: rotate(2deg);
+  z-index: 2;
+}
+
+.slot2 {
+  top: 196px;
+  left: 2px;
+  width: 66%;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+.slot3 {
+  top: 280px;
+  right: 0;
+  width: 66%;
+  transform: rotate(2deg);
+  z-index: 4;
+}
+
+/* ---- shared widget primitives ---- */
+.widgetHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 10px;
+}
+
+.widgetHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.widgetHeaderTight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffe1d6;
+  color: #e64a24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9.5px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.avatarLg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffe1d6;
+  color: #e64a24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.widgetName {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.widgetSub {
+  font-size: 8.5px;
+  color: var(--color-text-faint);
+}
+
+.widgetSubFaint {
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+.rowTextTight {
+  flex: 1;
+  min-width: 0;
+}
+
+.pillBadge {
+  font-size: 7.5px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  background: #f4ece0;
+  border-radius: 999px;
+  padding: 3px 7px;
+  flex-shrink: 0;
+}
+
+.pillBadgeWarn {
+  font-size: 8px;
+  font-weight: 600;
+  color: #c0503a;
+  background: #f4ece0;
+  border-radius: 999px;
+  padding: 3px 7px;
+  flex-shrink: 0;
+}
+
+.pillBadgeGreen {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--color-green-hover, #0e7a45);
+  background: var(--color-green-tint);
+  border-radius: 999px;
+  padding: 3px 8px;
+  flex-shrink: 0;
+}
+
+.fieldRows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fieldRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5px;
+}
+
+.fieldLabel {
+  color: var(--color-text-faint);
+}
+
+.fieldValue {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.footNote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #c0503a;
+}
+
+/* ---- campaign chart ---- */
+.barsRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 38px;
+  margin-bottom: 11px;
+}
+
+.bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+}
+
+.statsRow {
+  display: flex;
+  gap: 14px;
+}
+
+.statValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.statLabel {
+  font-size: 7.5px;
+  color: var(--color-text-faint);
+}
+
+/* ---- inbox ---- */
+.inboxRows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inboxDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.inboxDotActive {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.inboxName {
+  font-size: 9.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.inboxNameActive {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.inboxSub {
+  font-size: 8px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- chat thread ---- */
+.chatThreadHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 10px;
+}
+
+.chatThreadIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-green-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chatBubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bubbleInMini {
+  align-self: flex-start;
+  max-width: 82%;
+  background: #f0ece4;
+  border-radius: 9px 9px 9px 2px;
+  padding: 6px 8px;
+  font-size: 8.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.bubbleOutMini {
+  align-self: flex-end;
+  max-width: 82%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 9px 9px 2px 9px;
+  padding: 6px 8px;
+  font-size: 8.5px;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ---- ticket ---- */
+.ticketRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.ticketPriorityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priorityValue {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  font-weight: 600;
+  color: #c0503a;
+}
+
+/* ---- workflow builder ---- */
+.builderRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.builderPill {
+  flex: 1;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f4ece0;
+  border-radius: 7px;
+  padding: 7px 4px;
+}
+
+.builderPillWarn {
+  flex: 1;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: #b06a25;
+  background: #fbead3;
+  border-radius: 7px;
+  padding: 7px 4px;
+}
+
+.builderCaption {
+  margin-top: 10px;
+  font-size: 8px;
+  color: var(--color-text-faint);
+}
+
+/* ---- pricing tiers (Keap problem section) ---- */
+.pricingCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: 0 26px 60px -30px rgba(40, 24, 10, 0.32);
+  padding: 22px;
+}
+
+.pricingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 16px;
+}
+
+.pricingColLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.05em;
+  padding: 0 4px 9px;
+}
+
+.pricingTiers {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricingTierRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 4px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.pricingTierLabel {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+}
+
+.pricingTierLabelAlert {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: #c0503a;
+  font-weight: 600;
+}
+
+.pricingTierValue {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.pricingTierValueAlert {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #c0503a;
+}
+
+.pricingAddons {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.pricingAddonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+}
+
+.pricingAddonValue {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.pricingTotal {
+  margin-top: 14px;
+  background: #fbede8;
+  border: 1px solid #f3d3c8;
+  border-radius: 12px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricingTotalLeft {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pricingTotalLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8f3d2b;
+}
+
+.pricingTotalValue {
+  font-size: 15px;
+  font-weight: 800;
+  color: #c0503a;
+}
+
+/* ---- Keap zigzag cards (shared shell) ---- */
+.zigCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: 0 24px 55px -30px rgba(40, 24, 10, 0.28);
+  padding: 20px;
+}
+
+.zigHeader {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 14px;
+}
+
+.zigHeaderIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.zigContactRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  padding: 12px 13px;
+  margin-bottom: 13px;
+}
+
+.zigActionsLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.05em;
+  margin-bottom: 9px;
+}
+
+.zigActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zigActionRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.zigActionIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.zigActionTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ---- communication timeline (Keap zigzag 2) ---- */
+.timelineWrap {
+  position: relative;
+  padding-left: 22px;
+}
+
+.timelineWrap::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timelineEvent {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.timelineEvent:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDotOutline {
+  position: absolute;
+  left: -22px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--color-primary);
+}
+
+.timelineMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.channelTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f4ece0;
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.timelineText {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+/* ---- channel chips + contacts (differentiators card 1) ---- */
+.chipsRow {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.channelChip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f4ece0;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.channelChipPlain {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f4ece0;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.chipsContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.chipsContactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 7px 9px;
+}
+
+.avatarSm {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ---- one-platform grid (differentiators card 2) ---- */
+.platformGridWrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.platformGridLabel {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.06em;
+  margin-bottom: 9px;
+}
+
+.platformGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.platformGridItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+.platformGridIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---- growth timeline (differentiators card 3) ---- */
+.growthTimelineWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.growthTimelineLine {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 9px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.growthNode {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.growthNodeIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.growthNodeLabel {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  .collage {
+    height: auto;
+  }
+
+  .collageCard {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+    margin-bottom: 16px;
+  }
+}

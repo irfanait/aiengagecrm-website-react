@@ -43,14 +43,36 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    sameAs: [
-      'https://www.facebook.com/aiengagecrm',
-      'https://www.linkedin.com/company/aiengagecrm',
-      'https://twitter.com/aiengagecrm',
-      'https://www.instagram.com/aiengagecrm',
-    ],
+    url: `${SITE_URL}/`,
+    logo: '/brand/logo.svg',
+    sameAs: ['https://www.facebook.com/aiengagecrm', 'https://www.instagram.com/aiengage.crm/', 'https://www.youtube.com/@aiengagecrm'],
+  };
+}
+
+/** JSON-LD: LocalBusiness schema, rendered once in the root layout. */
+export function localBusinessSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: SITE_NAME,
+    image: '/brand/logo.svg',
+    '@id': '',
+    url: `${SITE_URL}/`,
+    telephone: '',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '',
+      addressLocality: 'Indore',
+      postalCode: '452010',
+      addressCountry: 'IN',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
+      closes: '19:00',
+    },
+    sameAs: ['https://www.facebook.com/aiengagecrm', 'https://www.instagram.com/aiengage.crm/', 'https://www.youtube.com/@aiengagecrm'],
   };
 }
 

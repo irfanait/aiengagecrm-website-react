@@ -38,7 +38,7 @@ export const FOOTER_COLUMNS = [
       { label: 'About Us', href: '/about' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Careers', href: '#' },
-      { label: 'Contact Us', href: '#' },
+      { label: 'Contact Us', href: '/contact-us' },
     ],
   },
 ];
