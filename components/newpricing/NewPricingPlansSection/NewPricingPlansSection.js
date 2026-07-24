@@ -91,8 +91,8 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
 
       {modalOpen && (
         <NewPricingFeatureModal
-          businessPrice={regionPrices.business}
-          businessProPrice={regionPrices.businessPro}
+          businessPrice={`${regionPrices.business}${cycleSuffix}`}
+          businessProPrice={`${regionPrices.businessPro}${cycleSuffix}`}
           categories={featureTable}
           onClose={() => setModalOpen(false)}
         />
