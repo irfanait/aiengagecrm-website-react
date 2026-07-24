@@ -14,11 +14,11 @@ export default function WhatsNewCard({ entry }) {
         <div className={styles.tagDateRow}>
           <div className={styles.tags}>
             {entry.moduleTags.map((tag) => (
-              <span key={tag} className={styles.tag}>
+              <span key={tag} className={styles.moduleTag}>
                 {tag}
               </span>
             ))}
-            <span className={styles.tag}>{entry.typeTag === 'enhancement' ? 'Enhancement' : 'New Feature Update'}</span>
+            <span className={styles.typeTag}>{entry.typeTag === 'enhancement' ? 'Enhancement' : 'New Feature Update'}</span>
           </div>
           <span className={styles.date}>{formatWhatsNewDate(entry.date)}</span>
         </div>

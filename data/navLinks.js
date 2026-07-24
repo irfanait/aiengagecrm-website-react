@@ -1,26 +1,6 @@
 // Top-level header nav. "Features" opens the MegaMenu; "Why AiEngage" opens a small NavDropdown.
 export const NAV_LINKS = [
-  { label: 'About Us', href: '/about' },
-  {
-    label: 'Why AiEngage',
-    href: '#',
-    isDropdownTrigger: true,
-    dropdownItems: [
-      { label: 'AiEngage vs HubSpot', href: '/hubspot-alternative' },
-      { label: 'AiEngage vs Zoho', href: '/zoho-alternative' },
-      { label: 'AiEngage vs Keap', href: '/keap-alternative' },
-    ],
-  },
   { label: 'Features', href: '/#platform', isMegaMenuTrigger: true },
-  {
-    label: 'Solutions',
-    href: '#',
-    isDropdownTrigger: true,
-    dropdownItems: [
-      { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
-      { label: "What's New", href: '/whats-new' },
-    ],
-  },
   {
     label: 'Industries',
     href: '#',
@@ -34,6 +14,25 @@ export const NAV_LINKS = [
       { label: 'Finance', href: '/industries/finance', icon: 'account_balance' },
       { label: 'Education', href: '/industries/education', icon: 'school' },
       { label: 'IT & Technology', href: '/industries/it', icon: 'computer' },
+    ],
+  },
+  {
+    label: 'Why AiEngage',
+    href: '#',
+    isDropdownTrigger: true,
+    dropdownItems: [
+      { label: 'AiEngage vs HubSpot', href: '/hubspot-alternative' },
+      { label: 'AiEngage vs Zoho', href: '/zoho-alternative' },
+      { label: 'AiEngage vs Keap', href: '/keap-alternative' },
+    ],
+  },
+  {
+    label: 'Resources',
+    href: '#',
+    isDropdownTrigger: true,
+    dropdownItems: [
+      { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
+      { label: "What's New", href: '/whats-new' },
     ],
   },
   { label: 'Pricing', href: '/pricing' },

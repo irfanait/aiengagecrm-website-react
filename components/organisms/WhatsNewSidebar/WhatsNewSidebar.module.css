@@ -1,31 +1,36 @@
 .sidebar {
   width: 200px;
   flex-shrink: 0;
+  position: sticky;
+  top: 100px;
 }
 
 .heading {
   margin: 0 0 14px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--color-text);
+  color: var(--color-text-faint);
 }
 
 .list {
   list-style: none;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
 }
 
 .link {
+  display: block;
   font-size: 14px;
-  color: var(--color-text-secondary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  border-left: 2px solid transparent;
+  padding: 7px 12px;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .link:hover {
@@ -33,28 +38,20 @@
 }
 
 .linkActive {
+  display: block;
   font-size: 14px;
   font-weight: 700;
   color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 4px 0 20px;
+  border-left: 2px solid var(--color-primary);
+  padding: 7px 12px;
 }
 
 @media (max-width: 900px) {
   .sidebar {
     width: 100%;
+    position: static;
     display: flex;
     gap: 48px;
-  }
-
-  .divider {
-    display: none;
   }
 }
 

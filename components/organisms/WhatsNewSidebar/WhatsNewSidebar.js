@@ -8,6 +8,14 @@ export default function WhatsNewSidebar({ typeFilter, activeModule, activeYear, 
     <aside className={styles.sidebar}>
       <h3 className={styles.heading}>Modules</h3>
       <ul className={styles.list}>
+        <li>
+          <Link
+            href={buildWhatsNewFilterUrl({ type: typeFilter, module: null, year: activeYear })}
+            className={activeModule ? styles.link : styles.linkActive}
+          >
+            All Modules
+          </Link>
+        </li>
         {WN_MODULE_FILTERS.map((m) => {
           const isActive = activeModule === m;
           const href = buildWhatsNewFilterUrl({ type: typeFilter, module: isActive ? null : m, year: activeYear });
@@ -20,8 +28,6 @@ export default function WhatsNewSidebar({ typeFilter, activeModule, activeYear, 
           );
         })}
       </ul>
-
-      <hr className={styles.divider} />
 
       <h3 className={styles.heading}>Years</h3>
       <ul className={styles.list}>

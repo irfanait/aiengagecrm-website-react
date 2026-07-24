@@ -11,9 +11,12 @@ export default function WhatsNewHero({ banner, children }) {
     <section className={styles.hero}>
       <Container className={styles.inner}>
         <h1 className={styles.title}>{banner.title}</h1>
-        <p className={styles.subtitle}>{banner.subtitle}</p>
-        <p className={styles.contactNote}>
-          <Link href={banner.contactHref}>{banner.contactLead}</Link>
+        <p className={styles.subtitle}>
+          {banner.subtitle}
+          <br />
+          <Link href={banner.contactHref} className={styles.contactLink}>
+            {banner.contactLead}
+          </Link>
           {banner.contactTail}
         </p>
         {children}

@@ -15,10 +15,9 @@ export const WN_BANNER = {
 
 // Top pill tabs. `key` (except 'all') is the value matched against an entry's `typeTag`.
 export const WN_TYPE_FILTERS = [
-  { key: 'all', label: 'All', icon: 'apps' },
-  { key: 'enhancement', label: 'Product Enhancements', icon: 'upgrade' },
-  { key: 'new-feature-update', label: 'New Features', icon: 'auto_awesome' },
-  { key: 'reports', label: 'Reports', icon: 'bar_chart' },
+  { key: 'all', label: 'All' },
+  { key: 'new-feature-update', label: 'New Features' },
+  { key: 'enhancement', label: 'Product Enhancements' },
 ];
 
 // Sidebar "Modules" list. Matched against each entry's `moduleTags` array (exact string match).
@@ -27,7 +26,7 @@ export const WN_MODULE_FILTERS = [
   'Records',
   'Invoices & Quotes',
   'WhatsApp',
-  'Ai Agents',
+  'AI Agents',
   'Marketing',
   'Mobile App',
   'Voice',
@@ -53,7 +52,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'new-feature-update',
     moduleTags: ['Contacts'],
-    image: '/whats-new/instantly-create-contacts-by-scanning-images-such-as-business-cards.png',
+    image: '/whats-new/instantly-create-contacts-by-scanning-images-such-as-business-cards-dark.png',
     teaser:
       "Adding new contacts is now faster than ever. We're excited to introduce Create Contact by Scanning Image, a new feature that lets you instantly create CRM contacts by scanning a business card or uploading an image.",
     body: [
@@ -114,7 +113,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'new-feature-update',
     moduleTags: ['Marketing', 'Mobile App', 'Voice'],
-    image: '/whats-new/make-customer-calls-smarter-with-mobile-crm-calling.png',
+    image: '/whats-new/make-customer-calls-smarter-with-mobile-crm-calling-dark.png',
     teaser:
       "Managing customer conversations on the go just got easier. We're excited to introduce Mobile Calling, a new feature that lets you log and manage customer calls directly from your mobile device.",
     body: [
@@ -172,7 +171,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'enhancement',
     moduleTags: ['Records'],
-    image: '/whats-new/organize-customer-information-with-notes.png',
+    image: '/whats-new/organize-customer-information-with-notes-dark.png',
     teaser:
       'Keep every customer interaction organized in one place. We’re excited to introduce Contact Related Notes View—a centralized space to create, view, and manage notes associated with your contacts.',
     body: [
@@ -223,8 +222,8 @@ export const WN_ENTRIES = [
     title: 'Automate WhatsApp Conversations with AI',
     date: '2026-07-15',
     typeTag: 'new-feature-update',
-    moduleTags: ['Ai Agents'],
-    image: '/whats-new/automate-whatsapp-conversations-with-ai.png',
+    moduleTags: ['AI Agents'],
+    image: '/whats-new/automate-whatsapp-conversations-with-ai-dark.png',
     teaser:
       "Bring your AI Agent to the world's most popular messaging platform. We're excited to introduce AI Agent for WhatsApp—a seamless integration that lets your AI Agent engage with customers directly on WhatsApp.",
     body: [
@@ -275,8 +274,8 @@ export const WN_ENTRIES = [
     title: 'Bring AI-Powered Support to Your Customers',
     date: '2026-07-15',
     typeTag: 'new-feature-update',
-    moduleTags: ['Ai Agents'],
-    image: '/whats-new/bring-ai-powered-support-to-your-customers.png',
+    moduleTags: ['AI Agents'],
+    image: '/whats-new/bring-ai-powered-support-to-your-customers-dark.png',
     teaser:
       'Deliver instant, personalized customer support 24/7 with AI-powered agents. We’re excited to introduce AI Agents—an intelligent shopping assistant that helps customers discover products, answer questions, and more.',
     body: [
@@ -328,7 +327,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'enhancement',
     moduleTags: ['Records'],
-    image: '/whats-new/find-merge-duplicate-contacts-with-ease.png',
+    image: '/whats-new/find-merge-duplicate-contacts-with-ease-dark.png',
     teaser:
       'Keep your CRM clean by merging duplicate contact records. This feature helps you identify duplicate customer records and merge them into a single, complete contact.',
     body: [
@@ -378,7 +377,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'new-feature-update',
     moduleTags: ['Invoices & Quotes'],
-    image: '/whats-new/accept-payments-with-stripe-or-razorpay.png',
+    image: '/whats-new/accept-payments-with-stripe-or-razorpay-dark.png',
     teaser:
       'Accept payments seamlessly with trusted payment gateways. We’re excited to introduce Stripe and Razorpay integration for online payments, so you can securely collect payments directly through your storefront.',
     body: [
@@ -444,7 +443,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'enhancement',
     moduleTags: ['Dashboards'],
-    image: '/whats-new/organize-your-dashboard-with-labels.png',
+    image: '/whats-new/organize-your-dashboard-with-labels-dark.png',
     teaser:
       'Organize your dashboard the way you work. We’re excited to introduce Dashboard Labels & Sections—a new way to group, organize, and navigate your dashboard with customizable labels.',
     body: [
@@ -497,7 +496,7 @@ export const WN_ENTRIES = [
     date: '2026-07-15',
     typeTag: 'enhancement',
     moduleTags: ['Dashboards'],
-    image: '/whats-new/filter-your-entire-dashboard-at-once.png',
+    image: '/whats-new/filter-your-entire-dashboard-at-once-dark.png',
     teaser:
       'Analyze your dashboard faster with one filter that updates everything at once. Instead of selecting a date range on each page individually, filter your data once and view results across your dashboard.',
     body: [
@@ -550,7 +549,7 @@ export const WN_ENTRIES = [
     date: '2026-07-14',
     typeTag: 'new-feature-update',
     moduleTags: ['WhatsApp'],
-    image: '/whats-new/scale-conversations-with-multiple-whatsapp-senders.png',
+    image: '/whats-new/scale-conversations-with-multiple-whatsapp-senders-dark.png',
     teaser:
       'Managing customer conversations across multiple WhatsApp numbers just got easier. We’re excited to introduce Multiple WhatsApp Senders, a new feature to connect and manage multiple sender accounts from one platform.',
     body: [
@@ -620,11 +619,14 @@ export function getWhatsNewEntry(slug) {
 }
 
 /** Builds a /whats-new filter URL, keeping only the facets that are actually set. */
-export function buildWhatsNewFilterUrl({ type, module, year } = {}) {
+export function buildWhatsNewFilterUrl({ type, module, year, page } = {}) {
   const params = new URLSearchParams();
   if (type && type !== 'all') params.set('type', type);
   if (module) params.set('module', module);
   if (year) params.set('year', year);
+  if (page && page > 1) params.set('page', String(page));
   const qs = params.toString();
   return qs ? `/whats-new?${qs}` : '/whats-new';
 }
+
+export const WN_PAGE_SIZE = 10;

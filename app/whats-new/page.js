@@ -13,6 +13,7 @@ export default async function WhatsNewPage({ searchParams }) {
   const typeFilter = typeof params.type === 'string' ? params.type : 'all';
   const moduleFilter = typeof params.module === 'string' ? params.module : null;
   const yearFilter = typeof params.year === 'string' ? params.year : null;
+  const page = typeof params.page === 'string' ? Math.max(1, parseInt(params.page, 10) || 1) : 1;
 
   return (
     <>
@@ -26,7 +27,7 @@ export default async function WhatsNewPage({ searchParams }) {
       <WhatsNewHero banner={WN_BANNER}>
         <WhatsNewTypeTabs active={typeFilter} moduleFilter={moduleFilter} yearFilter={yearFilter} />
       </WhatsNewHero>
-      <WhatsNewListing entries={WN_ENTRIES} typeFilter={typeFilter} moduleFilter={moduleFilter} yearFilter={yearFilter} />
+      <WhatsNewListing entries={WN_ENTRIES} typeFilter={typeFilter} moduleFilter={moduleFilter} yearFilter={yearFilter} page={page} />
     </>
   );
 }

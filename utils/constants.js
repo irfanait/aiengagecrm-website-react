@@ -4,8 +4,8 @@ export const SITE_URL = 'https://www.aiengagecrm.com';
 export const SITE_BY = 'Aitrillion.com';
 
 export const CONTACT = {
-  email: 'hello@aiengagecrm.com',
-  phone: '+91 98000 00000',
+  email: 'info@aiengagecrm.com',
+  phone: '+91 9183440213',
 };
 
 export const SOCIAL_LINKS = {

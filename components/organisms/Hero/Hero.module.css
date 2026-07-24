@@ -1,5 +1,5 @@
 .hero {
-  padding: 56px 40px 0;
+  padding: 35px 40px 0;
 }
 
 .inner {
@@ -16,7 +16,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   color: var(--color-primary);
-  margin-bottom: 26px;
+  margin-bottom: 10px;
 }
 
 .eyebrowLine {

@@ -7,8 +7,8 @@ export const CONTACT_HERO = {
 };
 
 export const CONTACT_CHANNELS = [
-  { icon: 'mail', label: 'Email us', value: 'hello@aiengagecrm.com', href: 'mailto:hello@aiengagecrm.com' },
+  { icon: 'mail', label: 'Email us', value: 'info@aiengagecrm.com', href: 'mailto:info@aiengagecrm.com' },
   { icon: 'chat', label: 'WhatsApp us', value: '+91 9183440213', href: 'https://wa.me/+919183440213' },
-  { icon: 'location_on', label: 'Our office', value: 'Indore, Madhya Pradesh 452010, India' },
+  // { icon: 'location_on', label: 'Our office', value: 'Indore, Madhya Pradesh 452010, India' },
   { icon: 'schedule', label: 'Working hours', value: 'Mon – Fri, 10:00 AM – 7:00 PM IST' },
 ];

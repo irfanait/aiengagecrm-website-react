@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.step {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.step:hover {
+  color: var(--color-primary);
+}
+
+.stepDisabled {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.number:hover {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.numberActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.numberActive:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
