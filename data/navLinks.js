@@ -9,7 +9,7 @@ export const NAV_LINKS = [
     dropdownItems: [
       { label: 'Real Estate', href: '/industries/real-estate', icon: 'apartment' },
       { label: 'Healthcare', href: '/industries/healthcare', icon: 'medical_services' },
-      { label: 'Event Management', href: '/industries/event-management', icon: 'celebration' },
+      // { label: 'Event Management', href: '/industries/event-management', icon: 'celebration' },
       { label: 'Tours & Travels', href: '/industries/tours-travels', icon: 'flight' },
       { label: 'Finance', href: '/industries/finance', icon: 'account_balance' },
       { label: 'Education', href: '/industries/education', icon: 'school' },

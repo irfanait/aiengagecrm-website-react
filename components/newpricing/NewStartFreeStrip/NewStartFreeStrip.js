@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import Container from '../../common/Container/Container';
-import styles from './StartFreeStrip.module.css';
+import styles from './NewStartFreeStrip.module.css';
 
-/** Slim callout strip below the pricing cards, promoting the always-free contact tier. */
-export default function StartFreeStrip({ title, descriptionLead, descriptionBold, descriptionTail, ctaLabel, ctaHref }) {
+/** Slim callout strip below the pricing cards, promoting the always-free contact tier. CTA opens
+ * the CRM signup app in a new tab, same as the plan cards' "Try ... For Free" buttons. */
+export default function NewStartFreeStrip({ title, descriptionLead, descriptionBold, descriptionTail, ctaLabel, ctaHref }) {
   return (
     <section className={styles.section}>
       <Container>
@@ -16,9 +16,9 @@ export default function StartFreeStrip({ title, descriptionLead, descriptionBold
               {descriptionTail}
             </p>
           </div>
-          <Link href={ctaHref} target="_blank" className={styles.cta}>
+          <a href={ctaHref} target="_blank" rel="noopener noreferrer" className={styles.cta}>
             {ctaLabel}
-          </Link>
+          </a>
         </div>
       </Container>
     </section>

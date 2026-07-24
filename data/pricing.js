@@ -95,13 +95,13 @@ export const PR_PLANS = [
     trialNote: 'Need help?',
     featuresHeading: 'Included in custom plan',
     features: [
-      'Full CRM with unlimited modules',
+      'Unlimited full CRM with unlimited modules',
       'Unlimited everything',
-      'Custom WhatsApp message quotas',
-      'Dedicated infrastructure options',
-      'White-glove onboarding',
-      'Custom integrations',
-      'Priority support',
+      'Unlimited custom WhatsApp message quotas',
+      'Unlimited dedicated infrastructure options',
+      'Unlimited white-glove onboarding',
+      'Unlimited custom integrations',
+      'Unlimited priority support',
     ],
   },
 ];
@@ -112,7 +112,7 @@ export const PR_START_FREE = {
   descriptionBold: 'free for up to 100 Active Contacts (per user)',
   descriptionTail: ' and explore powerful growth tools for your business.',
   ctaLabel: 'Start free',
-  ctaHref: '/signup',
+  ctaHref: 'https://crm.aitrillion.com/auth/sign-up',
 };
 
 export const PR_COMPARISON = {

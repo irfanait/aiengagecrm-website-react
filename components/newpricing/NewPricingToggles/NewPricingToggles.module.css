@@ -1,0 +1,122 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.cycleGroup {
+  display: inline-flex;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+}
+
+.cycleBtn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text-muted);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cycleBtnActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.regionGroup {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.regionLabel {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+}
+
+.regionLabelActive {
+  color: var(--color-text);
+}
+
+.track {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 46px;
+  height: 26px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+
+.trackIndia {
+  background: var(--color-primary);
+}
+
+.knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-text-faint);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: left 0.15s ease, background-color 0.15s ease;
+}
+
+.knobIndia {
+  left: 23px;
+  background: #fff;
+}
+
+.infoWrap {
+  position: relative;
+  display: inline-flex;
+  cursor: default;
+}
+
+.tip {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+  pointer-events: none;
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 230px;
+  background: var(--color-dark-bg);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 300;
+  padding: 10px 12px;
+  border-radius: var(--radius-2xs);
+  box-shadow: var(--shadow-panel);
+  z-index: 20;
+}
+
+.infoWrap:hover .tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
