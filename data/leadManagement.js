@@ -251,12 +251,12 @@ export const LM_BENEFITS = [
 export const LM_INDUSTRIES_HEADING = 'Teams in every industry.';
 
 export const LM_INDUSTRIES = [
-  { icon: 'apartment', label: 'Real Estate' },
-  { icon: 'code', label: 'IT' },
-  { icon: 'medical_services', label: 'Healthcare' },
-  { icon: 'school', label: 'Education' },
-  { icon: 'travel_explore', label: 'Tours & Travels' },
-  { icon: 'payments', label: 'Finance' },
+  { icon: 'apartment', label: 'Real Estate', href: '/industries/real-estate' },
+  { icon: 'code', label: 'IT', href: '/industries/it' },
+  { icon: 'medical_services', label: 'Healthcare', href: '/industries/healthcare' },
+  { icon: 'school', label: 'Education', href: '/industries/education' },
+  { icon: 'travel_explore', label: 'Tours & Travels', href: '/industries/tours-travels' },
+  { icon: 'payments', label: 'Finance', href: '/industries/finance' },
 ].map((i) => ({ ...i, bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' }));
 
 export const LM_FINAL_CTA = {

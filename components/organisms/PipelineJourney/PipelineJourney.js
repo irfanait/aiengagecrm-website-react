@@ -8,7 +8,7 @@ export default function PipelineJourney() {
     <section className={styles.section}>
       <Container>
         <SectionHeading
-          index="03"
+          index="04"
           label="HOW IT WORKS"
           title="From first inquiry to repeat business."
           description="Every lead gets an owner, a next step and a follow-up — automatically."

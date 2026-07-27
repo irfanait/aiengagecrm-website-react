@@ -1,23 +1,36 @@
 import AboutHero from '../../components/templates/AboutHero/AboutHero';
 import AboutMission from '../../components/organisms/AboutMission/AboutMission';
+import AboutChallenges from '../../components/organisms/AboutChallenges/AboutChallenges';
+import AboutIndustriesShowcase from '../../components/organisms/AboutIndustriesShowcase/AboutIndustriesShowcase';
 import AboutWhyItWorks from '../../components/organisms/AboutWhyItWorks/AboutWhyItWorks';
-import AboutFeaturesGrid from '../../components/organisms/AboutFeaturesGrid/AboutFeaturesGrid';
-import IndustriesGrid from '../../components/organisms/IndustriesGrid/IndustriesGrid';
+import AboutMissionBanner from '../../components/organisms/AboutMissionBanner/AboutMissionBanner';
+import AboutTrust from '../../components/organisms/AboutTrust/AboutTrust';
 import CTASection from '../../components/organisms/CTASection/CTASection';
 import JsonLd from '../../components/common/JsonLd/JsonLd';
 import { buildMetadata, breadcrumbSchema } from '../../utils/seo';
 import { seoData } from '../../data/seoData';
 import {
   AB_HERO,
-  AB_MISSION,
-  AB_WHY_HEADING,
-  AB_WHY_CARDS,
-  AB_RESULT_LABEL,
-  AB_RESULT_STATS,
-  AB_FEATURES_HEADING,
-  AB_FEATURES,
+  AB_STORY_HEADING,
+  AB_STORY_PARAGRAPHS,
+  AB_STORY_STATS,
+  AB_CHALLENGES_HEADING,
+  AB_CHALLENGES_SUBTITLE,
+  AB_CHALLENGES,
+  AB_CHALLENGES_NOTE,
   AB_INDUSTRIES_HEADING,
+  AB_INDUSTRIES_INTRO,
   AB_INDUSTRIES,
+  AB_INDUSTRIES_NOTE,
+  AB_INDUSTRIES_TAGLINE,
+  AB_APPROACH_HEADING,
+  AB_APPROACH_SUBTITLE,
+  AB_APPROACH_CARDS,
+  AB_APPROACH_NOTE,
+  AB_MISSION_BANNER,
+  AB_TRUST_HEADING,
+  AB_TRUST_ITEMS,
+  AB_TRUST_NOTE,
   AB_FINAL_CTA,
 } from '../../data/about';
 
@@ -38,19 +51,30 @@ export default function AboutPage() {
         title={
           <>
             {AB_HERO.titleLead}
+            <br />
             <span className="textAccent">{AB_HERO.titleAccent}</span>
           </>
         }
         description={AB_HERO.description}
       />
 
-      <AboutMission heading={AB_MISSION.heading} tagline={AB_MISSION.tagline} paragraphs={AB_MISSION.paragraphs} />
+      <AboutMission heading={AB_STORY_HEADING} paragraphs={AB_STORY_PARAGRAPHS} stats={AB_STORY_STATS} />
 
-      <AboutWhyItWorks heading={AB_WHY_HEADING} cards={AB_WHY_CARDS} resultLabel={AB_RESULT_LABEL} stats={AB_RESULT_STATS} />
+      <AboutChallenges heading={AB_CHALLENGES_HEADING} subtitle={AB_CHALLENGES_SUBTITLE} items={AB_CHALLENGES} note={AB_CHALLENGES_NOTE} />
 
-      <AboutFeaturesGrid heading={AB_FEATURES_HEADING} items={AB_FEATURES} />
+      <AboutIndustriesShowcase
+        heading={AB_INDUSTRIES_HEADING}
+        intro={AB_INDUSTRIES_INTRO}
+        items={AB_INDUSTRIES}
+        note={AB_INDUSTRIES_NOTE}
+        tagline={AB_INDUSTRIES_TAGLINE}
+      />
 
-      <IndustriesGrid heading={AB_INDUSTRIES_HEADING} items={AB_INDUSTRIES} columns={3} showMoreCard={false} moreNote="And Many More" />
+      <AboutWhyItWorks heading={AB_APPROACH_HEADING} subtitle={AB_APPROACH_SUBTITLE} cards={AB_APPROACH_CARDS} note={AB_APPROACH_NOTE} />
+
+      <AboutMissionBanner eyebrow={AB_MISSION_BANNER.eyebrow} heading={AB_MISSION_BANNER.heading} description={AB_MISSION_BANNER.description} />
+
+      <AboutTrust heading={AB_TRUST_HEADING} items={AB_TRUST_ITEMS} note={AB_TRUST_NOTE} />
 
       <CTASection
         title={

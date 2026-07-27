@@ -28,7 +28,7 @@ export default function Testimonial() {
     <section className={styles.section}>
       <Container className={styles.body}>
         <div className={styles.side}>
-          <SectionHeading index="06" label="CUSTOMERS" title="" className={styles.tagOnly} />
+          <SectionHeading index="07" label="CUSTOMERS" title="" className={styles.tagOnly} />
         </div>
 
         <div className={styles.content}>

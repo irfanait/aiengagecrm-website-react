@@ -1,42 +1,98 @@
-// Content for the About Us page. Structurally different from the product feature pages —
-// no ProductHero/FeatureSection zig-zag here, just a centered hero, a mission statement,
-// a "why it works" card grid + result stats, a 9-card features grid linking to product pages,
-// an industries grid, and a dark final CTA.
+// Content for the About Us page (V2 redesign). Structurally different from the product feature
+// pages — a centered hero, an origin-story section with a stats card, a "challenges" checklist,
+// an industries showcase, an "approach to AI" card row, a dark mission banner, a 9-card features
+// grid (AB_FEATURES — also reused by the homepage's AIStageSlider, keep in sync with care), a
+// "why businesses trust us" checklist, and a dark final CTA.
 
 export const AB_HERO = {
   badge: { icon: null, label: 'ABOUT US', bg: '#fff3ea', textColor: 'var(--color-primary-hover)' },
-  titleLead: 'AI-Powered CRM To Manage ',
-  titleAccent: 'Every Lead, Conversation, And Sale',
+  titleLead: 'More Than a CRM.',
+  titleAccent: 'Built to Help Businesses Grow.',
+  description: 'Built on 17 Years of Experience. Designed for the Future.',
+};
+
+export const AB_STORY_HEADING = 'A platform shaped by 17 years of working with businesses.';
+
+export const AB_STORY_PARAGRAPHS = [
+  'AiEngage CRM is the result of 17 years of experience working with businesses, understanding their challenges, and building solutions that simplify growth.',
+  'Founded by Sachin Dhanotiya and developed by the AiTrillion team, our journey began by helping 10,000+ businesses strengthen customer relationships, automate operations, and scale through technology.',
+  'After years of building AI and automation solutions for eCommerce businesses, we realized that service industries were facing the same challenges—manual work, scattered communication, missed follow-ups, and limited visibility.',
+  "That's why we created AiEngage—an AI-powered Business Automation Platform built specifically for modern service businesses.",
+];
+
+export const AB_STORY_STATS = [
+  { value: '17+', label: 'Years of experience' },
+  { value: '10,000+', label: 'Businesses served' },
+  { value: '1', label: 'Connected platform' },
+];
+
+export const AB_CHALLENGES_HEADING = 'We Understand How Businesses Actually Work';
+export const AB_CHALLENGES_SUBTITLE = 'Every business is different, but the day-to-day challenges are surprisingly similar.';
+
+export const AB_CHALLENGES = [
+  'Leads come from multiple sources.',
+  'Teams communicate on different platforms.',
+  'Follow-ups are missed.',
+  'Business owners struggle to track what is happening.',
+  'Employees spend more time managing work than growing the business.',
+];
+
+export const AB_CHALLENGES_NOTE = [
+  "We've seen these challenges across thousands of businesses over the last 17 years.",
+  'AiEngage was built to simplify these processes, helping businesses become more organized, responsive, and scalable through AI and automation.',
+];
+
+export const AB_INDUSTRIES_HEADING = 'From eCommerce Innovation to Every Service Business';
+
+export const AB_INDUSTRIES_INTRO = [
+  'Our experience started in the world of eCommerce, where speed, customer engagement, and automation are essential for growth.',
+  'The same principles now power AiEngage for service industries.',
+];
+
+export const AB_INDUSTRIES = [
+  { icon: 'apartment', label: 'Real Estate', href: '/industries/real-estate' },
+  { icon: 'memory', label: 'IT', href: '/industries/it' },
+  { icon: 'account_balance', label: 'Finance', href: '/industries/finance' },
+  { icon: 'flight_takeoff', label: 'Tours & Travels', href: '/industries/tours-travels' },
+  { icon: 'school', label: 'Education', href: '/industries/education' },
+  { icon: 'medical_services', label: 'Healthcare', href: '/industries/healthcare' },
+  { icon: 'badge', label: 'Professional Services' },
+  { icon: 'precision_manufacturing', label: 'Manufacturing' },
+];
+
+export const AB_INDUSTRIES_NOTE = 'And many more.';
+export const AB_INDUSTRIES_TAGLINE = 'Every industry has its own workflow, but every growing business benefits from better systems.';
+
+export const AB_APPROACH_HEADING = 'Our Approach to AI';
+export const AB_APPROACH_SUBTITLE = 'We believe AI should support people, not replace them.';
+
+export const AB_APPROACH_CARDS = [
+  {
+    icon: 'bolt',
+    title: 'Removes Repetitive Work',
+    body: "Technology is most valuable when it takes the manual, repeating tasks off your team's plate.",
+  },
+  {
+    icon: 'forum',
+    title: 'Improves Customer Experiences',
+    body: 'Faster responses and consistent communication across every conversation.',
+  },
+  {
+    icon: 'insights',
+    title: 'Supports Better Decisions',
+    body: 'Clear visibility into what is happening, so teams can act on it.',
+  },
+];
+
+export const AB_APPROACH_NOTE =
+  'By combining AI with automation and a connected business platform, we help businesses respond faster, stay organized, and create consistent customer experiences—while keeping people at the center of every interaction.';
+
+export const AB_MISSION_BANNER = {
+  eyebrow: 'OUR MISSION',
+  heading: 'To help businesses grow with smarter systems, intelligent automation, and practical AI.',
   description:
-    'Manage every customer conversation with an AI-powered CRM assistant that qualifies leads, automates follow-ups, reduces repetitive work, and keeps your sales pipeline moving.',
+    "We're building more than software—we're building a platform that gives business owners greater visibility, empowers teams to work more efficiently, and creates processes that scale as the business grows.",
 };
-
-export const AB_MISSION = {
-  heading: 'We Built AiEngage CRM To Help You Capture Every Lead',
-  tagline: 'Making Customer Engagement Smarter With AI.',
-  paragraphs: [
-    'Our mission is to help businesses manage every customer interaction with greater speed, consistency, and clarity.',
-    'AiEngage CRM brings AI into the complete customer journey. It can answer common questions, qualify incoming leads, summarize conversations, automate follow-ups, assign tasks, and move opportunities to the next stage.',
-    'This creates a faster, more organized experience for both businesses and their customers.',
-  ],
-};
-
-export const AB_WHY_HEADING = 'Built To Turn More Conversations Into Conversions';
-
-export const AB_WHY_CARDS = [
-  { icon: 'bolt', title: 'Faster Responses', body: 'AI agents and chatbots can respond to customer enquiries instantly, even when teams are unavailable.' },
-  { icon: 'fact_check', title: 'Smarter Lead Qualification', body: 'AI can ask relevant questions, understand customer intent, and identify high-potential leads.' },
-  { icon: 'update', title: 'Automated Follow-Ups', body: 'Messages, reminders, tasks, and next steps can be triggered automatically based on customer activity.' },
-  { icon: 'task_alt', title: 'Less Manual Work', body: 'Conversation summaries, lead updates, assignments, and repetitive actions can be handled automatically.' },
-];
-
-export const AB_RESULT_LABEL = 'RESULT';
-
-export const AB_RESULT_STATS = [
-  { value: '2X', label: 'Faster Follow-Ups' },
-  { value: '50%', label: 'Less Manual Work' },
-  { value: 'More', label: 'Qualified Leads' },
-];
 
 export const AB_FEATURES_HEADING = 'AI Built Into Every Stage Of Customer Engagement';
 
@@ -142,16 +198,19 @@ export const AB_FEATURES = [
   },
 ];
 
-export const AB_INDUSTRIES_HEADING = 'Trusted Across Growing Industries';
+export const AB_TRUST_HEADING = 'Why Businesses Trust AiEngage';
 
-export const AB_INDUSTRIES = [
-  { icon: 'apartment', label: 'Real Estate', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'memory', label: 'IT', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'medical_services', label: 'Healthcare', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'school', label: 'Education', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'flight_takeoff', label: 'Tours & Travels', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'account_balance', label: 'Finance', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
+export const AB_TRUST_ITEMS = [
+  '17+ years of industry experience',
+  'Trusted by 10,000+ businesses',
+  'Built by the experienced AiTrillion team',
+  'Purpose-built for modern service businesses',
+  'Focused on practical AI and business automation',
+  'Committed to long-term customer success',
 ];
+
+export const AB_TRUST_NOTE =
+  "At AiEngage, we don't just build technology—we build systems that help businesses work smarter, serve customers better, and grow with confidence.";
 
 export const AB_FINAL_CTA = {
   titleLead: 'Turn More Conversations ',

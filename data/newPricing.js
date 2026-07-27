@@ -61,6 +61,7 @@ export const NP_PLANS = [
     trialNote: '14-days free trial',
     featuresHeading: 'Included in business',
     features: [
+      'Up to 10 Users/Seats',
       'Full CRM + 10 Custom Modules',
       'Up to 20,000 Contacts',
       'Email, WhatsApp, Voice & Team Inbox',
@@ -83,6 +84,7 @@ export const NP_PLANS = [
     trialNote: '14-days free trial',
     featuresHeading: 'Included in business pro',
     features: [
+      'Up to 20 Users/Seats',
       'Full CRM + 15 Custom Modules',
       'Up to 50,000 Contacts',
       'Email, WhatsApp, Voice & Team Inbox',
@@ -110,12 +112,12 @@ export const NP_PLANS = [
         'Custom User/Seat limit',
         'Custom Contact limit',
         'All Feature Available',
+        'REST API & MCP Access',
+        'Custom limit for REST API Calls',
         'Dedicated infrastructure options',
         'White-glove onboarding',
         'Custom integrations',
-        'Oriority support',
-        'REST API & MCP Access',
-        'Custom limit for REST API'
+        'Priority support',
     ],
   },
 ];
@@ -148,7 +150,7 @@ export const NP_COMPARISON = {
     'Limited visibility into the customer journey',
   ],
   ctaLabel: 'Try AiEngage Free',
-  ctaHref: '/signup',
+  ctaHref: 'https://crm.aitrillion.com/auth/sign-up',
 };
 
 export const NP_PLATFORM = {
@@ -245,7 +247,7 @@ export const NP_FEATURE_TABLE = [
     title: 'CRM Core & Data Model',
     rows: [
       { label: 'Custom modules', sub: 'Build your own entities beyond Leads', business: '10', businessPro: '15' },
-      { label: 'Custom fields', sub: 'Per module', business: '30', businessPro: '45' },
+      { label: 'Custom fields', sub: 'Per module', business: '50', businessPro: '80' },
       { label: 'Custom list views', sub: null, business: '40', businessPro: '100' },
       { label: 'Drag-and-drop layout builder', sub: null, business: true, businessPro: true },
       { label: 'Activity log & audit trail', sub: 'Field-level before/after history', business: true, businessPro: true },
@@ -260,7 +262,7 @@ export const NP_FEATURE_TABLE = [
       { label: 'Roles', sub: 'User role definitions', business: '12', businessPro: '30' },
       { label: 'Profiles', sub: 'Permission sets', business: '12', businessPro: '30' },
       { label: 'Sharing rules', sub: 'Record-level access control', business: '12', businessPro: '30' },
-      { label: 'Teams', sub: 'Group users into teams', business: '10', businessPro: '25' },
+      { label: 'Teams', sub: 'Group users into teams', business: '10', businessPro: '20' },
     ],
   },
   {
@@ -405,7 +407,7 @@ export const NP_FEATURE_TABLE = [
       { label: 'Saved reports', sub: 'Share with team', business: true, businessPro: true },
       { label: 'Drill-down', sub: 'Click any cell to underlying records', business: true, businessPro: true },
       { label: 'Per-dashboard sharing', sub: 'Share with users or team', business: true, businessPro: true },
-      { label: 'Components per dashboard', sub: 'Org level', business: '10', businessPro: '20' },
+      { label: 'Components per dashboard', sub: 'Org level', business: '20', businessPro: '20' },
       { label: 'Chart components', sub: 'Org level', business: '100', businessPro: '150' },
       { label: 'Comparator components', sub: 'Org level', business: '15', businessPro: '25' },
       { label: 'KPI components', sub: 'Org level', business: '120', businessPro: '150' },

@@ -1,35 +1,48 @@
-// Mirrors SiteFooter.dc.html's four link columns.
+// Mirrors the updated footer design: FEATURES spans two columns (the second has no heading of
+// its own, it's a visual continuation), then INDUSTRIES, WHY AIENGAGE and COMPANY.
 export const FOOTER_COLUMNS = [
   {
-    heading: 'PRODUCTS',
+    heading: 'FEATURES',
     links: [
       { label: 'WhatsApp Business', href: '/whatsapp' },
+      { label: 'Marketing Campaigns', href: '/marketing-campaigns' },
+      { label: 'Multi-Channel Communication', href: '/multichannel-communication' },
+      { label: 'Customer Management', href: '/customer-management' },
       { label: 'Lead Management', href: '/lead-management' },
       { label: 'Sales Pipeline', href: '/sales-pipeline' },
-      { label: 'Built-In Calling', href: '/calling' },
-      { label: 'AI & Automation', href: '/automation' },
+      { label: 'Automation', href: '/automation' },
+      { label: 'AI', href: '/ai' },
+    ],
+  },
+  {
+    heading: null,
+    links: [
+      { label: 'Calling', href: '/calling' },
+      { label: 'Mobile App', href: '/mobile-app' },
+      { label: 'Data Management', href: '/data-management' },
       { label: 'Reports & Analytics', href: '/reports-analytics' },
+      { label: 'Integrations', href: '/integrations' },
+      { label: 'Customization', href: '/customization' },
+      { label: 'Security & Compliance', href: '/security-compliance' },
     ],
   },
   {
-    heading: 'SOLUTIONS',
+    heading: 'INDUSTRIES',
     links: [
-      { label: 'Real Estate', href: '#' },
-      { label: 'Healthcare', href: '#' },
-      { label: 'Education', href: '#' },
-      { label: 'Finance', href: '#' },
-      { label: 'IT & Technology', href: '#' },
-      { label: 'Tours & Travels', href: '#' },
+      { label: 'Real Estate', href: '/industries/real-estate' },
+      { label: 'Healthcare', href: '/industries/healthcare' },
+      { label: 'Education', href: '/industries/education' },
+      { label: 'Tours & Travels', href: '/industries/tours-travels' },
+      { label: 'Finance', href: '/industries/finance' },
+      { label: 'IT', href: '/industries/it' },
     ],
   },
   {
-    heading: 'RESOURCES',
+    heading: 'WHY AIENGAGE',
     links: [
-      { label: 'Blog', href: '#' },
-      { label: 'Help Centre', href: '#' },
-      { label: 'Case Studies', href: '#' },
-      { label: 'Webinars', href: '#' },
-      { label: 'API Docs', href: '#' },
+      { label: 'AiEngage vs HubSpot', href: '/hubspot-alternative' },
+      { label: 'AiEngage vs Zoho', href: '/zoho-alternative' },
+      { label: 'AiEngage vs Keap', href: '/keap-alternative' },
     ],
   },
   {
@@ -37,8 +50,8 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: 'About Us', href: '/about' },
       { label: 'Pricing', href: '/pricing' },
-      { label: 'Careers', href: '#' },
-      { label: 'Contact Us', href: '/contact-us' },
+      { label: "What's New", href: '/whats-new' },
+      { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
     ],
   },
 ];
@@ -48,5 +61,4 @@ export const FOOTER_SOCIALS = [
   { label: 'in', name: 'LinkedIn', href: 'https://www.linkedin.com/company/aiengagecrm' },
   { label: 'X', name: 'X (Twitter)', href: 'https://twitter.com/aiengagecrm' },
   { label: 'ig', name: 'Instagram', href: 'https://www.instagram.com/aiengagecrm' },
-  { label: 'yt', name: 'YouTube', href: 'https://www.youtube.com/@aiengagecrm' },
 ];

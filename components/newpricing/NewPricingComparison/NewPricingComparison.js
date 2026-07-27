@@ -43,7 +43,7 @@ export default function NewPricingComparison({ titleLead, titleAccent, titleTail
                 </div>
               ))}
             </div>
-            <Link href={ctaHref} className={styles.cta}>
+            <Link target="_blank" href={ctaHref} className={styles.cta}>
               {ctaLabel}
             </Link>
           </div>

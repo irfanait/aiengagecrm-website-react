@@ -18,7 +18,7 @@ export default function NewPricingToggles({ cycle, region, onCycleChange, onRegi
           className={`${styles.cycleBtn} ${cycle === 'annual' ? styles.cycleBtnActive : ''}`}
           onClick={() => onCycleChange('annual')}
         >
-          Annually(2 months free)
+          Annually( 2 months <b>FREE</b> )
         </button>
       </div>
 

@@ -35,7 +35,7 @@ export default function AIAutopilot() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading index="02" label="AI ON AUTOPILOT" dark className={styles.eyebrowOnly} title="" />
+        <SectionHeading index="03" label="AI ON AUTOPILOT" dark className={styles.eyebrowOnly} title="" />
 
         <div className={styles.header}>
           <h2 className={styles.title}>
@@ -80,7 +80,7 @@ export default function AIAutopilot() {
             <span className={`${styles.footerDot} ${styles.footerDotFinal}`} />
             Step 8 · your team&apos;s first touch
           </span>
-          <a href="#" className={styles.footerLink}>
+          <a href="/automation" className={styles.footerLink}>
             See automation in action
             <Icon name="arrow_forward" size={16} />
           </a>

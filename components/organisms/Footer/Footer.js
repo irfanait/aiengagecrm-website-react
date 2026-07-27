@@ -2,9 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { FOOTER_COLUMNS, FOOTER_SOCIALS } from '../../../data/footerLinks';
-import { SITE_BY,
-  SITE_NAME 
-} from '../../../utils/constants';
+import { SITE_NAME } from '../../../utils/constants';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -32,14 +30,20 @@ export default function Footer() {
           </div>
 
           <div className={styles.columns}>
-            {FOOTER_COLUMNS.map((col) => (
-              <div className={styles.column} key={col.heading}>
-                <span className={styles.columnHeading}>{col.heading}</span>
-                {col.links.map((link) => (
-                  <Link key={link.label} href={link.href} className={styles.columnLink}>
-                    {link.label}
-                  </Link>
-                ))}
+            {FOOTER_COLUMNS.map((col, i) => (
+              <div className={styles.column} key={col.heading || `col-${i}`}>
+                {col.heading && <span className={styles.columnHeading}>{col.heading}</span>}
+                {col.links.map((link) =>
+                  link.external ? (
+                    <a key={link.label} href={link.href} className={styles.columnLink} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link key={link.label} href={link.href} className={styles.columnLink}>
+                      {link.label}
+                    </Link>
+                  )
+                )}
               </div>
             ))}
           </div>
@@ -47,17 +51,16 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <span className={styles.copyright}>
-            © {year} <Link href="/">{SITE_NAME}</Link>. All rights reserved. by{' '}
-            <a href="https://www.aitrillion.com" target="_blank" rel="noreferrer">
-              {SITE_BY}
-            </a>
+            © {year} <Link href="/">{SITE_NAME}</Link>. All rights reserved.
           </span>
-          <Link href="https://www.aitrillion.com/terms-of-service" target='_blank' className={styles.legalLink}>
-            Terms of Use
-          </Link>
-          <Link href="https://www.aitrillion.com/privacy-policy" target='_blank' className={styles.legalLink}>
-            Privacy Policy
-          </Link>
+          <div className={styles.legalLinks}>
+            <Link href="https://www.aitrillion.com/terms-of-service" target='_blank' className={styles.legalLink}>
+              Terms of Use
+            </Link>
+            <Link href="https://www.aitrillion.com/privacy-policy" target='_blank' className={styles.legalLink}>
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </Container>
     </footer>

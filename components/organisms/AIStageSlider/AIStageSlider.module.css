@@ -1,0 +1,78 @@
+.section {
+  padding: 84px 40px;
+  background: #fff;
+  border-top: 1px solid var(--color-border);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.heading {
+  margin-bottom: 0 !important;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-bottom: 4px;
+}
+
+.arrowBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.arrowBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.carousel :global(.slick-list) {
+  margin: 0 -12px;
+}
+
+.carousel :global(.slick-track) {
+  display: flex !important;
+}
+
+.carousel :global(.slick-slide) {
+  height: auto;
+}
+
+.carousel :global(.slick-slide) > div {
+  height: 100%;
+}
+
+.slide {
+  height: 100%;
+  padding: 4px 12px 20px;
+}
+
+@media (max-width: 900px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px 20px;
+  }
+}

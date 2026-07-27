@@ -107,12 +107,12 @@ export const STATS = [
 ];
 
 export const INDUSTRIES = [
-  { icon: 'apartment', label: 'Real Estate' },
-  { icon: 'medical_services', label: 'Healthcare' },
-  { icon: 'school', label: 'Education' },
-  { icon: 'payments', label: 'Finance' },
-  { icon: 'code', label: 'IT & Technology' },
-  { icon: 'travel_explore', label: 'Tours & Travels' },
+  { icon: 'apartment', label: 'Real Estate', href: '/industries/real-estate' },
+  { icon: 'medical_services', label: 'Healthcare', href: '/industries/healthcare' },
+  { icon: 'school', label: 'Education', href: '/industries/education' },
+  { icon: 'payments', label: 'Finance', href: '/industries/finance' },
+  { icon: 'code', label: 'IT & Technology', href: '/industries/it' },
+  { icon: 'travel_explore', label: 'Tours & Travels', href: '/industries/tours-travels' },
   { icon: 'event', label: 'Event Management' },
   { icon: 'factory', label: 'Manufacturing' },
   { icon: 'storefront', label: 'Retail' },

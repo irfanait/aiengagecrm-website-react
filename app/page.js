@@ -1,6 +1,7 @@
 import Hero from '../components/organisms/Hero/Hero';
 import PlatformExplorer from '../components/organisms/PlatformExplorer/PlatformExplorer';
 import AIAutopilot from '../components/organisms/AIAutopilot/AIAutopilot';
+import AIStageSlider from '../components/organisms/AIStageSlider/AIStageSlider';
 import PipelineJourney from '../components/organisms/PipelineJourney/PipelineJourney';
 import Stats from '../components/organisms/Stats/Stats';
 import Industries from '../components/organisms/Industries/Industries';
@@ -19,6 +20,7 @@ export default function HomePage() {
       <JsonLd data={webPageSchema({ name: seoData.home.title, description: seoData.home.description, path: '/' })} />
       <Hero />
       <PlatformExplorer />
+      <AIStageSlider />
       <AIAutopilot />
       <PipelineJourney />
       <Stats />

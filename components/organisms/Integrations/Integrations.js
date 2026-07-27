@@ -9,7 +9,7 @@ export default function Integrations() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading index="07" label="INTEGRATIONS" title="" className={styles.tagOnly} />
+        <SectionHeading index="08" label="INTEGRATIONS" title="" className={styles.tagOnly} />
         <div className={styles.headerRow}>
           <h2 className={styles.title}>Plays well with the tools you already use.</h2>
           <span className={styles.allCount}>All 100+ integrations</span>

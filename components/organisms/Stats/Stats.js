@@ -7,7 +7,7 @@ export default function Stats() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading index="04" label="THE RESULTS" className={styles.heading} />
+        <SectionHeading index="05" label="THE RESULTS" className={styles.heading} />
         <div className={styles.grid}>
           {STATS.map((stat) => (
             <div key={stat.label} className={styles.item}>

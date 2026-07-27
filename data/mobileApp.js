@@ -123,12 +123,12 @@ export const MA_BENEFITS = [
 ];
 
 export const MA_INDUSTRIES = [
-  { icon: 'apartment', label: 'Real Estate', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'memory', label: 'IT', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
-  { icon: 'medical_services', label: 'Healthcare', bg: 'var(--color-green-tint)', color: 'var(--color-whatsapp)' },
-  { icon: 'school', label: 'Education', bg: 'var(--color-purple-tint)', color: 'var(--color-purple)' },
-  { icon: 'flight_takeoff', label: 'Tours & Travels', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
-  { icon: 'account_balance', label: 'Finance', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)', dark: true },
+  { icon: 'apartment', label: 'Real Estate', href: '/industries/real-estate', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
+  { icon: 'memory', label: 'IT', href: '/industries/it', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)' },
+  { icon: 'medical_services', label: 'Healthcare', href: '/industries/healthcare', bg: 'var(--color-green-tint)', color: 'var(--color-whatsapp)' },
+  { icon: 'school', label: 'Education', href: '/industries/education', bg: 'var(--color-purple-tint)', color: 'var(--color-purple)' },
+  { icon: 'flight_takeoff', label: 'Tours & Travels', href: '/industries/tours-travels', bg: 'var(--color-primary-tint)', color: 'var(--color-primary)' },
+  { icon: 'account_balance', label: 'Finance', href: '/industries/finance', bg: 'var(--color-blue-tint)', color: 'var(--color-blue)', dark: true },
 ];
 
 export const MA_FINAL_CTA = {
