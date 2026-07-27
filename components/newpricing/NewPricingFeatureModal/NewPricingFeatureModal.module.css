@@ -20,14 +20,25 @@
   overflow: hidden;
 }
 
+/* Carries both scroll axes: vertical always (header pins via sticky/top), horizontal only once
+   the mobile breakpoint below gives rows a min-width wider than the viewport. */
+.scrollArea {
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+}
+
+.scrollFade {
+  display: none;
+}
+
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   background: #fff;
   border-bottom: 1px solid var(--color-border);
   display: grid;
-  grid-template-columns: 44% 28% 28%;
+  grid-template-columns: 34% 22% 22% 22%;
   align-items: center;
   gap: 8px;
   padding: 22px 26px 18px;
@@ -57,6 +68,9 @@
 }
 
 .headerTitle {
+  position: sticky;
+  left: 9px;
+  z-index: 1;
   margin: 0;
   font-size: 20px;
   line-height: 1.25;
@@ -64,6 +78,7 @@
   color: var(--color-text);
   max-width: 20ch;
   padding-right: 44px;
+  background: #fff;
 }
 
 .headerPrice {
@@ -89,9 +104,10 @@
   white-space: nowrap;
 }
 
-.tableWrap {
-  max-height: calc(100vh - 220px);
-  overflow-y: auto;
+.headerPlanOriginal {
+  margin-left: 5px;
+  color: var(--color-text-faint);
+  text-decoration: line-through;
 }
 
 .categoryRow {
@@ -121,11 +137,12 @@
    don't share a box model with the header's grid and drift out of alignment — see the JS comment). */
 .row {
   display: grid;
-  grid-template-columns: 44% 28% 28%;
+  grid-template-columns: 34% 22% 22% 22%;
   gap: 8px;
   align-items: center;
   padding: 12px 26px;
   border-bottom: 1px solid var(--color-border);
+  background: #fff;
 }
 
 .rowHighlight {
@@ -133,7 +150,11 @@
 }
 
 .labelCell {
+  position: sticky;
+  left: 9px;
+  z-index: 1;
   min-width: 0;
+  background: inherit;
 }
 
 .rowLabel {
@@ -174,17 +195,63 @@
 }
 
 @media (max-width: 700px) {
-  .header {
-    grid-template-columns: 1fr;
+  /* Fixed px columns (rather than the desktop %) so the row's natural width exceeds a phone
+     viewport, which is what makes .scrollArea actually scroll horizontally; 150+108*3+10*3 gap
+     = 504px is that natural width, repeated as min-width on .categoryRow since it has no grid
+     columns of its own to force it wide. */
+  .header,
+  .row {
+    grid-template-columns: 150px 108px 108px 108px;
+    min-width: 504px;
     gap: 10px;
+  }
+
+  .categoryRow {
+    min-width: 504px;
   }
 
   .headerTitle {
     max-width: none;
+    padding-right: 12px;
   }
 
   .row,
   .categoryRow {
     padding: 12px 16px;
+  }
+
+  .labelCell,
+  .headerTitle {
+    padding-right: 10px;
+    box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Horizontal scroll-snap so a swipe always settles with a plan column landing cleanly right
+     after the sticky label (scroll-margin-left offsets by that label's width + gap), instead of
+     resting mid-column with a price box half cut off. Only .headerPrice needs the snap points —
+     every row shares the same grid, so snapping the header snaps the whole table underneath it. */
+  .scrollArea {
+    scroll-snap-type: x mandatory;
+  }
+
+  .headerTitle {
+    scroll-snap-align: start;
+  }
+
+  .headerPrice {
+    scroll-snap-align: start;
+    scroll-margin-left: 160px;
+  }
+
+  .scrollFade {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 28px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    pointer-events: none;
+    z-index: 4;
   }
 }

@@ -12,13 +12,11 @@ import styles from './NewPricingPlansSection.module.css';
  * Hero + billing/region toggles + the 3 plan cards, all in one client component since the
  * cards' prices and the "See all features" modal both depend on the same cycle/region state.
  * The rest of this page (start-free strip, comparison, tiles, addons, FAQ, final CTA) is static
- * and lives in separate server components. Mirrors PricingPlansSection's structure exactly, but
- * reads from data/newPricing.js and renders through the components/newpricing/* tree so it never
- * touches the live /pricing page.
+ * and lives in separate server components.
  *
- * `initialRegion` ('india' | 'international' | null) comes from app/pricing-new/page.js, which
- * reads the same country cookie the live page uses. When absent (e.g. local dev), this component
- * falls back to a one-off client-side IP lookup so the toggle still defaults correctly.
+ * `initialRegion` ('india' | 'international' | null) comes from app/pricing/page.js, which reads
+ * a country cookie set by the proxy's IP geolocation. When absent (e.g. local dev), this
+ * component falls back to a one-off client-side IP lookup so the toggle still defaults correctly.
  */
 export default function NewPricingPlansSection({ hero, prices, plans, featureTable, initialRegion }) {
   const [cycle, setCycle] = useState('monthly');
@@ -48,6 +46,7 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
   }, [initialRegion]);
 
   const regionPrices = prices[region][cycle];
+  const originalAnnualPrices = prices[region].annualOriginal;
   const cycleSuffix = cycle === 'annual' ? '/year' : '/month';
 
   return (
@@ -73,6 +72,7 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
                 key={plan.key}
                 name={plan.name}
                 price={isDynamic ? regionPrices[plan.priceKey] : plan.staticPrice}
+                priceOriginal={isDynamic && cycle === 'annual' ? originalAnnualPrices[plan.priceKey] : null}
                 priceSuffix={isDynamic ? { top: cycleSuffix } : null}
                 subLabel={isDynamic ? NP_BILLING_LINES[cycle] : plan.staticSubLabel}
                 tagline={plan.tagline}
@@ -91,8 +91,12 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
 
       {modalOpen && (
         <NewPricingFeatureModal
+          soloPrice={`${regionPrices.solo}${cycleSuffix}`}
+          soloPriceOriginal={cycle === 'annual' ? originalAnnualPrices.solo : null}
           businessPrice={`${regionPrices.business}${cycleSuffix}`}
+          businessPriceOriginal={cycle === 'annual' ? originalAnnualPrices.business : null}
           businessProPrice={`${regionPrices.businessPro}${cycleSuffix}`}
+          businessProPriceOriginal={cycle === 'annual' ? originalAnnualPrices.businessPro : null}
           categories={featureTable}
           onClose={() => setModalOpen(false)}
         />

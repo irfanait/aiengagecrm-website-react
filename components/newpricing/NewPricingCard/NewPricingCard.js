@@ -12,6 +12,7 @@ import styles from './NewPricingCard.module.css';
 export default function NewPricingCard({
   name,
   price,
+  priceOriginal,
   priceSuffix,
   subLabel,
   tagline,
@@ -28,6 +29,7 @@ export default function NewPricingCard({
       <div className={styles.name}>{name}</div>
       <div className={styles.priceRow}>
         <span className={styles.price}>{price}</span>
+        {priceOriginal && <span className={styles.priceOriginal}>{priceOriginal}</span>}
         {priceSuffix && (
           <span className={styles.priceSuffix}>
             <span>{priceSuffix.top}</span>

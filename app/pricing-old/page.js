@@ -20,7 +20,7 @@ import {
   PR_FINAL_CTA,
 } from '../../data/pricing';
 
-export const metadata = buildMetadata(seoData.pricing);
+export const metadata = buildMetadata(seoData.pricingOld);
 
 export default async function PricingPage() {
   // Set by proxy.js from the host's IP-geolocation header, when available — 'IN' selects the
@@ -34,7 +34,7 @@ export default async function PricingPage() {
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', path: '/' },
-          { name: 'Pricing', path: '/pricing' },
+          { name: 'Pricing', path: '/pricing-old' },
         ])}
       />
 

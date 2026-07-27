@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers';
 import NewPricingPlansSection from '../../components/newpricing/NewPricingPlansSection/NewPricingPlansSection';
+import NewCustomPlanStrip from '../../components/newpricing/NewCustomPlanStrip/NewCustomPlanStrip';
 import NewStartFreeStrip from '../../components/newpricing/NewStartFreeStrip/NewStartFreeStrip';
 import NewPricingComparison from '../../components/newpricing/NewPricingComparison/NewPricingComparison';
 import NewPricingPlatformTiles from '../../components/newpricing/NewPricingPlatformTiles/NewPricingPlatformTiles';
@@ -12,6 +13,7 @@ import {
   NP_HERO,
   NP_PRICES,
   NP_PLANS,
+  NP_CUSTOM_PLAN,
   NP_FEATURE_TABLE,
   NP_START_FREE,
   NP_COMPARISON,
@@ -20,12 +22,8 @@ import {
   NP_FINAL_CTA,
 } from '../../data/newPricing';
 
-export const metadata = buildMetadata(seoData.pricingNew);
+export const metadata = buildMetadata(seoData.pricing);
 
-// Staging route for the new Business / Business Pro plan structure. Intentionally isolated from
-// app/pricing/page.js and everything it imports — see data/newPricing.js and
-// components/newpricing/* for why. Once this is ready to go live, this route gets renamed to
-// /pricing (and the current /pricing page archived), rather than the two being merged.
 export default async function NewPricingPage() {
   const countryCookie = (await cookies()).get('aie_country')?.value;
   const initialRegion = countryCookie ? (countryCookie === 'IN' ? 'india' : 'international') : null;
@@ -35,11 +33,19 @@ export default async function NewPricingPage() {
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', path: '/' },
-          { name: 'Pricing', path: '/pricing-new' },
+          { name: 'Pricing', path: '/pricing' },
         ])}
       />
 
       <NewPricingPlansSection hero={NP_HERO} prices={NP_PRICES} plans={NP_PLANS} featureTable={NP_FEATURE_TABLE} initialRegion={initialRegion} />
+
+      <NewCustomPlanStrip
+        title={NP_CUSTOM_PLAN.title}
+        description={NP_CUSTOM_PLAN.description}
+        features={NP_CUSTOM_PLAN.features}
+        ctaLabel={NP_CUSTOM_PLAN.ctaLabel}
+        ctaHref={NP_CUSTOM_PLAN.ctaHref}
+      />
 
       <NewStartFreeStrip
         title={NP_START_FREE.title}

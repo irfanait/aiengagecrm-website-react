@@ -145,21 +145,22 @@ export const seoData = {
     keywords: ['about AiEngage CRM', 'AI powered CRM', 'CRM mission', 'AI sales assistant'],
     image: '/og/about.png',
   },
+  // Live pricing page — Solo / Business / Business Pro plan structure (app/pricing/page.js).
   pricing: {
     path: '/pricing',
     title: 'Pricing | Plans for WhatsApp, Email, Voice & AI CRM | AiEngage',
     description:
-      'Simple, transparent pricing for AiEngage CRM. Compare Growth, Advance and Custom plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
+      'Simple, transparent pricing for AiEngage CRM. Compare Solo, Business and Business Pro plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
     keywords: ['AiEngage CRM pricing', 'CRM plans', 'WhatsApp CRM pricing', 'AI CRM cost'],
     image: '/og/pricing.png',
   },
-  // Staging page for the upcoming Business / Business Pro plan structure — not yet linked from
-  // nav or footer. noindex until this replaces /pricing (see app/pricing-new/page.js).
-  pricingNew: {
-    path: '/pricing-new',
+  // Archived Growth/Advance/Custom pricing page (app/pricing-old/page.js) — kept on-site for
+  // reference but noindexed since /pricing now covers this ground with the current plans.
+  pricingOld: {
+    path: '/pricing-old',
     title: 'Pricing | Plans for WhatsApp, Email, Voice & AI CRM | AiEngage',
     description:
-      'Simple, transparent pricing for AiEngage CRM. Compare Business and Business Pro plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
+      'Simple, transparent pricing for AiEngage CRM. Compare Growth, Advance and Custom plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
     keywords: ['AiEngage CRM pricing', 'CRM plans', 'WhatsApp CRM pricing', 'AI CRM cost'],
     image: '/og/pricing.png',
     noindex: true,

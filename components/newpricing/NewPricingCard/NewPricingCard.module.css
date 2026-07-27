@@ -29,6 +29,16 @@
   line-height: 1;
 }
 
+.priceOriginal {
+  align-self: flex-start;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+
 .priceSuffix {
   display: flex;
   flex-direction: column;
