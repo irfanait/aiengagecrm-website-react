@@ -25,7 +25,7 @@ export default function WhatsNewListing({ entries, typeFilter, moduleFilter, yea
   return (
     <section className={styles.section}>
       <Container className={styles.body}>
-        <WhatsNewSidebar typeFilter={typeFilter} activeModule={moduleFilter} activeYear={yearFilter} years={getWhatsNewYears()} />
+        <WhatsNewSidebar activeModule={moduleFilter} activeYear={yearFilter} years={getWhatsNewYears()} />
 
         <div className={styles.grid}>
           <p className={styles.count}>{filtered.length} update{filtered.length === 1 ? '' : 's'}</p>

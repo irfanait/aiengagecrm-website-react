@@ -46,7 +46,7 @@ export default function WhatsNewDetail({ entry }) {
   return (
     <section className={styles.section}>
       <Container className={styles.body}>
-        <WhatsNewSidebar typeFilter={null} activeModule={null} activeYear={null} years={getWhatsNewYears()} />
+        <WhatsNewSidebar activeModule={null} activeYear={null} years={getWhatsNewYears()} />
 
         <article className={styles.article}>
           <Link href="/whats-new" className={styles.backLink}>

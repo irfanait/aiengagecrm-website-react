@@ -25,7 +25,7 @@ export default async function WhatsNewPage({ searchParams }) {
       />
 
       <WhatsNewHero banner={WN_BANNER}>
-        <WhatsNewTypeTabs active={typeFilter} moduleFilter={moduleFilter} yearFilter={yearFilter} />
+        <WhatsNewTypeTabs active={typeFilter} />
       </WhatsNewHero>
       <WhatsNewListing entries={WN_ENTRIES} typeFilter={typeFilter} moduleFilter={moduleFilter} yearFilter={yearFilter} page={page} />
     </>

@@ -31,6 +31,9 @@ export const WN_MODULE_FILTERS = [
   'Mobile App',
   'Voice',
   'Contacts',
+  'Team Inbox',
+  'Ads & Analytics',
+  'Response Time',
 ];
 
 // CTA row shown at the bottom of every detail page.
@@ -46,6 +49,537 @@ export const WN_DETAIL_CTA = {
 // `body` block types: { type:'paragraph', segments:[{text, bold?, href?, external?}] } |
 // { type:'heading', text } | { type:'list', items:[string] }.
 export const WN_ENTRIES = [
+  {
+    slug: 'turn-conversations-into-actionable-insights-with-ai-summaries',
+    title: 'Turn Conversations into Actionable Insights with AI Summaries',
+    date: '2026-07-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Contacts'],
+    image: '/whats-new/turn-conversations-into-actionable-insights-with-ai-summaries-dark.png',
+    teaser:
+      "Understand customer conversations without reading lengthy chat histories. We're excited to introduce AI Summaries, a feature that automatically generates concise, customizable summaries of conversations and CRM records to help your team save time and respond faster.",
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'We’ve introduced ' },
+          { text: 'AI Summaries', bold: true },
+          {
+            text: ' to help your team quickly understand customer conversations and record activity without reading lengthy chat histories. AI automatically generates concise summaries that highlight the most important information, helping sales and support teams save time, respond faster, and stay informed. You can also customize how summaries are generated and control who can view or generate them through permissions.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 What’s New' },
+      { type: 'heading', text: 'AI-Powered Conversation Summaries' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Generate concise AI summaries for conversations and CRM records, allowing your team to quickly understand customer interactions without reviewing the entire conversation history.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Customizable Summary Behaviour' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Configure how AI generates summaries by choosing the preferred length, format, tone, and custom instructions to match your organization’s communication style.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Permission-Based AI Access' },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Control which users can view AI summaries and which users can generate or regenerate them using dedicated profile permissions.' },
+        ],
+      },
+      { type: 'heading', text: 'Organization-Wide AI Configuration' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Set default AI behaviour across your organization so every generated summary follows the same style and format for a consistent experience.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🤖 AI Summary Features' },
+      {
+        type: 'list',
+        items: [
+          'AI Conversation Summary – generates concise summaries of customer conversations and CRM records.',
+          'Summary Behaviour Settings – customize summary length (Short, Medium, Detailed), format (Bullets or Paragraphs), tone (Professional or Casual), and custom AI instructions.',
+          'Permission Management – control AI Summary View and AI Summary Manage permissions for different user roles.',
+          'AI Credit Support – generate summaries using your available AI credits with full control over AI usage.',
+        ],
+      },
+      { type: 'heading', text: '⚡ Key Advantages' },
+      {
+        type: 'list',
+        items: [
+          'Understand conversations instantly without reading lengthy histories.',
+          'Save time with AI-generated summaries.',
+          'Improve agent productivity and response times.',
+          'Maintain consistent summaries across your organization.',
+          'Control AI access through role-based permissions.',
+          'Customize summaries to fit your business communication style.',
+        ],
+      },
+      { type: 'heading', text: '📌 Use Case' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'When a customer has a long conversation spanning multiple messages or interactions, support and sales teams can generate an AI Summary to instantly view the key discussion points, customer concerns, and previous actions. Instead of reviewing the entire conversation history, agents can quickly understand the context and provide faster, more informed responses while maintaining a consistent customer experience.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Start using AI Summaries today to help your team understand conversations faster, improve response quality, and deliver smarter customer interactions with AI-powered insights.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          {
+            text: 'Help Center',
+            href: 'https://help.aiengagecrm.com/article/turn-on-ai-summaries-plan-permission-and-settings#what-it-takes-to-use-ai-summaries',
+            external: true,
+          },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'ai-powered-answers-from-your-whatsapp-conversations',
+    title: 'AI-Powered Answers from Your WhatsApp Conversations',
+    date: '2026-07-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Team Inbox'],
+    image: '/whats-new/ai-powered-answers-from-your-whatsapp-conversations-dark.png',
+    teaser:
+      "Stop manually searching through hundreds of chats. We're excited to introduce Inbox Intelligence, an AI-powered assistant that lets you ask questions in natural language and instantly get answers from your WhatsApp conversations, along with the exact chats behind them.",
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'We’re excited to introduce ' },
+          { text: 'Inbox Intelligence', bold: true },
+          {
+            text: '—an AI-powered assistant that helps your team instantly find answers from WhatsApp conversations using natural language. Instead of manually searching through hundreds of chats, simply ask a question, and AI analyzes your conversations to provide a concise answer along with the exact chats it used. This helps sales and support teams save time, uncover customer insights, and respond with greater confidence.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🎉 What’s New' },
+      { type: 'heading', text: '💬 Ask AI About Any WhatsApp Conversation' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Simply ask questions like "Show me chats with positive leads that are missing follow-ups", "Who was unhappy about delivery?", or "Any potential leads worth reaching out to?" and let AI search your WhatsApp conversations for the answers.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🤖 AI-Powered Conversation Analysis' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Inbox Intelligence automatically analyzes conversations within your selected date range to understand customer interactions and generate accurate, context-aware responses.',
+          },
+        ],
+      },
+      { type: 'heading', text: '📅 Date Range Filtering' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Narrow your search by selecting a custom date range to analyze conversations from a specific period, making it easier to investigate campaigns, customer issues, or recent interactions.',
+          },
+        ],
+      },
+      { type: 'heading', text: '📝 Conversation History' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'All your AI questions are automatically saved in a history panel, allowing you to revisit previous searches, review answers, and continue your analysis without starting over.',
+          },
+        ],
+      },
+      { type: 'heading', text: '⚡ Faster Customer Insights' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Instead of manually reading through multiple conversations, Inbox Intelligence quickly identifies patterns, customer concerns, sales opportunities, and support issues, helping your team make faster, data-driven decisions.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🚀 AI Assistance for Every Team' },
+      { type: 'heading', text: 'Sales Teams' },
+      {
+        type: 'list',
+        items: [
+          'Identify high-intent prospects from conversations.',
+          'Find customers interested in specific products or services.',
+          'Discover follow-up opportunities without manually reviewing chats.',
+        ],
+      },
+      { type: 'heading', text: 'Customer Support' },
+      {
+        type: 'list',
+        items: [
+          'Quickly locate customers reporting delivery issues or refund requests.',
+          'Understand customer concerns without reading entire conversation threads.',
+          'Respond faster with complete conversation context.',
+        ],
+      },
+      { type: 'heading', text: 'Customer Success' },
+      {
+        type: 'list',
+        items: [
+          'Identify unresolved customer questions.',
+          'Review customer interactions before follow-up calls.',
+          'Monitor customer satisfaction and engagement trends.',
+        ],
+      },
+      { type: 'heading', text: 'Business Managers' },
+      {
+        type: 'list',
+        items: [
+          'Analyze customer conversations to uncover recurring questions and trends.',
+          'Identify common support issues and improvement opportunities.',
+          'Make informed decisions using AI-generated conversation insights.',
+        ],
+      },
+      { type: 'heading', text: '✨ Key Benefits' },
+      {
+        type: 'list',
+        items: [
+          'Find answers from WhatsApp conversations in seconds.',
+          'Eliminate manual searching through lengthy chat histories.',
+          'Improve team productivity with AI-powered conversation analysis.',
+          'Access the exact conversations behind every AI-generated answer.',
+          'Discover customer trends, concerns, and opportunities faster.',
+          'Save previous AI searches for future reference.',
+          'Help sales and support teams make faster, more informed decisions.',
+          'Turn everyday customer conversations into valuable business insights.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Start using Inbox Intelligence today to instantly find answers from your WhatsApp conversations, uncover valuable customer insights, and empower your team to make faster, smarter decisions with AI.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          {
+            text: 'Help Center',
+            href: 'https://help.aiengagecrm.com/article/inbox-intelligence-ask-ai-about-whatsapp-conversations',
+            external: true,
+          },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'measure-every-campaign-with-ads-and-analytics',
+    title: 'Measure Every Campaign with Ads & Analytics',
+    date: '2026-07-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Ads & Analytics'],
+    image: '/whats-new/measure-every-campaign-with-ads-and-analytics-dark.png',
+    teaser:
+      'Track every advertising campaign from one dashboard. We’re excited to introduce Ads & Analytics, a solution that unifies online campaigns like Meta and Google Ads with offline campaigns like print, radio, and billboards, so you can measure leads, spend, and ROI in one place.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'We’re excited to introduce ' },
+          { text: 'Ads & Analytics', bold: true },
+          {
+            text: ', a powerful solution that helps you track both online and offline advertising campaigns from a single dashboard. Whether you’re running Meta Ads, Google Ads, newspaper campaigns, radio ads, TV commercials, flyers, or billboard campaigns, Ads & Analytics gives you a unified view of your advertising performance, helping you understand where your leads come from and which campaigns deliver the best return on investment.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🎉 What’s New?' },
+      { type: 'paragraph', segments: [{ text: 'With Ads & Analytics, you can:' }] },
+      { type: 'heading', text: '📢 Track Online & Offline Campaigns' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create and manage campaigns across digital and offline marketing channels, including Meta Ads, Google Ads, newspapers, radio, TV, flyers, billboards, and more.',
+          },
+        ],
+      },
+      { type: 'heading', text: '💰 Record Campaign Spend & Cost Per Lead' },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Add advertising spend manually for offline campaigns and automatically calculate total spend, leads generated, and cost per lead for every campaign.' },
+        ],
+      },
+      { type: 'heading', text: '📈 Unified Advertising Analytics' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'View campaign performance across all connected advertising platforms in a single analytics dashboard with metrics like leads, CPL, impressions, clicks, CTR, CPC, CPM, revenue, and ROAS.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🔍 Advanced Performance Filtering' },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Filter campaign data by advertising platform, business, ad account, campaign, ad set, ad, and custom date ranges to analyze performance from every angle.' },
+        ],
+      },
+      { type: 'heading', text: '🔄 Real-Time Analytics Sync' },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Sync your advertising data anytime to keep campaign performance, leads, and analytics up to date across connected advertising platforms.' },
+        ],
+      },
+      { type: 'heading', text: '🎯 Conversion & Revenue Tracking' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Measure campaign success beyond leads by tracking conversions, revenue, and Return on Ad Spend (ROAS), helping you identify your highest-performing campaigns.',
+          },
+        ],
+      },
+      { type: 'heading', text: '⚙️ Manage Your Advertising Performance' },
+      { type: 'paragraph', segments: [{ text: 'Monitor your campaigns with powerful analytics tools:' }] },
+      {
+        type: 'list',
+        items: [
+          'Create and organize online and offline advertising campaigns.',
+          'Record advertising spend for offline marketing activities.',
+          'Automatically calculate leads and Cost Per Lead (CPL).',
+          'Compare campaign performance across multiple advertising channels.',
+          'Filter reports by platform, campaign, business, ad account, or date range.',
+          'Configure conversion tracking to measure revenue and ROAS.',
+          'Sync advertising data whenever needed for the latest insights.',
+          'View all campaign performance metrics from one centralized dashboard.',
+        ],
+      },
+      { type: 'heading', text: '✨ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          '🚀 Measure the performance of both online and offline advertising in one place.',
+          '📊 Compare marketing channels using unified analytics and performance reports.',
+          '💰 Track advertising spend, leads, and Cost Per Lead automatically.',
+          '📈 Monitor revenue, conversions, and ROAS to optimize marketing investments.',
+          '🔍 Identify your best-performing campaigns with detailed filtering and reporting.',
+          '⚡ Keep advertising insights up to date with real-time data synchronization.',
+          '🎯 Make smarter marketing decisions using complete campaign performance data.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Start using Ads & Analytics today to gain complete visibility into your marketing performance and optimize every advertising dollar.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          {
+            text: 'Advertising Analytics guide',
+            href: 'https://help.aiengagecrm.com/article/advertising-analytics-unified-ad-performance',
+            external: true,
+          },
+          { text: ' and our ' },
+          {
+            text: 'Offline Campaign Tracking guide',
+            href: 'https://help.aiengagecrm.com/article/track-offline-advertising-custom-campaigns',
+            external: true,
+          },
+          { text: ', or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'advanced-response-time-and-service-level-agreement-management',
+    title: 'Advanced Response Time & Service Level Agreement Management',
+    date: '2026-07-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Response Time'],
+    image: '/whats-new/advanced-response-time-and-service-level-agreement-management-dark.png',
+    teaser:
+      'Make sure no lead waits too long for a response. We’re excited to introduce Response Time & SLA Management, a feature that lets you set response time targets, track performance during business hours or 24×7, and monitor SLA compliance across your team.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'We’re excited to introduce ' },
+          { text: 'Response Time & SLA Management', bold: true },
+          {
+            text: '—a powerful performance tracking feature that helps your team monitor, measure, and improve how quickly they respond to new leads. Set response time targets, configure business hours or 24×7 tracking, create custom working schedules, and monitor SLA performance to ensure every lead receives timely attention and no opportunity is missed.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🎉 What’s New' },
+      { type: 'heading', text: '⏱️ Speed-to-Lead Response Time Tracking' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Automatically measure the time it takes for your team to make the first response to every new lead, helping you improve response speed and maximize conversion opportunities.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🎯 Custom Response Time SLA Targets' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Define your own response time goals using flexible SLA targets, with quick presets like 15, 30, or 60 minutes, or configure custom response windows that align with your business objectives.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🕒 Business Hours & 24×7 Tracking' },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Choose whether response time should be measured during business hours or continuously 24×7, ensuring SLA calculations match the way your team operates.' },
+        ],
+      },
+      { type: 'heading', text: '📅 Flexible Schedules & Holiday Management' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create custom working schedules with business hours, break times, weekends, time zones, and holidays so response time is calculated only during actual working hours.',
+          },
+        ],
+      },
+      { type: 'heading', text: '📊 SLA Performance Monitoring' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Track whether your team meets response time goals with built-in SLA metrics, response speed reporting, first response details, and dashboard insights to monitor team performance.',
+          },
+        ],
+      },
+      { type: 'heading', text: '👥 Team-Based Response Management' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Assign schedules to specific teams or users, configure default working schedules, and maintain consistent response time tracking across your entire organization.',
+          },
+        ],
+      },
+      { type: 'heading', text: '⚡ Smarter Response Management Across Every Lead' },
+      { type: 'heading', text: 'Lead Management' },
+      {
+        type: 'list',
+        items: [
+          'Track the first response time for every new lead.',
+          'Measure response speed across calls, emails, WhatsApp, or meetings.',
+          'Improve lead engagement with faster follow-ups.',
+        ],
+      },
+      { type: 'heading', text: 'Sales Teams' },
+      {
+        type: 'list',
+        items: [
+          'Prioritize new leads based on response time.',
+          'Meet internal SLA commitments.',
+          'Increase conversion rates by responding faster.',
+        ],
+      },
+      { type: 'heading', text: 'Team Managers' },
+      {
+        type: 'list',
+        items: [
+          'Monitor SLA compliance across teams.',
+          'Compare response performance between users.',
+          'Identify delays and optimize team productivity.',
+        ],
+      },
+      { type: 'heading', text: 'Business Operations' },
+      {
+        type: 'list',
+        items: [
+          'Configure business hours, shifts, and holidays.',
+          'Standardize response time policies across departments.',
+          'Generate consistent response time reports for performance analysis.',
+        ],
+      },
+      { type: 'heading', text: '✨ Key Benefits' },
+      {
+        type: 'list',
+        items: [
+          'Improve speed-to-lead and increase conversion opportunities.',
+          'Ensure every lead is responded to within your SLA targets.',
+          'Configure response tracking based on business hours or 24×7 operations.',
+          'Create flexible work schedules with holidays and break times.',
+          'Monitor team performance using response time and SLA metrics.',
+          'Identify response delays before they impact customer experience.',
+          'Standardize response management across your organization.',
+          'Optimize sales and support efficiency with actionable response insights.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Start using Response Time & SLA Management today to improve your team’s response speed, achieve SLA targets, and deliver a faster, more consistent customer experience.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          {
+            text: 'Response Time & SLA configuration guide',
+            href: 'https://help.aiengagecrm.com/article/configure-response-time-sla',
+            external: true,
+          },
+          { text: ', our ' },
+          {
+            text: 'Speed-to-Lead tracking guide',
+            href: 'https://help.aiengagecrm.com/article/speed-to-lead-response-time-tracking',
+            external: true,
+          },
+          { text: ', and our ' },
+          {
+            text: 'Business Hours & Schedules guide',
+            href: 'https://help.aiengagecrm.com/article/business-hours-schedules-and-holidays',
+            external: true,
+          },
+          { text: ', or contact our support team.' },
+        ],
+      },
+    ],
+  },
   {
     slug: 'instantly-create-contacts-by-scanning-images-such-as-business-cards',
     title: '📇 Instantly Create Contacts by Scanning Images Such as Business Cards',

@@ -2,15 +2,20 @@ import Link from 'next/link';
 import { WN_MODULE_FILTERS, buildWhatsNewFilterUrl } from '../../../data/whatsNew';
 import styles from './WhatsNewSidebar.module.css';
 
-/** Left column: "Modules" and "Years" filter links, kept alongside the active type/module/year. */
-export default function WhatsNewSidebar({ typeFilter, activeModule, activeYear, years }) {
+/**
+ * Left column: "Modules" and "Years" filter links. These two combine with each other (module +
+ * year is a sensible combination), but deliberately drop any active top-bar type filter — see
+ * WhatsNewTypeTabs — so the sidebar always applies on its own instead of ANDing with the top
+ * filter and potentially producing a 0-result combination.
+ */
+export default function WhatsNewSidebar({ activeModule, activeYear, years }) {
   return (
     <aside className={styles.sidebar}>
       <h3 className={styles.heading}>Modules</h3>
       <ul className={styles.list}>
         <li>
           <Link
-            href={buildWhatsNewFilterUrl({ type: typeFilter, module: null, year: activeYear })}
+            href={buildWhatsNewFilterUrl({ module: null, year: activeYear })}
             className={activeModule ? styles.link : styles.linkActive}
           >
             All Modules
@@ -18,7 +23,7 @@ export default function WhatsNewSidebar({ typeFilter, activeModule, activeYear, 
         </li>
         {WN_MODULE_FILTERS.map((m) => {
           const isActive = activeModule === m;
-          const href = buildWhatsNewFilterUrl({ type: typeFilter, module: isActive ? null : m, year: activeYear });
+          const href = buildWhatsNewFilterUrl({ module: isActive ? null : m, year: activeYear });
           return (
             <li key={m}>
               <Link href={href} className={isActive ? styles.linkActive : styles.link}>
@@ -33,7 +38,7 @@ export default function WhatsNewSidebar({ typeFilter, activeModule, activeYear, 
       <ul className={styles.list}>
         {years.map((y) => {
           const isActive = activeYear === y;
-          const href = buildWhatsNewFilterUrl({ type: typeFilter, module: activeModule, year: isActive ? null : y });
+          const href = buildWhatsNewFilterUrl({ module: activeModule, year: isActive ? null : y });
           return (
             <li key={y}>
               <Link href={href} className={isActive ? styles.linkActive : styles.link}>
