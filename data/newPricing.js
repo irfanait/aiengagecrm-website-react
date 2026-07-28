@@ -39,14 +39,12 @@ export const NP_BILLING_LINES = {
 
 export const NP_REGION_NOTE = 'Displayed INR prices are estimates for reference only. All payments are billed in USD.';
 
-// The actual signup app. TODO: replace all signupProductId placeholders in NP_PLANS below with
-// real Chargebee product IDs.
+// The actual signup app.
 const SIGNUP_BASE_URL = 'https://crm.aitrillion.com/auth/sign-up';
 
 /** Builds the "Try ... For Free" signup link for a plan, matching cycle to the ?cycle= param. */
 export function buildNewSignupHref(productId, cycle) {
-  const params = new URLSearchParams({ product_id: productId });
-  if (cycle === 'annual') params.set('cycle', 'yearly');
+  const params = new URLSearchParams({ product_id: productId, cycle: cycle === 'annual' ? 'yearly' : 'monthly' });
   return `${SIGNUP_BASE_URL}?${params.toString()}`;
 }
 
@@ -60,7 +58,7 @@ export const NP_PLANS = [
     key: 'solo',
     name: 'Solo',
     priceKey: 'solo',
-    signupProductId: 'REPLACE_WITH_SOLO_PRODUCT_ID',
+    signupProductId: 'prod_Uy471v1F9tH72j',
     tagline: 'Individual users who want AI-powered WhatsApp, Email and Voice in one simple plan.',
     ctaLabel: 'Try Solo For Free',
     trialNote: '14-days free trial',
@@ -83,7 +81,7 @@ export const NP_PLANS = [
     key: 'business',
     name: 'Business',
     priceKey: 'business',
-    signupProductId: 'REPLACE_WITH_BUSINESS_PRODUCT_ID',
+    signupProductId: 'prod_Uy479QR3Yh3jJ8',
     tagline: 'Growing teams who need multi-user collaboration with WhatsApp, Email and Voice built in.',
     ctaLabel: 'Try Business For Free',
     trialNote: '14-days free trial',
@@ -106,7 +104,7 @@ export const NP_PLANS = [
     key: 'businessPro',
     name: 'Business Pro',
     priceKey: 'businessPro',
-    signupProductId: 'REPLACE_WITH_BUSINESS_PRO_PRODUCT_ID',
+    signupProductId: 'prod_Uy47HFHg9WE4nb',
     tagline: 'Larger teams who want higher limits, priority support and full API access.',
     ctaLabel: 'Try Business Pro For Free',
     trialNote: '14-days free trial',
@@ -134,14 +132,12 @@ export const NP_CUSTOM_PLAN = {
   title: 'Need a Custom Plan?',
   description: 'Looking for a custom plan? Or not sure which one fits your needs? Get custom user, contact and API limits built around your business.',
   features: [
-    'Custom User/Seat limit',
-    'Custom Contact limit',
-    'All Feature Available',
-    'REST API & MCP Access',
-    'Custom limit for REST API Calls',
-    'Dedicated infrastructure options',
-    'White-glove onboarding',
+    'Custom limits for user/seats',
+    'Custom limits for all module',
     'Custom integrations',
+    'All features access',
+    'Dedicated infrastructure',
+    'White-glove onboarding',
     'Priority support',
   ],
   ctaLabel: 'Contact Us Now',
