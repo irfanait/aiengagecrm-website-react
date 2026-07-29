@@ -768,7 +768,7 @@ export const WN_ENTRIES = [
           { text: 'We’re excited to introduce ' },
           { text: 'AI Agent for WhatsApp', bold: true },
           {
-            text: '—a seamless integration that lets your AI Agent engage with customers directly on WhatsApp. Once connected, your AI Agent can answer customer questions, provide instant support, recommend products, and assist shoppers 24/7 using the knowledge you’ve trained it with.',
+            text: '—a seamless integration that lets your AI Agent engage with customers directly on WhatsApp. Once connected, your AI Agent can answer customer questions, provide instant support, guide visitors, and assist customers 24/7 using the knowledge it has been trained on.',
           },
         ],
       },
@@ -820,7 +820,7 @@ export const WN_ENTRIES = [
           { text: 'We’re excited to introduce ' },
           { text: 'AI Agents', bold: true },
           {
-            text: '—an intelligent shopping assistant that helps customers discover products, answer questions, track orders, learn about your business, and much more. Train your AI Agent using your own business knowledge, customize its behavior, and deploy it to your website or WhatsApp to provide fast, accurate, and engaging customer support around the clock.',
+            text: '—an intelligent AI assistant that helps customers discover products, answer questions, track orders, learn about your business, and much more. Train your AI Agent using your own business knowledge, customize its behavior, and deploy it to your website or WhatsApp to provide fast, accurate, and engaging customer support around the clock.',
           },
         ],
       },
