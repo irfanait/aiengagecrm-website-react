@@ -41,53 +41,68 @@ function Block({ block, index }) {
   );
 }
 
-/** Single "What's New" article: image, tags/date, title, body blocks, and the try/sign-up CTA row. */
+/** Single "What's New" article: image, tags/date, title, body blocks, the try/sign-up CTA row,
+ * and the promo banner — the last two share `.mainCol` so the banner sits below the article's
+ * white card (same width as it) rather than inside it or spanning under the sidebar. */
 export default function WhatsNewDetail({ entry }) {
   return (
     <section className={styles.section}>
       <Container className={styles.body}>
         <WhatsNewSidebar activeModule={null} activeYear={null} years={getWhatsNewYears()} />
 
-        <article className={styles.article}>
-          <Link href="/whats-new" className={styles.backLink}>
-            <Icon name="arrow_back" size={16} />
-            All Updates
-          </Link>
+        <div className={styles.mainCol}>
+          <article className={styles.article}>
+            <Link href="/whats-new" className={styles.backLink}>
+              <Icon name="arrow_back" size={16} />
+              All Updates
+            </Link>
 
-          <div className={styles.imageWrap}>
-            <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} priority />
-          </div>
-
-          <div className={styles.tagDateRow}>
-            <div className={styles.tags}>
-              {entry.moduleTags.map((tag) => (
-                <span key={tag} className={styles.tag}>
-                  {tag}
-                </span>
-              ))}
-              <span className={styles.tag}>{entry.typeTag === 'enhancement' ? 'Enhancement' : 'New Feature Update'}</span>
+            <div className={styles.imageWrap}>
+              <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} priority />
             </div>
-            <span className={styles.date}>{formatWhatsNewDate(entry.date)}</span>
-          </div>
 
-          <h1 className={styles.title}>{entry.title}</h1>
+            <div className={styles.tagDateRow}>
+              <div className={styles.tags}>
+                {entry.moduleTags.map((tag) => (
+                  <span key={tag} className={styles.tag}>
+                    {tag}
+                  </span>
+                ))}
+                <span className={styles.tag}>{entry.typeTag === 'enhancement' ? 'Enhancement' : 'New Feature Update'}</span>
+              </div>
+              <span className={styles.date}>{formatWhatsNewDate(entry.date)}</span>
+            </div>
 
-          <div className={styles.prose}>
-            {entry.body.map((block, i) => (
-              <Block key={i} block={block} index={i} />
-            ))}
-          </div>
+            <h1 className={styles.title}>{entry.title}</h1>
 
-          <div className={styles.ctaRow}>
-            <a href={WN_DETAIL_CTA.tryHref} target="_blank" rel="noopener noreferrer" className={styles.tryBtn}>
-              {WN_DETAIL_CTA.tryLabel}
-            </a>
-            <p className={styles.signupNote}>
-              {WN_DETAIL_CTA.signupLead}
-              <Link href={WN_DETAIL_CTA.signupHref}>{WN_DETAIL_CTA.signupLabel}</Link>
-            </p>
-          </div>
-        </article>
+            <div className={styles.prose}>
+              {entry.body.map((block, i) => (
+                <Block key={i} block={block} index={i} />
+              ))}
+            </div>
+
+            <div className={styles.ctaRow}>
+              <a href={WN_DETAIL_CTA.tryHref} target="_blank" rel="noopener noreferrer" className={styles.tryBtn}>
+                {WN_DETAIL_CTA.tryLabel}
+              </a>
+              <p className={styles.signupNote}>
+                {WN_DETAIL_CTA.signupLead}
+                <Link href={WN_DETAIL_CTA.signupHref}>{WN_DETAIL_CTA.signupLabel}</Link>
+              </p>
+            </div>
+          </article>
+
+          <Link href="/pricing" className={styles.promoBanner}>
+            <Image
+              src="/banners/whats-new-promo-banner.png"
+              alt="Are you still not using AiEngage? Try now."
+              width={1200}
+              height={279}
+              className={styles.promoBannerImage}
+              unoptimized
+            />
+          </Link>
+        </div>
       </Container>
     </section>
   );

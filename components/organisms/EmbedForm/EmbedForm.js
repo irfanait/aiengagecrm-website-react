@@ -26,7 +26,7 @@ export default function EmbedForm({ slug, title }) {
       <iframe
         ref={iframeRef}
         id={`ait-form-${slug}`}
-        src={`https://crm.aitrillion.com/forms/${slug}?embed=true`}
+        src={`https://app.aiengagecrm.com/forms/${slug}?embed=true`}
         width="100%"
         height="800"
         frameBorder="0"

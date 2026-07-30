@@ -252,6 +252,13 @@ export const seoData = {
     keywords: ['book a CRM demo', 'AiEngage demo', 'CRM demo request'],
     image: '/og/book-a-demo.png',
   },
+  bookADemocoldemail: {
+    path: '/book-a-demo-coldemail',
+    title: 'Book a Free AiEngage CRM Demo | AiEngage',
+    description: 'Book your free AiEngage CRM demo and see lead capture, pipeline management, and AI-powered engagement live, tailored to your business.',
+    keywords: ['book a CRM demo', 'AiEngage demo', 'CRM demo request'],
+    image: '/og/book-a-demo.png',
+  },
   contactUs: {
     path: '/contact-us',
     title: 'Contact Us | Talk to Our CRM Experts | AiEngage',

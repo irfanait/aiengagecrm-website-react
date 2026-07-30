@@ -40,7 +40,7 @@ export const NP_BILLING_LINES = {
 export const NP_REGION_NOTE = 'Displayed INR prices are estimates for reference only. All payments are billed in USD.';
 
 // The actual signup app.
-const SIGNUP_BASE_URL = 'https://crm.aitrillion.com/auth/sign-up';
+const SIGNUP_BASE_URL = 'https://app.aiengagecrm.com/auth/sign-up';
 
 /** Builds the "Try ... For Free" signup link for a plan, matching cycle to the ?cycle= param. */
 export function buildNewSignupHref(productId, cycle) {
@@ -150,7 +150,7 @@ export const NP_START_FREE = {
   descriptionBold: 'free for up to 100 Active Contacts (per user)',
   descriptionTail: ' and explore powerful growth tools for your business.',
   ctaLabel: 'Start free',
-  ctaHref: 'https://crm.aitrillion.com/auth/sign-up',
+  ctaHref: 'https://app.aiengagecrm.com/auth/sign-up',
 };
 
 export const NP_COMPARISON = {
@@ -172,7 +172,7 @@ export const NP_COMPARISON = {
     'Limited visibility into the customer journey',
   ],
   ctaLabel: 'Try AiEngage Free',
-  ctaHref: 'https://crm.aitrillion.com/auth/sign-up',
+  ctaHref: 'https://app.aiengagecrm.com/auth/sign-up',
 };
 
 export const NP_PLATFORM = {

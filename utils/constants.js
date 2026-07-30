@@ -18,5 +18,5 @@ export const SOCIAL_LINKS = {
 export const CTA_LINKS = {
   bookDemo: '/book-a-demo',
   tryFree: '/pricing',
-  login: 'https://crm.aitrillion.com/',
+  login: 'https://app.aiengagecrm.com/',
 };

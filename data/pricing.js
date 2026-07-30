@@ -32,7 +32,7 @@ export const PR_REGION_NOTE = 'Displayed INR prices are estimates for reference 
 // The actual signup app. A plan with `signupProductId` gets its CTA built from this base via
 // buildSignupHref() below instead of using a plain `ctaHref` — the link's billing-cycle query
 // param follows whichever toggle (Monthly / Annually) is selected.
-const SIGNUP_BASE_URL = 'https://crm.aitrillion.com/auth/sign-up';
+const SIGNUP_BASE_URL = 'https://app.aiengagecrm.com/auth/sign-up';
 
 /** Builds the "Try ... For Free" signup link for a plan, matching cycle to the ?cycle= param. */
 export function buildSignupHref(productId, cycle) {
@@ -113,7 +113,7 @@ export const PR_START_FREE = {
   descriptionBold: 'free for up to 100 Active Contacts (per user)',
   descriptionTail: ' and explore powerful growth tools for your business.',
   ctaLabel: 'Start free',
-  ctaHref: 'https://crm.aitrillion.com/auth/sign-up',
+  ctaHref: 'https://app.aiengagecrm.com/auth/sign-up',
 };
 
 export const PR_COMPARISON = {
