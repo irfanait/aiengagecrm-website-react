@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import Icon from '../../atoms/Icon/Icon';
 import styles from './NewPricingFeatureModal.module.css';
 
@@ -33,6 +33,11 @@ function Cell({ value }) {
  * the 700px breakpoint the grid columns switch to a fixed min-width wider than the viewport so
  * .scrollArea also scrolls horizontally, with .labelCell/.headerTitle pinned via
  * position:sticky/left so the feature name stays put while the plan columns scroll under it.
+ *
+ * .searchBar sits outside .scrollArea (between it and the close button) so it never scrolls out
+ * of view. Typing filters `categories` down to `filteredCategories`, matching a row's label/sub
+ * or its category title — a whole-category match (e.g. "WhatsApp") keeps all of that category's
+ * rows rather than just the ones whose own label happens to contain the term.
  */
 export default function NewPricingFeatureModal({
   soloPrice,
@@ -45,7 +50,9 @@ export default function NewPricingFeatureModal({
   onClose,
 }) {
   const scrollRef = useRef(null);
+  const searchRef = useRef(null);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -54,8 +61,30 @@ export default function NewPricingFeatureModal({
     };
   }, []);
 
+  // Matches against the category title (e.g. "WhatsApp" finds the whole "Email & WhatsApp
+  // Marketing" section) as well as each row's label/sub, since a plan-limit row's unit (GB, API
+  // calls) often lives in `sub` rather than `label`.
+  const normalizedQuery = query.trim().toLowerCase();
+  const filteredCategories = useMemo(() => {
+    if (!normalizedQuery) return categories;
+    return categories
+      .map((cat) => {
+        const categoryMatches = cat.title.toLowerCase().includes(normalizedQuery);
+        const rows = categoryMatches
+          ? cat.rows
+          : cat.rows.filter(
+              (row) =>
+                row.label.toLowerCase().includes(normalizedQuery) ||
+                (row.sub && row.sub.toLowerCase().includes(normalizedQuery)),
+            );
+        return rows.length ? { ...cat, rows } : null;
+      })
+      .filter(Boolean);
+  }, [categories, normalizedQuery]);
+
   // Right-edge fade (mobile only, see .scrollFade) hints that a partially-cut plan column is
-  // scrollable rather than broken — it hides itself once scrolled to the end.
+  // scrollable rather than broken — it hides itself once scrolled to the end. Re-checked whenever
+  // the filtered rows change since that can change scrollArea's scrollHeight/scrollWidth.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return undefined;
@@ -69,7 +98,7 @@ export default function NewPricingFeatureModal({
       el.removeEventListener('scroll', update);
       window.removeEventListener('resize', update);
     };
-  }, []);
+  }, [filteredCategories]);
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -82,9 +111,29 @@ export default function NewPricingFeatureModal({
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.panel} onClick={(e) => e.stopPropagation()}>
-        <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
-          <Icon name="close" size={19} />
-        </button>
+        <div className={styles.topBar}>
+          <div className={styles.searchBar}>
+            <Icon name="search" size={18} className={styles.searchIcon} />
+            <input
+              ref={searchRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search features — e.g. WhatsApp, API, storage…"
+              className={styles.searchInput}
+              aria-label="Search features"
+            />
+            {query && (
+              <button type="button" className={styles.searchClear} onClick={() => setQuery('')} aria-label="Clear search">
+                <Icon name="close" size={13} />
+              </button>
+            )}
+          </div>
+
+          <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
+            <Icon name="close" size={16} />
+          </button>
+        </div>
 
         <div className={styles.scrollArea} ref={scrollRef}>
           <div className={styles.header}>
@@ -112,11 +161,13 @@ export default function NewPricingFeatureModal({
             </div>
           </div>
 
-          {categories.map((cat) => (
+          {filteredCategories.map((cat) => (
             <Fragment key={cat.title}>
               <div className={`${styles.categoryRow} ${cat.highlight ? styles.categoryRowHighlight : ''}`}>
                 <span className={styles.categoryLabel}>
-                  <Icon name={cat.icon} size={16} color="#fff" />
+                  <span className={styles.categoryIcon}>
+                    <Icon name={cat.icon} size={15} filled />
+                  </span>
                   {cat.title}
                 </span>
               </div>
@@ -139,6 +190,18 @@ export default function NewPricingFeatureModal({
               ))}
             </Fragment>
           ))}
+
+          {filteredCategories.length === 0 && (
+            <div className={styles.emptyState}>
+              <Icon name="search_off" size={30} className={styles.emptyStateIcon} />
+              <p className={styles.emptyStateText}>
+                No features match <strong>&ldquo;{query}&rdquo;</strong>
+              </p>
+              <button type="button" className={styles.emptyStateClear} onClick={() => setQuery('')}>
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Fades the right edge on mobile so a partially cut-off plan column reads as "more to

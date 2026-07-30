@@ -2,6 +2,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 9, 35, 0.55);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -15,16 +16,169 @@
   width: 100%;
   max-width: 1100px;
   background: #fff;
+  border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-panel);
   overflow: hidden;
 }
 
 /* Carries both scroll axes: vertical always (header pins via sticky/top), horizontal only once
-   the mobile breakpoint below gives rows a min-width wider than the viewport. */
+   the mobile breakpoint below gives rows a min-width wider than the viewport. Reserves room
+   above itself for .searchBar, which lives outside .scrollArea so it never scrolls away. */
 .scrollArea {
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 150px);
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-dashed) transparent;
+}
+
+/* Windows/Chrome's default scrollbar (thick track + up/down arrow buttons) looked out of place
+   against the rest of this panel's design — a slim neutral thumb with no track/buttons reads as
+   part of the panel instead of a bolted-on OS control. Neutral by default (a pale brand tint
+   here read as washed-out/faded) with the brand orange reserved for hover, so it stays legible
+   without competing with the peach plan cards right above it. */
+.scrollArea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollArea::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.scrollArea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollArea::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-dashed);
+  border-radius: var(--radius-pill);
+}
+
+.scrollArea::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+.scrollArea::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Search bar + close button as one flex row (rather than the close button absolutely positioned
+   on top of the search bar) — that positioning had to be hand-tuned against the pill's rounded
+   corner and broke the moment either element's size changed, visibly overlapping/squashing the
+   pill. A flex row can't overlap: both sit in normal flow, vertically centered, close button
+   fixed-width via flex-shrink: 0. Outside .scrollArea so this row never scrolls out of view. */
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 26px 2px;
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  padding: 0 14px;
+  height: 44px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.searchBar:focus-within {
+  border-color: var(--color-primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--color-primary-tint);
+}
+
+.searchIcon {
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.searchBar:focus-within .searchIcon {
+  color: var(--color-primary);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13.5px;
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-faint);
+}
+
+.searchClear {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border-light);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.searchClear:hover {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 70px 26px;
+  text-align: center;
+}
+
+.emptyStateIcon {
+  color: var(--color-border);
+}
+
+.emptyStateText {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.emptyStateText strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.emptyStateClear {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.emptyStateClear:hover {
+  color: var(--color-primary-hover);
 }
 
 .scrollFade {
@@ -44,27 +198,35 @@
   padding: 22px 26px 18px;
 }
 
+/* A flex sibling of .searchBar inside .topBar now, not absolutely positioned over it — see the
+   .topBar comment above for why. Bigger box + more icon padding than the original 22px/19px pair
+   so it reads as a clickable control, not a cramped smudge. */
 .close {
-  position: absolute;
-  top: 8px;
-  right: 7px;
-  z-index: 4;
-  width: 22px;
-  height: 22px;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: var(--color-bg);
+  background: #fff;
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: 0 2px 5px rgba(40, 24, 10, 0.08);
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.15s ease;
 }
 
 .close:hover {
   border-color: var(--color-primary);
+  background: var(--color-primary-tint);
   color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(255, 95, 56, 0.16);
+}
+
+.close:active {
+  transform: scale(0.92);
 }
 
 .headerTitle {
@@ -77,7 +239,7 @@
   font-weight: 600;
   color: var(--color-text);
   max-width: 20ch;
-  padding-right: 44px;
+  padding-right: 16px;
   background: #fff;
 }
 
@@ -87,6 +249,21 @@
   padding: 12px 10px;
   text-align: center;
   background: #fff;
+  box-shadow: 0 1px 3px rgba(40, 24, 10, 0.06);
+}
+
+/* Solo/Business/Business Pro as an ascending tint ladder instead of 3 identical cream boxes
+   (which read as the same shade as .searchBar right above them) — each step a little warmer than
+   the last, so the eye reads price/value progression left to right. .headerPrice is 2nd/3rd/4th
+   child of .header (1st is .headerTitle), so nth-child(3)/(4) land on Business/Business Pro. */
+.headerPrice:nth-child(3) {
+  background: var(--color-primary-tint);
+  border-color: var(--color-primary-tint-border);
+}
+
+.headerPrice:nth-child(4) {
+  background: var(--color-primary-highlight);
+  border-color: var(--color-primary-dark-accent);
 }
 
 .headerPlanName {
@@ -110,26 +287,59 @@
   text-decoration: line-through;
 }
 
+/* A soft tinted strip with a colored icon chip reads as a clean section break across ~18
+   categories; the earlier solid-orange bar looked fine once but repeated that often, it fought
+   the plan-price boxes for attention instead of just organizing rows underneath them. Peach tint
+   (not the neutral --color-bg cream, which read as flat/washed-out) ties it to the brand orange. */
 .categoryRow {
-  background: var(--color-primary);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 11px 26px;
+  background: var(--color-primary-tint);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-primary-tint-border);
+  padding: 12px 26px;
 }
 
-/* "Extra Addons" — same category-row treatment, just a lighter tint so it reads as flat add-on
-   pricing rather than another plan-limit category. */
+/* "Extra Addons" — same treatment, one shade deeper so it reads as flat add-on pricing rather
+   than another plan-limit category. */
 .categoryRowHighlight {
-  background: var(--color-primary-dark-accent);
+  background: var(--color-primary-highlight);
+  border-bottom-color: var(--color-primary-dark-accent);
 }
 
+/* Sticky at the same left offset as .labelCell/.headerTitle below, so scrolling the plan columns
+   horizontally (mobile) pins the category name in place instead of letting it scroll off with
+   the rest of the (otherwise-empty) row. */
 .categoryLabel {
+  position: sticky;
+  left: 9px;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.categoryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-primary-tint-border);
+  color: var(--color-primary);
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(40, 24, 10, 0.08);
+}
+
+.categoryRowHighlight .categoryIcon {
+  background: #fff;
+  border-color: var(--color-primary-highlight);
+  box-shadow: none;
 }
 
 /* Same grid-template-columns, gap and horizontal padding as .header above, so each row's value
@@ -143,10 +353,19 @@
   padding: 12px 26px;
   border-bottom: 1px solid var(--color-border);
   background: #fff;
+  transition: background-color 0.12s ease;
+}
+
+.row:hover {
+  background: var(--color-bg);
 }
 
 .rowHighlight {
   background: var(--color-primary-tint);
+}
+
+.rowHighlight:hover {
+  background: var(--color-primary-tint-border);
 }
 
 .labelCell {
@@ -220,8 +439,23 @@
     padding: 12px 16px;
   }
 
+  .topBar {
+    margin: 16px 16px 2px;
+    gap: 8px;
+  }
+
+  .close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .emptyState {
+    padding: 56px 16px;
+  }
+
   .labelCell,
-  .headerTitle {
+  .headerTitle,
+  .categoryLabel {
     padding-right: 10px;
     box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.08);
   }
