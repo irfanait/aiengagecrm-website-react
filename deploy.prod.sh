@@ -5,5 +5,6 @@ echo "\n Building website...."
 npm run build
 echo "\n Restarting service.."
 pm2 stop aiengagecrm-site
+pm2 delete aiengagecrm-site
 pm2 start npm --name aiengagecrm-site -- start -- -p 7001
 echo "\n Code deployed successfully!"
