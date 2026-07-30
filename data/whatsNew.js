@@ -39,7 +39,7 @@ export const WN_MODULE_FILTERS = [
 // CTA row shown at the bottom of every detail page.
 export const WN_DETAIL_CTA = {
   tryLabel: 'Try on your Store',
-  tryHref: 'https://crm.aitrillion.com/',
+  tryHref: 'https://app.aiengagecrm.com/',
   signupLead: 'New to AiEngage CRM? ',
   signupLabel: 'Sign Up',
   signupHref: '/pricing',
