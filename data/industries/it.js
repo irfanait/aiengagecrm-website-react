@@ -1,7 +1,6 @@
 // IT & Technology industry page content.
 
 export const IT_HERO = {
-  eyebrow: 'IT & Technology',
   titleLead: 'Automate Your Client Journey With ',
   titleAccent: 'AI-Powered CRM',
   description:
@@ -48,7 +47,7 @@ export const IT_SOLUTIONS = {
   items: [
     { icon: 'fact_check', title: 'AI Lead Qualification', body: 'Automatically collect the required service, project scope, budget range, expected timeline, company size, existing technology, and decision-making stage so your team focuses on opportunities with stronger buying intent.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'inbox', title: 'IT Inquiry Management', body: 'Capture and organize inquiries from your website, Meta Ads, LinkedIn campaigns, WhatsApp, calls, forms, landing pages, marketplaces, and referrals in one place.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to service inquiries quickly, answer common questions, collect project requirements, share company information, and transfer qualified opportunities to your sales team.', chipBg: '#E4F5EC', iconColor: '#1FAF64' },
+    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to service inquiries quickly, answer common questions, collect project requirements, share company information, and transfer qualified opportunities to your sales team.', chipBg: '#E4F5EC', iconColor: '#25D366' },
     { icon: 'call', title: 'Built-In Calling', body: 'Make and receive business calls directly through the CRM. Record calls where permitted, save notes, track missed calls, and maintain a complete communication history.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'event_available', title: 'Discovery Call Scheduling', body: 'Allow qualified prospects to schedule discovery calls, technical consultations, product demonstrations, and project discussions with the right team member.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'update', title: 'Automated Follow-Ups', body: 'Trigger reminders and messages after inquiries, discovery calls, demonstrations, proposals, technical discussions, and contract negotiations.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
@@ -61,7 +60,6 @@ export const IT_SOLUTIONS = {
 };
 
 export const IT_WORKFLOW = {
-  eyebrow: 'IT SERVICES WORKFLOW',
   heading: 'From Client Inquiry to Client Onboarding Without Human Efforts',
   steps: [
     {

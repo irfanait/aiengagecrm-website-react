@@ -21,8 +21,6 @@ import {
   AB_INDUSTRIES_HEADING,
   AB_INDUSTRIES_INTRO,
   AB_INDUSTRIES,
-  AB_INDUSTRIES_NOTE,
-  AB_INDUSTRIES_TAGLINE,
   AB_APPROACH_HEADING,
   AB_APPROACH_SUBTITLE,
   AB_APPROACH_CARDS,
@@ -30,7 +28,6 @@ import {
   AB_MISSION_BANNER,
   AB_TRUST_HEADING,
   AB_TRUST_ITEMS,
-  AB_TRUST_NOTE,
   AB_FINAL_CTA,
 } from '../../data/about';
 
@@ -62,19 +59,13 @@ export default function AboutPage() {
 
       <AboutChallenges heading={AB_CHALLENGES_HEADING} subtitle={AB_CHALLENGES_SUBTITLE} items={AB_CHALLENGES} note={AB_CHALLENGES_NOTE} />
 
-      <AboutIndustriesShowcase
-        heading={AB_INDUSTRIES_HEADING}
-        intro={AB_INDUSTRIES_INTRO}
-        items={AB_INDUSTRIES}
-        note={AB_INDUSTRIES_NOTE}
-        tagline={AB_INDUSTRIES_TAGLINE}
-      />
+      <AboutIndustriesShowcase heading={AB_INDUSTRIES_HEADING} intro={AB_INDUSTRIES_INTRO} items={AB_INDUSTRIES} />
 
       <AboutWhyItWorks heading={AB_APPROACH_HEADING} subtitle={AB_APPROACH_SUBTITLE} cards={AB_APPROACH_CARDS} note={AB_APPROACH_NOTE} />
 
       <AboutMissionBanner eyebrow={AB_MISSION_BANNER.eyebrow} heading={AB_MISSION_BANNER.heading} description={AB_MISSION_BANNER.description} />
 
-      <AboutTrust heading={AB_TRUST_HEADING} items={AB_TRUST_ITEMS} note={AB_TRUST_NOTE} />
+      <AboutTrust heading={AB_TRUST_HEADING} items={AB_TRUST_ITEMS} />
 
       <CTASection
         title={

@@ -1,21 +1,26 @@
 .section {
-  padding: 80px 40px;
+  padding: 72px 40px;
   background: var(--color-bg);
 }
 
+.inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
 .heading {
-  margin: 0 0 12px;
-  font-size: 30px;
-  line-height: 1.25;
+  margin: 0 0 16px;
+  font-size: 34px;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: -1px;
   text-wrap: balance;
 }
 
 .subtitle {
-  margin: 0 0 28px;
-  font-size: 15px;
-  line-height: 1.6;
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.85;
   color: var(--color-text-muted);
 }
 
@@ -27,24 +32,19 @@
 .row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 4px;
+  gap: 14px;
+  padding: 11px 0;
   border-bottom: 1px solid var(--color-border);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--color-text);
 }
 
 .note {
   margin: 0 0 12px;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.85;
   color: var(--color-text-muted);
-  max-width: 760px;
-}
-
-.note:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {

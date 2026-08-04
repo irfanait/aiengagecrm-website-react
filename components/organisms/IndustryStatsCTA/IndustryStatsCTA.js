@@ -23,8 +23,8 @@ export default function IndustryStatsCTA({ statRows, heading, description, prima
                   <div className={styles.stat}>
                     <div className={styles.statValue}>{s.value}</div>
                     <div className={styles.statLabel}>{s.label}</div>
-                    <div className={styles.statTitle}>{s.title}</div>
-                    <p className={styles.statDesc}>{s.desc}</p>
+                    {s.title && <div className={styles.statTitle}>{s.title}</div>}
+                    {s.desc && <p className={styles.statDesc}>{s.desc}</p>}
                   </div>
                 </Fragment>
               ))}

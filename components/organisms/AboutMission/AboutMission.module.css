@@ -1,11 +1,11 @@
 .section {
-  padding: 80px 40px;
+  padding: 72px 40px;
   background: #fff;
 }
 
 .inner {
   display: flex;
-  gap: 64px;
+  gap: 70px;
   align-items: flex-start;
 }
 
@@ -14,19 +14,19 @@
 }
 
 .heading {
-  margin: 0 0 20px;
-  font-size: 30px;
-  line-height: 1.25;
+  margin: 0 0 26px;
+  font-size: 34px;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: -1px;
   text-wrap: balance;
-  max-width: 520px;
 }
 
 .paragraph {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.85;
+  font-weight: 300;
   color: var(--color-text-muted);
 }
 
@@ -39,11 +39,11 @@
   max-width: 400px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 28px 30px;
+  padding: 8px 28px;
 }
 
 .stat {
-  padding: 18px 0;
+  padding: 26px 0;
 }
 
 .statBordered {
@@ -51,24 +51,25 @@
 }
 
 .stat:first-child {
-  padding-top: 0;
+  padding-top: 26px;
 }
 
 .stat:last-child {
-  padding-bottom: 0;
+  padding-bottom: 26px;
 }
 
 .statValue {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1;
+  letter-spacing: -1px;
   margin-bottom: 8px;
 }
 
 .statLabel {
   font-size: 14px;
-  color: var(--color-text-muted);
+  color: var(--color-text-faint);
 }
 
 @media (max-width: 900px) {

@@ -45,7 +45,12 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     logo: '/brand/logo.svg',
-    sameAs: ['https://www.facebook.com/aiengagecrm', 'https://www.instagram.com/aiengage.crm/', 'https://www.youtube.com/@aiengagecrm'],
+    sameAs: [
+      'https://www.facebook.com/aiengagecrm',
+      'https://www.instagram.com/aiengage.crm',
+      'http://www.linkedin.com/company/aiengage-crm',
+      'https://www.youtube.com/@AiEngageCRM',
+    ],
   };
 }
 
@@ -72,7 +77,12 @@ export function localBusinessSchema() {
       opens: '10:00',
       closes: '19:00',
     },
-    sameAs: ['https://www.facebook.com/aiengagecrm', 'https://www.instagram.com/aiengage.crm/', 'https://www.youtube.com/@aiengagecrm'],
+    sameAs: [
+      'https://www.facebook.com/aiengagecrm',
+      'https://www.instagram.com/aiengage.crm',
+      'http://www.linkedin.com/company/aiengage-crm',
+      'https://www.youtube.com/@AiEngageCRM',
+    ],
   };
 }
 

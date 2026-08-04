@@ -45,12 +45,11 @@ const MOCKS = {
  * single centered column instead of the usual text/mock split — the alternation for steps
  * before and after it is unaffected, since it still occupies one row in the sequence.
  */
-export default function IndustryWorkflow({ eyebrow, heading, steps }) {
+export default function IndustryWorkflow({ heading, steps }) {
   return (
     <section id="workflow" className={styles.section}>
       <Container className={styles.inner}>
         <div className={styles.headingWrap}>
-          <span className={styles.eyebrow}>{eyebrow}</span>
           <h2 className={styles.heading}>{heading}</h2>
         </div>
 

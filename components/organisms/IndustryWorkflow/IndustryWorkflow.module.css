@@ -8,15 +8,8 @@
   margin-bottom: 20px;
 }
 
-.eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  letter-spacing: 2px;
-}
-
 .heading {
-  margin: 12px auto 0;
+  margin: 0 auto;
   max-width: 780px;
   font-size: clamp(26px, 3.2vw, 34px);
   font-weight: 700;

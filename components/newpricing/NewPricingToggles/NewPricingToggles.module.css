@@ -117,6 +117,6 @@
   .row {
     flex-direction: column;
     gap: 16px;
-    align-items: flex-start;
+    align-items: center;
   }
 }

@@ -1,7 +1,6 @@
 // Tours & Travels industry page content.
 
 export const TT_HERO = {
-  eyebrow: 'Tours & Travels',
   titleLead: 'Automate Your Travel Bookings With ',
   titleAccent: 'AI-Powered Travel CRM',
   description:
@@ -98,7 +97,7 @@ export const TT_SOLUTIONS = {
       href: '/whatsapp#ai-agent',
       body: 'Respond to travel inquiries quickly, answer common questions, collect trip requirements, share package information, and transfer qualified conversations to your travel consultants.',
       chipBg: '#E4F5EC',
-      iconColor: '#1FAF64',
+      iconColor: '#25D366',
     },
     {
       icon: 'call',
@@ -174,7 +173,6 @@ export const TT_SOLUTIONS = {
 };
 
 export const TT_WORKFLOW = {
-  eyebrow: 'TOURS AND TRAVEL WORKFLOW',
   heading: 'From Travel Inquiry To Confirmed Booking Without Human Efforts',
   steps: [
     {

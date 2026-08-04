@@ -20,26 +20,17 @@ function AssignedCell({ assigned }) {
   );
 }
 
-/** "The Challenge" section: problem list on one side, a messy lead/inquiry table mock on the other. */
-export default function IndustryProblem({ eyebrow, heading, problems, mock }) {
+/**
+ * "The Challenge" section: a messy lead/inquiry table mock on the left, problem list on the
+ * right. `ratio` sets the two-column split (mock fr, text fr) — most industries use a narrower
+ * mock (42fr 58fr) but pages with a wider table (more columns) pass 58fr 42fr instead.
+ */
+export default function IndustryProblem({ eyebrow, heading, problems, mock, ratio = '42fr 58fr' }) {
   const gridStyle = mock.columnTemplate ? { gridTemplateColumns: mock.columnTemplate } : undefined;
 
   return (
     <section id="problem" className={styles.section}>
-      <Container className={styles.grid}>
-        <div>
-          <div className={styles.eyebrow}>{eyebrow}</div>
-          <h2 className={styles.heading}>{heading}</h2>
-          <div className={styles.problemList}>
-            {problems.map((text) => (
-              <div key={text} className={styles.problemItem}>
-                <Icon name="priority_high" size={15} color="#c0503a" className={styles.problemIcon} />
-                <span className={styles.problemText}>{text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
+      <Container className={styles.grid} style={{ gridTemplateColumns: ratio }}>
         <div className={styles.mockCard}>
           <div className={styles.mockHeader}>
             <span className={styles.mockHeaderTitle}>{mock.title}</span>
@@ -97,6 +88,19 @@ export default function IndustryProblem({ eyebrow, heading, problems, mock }) {
                 </span>
               </div>
             )}
+          </div>
+        </div>
+
+        <div>
+          <div className={styles.eyebrow}>{eyebrow}</div>
+          <h2 className={styles.heading}>{heading}</h2>
+          <div className={styles.problemList}>
+            {problems.map((text) => (
+              <div key={text} className={styles.problemItem}>
+                <Icon name="priority_high" size={15} color="#c0503a" className={styles.problemIcon} />
+                <span className={styles.problemText}>{text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

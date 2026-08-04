@@ -1,7 +1,6 @@
 // Healthcare industry page content.
 
 export const HC_HERO = {
-  eyebrow: 'HEALTHCARE',
   titleLead: 'Automate Your Patient Journey with ',
   titleAccent: 'AI-Powered Healthcare CRM',
   description:
@@ -77,7 +76,7 @@ export const HC_SOLUTIONS = {
   items: [
     { icon: 'fact_check', title: 'AI Inquiry Qualification', body: 'Automatically collect important details such as the required service, preferred doctor or department, appointment urgency, location, and suitable time. Help your team understand each inquiry before responding.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'inbox', title: 'Patient Inquiry Management', body: 'Capture and organize inquiries from websites, Meta Ads, WhatsApp, calls, appointment forms, landing pages, and referral sources in one place.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to common patient questions, collect appointment details, share basic service information, provide available slots, and transfer conversations to your team when required.', chipBg: '#E4F5EC', iconColor: '#1FAF64' },
+    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to common patient questions, collect appointment details, share basic service information, provide available slots, and transfer conversations to your team when required.', chipBg: '#E4F5EC', iconColor: '#25D366' },
     { icon: 'call', title: 'Built-In Calling', body: 'Make and receive business calls directly through the CRM. Record call activity, save notes, track missed calls, and keep communication connected to the patient inquiry.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'event_available', title: 'Appointment Scheduling', body: 'Schedule consultations, diagnostic appointments, follow-ups, and other services. Assign the right doctor, department, branch, or staff member and send automatic confirmations.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'update', title: 'Automated Follow-Ups', body: 'Trigger appointment reminders, follow-up messages, pending inquiry alerts, and next-step tasks based on appointment status and patient activity.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
@@ -91,7 +90,6 @@ export const HC_SOLUTIONS = {
 };
 
 export const HC_WORKFLOW = {
-  eyebrow: 'HEALTHCARE WORKFLOW',
   heading: 'From Patient Inquiry to Confirmed Appointment Without Human Efforts',
   steps: [
     {

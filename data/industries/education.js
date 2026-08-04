@@ -1,36 +1,39 @@
 // Education industry page content.
 
 export const EDU_HERO = {
-  eyebrow: 'Education',
-  titleLead: 'Manage Student Admissions and Student Engagement ',
-  titleAccent: 'In One Place',
-  description: 'Capture every admission inquiry, nurture prospective students, and improve enrollment conversions with smarter workflows.',
+  titleLead: 'Automate Your Student Admissions with ',
+  titleAccent: 'AI-Powered Education CRM',
+  description:
+    'Capture admission inquiries from your website, Meta Ads, WhatsApp, education portals, calls, and landing pages. Let AI respond instantly to student queries, schedule counseling sessions, and automate admission follow-ups.',
   image: { src: '/industries/education-hero.png', alt: 'Education institution using AiEngage CRM', width: 1402, height: 1058 },
 };
 
 export const EDU_PROBLEM = {
   eyebrow: 'THE CHALLENGE',
-  heading: 'Admission Season Moves Faster Than Your Enquiry Sheet',
+  heading: "Wondering Why Admission Inquiries Don't Convert?",
   problems: [
-    'Admission enquiries arrive from your website, ads, education portals, walk-ins and referrals — and none of those lists talk to each other.',
-    'The same student enquires three times through three channels and gets counted, and contacted, as three separate prospects.',
-    'Enquiries sit unassigned through peak admission season while the counselling team is already at capacity.',
-    'Campus visits and demo classes are booked and then quietly missed, with nobody tracking the no-show.',
-    'Students go silent halfway through the application and nobody notices until the intake has closed.',
+    'Student inquiries coming from multiple channels',
+    'Slow responses to admission questions',
+    'Counselors using personal numbers',
+    'Missed follow-ups after counseling sessions',
+    'No clear view of student interests and eligibility',
+    'Duplicate or incomplete inquiries',
+    'Difficulty tracking counselor performance',
   ],
   mock: {
-    title: 'Admission Enquiries',
-    searchLabel: 'All Programmes',
-    filterLabel: 'Source',
+    title: 'Admission Inquiries',
+    searchLabel: 'Search inquiries',
+    filterLabel: 'Program',
     columnTemplate: '1.7fr 1.7fr 1.7fr 1.2fr 1.2fr 1.1fr',
-    columns: ['STUDENT', 'PROGRAMME', 'SOURCE', 'COUNSELLOR', 'LAST CONTACT', 'STATUS'],
-    footerText: '6 enquiries · 3 unassigned · 3 overdue follow-ups',
+    columns: ['STUDENT', 'PROGRAM', 'SOURCE', 'COUNSELOR', 'LAST CONTACT', 'STATUS'],
+    footerText: '7 inquiries · 3 unassigned · 3 overdue follow-ups',
     rows: [
       { name: 'Sneha Iyer', product: 'MBA Finance', source: 'Education Portal', assigned: { type: 'text', value: 'Unassigned', overdue: true }, lastContact: { text: '4 hours ago' }, status: 'New' },
       { name: 'Ananya Sharma', product: 'B.Sc Nursing', source: 'Website Form', assigned: { type: 'text', value: 'Kabir M.', strong: true }, lastContact: { text: '6 days ago', overdue: true }, status: 'Follow-up Due' },
       { name: 'Ananya Sharma', product: 'B.Sc Nursing', source: 'Meta Ads', assigned: { type: 'text', value: 'Unassigned', overdue: true }, lastContact: { text: '5 days ago', overdue: true }, status: 'New' },
-      { name: 'Imran Qureshi', product: 'Diploma Mechanical', source: 'Referral', assigned: { type: 'text', value: 'Unassigned', overdue: true }, lastContact: { text: '1 day ago' }, status: 'New' },
-      { name: 'Meera Nair', product: 'BBA', source: 'Phone Enquiry', sourceExtra: 'Personal #', assigned: { type: 'text', value: 'Kabir M.', strong: true }, lastContact: { text: '8 days ago', overdue: true }, status: 'Follow-up Due' },
+      { name: 'Ananya Sharma', product: 'B.Sc Nursing', source: 'Education Portal', assigned: { type: 'text', value: 'Unassigned', overdue: true }, lastContact: { text: '2 hours ago' }, status: 'New' },
+      { name: 'Imran Qureshi', product: 'Diploma Mechanical', source: 'Referral', assigned: { type: 'text', value: 'Priya N.', strong: true }, lastContact: { text: '1 day ago' }, status: 'Contacted' },
+      { name: 'Meera Nair', product: 'BBA', source: 'Phone Inquiry', sourceExtra: 'Personal #', assigned: { type: 'text', value: 'Kabir M.', strong: true }, lastContact: { text: '8 days ago', overdue: true }, status: 'Follow-up Due' },
       { name: 'Aditya Rao', product: 'M.Tech Data Science', source: 'Education Portal', assigned: { type: 'text', value: 'Priya N.', strong: true }, lastContact: { text: '3 hours ago' }, status: 'Contacted' },
     ],
   },
@@ -38,29 +41,37 @@ export const EDU_PROBLEM = {
 
 export const EDU_SOLUTIONS = {
   eyebrow: 'SOLUTIONS',
-  heading: 'Everything You Need to Grow Enrollments and Engage Students',
+  heading: 'Everything You Need to Manage Student Admissions',
   items: [
-    { icon: 'inbox', title: 'Admissions Inquiry Management', body: 'Capture leads from your website, ads, education portals, walk-ins, and referrals into one organized inbox.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/lead-management' },
-    { icon: 'donut_small', title: 'Smart Student Segmentation', body: 'Segment students by program, location, qualification, and stage so every counselor speaks to the right student at the right time.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'forum', title: 'Multi-Channel Communication', body: 'Reach students and parents on email, SMS, WhatsApp, and calls with the full conversation history visible to every counselor.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/multichannel-communication' },
-    { icon: 'fact_check', title: 'Application & Document Tracking', body: 'Track every application stage, document submission, and fee payment in real time, with auto-reminders for what is still missing.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'event_available', title: 'Counselor & Campus Visit Management', body: 'Schedule counseling sessions, campus visits, and demo classes with automated reminders that cut no-shows.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'monitoring', title: 'Data-Driven Insights & Reporting', body: 'Real-time dashboards on inquiries, drop-off points, counselor performance, and program-wise enrollments so every decision is informed.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/reports-analytics' },
+    { icon: 'fact_check', title: 'AI Lead Qualification', body: 'Automatically collect the course of interest, academic background, preferred intake, budget considerations, and admission timeline so counselors know each student before they respond.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/ai#ai-lead-qualification' },
+    { icon: 'inbox', title: 'Admission Inquiry Management', body: 'Capture and organize inquiries from your website, Meta Ads, WhatsApp, education portals, landing pages, referral programs, and campus events in one place.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/lead-management' },
+    { icon: 'chat', title: 'WhatsApp AI Assistant', body: 'Answer common admission questions, share brochures and fee details, collect student requirements, and hand the conversation to a counselor when required.', chipBg: '#E4F5EC', iconColor: '#25D366', href: '/whatsapp#ai-agent' },
+    { icon: 'call', title: 'Built-In Calling', body: 'Make and receive admission calls directly in the CRM. Record call activity, save notes, track missed calls, and keep every conversation attached to the student profile.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/calling' },
+    { icon: 'event_available', title: 'Counseling Session Scheduling', body: 'Schedule counseling calls, campus visits, and demo classes. Assign the right counselor and send automatic confirmations and reminders.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
+    { icon: 'update', title: 'Automated Follow-Ups', body: "Trigger application reminders, document requests, deadline alerts, and next-step tasks based on each student's admission stage.", chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/automation' },
+    { icon: 'alt_route', title: 'Lead Distribution', body: 'Automatically assign student inquiries based on course, department, campus, language, counselor availability, or your own team rules.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/lead-management' },
+    { icon: 'account_tree', title: 'Admission Pipeline', body: 'Track every student from first inquiry and counseling session to application, document submission, fee payment, and enrollment.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/sales-pipeline' },
+    { icon: 'assignment_ind', title: 'Student Profile Management', body: 'Store the course of interest, qualification, parent details, preferred campus, documents submitted, and complete communication history in one profile.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/customer-management' },
+    { icon: 'summarize', title: 'Conversation Summaries', body: 'Turn long calls and WhatsApp threads into clear AI-generated summaries with student requirements, questions asked, and recommended next actions.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/ai#smart-summaries' },
+    { icon: 'campaign', title: 'Email & WhatsApp Campaigns', body: 'Send admission announcements, deadline reminders, scholarship information, event invitations, and program updates to selected student segments.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/marketing-campaigns' },
+    { icon: 'monitoring', title: 'Counselor Performance Reports', body: 'Track response times, calls, pending inquiries, counseling sessions scheduled, follow-ups, and conversion from inquiry to enrollment.', chipBg: '#FFF3EA', iconColor: '#FF5F38', href: '/reports-analytics' },
   ],
 };
 
 export const EDU_WORKFLOW = {
-  eyebrow: 'STUDENT ADMISSION JOURNEY',
-  heading: 'Automate the Entire Student Admission Journey',
+  heading: 'From Student Inquiry to Enrollment Without Human Efforts',
   steps: [
     {
       n: 1,
-      title: 'Student Inquiry Captured',
-      paragraphs: ['A prospective student or parent discovers your institution through ads, social media, education portals, or referrals. Every inquiry lands in your pipeline.'],
+      title: 'Student Inquiry Is Captured',
+      paragraphs: [
+        'Every new admission inquiry is automatically added to AiEngage from Meta Ads, your website, education portals, WhatsApp, referral programs, campus events, and other channels.',
+        'The inquiry profile can include the source, contact details, inquiry time, and the program the student is interested in.',
+      ],
       mock: {
         type: 'captureList',
         props: {
-          title: 'Inbound Enquiries',
+          title: 'Inbound Inquiries',
           rows: [
             { tag: 'Meta Ads', tagBg: '#F4ECE0', tagFg: '#6E6154', name: 'Rohit Verma', sub: 'B.Tech Computer Science', time: '2m' },
             { tag: 'Ed. Portal', tagBg: '#F4ECE0', tagFg: '#6E6154', name: 'Sneha Iyer', sub: 'MBA Finance', time: '7m' },
@@ -72,104 +83,132 @@ export const EDU_WORKFLOW = {
     },
     {
       n: 2,
-      title: 'Course & Admission Information Shared',
-      paragraphs: ["Brochures, fee structure, admission criteria, and program details sent automatically based on the student's interest and qualification."],
+      title: 'AI Responds Quickly',
+      paragraphs: [
+        'AI begins the conversation when your counseling team is busy or unavailable. It welcomes the student, answers common admission questions, shares relevant information, and collects the details needed to move the inquiry forward.',
+      ],
       mock: {
-        type: 'autoSend',
+        type: 'chat',
         props: {
-          icon: 'send',
-          title: 'Auto-send · B.Tech Computer Science',
-          sub: 'Matched to Rohit Verma',
-          items: [
-            { icon: 'description', label: 'Programme Brochure', channel: 'Email', status: 'Sent' },
-            { icon: 'payments', label: 'Fee Structure', channel: 'WhatsApp', status: 'Sent' },
-            { icon: 'fact_check', label: 'Admission Criteria', channel: 'Email', status: 'Sent' },
-            { icon: 'apartment', label: 'Campus Overview', channel: 'SMS', status: 'Sent' },
+          agentIcon: 'chat',
+          agentIconBg: '#E4F5EC',
+          agentIconColor: '#1FAF64',
+          agentSub: 'Replying to Sneha · WhatsApp',
+          headerBadge: { icon: 'bolt', text: 'Replied in 35s', color: '#0E7A45', bg: '#E5F5EC', iconColor: '#1FAF64' },
+          messages: [
+            { from: 'in', text: 'What is the eligibility for MBA Finance?' },
+            { from: 'out', text: "A bachelor's degree with 50% aggregate, plus CAT/MAT/CMAT score. Sharing the brochure." },
+            { from: 'in', text: 'Any scholarship for merit students?' },
+            { from: 'out', text: 'Yes — merit scholarships for 85%+ scorers. Applications close 12 Aug.' },
           ],
-          trigger: { prefix: 'Trigger · when programme interest =', value: 'B.Tech CS' },
         },
       },
     },
     {
       n: 3,
-      title: 'Counseling Session Scheduled',
-      paragraphs: ['Confirmed slot for a campus visit, demo class, or counselor call, with reminders across email, SMS, and WhatsApp.'],
+      title: 'Student Requirements Are Collected',
+      paragraphs: ["AI asks relevant questions to understand the student's admission requirements, including:"],
+      checklist: ['Student name & contact', 'Parent details', 'Course or program of interest', 'Grade / Qualification', 'Preferred campus', 'Lead source', 'Assigned admission counselor', 'Previous conversations'],
       mock: {
-        type: 'daySlots',
+        type: 'scoreCard',
         props: {
-          dateLabel: 'Wed · 19 Nov',
-          sub: 'Counsellor · Priya N.',
-          slots: [
-            { time: '10:00', label: '—' },
-            { time: '11:30', label: 'Campus Visit · Ananya S.', active: true, confirmed: true },
-            { time: '1:00', label: 'Demo Class · slot open' },
-            { time: '3:30', label: '—' },
-            { time: '5:00', label: 'Counsellor Call · slot open' },
-          ],
-          reminders: [
-            { icon: 'mail', label: 'Email' },
-            { icon: 'sms', label: 'SMS' },
-            { icon: 'chat', label: 'WhatsApp' },
+          avatarInitials: 'RV',
+          avatarBg: '#FFF3EA',
+          avatarFg: '#C2410C',
+          name: 'Rohit Verma',
+          phone: '+91 98204 55127 · Parent: Anil Verma',
+          badge: 'Ready',
+          badgeFg: '#E64A24',
+          badgeBg: '#FFF3EA',
+          score: 88,
+          fields: [
+            { label: 'PROGRAM', value: 'B.Tech CS' },
+            { label: 'GRADE', value: 'Class 12 · PCM' },
+            { label: 'CAMPUS', value: 'Pune Main' },
+            { label: 'COUNSELOR', value: 'Priya Nambiar' },
           ],
         },
       },
     },
     {
       n: 4,
-      title: 'Application Submission & Follow-Up',
-      paragraphs: ['Personalized nudges to complete applications, submit documents, and pay registration fees on time.'],
+      title: 'Inquiry Is Assigned to the Right Counselor',
+      paragraphs: ["Once the student's requirements are clear, the inquiry is automatically assigned to the most suitable counselor or department. Assignment can be based on:"],
+      checklist: ['Course or program', 'Department', 'Preferred campus', 'Student language', 'Counselor availability', 'Lead source', 'New or returning inquiry'],
       mock: {
-        type: 'documentChecklist',
+        type: 'assignment',
         props: {
-          name: 'Application · Ananya Sharma',
-          sub: 'B.Sc Nursing',
-          items: [
-            { label: 'Application Form', state: 'received', badgeLabel: 'Submitted' },
-            { label: 'Photo ID', state: 'received', badgeLabel: 'Submitted' },
-            { label: 'Transcript', state: 'overdue', badgeLabel: 'Pending' },
-            { label: 'ID Proof of Guardian', state: 'overdue', badgeLabel: 'Pending' },
-            { label: 'Registration Fee', state: 'overdue', badgeLabel: 'Unpaid' },
+          rules: [
+            { label: 'Program', value: 'B.Sc Nursing', target: 'Kabir Menon' },
+            { label: 'Program', value: 'MBA Finance', target: 'Priya Nambiar' },
+            { label: 'Source', value: 'Referral', target: 'Priya N.' },
           ],
-          nudges: ['Today · SMS', '+2d · WhatsApp', '+5d · Call'],
+          routedNote: { prefix: 'Inquiry routed to ', name: 'Kabir Menon', suffix: ' in 4s' },
         },
       },
     },
     {
       n: 5,
-      title: 'Admission Review and Enrollment Progression',
-      paragraphs: ['Applications are reviewed, shortlists are shared, and serious students move into discussions around final enrollment.'],
+      title: 'Relevant Information Is Shared',
+      paragraphs: ['The student receives information relevant to their inquiry through approved channels. Your team can share:'],
+      checklist: ['WhatsApp welcome message', 'Course brochure', 'Fee structure', 'Admission process', 'Scholarship information', 'Email follow-ups', 'Application reminders', 'Internal notifications'],
       mock: {
-        type: 'admissionFunnel',
+        type: 'share',
         props: {
-          stats: [
-            { value: '42', label: 'UNDER REVIEW' },
-            { value: '18', label: 'SHORTLISTED' },
-            { value: '9', label: 'IN DISCUSSION' },
-          ],
+          title: 'Shared with Rohit',
           items: [
-            { name: 'Rohit Verma', sub: 'B.Tech Computer Science', status: 'Under Review' },
-            { name: 'Aditya Rao', sub: 'M.Tech Data Science', status: 'Shortlisted' },
-            { name: 'Meera Nair', sub: 'BBA', status: 'In Discussion' },
-            { name: 'Sneha Iyer', sub: 'MBA Finance', status: 'Under Review' },
+            { icon: 'description', title: 'Programme Brochure', sub: 'B.Tech Computer Science', value: 'Sent' },
+            { icon: 'payments', title: 'Fee Structure', sub: 'Full breakdown', value: 'Sent' },
+            { icon: 'fact_check', title: 'Admission Criteria', sub: 'Eligibility & documents', value: 'Sent' },
+          ],
+          channels: [
+            { icon: 'chat', label: 'WhatsApp', active: true },
+            { icon: 'mail', label: 'Email', active: false },
           ],
         },
       },
     },
     {
       n: 6,
-      title: 'Admission Confirmation & Student Onboarding',
-      paragraphs: ['Once the student decides to enroll, the system tracks confirmation, sends welcome kits, and shares orientation resources.'],
+      title: 'Counseling Session Is Scheduled',
+      paragraphs: ['Once the student shows interest, they can select a suitable time for a counseling call, campus visit, or demo class. AiEngage can:'],
+      checklist: ['Show available counseling slots', 'Assign the appropriate counselor', 'Add the session to the calendar', 'Send confirmation messages', 'Share campus location details', 'Send reminders before the session', 'Track rescheduled or missed sessions'],
       mock: {
-        type: 'enrollmentProgress',
+        type: 'schedule',
         props: {
-          banner: { icon: 'verified', title: 'Enrollment Confirmed · Ananya Sharma', sub: 'B.Sc Nursing · Batch 2026' },
-          items: [
-            { label: 'Welcome Kit Sent', done: true, status: 'Done' },
-            { label: 'Orientation Schedule Shared', done: true, status: 'Done' },
-            { label: 'Student Portal Access', done: true, status: 'Done' },
-            { label: 'Document Verification', done: false, status: 'In Progress' },
+          title: 'Schedule Counseling Session',
+          monthLabel: 'Nov 2025',
+          days: [
+            { label: 'TUE', num: '18' },
+            { label: 'WED', num: '19', active: true },
+            { label: 'THU', num: '20' },
+            { label: 'FRI', num: '21' },
           ],
-          progress: { label: 'Onboarding progress', percent: 75 },
+          times: [{ label: '11:30 AM', active: true }, { label: '2:00 PM' }, { label: '4:30 PM' }],
+          footerLabel: 'Counselor',
+          footerName: 'Priya Nambiar',
+          statusLabel: 'Confirmed',
+          statusFg: '#0E7A45',
+          statusBg: '#E5F5EC',
+          statusIconColor: '#1FAF64',
+        },
+      },
+    },
+    {
+      n: 7,
+      title: 'Follow-Ups Continue Automatically',
+      paragraphs: ['AiEngage keeps every admission inquiry moving with timely messages, reminders, and tasks. Automations can be triggered for:'],
+      checklist: ['Counseling session reminders', 'Pending document requests', 'Application deadline alerts', 'Fee payment reminders', 'Scholarship deadline alerts', 'Post-session follow-ups', 'Long-term prospect nurturing'],
+      mock: {
+        type: 'timeline',
+        props: {
+          badge: { icon: 'bolt', text: 'Rohit V.' },
+          events: [
+            { title: 'Confirmation sent', sub: 'Wed 19, 9:02 AM · WhatsApp', done: true },
+            { title: 'Reminder scheduled', sub: '1h before session', done: true },
+            { title: 'Document request sent', sub: 'Wed 19, 11:45 AM · Email', done: true },
+            { title: 'Feedback request', sub: 'Queued · Wed 19, 6:00 PM', done: false },
+          ],
         },
       },
     },
@@ -177,28 +216,29 @@ export const EDU_WORKFLOW = {
 };
 
 export const EDU_BENEFITS = {
-  heading: 'Grow Enrollments and Build Stronger Student Communities',
+  heading: 'The Benefits of AI-Powered Education CRM',
   items: [
-    { icon: 'trending_up', title: 'Increase Student Enrollments', body: 'Convert more inquiries into enrollments with automated, personalized nurture across every channel.' },
-    { icon: 'inbox', title: 'Capture Every Admission Inquiry', body: 'Auto-pull leads from every channel so no prospective student is missed during peak admission seasons.' },
-    { icon: 'bolt', title: 'Respond to Students Faster', body: 'Centralized inbox plus automated first responses ensure no student waits more than minutes for a reply.' },
-    { icon: 'event_repeat', title: 'Reduce Application Drop-Off', body: 'Smart reminders and personalized follow-ups keep students engaged through every stage of application.' },
-    { icon: 'sentiment_satisfied', title: 'Improve Student Experience', body: 'Timely, personalized communication builds the kind of experience that turns students into advocates.' },
-    { icon: 'insights', title: 'Improve Marketing Performance', body: 'Track which campaigns drive enrollments to invest where it actually grows your institution.' },
+    { icon: 'bolt', title: 'Faster Responses to Every Admission Inquiry', body: 'Respond to admission questions within minutes, even during peak intake season or outside office hours.' },
+    { icon: 'verified', title: 'More Qualified Admission Leads', body: 'Collect the course interest, academic background, intake preference, and timeline before the inquiry reaches a counselor.' },
+    { icon: 'event_repeat', title: 'Fewer Missed Follow-Ups', body: "Automatically send reminders, create tasks, and trigger the next action based on each student's admission stage." },
+    { icon: 'calendar_month', title: 'More Counseling Sessions Scheduled', body: 'Make it easy for students and parents to view available slots and book a counseling call or campus visit.' },
+    { icon: 'alt_route', title: 'Better Inquiry Distribution', body: 'Assign inquiries to the right counselor, course team, or campus based on predefined rules.' },
+    { icon: 'contact_page', title: 'Complete Student Information', body: 'Keep calls, WhatsApp chats, emails, notes, documents, and previous interactions connected to one student profile.' },
+    { icon: 'task_alt', title: 'Less Manual Work for Counselors', body: 'Reduce repetitive work such as answering common questions, updating inquiry details, writing summaries, and sending reminders.' },
+    { icon: 'account_tree', title: 'Clearer Admission Pipeline', body: 'See which students are new, waiting for information, ready for counseling, applied, documented, or enrolled.' },
+    { icon: 'insights', title: 'Better Counselor Accountability', body: 'Track response time, call activity, pending inquiries, sessions held, and follow-up completion for every counselor.' },
   ],
 };
 
 export const EDU_INSTITUTION_TYPES = {
-  heading: 'Built for Every Kind of Institution',
+  heading: 'Built for Every Type of Educational Institution',
   columns: 3,
-  variant: 'card',
   items: [
-    { icon: 'school', name: 'Schools (K–12)', body: 'Manage admission enquiries, parent communication and seat allocation across every grade.' },
-    { icon: 'account_balance', name: 'Colleges & Universities', body: 'Handle high-volume applications across multiple programmes, departments and intakes.' },
-    { icon: 'menu_book', name: 'Coaching & Test-Prep Institutes', body: 'Track batch enquiries, demo classes and enrolment conversions across every centre.' },
-    { icon: 'workspace_premium', name: 'Training & Skill Development Institutes', body: 'Move enquiries from first interest to course enrolment with automated follow-ups.' },
-    { icon: 'devices', name: 'Ed-Tech & Online Learning Platforms', body: 'Capture and nurture digital enquiries at scale without adding counselling headcount.' },
-    { icon: 'child_care', name: 'Preschools & Play Schools', body: 'Manage parent enquiries, campus visits and admission formalities in one place.' },
+    { icon: 'school', name: 'Schools' },
+    { icon: 'account_balance', name: 'Colleges & Universities' },
+    { icon: 'menu_book', name: 'Coaching Institutes' },
+    { icon: 'devices', name: 'EdTech Companies' },
+    { icon: 'workspace_premium', name: 'Skill Development & Training Centers' },
   ],
 };
 
@@ -216,18 +256,13 @@ export const EDU_FAQS = {
 };
 
 export const EDU_RESULTS = {
-  heading: 'Ready To Take Your Business To The Next Level?',
+  heading: 'The Smarter Way to Manage Student Admissions Starts Here',
   description: 'Capture every admission inquiry, automate follow-ups, keep prospective students engaged, and grow enrollments with our AI-powered CRM.',
   statRows: [
     [
-      { value: '+45%', label: 'ENROLLMENTS', title: 'Increase Student Enrollments', desc: 'Convert more inquiries into enrollments with automated, personalized nurture.' },
-      { value: '100%', label: 'INQUIRY CAPTURE', title: 'Capture Every Admission Inquiry', desc: 'Auto-pull leads from every channel so no prospective student is missed.' },
-      { value: '2.4×', label: 'RESPONSE SPEED', title: 'Respond to Students Faster', desc: 'Centralized inbox and automated first responses cut reply times to minutes.' },
-    ],
-    [
-      { value: '−35%', label: 'DROP-OFF RATE', title: 'Reduce Application Drop-Off', desc: 'Smart reminders keep students engaged through every stage of application.' },
-      { value: '4.9★', label: 'STUDENT EXPERIENCE', title: 'Improve Student Experience', desc: 'Timely, personalized communication turns students into advocates.' },
-      { value: '3×', label: 'MARKETING ROI', title: 'Improve Marketing Performance', desc: 'Track which campaigns drive enrollments and invest where growth actually happens.' },
+      { value: '2X', label: 'Faster Admission Responses' },
+      { value: 'More', label: 'Qualified Student Inquiries' },
+      { value: 'Fewer', label: 'Missed Counseling Sessions' },
     ],
   ],
 };

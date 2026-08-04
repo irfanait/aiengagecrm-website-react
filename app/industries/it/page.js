@@ -25,7 +25,6 @@ export default function ITIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: IT_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {IT_HERO.titleLead}
@@ -43,7 +42,7 @@ export default function ITIndustryPage() {
 
       <IndustrySolutions eyebrow={IT_SOLUTIONS.eyebrow} heading={IT_SOLUTIONS.heading} items={IT_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={IT_WORKFLOW.eyebrow} heading={IT_WORKFLOW.heading} steps={IT_WORKFLOW.steps} />
+      <IndustryWorkflow heading={IT_WORKFLOW.heading} steps={IT_WORKFLOW.steps} />
 
       <IndustryBenefits heading={IT_BENEFITS.heading} items={IT_BENEFITS.items} />
 

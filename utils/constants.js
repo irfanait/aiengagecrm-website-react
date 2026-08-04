@@ -10,9 +10,9 @@ export const CONTACT = {
 
 export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/aiengagecrm',
-  linkedin: 'https://www.linkedin.com/company/aiengagecrm',
-  twitter: 'https://twitter.com/aiengagecrm',
-  instagram: 'https://www.instagram.com/aiengagecrm',
+  linkedin: 'http://www.linkedin.com/company/aiengage-crm',
+  instagram: 'https://www.instagram.com/aiengage.crm',
+  youtube: 'https://www.youtube.com/@AiEngageCRM',
 };
 
 export const CTA_LINKS = {

@@ -25,7 +25,6 @@ export default function ToursTravelsIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: TT_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {TT_HERO.titleLead}
@@ -39,11 +38,11 @@ export default function ToursTravelsIndustryPage() {
         </div>
       </ProductHero>
 
-      <IndustryProblem eyebrow={TT_PROBLEM.eyebrow} heading={TT_PROBLEM.heading} problems={TT_PROBLEM.problems} mock={TT_PROBLEM.mock} />
+      <IndustryProblem eyebrow={TT_PROBLEM.eyebrow} heading={TT_PROBLEM.heading} problems={TT_PROBLEM.problems} mock={TT_PROBLEM.mock} ratio="58fr 42fr" />
 
       <IndustrySolutions eyebrow={TT_SOLUTIONS.eyebrow} heading={TT_SOLUTIONS.heading} items={TT_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={TT_WORKFLOW.eyebrow} heading={TT_WORKFLOW.heading} steps={TT_WORKFLOW.steps} />
+      <IndustryWorkflow heading={TT_WORKFLOW.heading} steps={TT_WORKFLOW.steps} />
 
       <IndustryBenefits heading={TT_BENEFITS.heading} items={TT_BENEFITS.items} />
 

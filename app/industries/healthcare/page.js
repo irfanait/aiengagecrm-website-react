@@ -25,7 +25,6 @@ export default function HealthcareIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: HC_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {HC_HERO.titleLead}
@@ -43,7 +42,7 @@ export default function HealthcareIndustryPage() {
 
       <IndustrySolutions eyebrow={HC_SOLUTIONS.eyebrow} heading={HC_SOLUTIONS.heading} items={HC_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={HC_WORKFLOW.eyebrow} heading={HC_WORKFLOW.heading} steps={HC_WORKFLOW.steps} />
+      <IndustryWorkflow heading={HC_WORKFLOW.heading} steps={HC_WORKFLOW.steps} />
 
       <IndustryBenefits heading={HC_BENEFITS.heading} items={HC_BENEFITS.items} />
 

@@ -25,7 +25,6 @@ export default function FinanceIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: FIN_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {FIN_HERO.titleLead}
@@ -39,11 +38,11 @@ export default function FinanceIndustryPage() {
         </div>
       </ProductHero>
 
-      <IndustryProblem eyebrow={FIN_PROBLEM.eyebrow} heading={FIN_PROBLEM.heading} problems={FIN_PROBLEM.problems} mock={FIN_PROBLEM.mock} />
+      <IndustryProblem eyebrow={FIN_PROBLEM.eyebrow} heading={FIN_PROBLEM.heading} problems={FIN_PROBLEM.problems} mock={FIN_PROBLEM.mock} ratio="58fr 42fr" />
 
       <IndustrySolutions eyebrow={FIN_SOLUTIONS.eyebrow} heading={FIN_SOLUTIONS.heading} items={FIN_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={FIN_WORKFLOW.eyebrow} heading={FIN_WORKFLOW.heading} steps={FIN_WORKFLOW.steps} />
+      <IndustryWorkflow heading={FIN_WORKFLOW.heading} steps={FIN_WORKFLOW.steps} />
 
       <IndustryBenefits heading={FIN_BENEFITS.heading} items={FIN_BENEFITS.items} />
 

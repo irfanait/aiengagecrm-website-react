@@ -1,7 +1,6 @@
 // Finance & Insurance industry page content.
 
 export const FIN_HERO = {
-  eyebrow: 'Finance',
   titleLead: 'Automate Your Customer Journey With ',
   titleAccent: 'AI-Powered Finance CRM',
   description:
@@ -126,7 +125,7 @@ export const FIN_SOLUTIONS = {
       href: '/whatsapp#ai-agent',
       body: 'Respond to common questions, collect customer requirements, share approved product information, request basic documents, schedule consultations, and transfer qualified conversations to the right advisor.',
       chipBg: '#E4F5EC',
-      iconColor: '#1FAF64',
+      iconColor: '#25D366',
     },
     {
       icon: 'call',
@@ -201,7 +200,6 @@ export const FIN_SOLUTIONS = {
 };
 
 export const FIN_WORKFLOW = {
-  eyebrow: 'FINANCE WORKFLOW',
   heading: 'From Inquiry To Customer Onboarding Without Human Efforts',
   steps: [
     {

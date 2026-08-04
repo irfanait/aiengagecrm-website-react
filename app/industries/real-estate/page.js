@@ -25,7 +25,6 @@ export default function RealEstateIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: RE_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {RE_HERO.titleLead}
@@ -43,7 +42,7 @@ export default function RealEstateIndustryPage() {
 
       <IndustrySolutions eyebrow={RE_SOLUTIONS.eyebrow} heading={RE_SOLUTIONS.heading} items={RE_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={RE_WORKFLOW.eyebrow} heading={RE_WORKFLOW.heading} steps={RE_WORKFLOW.steps} />
+      <IndustryWorkflow heading={RE_WORKFLOW.heading} steps={RE_WORKFLOW.steps} />
 
       <IndustryBenefits heading={RE_BENEFITS.heading} items={RE_BENEFITS.items} />
 

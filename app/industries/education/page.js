@@ -35,7 +35,6 @@ export default function EducationIndustryPage() {
       />
 
       <ProductHero
-        badge={{ label: EDU_HERO.eyebrow, bg: 'var(--color-primary-tint)', textColor: 'var(--color-primary)' }}
         title={
           <>
             {EDU_HERO.titleLead}
@@ -49,20 +48,15 @@ export default function EducationIndustryPage() {
         </div>
       </ProductHero>
 
-      <IndustryProblem eyebrow={EDU_PROBLEM.eyebrow} heading={EDU_PROBLEM.heading} problems={EDU_PROBLEM.problems} mock={EDU_PROBLEM.mock} />
+      <IndustryProblem eyebrow={EDU_PROBLEM.eyebrow} heading={EDU_PROBLEM.heading} problems={EDU_PROBLEM.problems} mock={EDU_PROBLEM.mock} ratio="58fr 42fr" />
 
       <IndustrySolutions eyebrow={EDU_SOLUTIONS.eyebrow} heading={EDU_SOLUTIONS.heading} items={EDU_SOLUTIONS.items} />
 
-      <IndustryWorkflow eyebrow={EDU_WORKFLOW.eyebrow} heading={EDU_WORKFLOW.heading} steps={EDU_WORKFLOW.steps} />
+      <IndustryWorkflow heading={EDU_WORKFLOW.heading} steps={EDU_WORKFLOW.steps} />
 
       <IndustryBenefits heading={EDU_BENEFITS.heading} items={EDU_BENEFITS.items} />
 
-      <IndustryBusinessTypes
-        heading={EDU_INSTITUTION_TYPES.heading}
-        items={EDU_INSTITUTION_TYPES.items}
-        columns={EDU_INSTITUTION_TYPES.columns}
-        variant={EDU_INSTITUTION_TYPES.variant}
-      />
+      <IndustryBusinessTypes heading={EDU_INSTITUTION_TYPES.heading} items={EDU_INSTITUTION_TYPES.items} columns={EDU_INSTITUTION_TYPES.columns} />
 
       <FAQAccordion heading={EDU_FAQS.heading} faqs={EDU_FAQS.items} />
 

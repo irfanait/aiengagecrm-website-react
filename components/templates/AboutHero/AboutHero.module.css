@@ -1,5 +1,5 @@
 .hero {
-  padding: 48px 40px 44px;
+  padding: 48px 40px;
 }
 
 .inner {
@@ -23,20 +23,19 @@
 }
 
 .title {
-  margin: 0 0 16px;
-  /* max-width: 760px; */
-  font-size: clamp(26px, 3.5vw + 12px, 40px);
-  line-height: 1.18;
+  margin: 0 0 22px;
+  font-size: clamp(30px, 4vw + 22px, 56px);
+  line-height: 1.1;
   font-weight: 700;
-  letter-spacing: -1.1px;
+  letter-spacing: -1.8px;
   color: var(--color-text);
   text-wrap: balance;
 }
 
 .desc {
-  margin: 0 0 24px;
-  max-width: 620px;
-  font-size: 15px;
+  margin: 0 auto 34px;
+  max-width: 560px;
+  font-size: 18px;
   line-height: 1.65;
   font-weight: 300;
   color: var(--color-text-muted);
@@ -45,7 +44,7 @@
 
 .ctaRow {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;

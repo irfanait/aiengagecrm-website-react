@@ -1,7 +1,6 @@
 // Real Estate industry page content.
 
 export const RE_HERO = {
-  eyebrow: 'REAL ESTATE',
   titleLead: 'Automate Your Property Sales With ',
   titleAccent: 'AI-Powered Real Estate CRM',
   description:
@@ -77,7 +76,7 @@ export const RE_SOLUTIONS = {
   items: [
     { icon: 'fact_check', title: 'AI Lead Qualification', body: 'Automatically ask buyers about their budget, preferred location, property type, purchase timeline, and requirements. Help agents focus on leads with stronger buying intent.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'inbox', title: 'Property Inquiry Management', body: 'Capture and organize inquiries from property portals, Meta Ads, websites, WhatsApp, calls, and other lead sources in one place.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
-    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to property inquiries instantly, answer common questions, collect buyer details, share information, and transfer qualified conversations to your team.', chipBg: '#E4F5EC', iconColor: '#1FAF64' },
+    { icon: 'chat', title: 'WhatsApp AI Agent', body: 'Respond to property inquiries instantly, answer common questions, collect buyer details, share information, and transfer qualified conversations to your team.', chipBg: '#E4F5EC', iconColor: '#25D366' },
     { icon: 'call', title: 'Built-In Calling', body: 'Make and receive business calls directly through the CRM. Record calls, save notes, track missed calls, and maintain a complete conversation history.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'event_available', title: 'Site Visit Scheduling', body: 'Schedule property visits, assign agents, send confirmations, and automatically remind buyers before their appointment.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
     { icon: 'update', title: 'Automated Follow-Ups', body: 'Trigger timely messages, reminders, and tasks based on lead activity, site visits, missed calls, and pipeline stages.', chipBg: '#FFF3EA', iconColor: '#FF5F38' },
@@ -91,7 +90,6 @@ export const RE_SOLUTIONS = {
 };
 
 export const RE_WORKFLOW = {
-  eyebrow: 'REAL ESTATE WORKFLOW',
   heading: 'From Property Inquiry to Site Visit Without Human Efforts',
   steps: [
     {

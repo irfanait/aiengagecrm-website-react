@@ -5,7 +5,7 @@
 // "why businesses trust us" checklist, and a dark final CTA.
 
 export const AB_HERO = {
-  badge: { icon: null, label: 'ABOUT US', bg: '#fff3ea', textColor: 'var(--color-primary-hover)' },
+  badge: null,
   titleLead: 'More Than a CRM.',
   titleAccent: 'Built to Help Businesses Grow.',
   description: 'Built on 17 Years of Experience. Designed for the Future.',
@@ -60,9 +60,6 @@ export const AB_INDUSTRIES = [
   { icon: 'precision_manufacturing', label: 'Manufacturing' },
 ];
 
-export const AB_INDUSTRIES_NOTE = 'And many more.';
-export const AB_INDUSTRIES_TAGLINE = 'Every industry has its own workflow, but every growing business benefits from better systems.';
-
 export const AB_APPROACH_HEADING = 'Our Approach to AI';
 export const AB_APPROACH_SUBTITLE = 'We believe AI should support people, not replace them.';
 
@@ -89,9 +86,12 @@ export const AB_APPROACH_NOTE =
 
 export const AB_MISSION_BANNER = {
   eyebrow: 'OUR MISSION',
-  heading: 'To help businesses grow with smarter systems, intelligent automation, and practical AI.',
-  description:
-    "We're building more than software—we're building a platform that gives business owners greater visibility, empowers teams to work more efficiently, and creates processes that scale as the business grows.",
+  heading: 'To Help Businesses Capture Every Lead',
+  description: [
+    'Making Customer Engagement Smarter With AI. Our mission is to help businesses manage every customer interaction with greater speed, consistency, and clarity.',
+    'AiEngage CRM brings AI into the complete customer journey. It can answer common questions, qualify incoming leads, summarize conversations, automate follow-ups, assign tasks, and move opportunities to the next stage.',
+    'This creates a faster, more organized experience for both businesses and their customers.',
+  ],
 };
 
 export const AB_FEATURES_HEADING = 'AI Built Into Every Stage Of Customer Engagement';
@@ -198,19 +198,16 @@ export const AB_FEATURES = [
   },
 ];
 
-export const AB_TRUST_HEADING = 'Why Businesses Trust AiEngage';
+export const AB_TRUST_HEADING = 'Why Businesses Choose AiEngage';
 
 export const AB_TRUST_ITEMS = [
-  '17+ years of industry experience',
-  'Trusted by 10,000+ businesses',
-  'Built by the experienced AiTrillion team',
-  'Purpose-built for modern service businesses',
-  'Focused on practical AI and business automation',
-  'Committed to long-term customer success',
+  '17+ years of proven industry experience',
+  'Trusted by 10,000+ businesses worldwide',
+  'Built by the team behind AiTrillion',
+  'Designed for growing service businesses',
+  'AI and automation built for real business needs',
+  'Dedicated to long-term customer success',
 ];
-
-export const AB_TRUST_NOTE =
-  "At AiEngage, we don't just build technology—we build systems that help businesses work smarter, serve customers better, and grow with confidence.";
 
 export const AB_FINAL_CTA = {
   titleLead: 'Turn More Conversations ',
