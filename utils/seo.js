@@ -48,7 +48,7 @@ export function organizationSchema() {
     sameAs: [
       'https://www.facebook.com/aiengagecrm',
       'https://www.instagram.com/aiengage.crm',
-      'http://www.linkedin.com/company/aiengage-crm',
+      'https://www.linkedin.com/company/aiengage-crm',
       'https://www.youtube.com/@AiEngageCRM',
     ],
   };
@@ -80,7 +80,7 @@ export function localBusinessSchema() {
     sameAs: [
       'https://www.facebook.com/aiengagecrm',
       'https://www.instagram.com/aiengage.crm',
-      'http://www.linkedin.com/company/aiengage-crm',
+      'https://www.linkedin.com/company/aiengage-crm',
       'https://www.youtube.com/@AiEngageCRM',
     ],
   };
