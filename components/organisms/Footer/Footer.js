@@ -54,10 +54,10 @@ export default function Footer() {
             © {year} <Link href="/">{SITE_NAME}</Link>. All rights reserved.
           </span>
           <div className={styles.legalLinks}>
-            <Link href="https://www.aitrillion.com/terms-of-service" target='_blank' className={styles.legalLink}>
+            <Link href="/terms-of-service" className={styles.legalLink}>
               Terms of Use
             </Link>
-            <Link href="https://www.aitrillion.com/privacy-policy" target='_blank' className={styles.legalLink}>
+            <Link href="/privacy-policy" className={styles.legalLink}>
               Privacy Policy
             </Link>
           </div>

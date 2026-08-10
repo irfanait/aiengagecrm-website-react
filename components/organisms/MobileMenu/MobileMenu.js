@@ -41,7 +41,9 @@ export default function MobileMenu({ open, onClose }) {
   }));
 
   return (
-    <Drawer title="Menu" placement="right" onClose={onClose} open={open} size={340}>
+    // zIndex matches MegaMenu/NavDropdown: the CRM widget's launcher iframe sets
+    // z-index: 2147483640, so the drawer (and its mask) need to clear that too.
+    <Drawer title="Menu" placement="right" onClose={onClose} open={open} size={340} zIndex={2147483641}>
       <div className={styles.drawerBody}>
         {NAV_LINKS.map((link) => {
           if (link.isMegaMenuTrigger) {

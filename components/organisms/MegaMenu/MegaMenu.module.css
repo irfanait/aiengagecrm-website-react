@@ -7,7 +7,10 @@
   transform: translateX(-50%);
   width: 1180px;
   max-width: calc(100vw - 40px);
-  z-index: 60;
+  /* The CRM widget's own launcher iframe sets z-index: 2147483640 (near the CSS max) so it
+     always sits above the host page — an open mega menu needs to clear that too, not just our
+     own header/floats, or its bottom rows render underneath the widget button. */
+  z-index: 2147483641;
 }
 
 .panel {

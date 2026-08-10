@@ -1,0 +1,146 @@
+.section {
+  padding: 56px 40px 88px;
+}
+
+.container {
+  max-width: 1020px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--color-text);
+}
+
+.metaLine {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-faint);
+}
+
+.article {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 40px;
+}
+
+.sectionBlock {
+  padding-top: 26px;
+  margin-top: 26px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.sectionBlock:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.intro {
+  margin: 0 0 20px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.sectionHeading {
+  margin: 0 0 14px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--color-text);
+}
+
+.subheading {
+  margin: 20px 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.paragraph {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.footerMeta {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+}
+
+.footerLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.footerItem a {
+  color: var(--color-primary);
+}
+
+.footerItem a:hover {
+  color: var(--color-primary-hover);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 5px 56px;
+  }
+
+  .article {
+    padding: 26px 22px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}

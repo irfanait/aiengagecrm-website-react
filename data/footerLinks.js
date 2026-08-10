@@ -52,6 +52,7 @@ export const FOOTER_COLUMNS = [
       { label: 'Pricing', href: '/pricing' },
       { label: "What's New", href: '/whats-new' },
       { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
+      { label: 'Trust Center', href: '/trust' },
     ],
   },
 ];

@@ -4,7 +4,9 @@
      page content is scrolled behind show through as a stray strip. */
   top: 100%;
   left: 0;
-  z-index: 60;
+  /* Matches MegaMenu's z-index — the CRM widget's launcher iframe sets z-index: 2147483640 so it
+     always sits above the host page, and an open dropdown needs to clear that too. */
+  z-index: 2147483641;
 }
 
 /* The grid variant's panel is much wider than its trigger word, so it's centered under the
