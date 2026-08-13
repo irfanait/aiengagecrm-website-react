@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from '../../common/Container/Container';
+import SocialIcon from '../../atoms/SocialIcon/SocialIcon';
 import { FOOTER_COLUMNS, FOOTER_SOCIALS } from '../../../data/footerLinks';
 import { SITE_NAME } from '../../../utils/constants';
 import styles from './Footer.module.css';
@@ -23,7 +24,7 @@ export default function Footer() {
             <div className={styles.socials}>
               {FOOTER_SOCIALS.map((s) => (
                 <a key={s.name} href={s.href} className={styles.socialIcon} aria-label={s.name} target="_blank" rel="noreferrer">
-                  {s.label}
+                  <SocialIcon name={s.icon} />
                 </a>
               ))}
             </div>

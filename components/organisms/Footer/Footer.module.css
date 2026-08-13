@@ -49,8 +49,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11.5px;
-  font-weight: 700;
   color: var(--color-dark-text-muted);
   transition: border-color 0.2s ease, color 0.2s ease;
 }

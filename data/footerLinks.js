@@ -58,8 +58,8 @@ export const FOOTER_COLUMNS = [
 ];
 
 export const FOOTER_SOCIALS = [
-  { label: 'f', name: 'Facebook', href: 'https://www.facebook.com/aiengagecrm' },
-  { label: 'in', name: 'LinkedIn', href: 'https://www.linkedin.com/company/aiengage-crm' },
-  { label: 'ig', name: 'Instagram', href: 'https://www.instagram.com/aiengage.crm' },
-  { label: 'yt', name: 'YouTube', href: 'https://www.youtube.com/@AiEngageCRM' },
+  { icon: 'facebook', name: 'Facebook', href: 'https://www.facebook.com/aiengagecrm' },
+  { icon: 'linkedin', name: 'LinkedIn', href: 'https://www.linkedin.com/company/aiengage-crm' },
+  { icon: 'instagram', name: 'Instagram', href: 'https://www.instagram.com/aiengage.crm' },
+  { icon: 'youtube', name: 'YouTube', href: 'https://www.youtube.com/@AiEngageCRM' },
 ];
