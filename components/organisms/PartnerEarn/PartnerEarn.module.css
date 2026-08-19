@@ -1,0 +1,194 @@
+.section {
+  padding: 76px 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.heading {
+  margin: 0 0 34px;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 28px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 9, 35, 0.04);
+}
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.divider {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--color-primary-highlight);
+  margin: 14px 0;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.flowBand {
+  margin-top: 22px;
+  background: var(--color-primary-tint);
+  border-radius: var(--radius-md);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.flowSteps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.flowStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 96px;
+}
+
+.flowIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.flowLine {
+  width: 26px;
+  height: 50px;
+  flex-shrink: 0;
+  display: block;
+  border-top: 2px dotted var(--color-primary-highlight);
+  margin-top: 25px;
+}
+
+.flowDivider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--color-primary-highlight);
+  flex-shrink: 0;
+}
+
+.flowHeading {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.2px;
+  margin-bottom: 6px;
+}
+
+.flowAccent {
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flowBand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .flowDivider {
+    display: none;
+  }
+
+  .flowSteps {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flowBand {
+    padding: 26px 22px;
+  }
+
+  .flowSteps {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .flowLine {
+    display: none;
+  }
+}

@@ -1,0 +1,249 @@
+.section {
+  scroll-margin-top: 100px;
+  padding: 56px 40px 64px;
+}
+
+.grid {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+.leftCol {
+  flex: 1 1 0;
+  min-width: 0;
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.title {
+  margin: 20px 0 16px;
+  font-size: clamp(30px, 3.8vw, 42px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+  color: var(--color-text);
+}
+
+.desc {
+  margin: 0 0 14px;
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.highlight {
+  margin: 0 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.selector {
+  margin-bottom: 28px;
+}
+
+.selectorLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: 10px;
+}
+
+.selectorQuestion {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.tabs {
+  display: inline-flex;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 5px;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.tab,
+.tabActive {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tab {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.tabActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.stageCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 480px;
+}
+
+.stageLevel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: 8px;
+}
+
+.stageName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.4px;
+}
+
+.stageRange {
+  font-size: 12.5px;
+  color: var(--color-text-faint);
+  margin-top: 4px;
+}
+
+.stagePctCol {
+  text-align: right;
+  flex-shrink: 0;
+  padding-left: 24px;
+  border-left: 1px solid var(--color-border-light);
+}
+
+.stagePct {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.stagePctLabel {
+  font-size: 12.5px;
+  color: var(--color-text-faint);
+  margin-top: 4px;
+}
+
+.exploreLink {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.exploreLink:hover {
+  color: var(--color-primary-hover);
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.formCol {
+  width: 630px;
+  flex-shrink: 0;
+}
+
+.termsNote {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--color-text-faint);
+}
+
+.termsLink {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.termsLink:hover {
+  color: var(--color-primary-hover);
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .leftCol {
+    position: static;
+  }
+
+  .formCol {
+    width: 100%;
+  }
+
+  .stageCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 20px 48px;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tab,
+  .tabActive {
+    flex: 1;
+  }
+
+  .stageCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .stagePctCol {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    border-left: none;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-light);
+  }
+}

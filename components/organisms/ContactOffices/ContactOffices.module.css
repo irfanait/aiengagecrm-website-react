@@ -1,0 +1,32 @@
+.box {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 20px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: 10px;
+}
+
+.office + .office {
+  padding-top: 12px;
+}
+
+.name {
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.address {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}

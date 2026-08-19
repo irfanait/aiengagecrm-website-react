@@ -5,6 +5,7 @@ export const SITE_BY = 'Aitrillion.com';
 
 export const CONTACT = {
   email: 'info@aiengagecrm.com',
+  emailUpdate: 'update@aiengagecrm.com',
   phone: '+91 9183440213',
 };
 

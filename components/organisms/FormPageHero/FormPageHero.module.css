@@ -3,13 +3,12 @@
 }
 
 .grid {
-  display: flex;
-  gap: 72px;
+  display: grid;
+  gap: 56px;
   align-items: flex-start;
 }
 
 .content {
-  flex: 1 1 0;
   min-width: 0;
   padding-top: 8px;
 }
@@ -47,7 +46,6 @@
 }
 
 .formCol {
-  flex: 1 1 0;
   min-width: 0;
   display: flex;
   justify-content: center;
@@ -55,7 +53,7 @@
 
 @media (max-width: 900px) {
   .grid {
-    flex-direction: column;
+    grid-template-columns: 1fr !important;
     gap: 48px;
   }
 

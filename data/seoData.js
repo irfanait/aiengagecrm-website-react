@@ -308,4 +308,19 @@ export const seoData = {
     keywords: ['AiEngage trust center', 'AiEngage legal', 'AiEngage compliance documents'],
     image: '/og/default.png',
   },
+  partners: {
+    path: '/partners',
+    title: 'Partner Program | Become an AiEngage Partner',
+    description:
+      'Join the AiEngage Partner Program — refer, implement, consult or market AiEngage and earn up to 35% recurring commission for a year.',
+    keywords: ['AiEngage partner program', 'CRM affiliate program', 'become a partner', 'AI CRM reseller'],
+    image: '/og/default.png',
+  },
+  partnerSignup: {
+    path: '/partners/signup',
+    title: 'Partner Signup | AiEngage Partner Program',
+    description: 'Sign up for the AiEngage Partner Program — pick your starting level and apply in minutes.',
+    keywords: ['AiEngage partner signup', 'become a partner', 'partner application'],
+    image: '/og/default.png',
+  },
 };
