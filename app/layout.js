@@ -100,6 +100,9 @@ fbq('track', 'PageView');`,
 crmwidget('init', 'agt_01KWM48SGAQWQRVAMZ3T00WN9Y', { agentName: 'CRM Assistant' });`,
           }}
         />
+
+        {/* Help Center embed */}
+        <Script src="https://help.aiengagecrm.com/embed.js" strategy="afterInteractive" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

@@ -31,7 +31,7 @@ export const NAV_LINKS = [
     href: '#',
     isDropdownTrigger: true,
     dropdownItems: [
-      // { label: 'Blog', href: '/blog' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
       { label: "What's New", href: '/whats-new' },
       { label: 'Partner Program', href: '/partners' },
