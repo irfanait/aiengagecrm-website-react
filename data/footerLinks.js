@@ -51,6 +51,7 @@ export const FOOTER_COLUMNS = [
       { label: 'About Us', href: '/about' },
       { label: 'Contact Us', href: '/contact-us' },
       { label: 'Pricing', href: '/pricing' },
+      // { label: 'Blog', href: '/blog' },
       { label: "What's New", href: '/whats-new' },
       { label: 'Knowledge Base', href: 'https://help.aiengagecrm.com/', external: true },
       { label: 'Partner Program', href: '/partners' },

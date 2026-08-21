@@ -323,4 +323,18 @@ export const seoData = {
     keywords: ['AiEngage partner signup', 'become a partner', 'partner application'],
     image: '/og/default.png',
   },
+  blog: {
+    path: '/blog',
+    title: 'Blog | AiEngage CRM',
+    description: 'Insights, guides and product news on WhatsApp CRM, AI automation, lead capture and customer engagement.',
+    keywords: ['AiEngage blog', 'WhatsApp CRM blog', 'AI automation guides'],
+    image: '/og/default.png',
+  },
+  blogSearch: {
+    path: '/blog/search',
+    title: 'Search the Blog | AiEngage CRM',
+    description: 'Search AiEngage CRM articles on WhatsApp automation, AI agents, lead capture and customer engagement.',
+    keywords: ['search AiEngage blog', 'WhatsApp CRM articles'],
+    image: '/og/default.png',
+  },
 };

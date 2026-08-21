@@ -1,0 +1,24 @@
+.section {
+  padding: 20px 40px 44px;
+}
+
+.inner {
+  max-width: var(--blog-post-container);
+}
+
+.link {
+  display: block;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 12px 20px 32px;
+  }
+}

@@ -353,6 +353,14 @@ export const NP_FEATURE_TABLE = [
     ],
   },
   {
+    icon: 'calendar_month',
+    title: 'Meeting Calendar',
+    rows: [
+      { label: 'Meeting Calendar', sub: null, solo: '2', business: '10', businessPro: '20' },
+      { label: 'Third party integration', sub: 'Google Meet, Zoom etc..', solo: true, business: true, businessPro: true },
+    ],
+  },
+  {
     icon: 'bar_chart',
     title: 'Campaign Analytics',
     rows: [

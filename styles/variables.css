@@ -82,6 +82,7 @@
   --container-max: 1360px;
   --container-pad: 40px;
   --header-height: 78px;
+  --blog-post-container: 1024px;
 
   /* ---- Breakpoints (reference only, used in media queries directly) ---- */
   --bp-desktop: 1280px;

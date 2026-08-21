@@ -1,0 +1,25 @@
+.section {
+  padding: 12px 40px 0;
+}
+
+.inner {
+  max-width: var(--blog-post-container);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 21 / 10.5;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 8px 20px 0;
+  }
+
+  .image {
+    aspect-ratio: 16 / 10;
+  }
+}
