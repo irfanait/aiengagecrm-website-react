@@ -21,14 +21,14 @@ export const NP_HERO = {
 // annual price, so the "2 months free" saving is visible rather than just stated.
 export const NP_PRICES = {
   india: {
-    monthly: { solo: '₹1,799', business: '₹5,999', businessPro: '₹12,999' },
-    annual: { solo: '₹17,990', business: '₹59,990', businessPro: '₹1,29,990' },
-    annualOriginal: { solo: '₹21,588', business: '₹71,988', businessPro: '₹1,55,988' },
+    monthly: { solo: '₹1,799', business: '₹5,999', businessPro: '₹9,999' },
+    annual: { solo: '₹17,990', business: '₹59,990', businessPro: '₹99,990' },
+    annualOriginal: { solo: '₹21,588', business: '₹71,988', businessPro: '₹1,19,988' },
   },
   international: {
-    monthly: { solo: '$19', business: '$65', businessPro: '$135' },
-    annual: { solo: '$190', business: '$650', businessPro: '$1,350' },
-    annualOriginal: { solo: '$228', business: '$780', businessPro: '$1,620' },
+    monthly: { solo: '$19', business: '$65', businessPro: '$99' },
+    annual: { solo: '$190', business: '$650', businessPro: '$990' },
+    annualOriginal: { solo: '$228', business: '$780', businessPro: '$1,188' },
   },
 };
 
