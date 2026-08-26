@@ -54,75 +54,174 @@ export const WN_DETAIL_CTA = {
 // { type:'heading', text } | { type:'list', items:[string] }.
 export const WN_ENTRIES = [
   {
-    slug: 'everything-your-team-needs-before-during-after-a-meeting',
-    title: 'Everything Your Team Needs Before, During & After a Meeting',
+    slug: 'create-meetings-generate-links-and-notify-customers-automatically',
+    title: 'Create Meetings, Generate Links & Notify Customers Automatically',
     date: '2026-08-24',
     typeTag: 'new-feature-update',
     moduleTags: ['Meetings'],
-    image: '/whats-new/everything-your-team-needs-before-during-after-a-meeting-dark.png',
+    image: '/whats-new/create-meetings-generate-links-and-notify-customers-automatically-dark.png',
     teaser:
-      "What if your team could create a meeting, add the customer, generate the Zoom or Google Meet link, assign the owner, and keep the follow-up context in one place? That's exactly why we built the new Meetings module in AiEngage CRM.",
+      'What if your team could create a meeting in AiEngage CRM and have everything else handled automatically? With the new Zoom & Google Meet integration, your team can now create an online meeting directly from AiEngage CRM.',
     body: [
       {
         type: 'paragraph',
+        segments: [{ text: 'What if your team could create a meeting in AiEngage CRM and have everything else handled automatically?' }],
+      },
+      {
+        type: 'paragraph',
         segments: [
-          {
-            text: 'From one-to-one and group bookings to Zoom & Google Meet integration, meeting recordings, transcripts, AI summaries, customer details, status tracking, and follow-ups, your team can now manage the complete meeting journey in one place. From booking the meeting to knowing what happened after it, everything stays inside your CRM.',
-          },
+          { text: 'With the new ' },
+          { text: 'Zoom & Google Meet integration', bold: true },
+          { text: ', your team can now create an online meeting directly from AiEngage CRM. When you create a meeting, AiEngage automatically creates it in the connected ' },
+          { text: 'Zoom or Google Meet account', bold: true },
+          { text: ', generates the meeting link, and emails the customer the meeting details and joining link.' },
         ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'No need to create the meeting separately, copy the meeting link, or manually email it to the customer.' }],
       },
       { type: 'heading', text: '🆕 Features' },
-      { type: 'heading', text: 'Create and Schedule Meetings Directly Inside AiEngage CRM' },
+      { type: 'heading', text: 'Create Zoom & Google Meet Meetings Directly from AiEngage CRM' },
       {
         type: 'paragraph',
         segments: [
-          {
-            text: 'Meetings can now be created directly inside AiEngage with the relevant customer and team context attached from the beginning. Your team can define the meeting title, status, venue, start and end date/time, host, owner, internal participants, CRM participant contacts, related CRM record, description, type, stage, format, location, and assignment.',
-          },
+          { text: 'You can now connect your ' },
+          { text: 'Zoom or Google Meet account', bold: true },
+          { text: ' with AiEngage CRM and create online meetings directly while scheduling a CRM meeting.' },
         ],
       },
       {
         type: 'paragraph',
-        segments: [
-          {
-            text: 'You can choose how the meeting will happen — Zoom, Google Meet, Phone Call, In Person, or Other. For supported platforms such as Zoom and Google Meet, the join information can be created as part of the scheduling flow, and teams can enable reminders, recurring meetings, or all-day meetings when needed. By connecting customer contacts and related CRM records at the time of creation, the meeting stays tied to the customer journey instead of becoming another disconnected calendar event.',
-          },
-        ],
-      },
-      { type: 'heading', text: 'Connect Zoom & Google Meet Automatically' },
-      {
-        type: 'paragraph',
-        segments: [
-          {
-            text: 'Connect Zoom or Google Meet with AiEngage CRM and create meeting links as part of the booking flow. Once a meeting is scheduled, the join details stay connected to the meeting and customer record.',
-          },
-        ],
+        segments: [{ text: 'Simply select your preferred meeting platform and create the meeting. AiEngage CRM takes care of the rest.' }],
       },
       {
         type: 'list',
         items: [
-          'Create Zoom or Google Meet links while scheduling.',
-          'Keep meeting links connected to the CRM.',
-          'Reduce manual link creation and sharing.',
-          'Give your team one place to access meeting details.',
+          'Connect your Zoom account.',
+          'Connect your Google Meet account.',
+          'Select Zoom or Google Meet while creating a meeting.',
+          'Automatically create the meeting on the connected platform.',
+          'Automatically generate the meeting joining link.',
+          'Save the meeting link with the CRM meeting.',
+          'Keep the meeting connected to the customer and CRM record.',
         ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Your team no longer needs to open Zoom or Google Meet separately to create the meeting and then copy the link back into the CRM.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Automatically Generate & Share the Meeting Link' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Once you create a meeting in AiEngage CRM, the system automatically generates the appropriate meeting link through the connected platform.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'The generated link stays available inside the CRM meeting, making it easy for your team to access and share whenever needed.' },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This removes the manual steps of:' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Create Meeting → Open Zoom/Meet → Create Meeting → Copy Link → Add Link to CRM → Send to Customer', bold: true }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Instead, AiEngage CRM handles the process automatically.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Create Meeting → Meeting Link Generated → Customer Notified', bold: true }],
+      },
+      { type: 'heading', text: 'Automatically Notify Customers by Email' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Once the meeting is created and the meeting link is generated, AiEngage CRM can automatically send the customer an email containing the meeting details and joining link.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Customers can receive the information they need to join the meeting without your team having to manually prepare and send an email.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'The notification can include:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Meeting title.',
+          'Meeting date and time.',
+          'Meeting details.',
+          'Meeting platform.',
+          'Meeting joining link.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'This helps ensure customers receive the meeting information immediately after the meeting is scheduled.' },
+        ],
+      },
+      { type: 'heading', text: 'Keep Meetings Connected to Your CRM' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Although the meeting is created on Zoom or Google Meet, your team can continue managing the meeting from AiEngage CRM.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'The meeting remains connected with:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Customer/contact.',
+          'Meeting owner.',
+          'Internal participants.',
+          'Meeting status.',
+          'Related CRM record.',
+          'Meeting date and time.',
+          'Zoom or Google Meet joining link.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This gives your team a complete view of the meeting without switching between multiple platforms.' }],
       },
       { type: 'heading', text: 'Host One-to-One & Group Meetings' },
       {
         type: 'paragraph',
-        segments: [
-          {
-            text: 'Create one-to-one meetings for individual conversations, or group meetings when multiple people need to join the same session.',
-          },
-        ],
+        segments: [{ text: 'Create meetings for individual customers or multiple participants directly from AiEngage CRM.' }],
       },
       {
         type: 'list',
         items: [
-          'Book individual demos or consultations.',
-          'Allow multiple attendees in the same time slot.',
-          'Run group demos, onboarding sessions, training, or workshops.',
-          'Keep all participants connected to one meeting record.',
+          'Schedule one-to-one customer meetings.',
+          'Organize group meetings.',
+          'Add internal team members.',
+          'Add CRM contacts.',
+          'Assign a meeting owner.',
+          'Use Zoom or Google Meet for online meetings.',
         ],
       },
       { type: 'heading', text: 'Meeting Transcripts & AI Summaries' },
@@ -130,17 +229,41 @@ export const WN_ENTRIES = [
         type: 'paragraph',
         segments: [
           {
-            text: 'Automatically capture meeting transcripts and generate AI summaries with key discussion points, customer requirements, decisions, follow-ups, and next steps — so your team gets the meeting context quickly without replaying the entire conversation.',
+            text: 'After the meeting, your team can keep the meeting context connected with the CRM. Meeting transcripts and AI-generated summaries can help capture key discussion points, customer requirements, decisions, follow-ups, and next steps.',
           },
         ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Your team can quickly understand what happened without going through the entire conversation again.' }],
       },
       { type: 'heading', text: 'Create Custom Kanban Views for Your Team' },
       {
         type: 'paragraph',
         segments: [
           {
-            text: 'Not every team tracks meetings the same way — a sales team may want to see meetings by status, a customer success team by stage, and another team may only want certain information visible on every card. AiEngage CRM lets you create custom Kanban views around the way your team actually works, choosing the view name, the picklist field used to categorize meetings, an optional aggregation field, the primary card title, which meeting fields appear on every card, their order, and whether the view stays private or is shared with everyone.',
+            text: 'Not every team tracks meetings in the same way. A sales team may want to see meetings by status, while a customer success team may organize them by stage.',
           },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'AiEngage CRM lets you create custom Kanban views around the way your team works.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'You can choose:', bold: true }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Kanban view name.',
+          'The picklist field used to categorize meetings.',
+          'An optional field for aggregation.',
+          'The primary card title.',
+          'Which meeting fields appear on every card.',
+          'The order in which those fields appear.',
+          'Whether the view stays private or is shared with everyone.',
         ],
       },
       { type: 'heading', text: 'Import Meeting History & Notes' },
@@ -165,25 +288,27 @@ export const WN_ENTRIES = [
       {
         type: 'list',
         items: [
-          'Everything in One Place: manage meeting schedules, customer details, participants, status, and context without jumping between different tools.',
-          'Clear Meeting Visibility: see what is scheduled, in progress, completed, cancelled, or marked as no-show at a glance.',
-          'Fewer Missed Follow-Ups: quickly spot cancelled and no-show meetings that still need attention.',
-          'Better Customer Context: keep meeting owners, participants, customer contacts, stages, and related CRM records connected.',
-          'Easier Team Handoffs: give the next team member the meeting context they need before speaking with the customer.',
-          'Flexible for Every Team: customize Kanban views to match the way sales, onboarding, or customer success teams work.',
-          'Keep Your Meeting History: import previous meetings and notes without losing valuable customer context.',
+          'Create Meetings from One Place: schedule your Zoom or Google Meet meeting directly from AiEngage CRM.',
+          'Automatic Meeting Creation: the meeting is automatically created in your connected Zoom or Google Meet account.',
+          'Automatic Meeting Links: the joining link is generated automatically and saved with the CRM meeting.',
+          'Automatic Customer Notifications: send customers the meeting details and joining link by email without manual work.',
+          'No More Copy-Pasting: eliminate the need to create meetings separately and manually copy links into your CRM.',
+          'Better Customer Experience: customers receive the meeting information and joining link as soon as the meeting is scheduled.',
+          'Complete CRM Context: keep the customer, meeting, owner, participants, status, and meeting link connected in one place.',
+          'Less Manual Work: let AiEngage CRM handle the repetitive steps so your team can focus on the customer.',
         ],
       },
       { type: 'heading', text: '🎯 Use Cases' },
       {
         type: 'list',
         items: [
-          'Sales Demos: schedule demos, add prospects, assign owners, and track every meeting through to completion.',
-          'Cancelled Meetings: quickly find meetings that need to be rescheduled and followed up.',
-          'Customer Onboarding: manage training calls, implementation sessions, and onboarding check-ins in one place.',
-          'Recurring Client Meetings: schedule weekly or monthly customer meetings without recreating them every time.',
-          'Team Handoffs: give sales, onboarding, and account management teams access to the meeting context before they take over.',
-          'CRM Migration: bring existing meeting records and notes into AiEngage while keeping historical customer activity intact.',
+          'Sales Demos: schedule a demo in AiEngage CRM, automatically create the Zoom or Google Meet meeting, and send the prospect the joining link.',
+          'Customer Onboarding: schedule onboarding sessions and automatically share the meeting details with customers.',
+          'Discovery Calls: create discovery meetings and let AiEngage CRM handle the meeting creation and customer notification.',
+          'Consultations: schedule customer consultations without manually creating and sharing online meeting links.',
+          'Team Meetings: create group meetings with internal participants and customers from one CRM record.',
+          'Follow-Up Meetings: schedule the next customer meeting and automatically send the joining details.',
+          'Recurring Meetings: manage recurring customer meetings while keeping the meeting information connected to the CRM.',
         ],
       },
       {
@@ -197,113 +322,248 @@ export const WN_ENTRIES = [
     ],
   },
   {
-    slug: 'manage-availability-and-bookings-in-one-calendar',
-    title: 'Manage Availability and Bookings in One Calendar',
+    slug: 'let-customers-book-meetings-on-their-own-based-on-your-availability',
+    title: 'Let Customers Book Meetings on Their Own, Based on Your Availability',
     date: '2026-08-24',
     typeTag: 'new-feature-update',
     moduleTags: ['Calendar'],
-    image: '/whats-new/manage-availability-and-bookings-in-one-calendar-dark.png',
+    image: '/whats-new/let-customers-book-meetings-on-their-own-based-on-your-availability-dark.png',
     teaser:
-      'How often does scheduling a meeting turn into "Are you free tomorrow?" and "Can we do 4 PM instead?" That back-and-forth is exactly what Calendar in AiEngage CRM is designed to remove.',
+      'How often does scheduling a meeting turn into "Are you free tomorrow?" "What time works for you?" "Can we do 4 PM instead?" That back-and-forth is exactly what the Calendar feature in AiEngage CRM is designed to remove.',
     body: [
       {
         type: 'paragraph',
         segments: [
-          {
-            text: 'Create booking events, set your availability, connect your meeting platform, and share a booking link with customers — they can choose an available time themselves without waiting for your team to coordinate every slot manually. You can create separate booking experiences for demos, consultations, onboarding, support calls, or group sessions, with different hosts, durations, forms, and availability. Once a customer books, the appointment appears in your AiEngage CRM Calendar so your team can see what is scheduled and manage upcoming bookings from the same place.',
-          },
+          { text: 'How often does scheduling a meeting turn into: ' },
+          { text: '"Are you free tomorrow?" "What time works for you?" "Can we do 4 PM instead?"', bold: true },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'That back-and-forth is exactly what the ' },
+          { text: 'Calendar feature in AiEngage CRM', bold: true },
+          { text: ' is designed to remove.' },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'With AiEngage CRM Calendar, you can create your own ' },
+          { text: 'booking calendars, set your availability, and share your booking link with customers', bold: true },
+          { text: '. Customers can then view your available time slots and book a meeting at a time that works for them — without waiting for your team to coordinate every slot manually.' },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'You can also ' },
+          { text: 'embed your booking calendar directly on your website', bold: true },
+          { text: ', making it easy for visitors to book demos, consultations, onboarding calls, support meetings, or other appointments directly from your website.' },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Once a customer books a meeting, the appointment is automatically added to your AiEngage CRM Calendar, giving your team one place to manage upcoming meetings and bookings.' },
         ],
       },
       { type: 'heading', text: '🆕 Features' },
-      { type: 'heading', text: 'Create and Manage Booking Events' },
+      { type: 'heading', text: 'Create & Manage Your Booking Calendars' },
       {
         type: 'paragraph',
-        segments: [
-          {
-            text: 'Create different booking events based on how your team meets customers, such as demos, consultations, onboarding calls, support discussions, or other meetings. From the Events section, search events, filter them by creator, host, or status, and switch between List and Calendar views depending on how you prefer to manage your schedule.',
-          },
-        ],
-      },
-      { type: 'heading', text: 'Customize Each Booking Event' },
-      {
-        type: 'paragraph',
-        segments: [
-          {
-            text: 'Set up every meeting based on its purpose — configure the event name, host, meeting duration, booking form, one-to-one or group meeting type, description, and custom booking URL. Choose standard durations such as 15, 30, 45, or 60 minutes, or set a custom duration. For group meetings, allow multiple participants to join the same booking slot, and choose the booking form invitees need to complete so required information is collected before the meeting.',
-          },
-        ],
+        segments: [{ text: 'Create booking calendars based on how your team wants to schedule meetings with customers.' }],
       },
       {
         type: 'paragraph',
-        segments: [{ text: 'Learn how to create an event', href: 'https://help.aiengagecrm.com/article/create-an-event-in-the-calendar', external: true }],
+        segments: [{ text: 'You can create separate calendars for different purposes, such as:' }],
       },
-      { type: 'heading', text: 'Set Your Weekly Availability' },
       {
-        type: 'paragraph',
-        segments: [
-          {
-            text: 'Define exactly when customers can book meetings with you or your team. Set your weekly working hours and show customers only the slots that are actually available — this helps prevent bookings outside working hours while still letting customers choose a convenient time themselves.',
-          },
-        ],
-      },
-      { type: 'heading', text: 'Host Group Meetings With Multiple People' },
-      {
-        type: 'paragraph',
-        segments: [
-          {
-            text: 'Need more than one person in the same meeting? Create a Group Meeting and allow multiple people to join the same booking instead of creating separate meetings for every attendee. This works well for group product demos, customer training sessions, onboarding sessions, workshops, team consultations, and meetings involving multiple stakeholders — all kept under one booking.',
-          },
+        type: 'list',
+        items: [
+          'Sales demos.',
+          'Consultations.',
+          'Customer onboarding.',
+          'Support calls.',
+          'Product training.',
+          'Discovery calls.',
+          'Other customer meetings.',
         ],
       },
       {
         type: 'paragraph',
-        segments: [{ text: 'Learn how to choose a host and meeting type', href: 'https://help.aiengagecrm.com/article/choose-the-host-and-meeting-type', external: true }],
-      },
-      { type: 'heading', text: 'Share Booking Links Anywhere' },
-      {
-        type: 'paragraph',
         segments: [
           {
-            text: 'Once an event is ready, share its booking link wherever customers already interact with your business — WhatsApp messages, emails, website CTAs, sales follow-ups, team signatures, campaigns, or customer conversations. Instead of asking back and forth about availability, customers can open the link and choose from the available time slots themselves. You can also create separate booking links for different events, hosts, or teams.',
+            text: 'Each calendar can have its own booking settings and availability, giving you flexibility to create different scheduling experiences for different teams or meeting types.',
           },
         ],
+      },
+      { type: 'heading', text: 'Set Your Availability' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Define exactly when customers can book time with you or your team.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Set your available days and working hours, and customers will only see the time slots that are available for booking.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This helps your team:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Avoid bookings outside working hours.',
+          'Control when customers can schedule meetings.',
+          'Keep personal and working schedules organised.',
+          'Let customers choose a convenient time themselves.',
+          'Reduce manual coordination between teams and customers.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Instead of asking customers when they are available, simply share your booking calendar and let them choose an available slot.' }],
+      },
+      { type: 'heading', text: 'Share Your Booking Calendar With Customers' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Once your calendar is ready, share your booking link with customers wherever they interact with your business.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'You can share your booking link through:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'WhatsApp messages.',
+          'Emails.',
+          'Website CTAs.',
+          'Sales follow-ups.',
+          'Team email signatures.',
+          'Marketing campaigns.',
+          'Customer conversations.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Customers can open the link, view your available slots, and book a meeting directly.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'No more “What time works for you?” conversations.', bold: true }],
       },
       {
         type: 'paragraph',
         segments: [{ text: 'Learn how to share your booking link', href: 'https://help.aiengagecrm.com/article/share-your-booking-link', external: true }],
       },
-      { type: 'heading', text: 'Manage All Meetings From Your Calendar' },
+      { type: 'heading', text: 'Embed Your Calendar Directly on Your Website' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Want customers to book meetings directly from your website?' }],
+      },
       {
         type: 'paragraph',
         segments: [
-          {
-            text: 'See your scheduled meetings in one place inside AiEngage. Use Day, Week, or Month views to quickly understand today’s meetings, upcoming bookings, busy days, available time, weekly schedules, and monthly meeting activity, so your team can immediately understand what is scheduled, who they are meeting, and what is coming up next.',
-          },
+          { text: 'You can ' },
+          { text: 'embed your AiEngage CRM booking calendar into your website', bold: true },
+          { text: ', allowing visitors to view available slots and schedule a meeting without leaving your website.' },
         ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This is ideal for:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Book a Demo pages.',
+          'Contact Us pages.',
+          'Sales landing pages.',
+          'Consultation pages.',
+          'Customer onboarding pages.',
+          'Support or appointment pages.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Instead of sending visitors to another scheduling tool, you can give them a booking experience directly on your website.' }],
+      },
+      { type: 'heading', text: 'Create Different Booking Experiences' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'You can create separate booking calendars for different types of meetings and teams.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'For example:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Book a Demo → Sales team.',
+          'Talk to an Expert → Consultant.',
+          'Customer Onboarding → Customer Success team.',
+          'Support Call → Support team.',
+          'Product Training → Training team.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This allows each team to have its own scheduling experience and availability while keeping everything connected to AiEngage CRM.' }],
+      },
+      { type: 'heading', text: 'Manage All Bookings From Your CRM Calendar' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Once customers book meetings through your booking calendar, your team can manage those appointments directly inside AiEngage CRM.' }],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Use the Calendar to see:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          "Today's meetings.",
+          'Upcoming bookings.',
+          'Available schedules.',
+          'Busy days.',
+          'Weekly schedules.',
+          'Monthly meeting activity.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Your team can quickly understand what is scheduled, who they are meeting, and what is coming up next.' }],
       },
       { type: 'heading', text: '❤️ Why You’ll Love It' },
       {
         type: 'list',
         items: [
-          'Less Scheduling Back-and-Forth: let customers choose an available slot themselves.',
-          'One Link to Book: share booking links across WhatsApp, email, websites, and customer conversations.',
-          'Control Weekly Availability: decide exactly when people can book time with you.',
-          'Bring Multiple People Together: run group meetings without creating separate bookings for every attendee.',
-          'Keep Meeting Platforms Connected: use Zoom, Google Meet, phone, in-person, or other meeting options.',
-          'See Your Complete Schedule: view bookings by day, week, or month from one calendar.',
+          'Less Scheduling Back-and-Forth: let customers choose an available time themselves instead of coordinating manually.',
+          'Set Your Availability: decide exactly when customers can book meetings with you or your team.',
+          'One Booking Link: share your calendar through email, WhatsApp, sales conversations, and other channels.',
+          'Embed on Your Website: let website visitors book meetings directly from your website.',
+          'Multiple Booking Calendars: create separate calendars for demos, consultations, onboarding, support, and other meetings.',
+          'Better Customer Experience: give customers a simple way to find a suitable time and book instantly.',
+          'Keep Everything in CRM: manage customer bookings and scheduled meetings from your AiEngage CRM Calendar.',
+          'Save Your Team Time: reduce the manual work involved in finding a suitable meeting time.',
         ],
       },
       { type: 'heading', text: '🎯 Use Cases' },
       {
         type: 'list',
         items: [
-          'Product Demos: let prospects choose an available demo slot themselves.',
-          'Group Product Demos: allow multiple prospects or stakeholders to attend the same session.',
-          'Sales Consultations: let leads book directly with the right salesperson.',
-          'Customer Onboarding: create dedicated booking events for implementation and onboarding calls.',
-          'Website Book-a-Demo: add a booking link directly to your website CTA.',
+          'Book a Demo: add your booking calendar to your website and let prospects choose their own demo time.',
+          'Sales Consultations: share a booking link with leads so they can schedule time with the right salesperson.',
+          'Customer Onboarding: create a dedicated calendar for onboarding and implementation calls.',
+          'Customer Training: let customers schedule product training sessions based on your team’s availability.',
+          'Support Calls: allow customers to book support or consultation slots without lengthy coordination.',
+          'Website Book-a-Demo: embed your booking calendar directly into your website’s demo or contact page.',
           'WhatsApp Follow-Ups: send a booking link instead of manually coordinating dates and times.',
-          'Multi-Team Scheduling: create separate events and booking links for sales, support, onboarding, and customer success.',
+          'Email Scheduling: add your booking link to emails and let customers schedule a meeting at their convenience.',
+          'Multi-Team Scheduling: create separate booking calendars for sales, support, onboarding, and customer success teams.',
         ],
       },
       {
