@@ -22,6 +22,10 @@ export const WN_TYPE_FILTERS = [
 
 // Sidebar "Modules" list. Matched against each entry's `moduleTags` array (exact string match).
 export const WN_MODULE_FILTERS = [
+  'Meetings',
+  'Calendar',
+  'Reports',
+  'Web Forms',
   'Dashboards',
   'Records',
   'Invoices & Quotes',
@@ -49,6 +53,679 @@ export const WN_DETAIL_CTA = {
 // `body` block types: { type:'paragraph', segments:[{text, bold?, href?, external?}] } |
 // { type:'heading', text } | { type:'list', items:[string] }.
 export const WN_ENTRIES = [
+  {
+    slug: 'everything-your-team-needs-before-during-after-a-meeting',
+    title: 'Everything Your Team Needs Before, During & After a Meeting',
+    date: '2026-08-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Meetings'],
+    image: '/whats-new/everything-your-team-needs-before-during-after-a-meeting-dark.png',
+    teaser:
+      "What if your team could create a meeting, add the customer, generate the Zoom or Google Meet link, assign the owner, and keep the follow-up context in one place? That's exactly why we built the new Meetings module in AiEngage CRM.",
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'From one-to-one and group bookings to Zoom & Google Meet integration, meeting recordings, transcripts, AI summaries, customer details, status tracking, and follow-ups, your team can now manage the complete meeting journey in one place. From booking the meeting to knowing what happened after it, everything stays inside your CRM.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Create and Schedule Meetings Directly Inside AiEngage CRM' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Meetings can now be created directly inside AiEngage with the relevant customer and team context attached from the beginning. Your team can define the meeting title, status, venue, start and end date/time, host, owner, internal participants, CRM participant contacts, related CRM record, description, type, stage, format, location, and assignment.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'You can choose how the meeting will happen — Zoom, Google Meet, Phone Call, In Person, or Other. For supported platforms such as Zoom and Google Meet, the join information can be created as part of the scheduling flow, and teams can enable reminders, recurring meetings, or all-day meetings when needed. By connecting customer contacts and related CRM records at the time of creation, the meeting stays tied to the customer journey instead of becoming another disconnected calendar event.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Connect Zoom & Google Meet Automatically' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Connect Zoom or Google Meet with AiEngage CRM and create meeting links as part of the booking flow. Once a meeting is scheduled, the join details stay connected to the meeting and customer record.',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          'Create Zoom or Google Meet links while scheduling.',
+          'Keep meeting links connected to the CRM.',
+          'Reduce manual link creation and sharing.',
+          'Give your team one place to access meeting details.',
+        ],
+      },
+      { type: 'heading', text: 'Host One-to-One & Group Meetings' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create one-to-one meetings for individual conversations, or group meetings when multiple people need to join the same session.',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          'Book individual demos or consultations.',
+          'Allow multiple attendees in the same time slot.',
+          'Run group demos, onboarding sessions, training, or workshops.',
+          'Keep all participants connected to one meeting record.',
+        ],
+      },
+      { type: 'heading', text: 'Meeting Transcripts & AI Summaries' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Automatically capture meeting transcripts and generate AI summaries with key discussion points, customer requirements, decisions, follow-ups, and next steps — so your team gets the meeting context quickly without replaying the entire conversation.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Create Custom Kanban Views for Your Team' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Not every team tracks meetings the same way — a sales team may want to see meetings by status, a customer success team by stage, and another team may only want certain information visible on every card. AiEngage CRM lets you create custom Kanban views around the way your team actually works, choosing the view name, the picklist field used to categorize meetings, an optional aggregation field, the primary card title, which meeting fields appear on every card, their order, and whether the view stays private or is shared with everyone.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Import Meeting History & Notes' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Bring your existing meeting records and notes into AiEngage CRM so valuable customer context is not lost during migration.',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        items: [
+          'Import past meetings and notes.',
+          'Track import status and progress.',
+          'Search previous imports easily.',
+          'Keep historical customer conversations connected to the CRM.',
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Everything in One Place: manage meeting schedules, customer details, participants, status, and context without jumping between different tools.',
+          'Clear Meeting Visibility: see what is scheduled, in progress, completed, cancelled, or marked as no-show at a glance.',
+          'Fewer Missed Follow-Ups: quickly spot cancelled and no-show meetings that still need attention.',
+          'Better Customer Context: keep meeting owners, participants, customer contacts, stages, and related CRM records connected.',
+          'Easier Team Handoffs: give the next team member the meeting context they need before speaking with the customer.',
+          'Flexible for Every Team: customize Kanban views to match the way sales, onboarding, or customer success teams work.',
+          'Keep Your Meeting History: import previous meetings and notes without losing valuable customer context.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Sales Demos: schedule demos, add prospects, assign owners, and track every meeting through to completion.',
+          'Cancelled Meetings: quickly find meetings that need to be rescheduled and followed up.',
+          'Customer Onboarding: manage training calls, implementation sessions, and onboarding check-ins in one place.',
+          'Recurring Client Meetings: schedule weekly or monthly customer meetings without recreating them every time.',
+          'Team Handoffs: give sales, onboarding, and account management teams access to the meeting context before they take over.',
+          'CRM Migration: bring existing meeting records and notes into AiEngage while keeping historical customer activity intact.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/c/meetings', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'manage-availability-and-bookings-in-one-calendar',
+    title: 'Manage Availability and Bookings in One Calendar',
+    date: '2026-08-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Calendar'],
+    image: '/whats-new/manage-availability-and-bookings-in-one-calendar-dark.png',
+    teaser:
+      'How often does scheduling a meeting turn into "Are you free tomorrow?" and "Can we do 4 PM instead?" That back-and-forth is exactly what Calendar in AiEngage CRM is designed to remove.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create booking events, set your availability, connect your meeting platform, and share a booking link with customers — they can choose an available time themselves without waiting for your team to coordinate every slot manually. You can create separate booking experiences for demos, consultations, onboarding, support calls, or group sessions, with different hosts, durations, forms, and availability. Once a customer books, the appointment appears in your AiEngage CRM Calendar so your team can see what is scheduled and manage upcoming bookings from the same place.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Create and Manage Booking Events' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create different booking events based on how your team meets customers, such as demos, consultations, onboarding calls, support discussions, or other meetings. From the Events section, search events, filter them by creator, host, or status, and switch between List and Calendar views depending on how you prefer to manage your schedule.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Customize Each Booking Event' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Set up every meeting based on its purpose — configure the event name, host, meeting duration, booking form, one-to-one or group meeting type, description, and custom booking URL. Choose standard durations such as 15, 30, 45, or 60 minutes, or set a custom duration. For group meetings, allow multiple participants to join the same booking slot, and choose the booking form invitees need to complete so required information is collected before the meeting.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn how to create an event', href: 'https://help.aiengagecrm.com/article/create-an-event-in-the-calendar', external: true }],
+      },
+      { type: 'heading', text: 'Set Your Weekly Availability' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Define exactly when customers can book meetings with you or your team. Set your weekly working hours and show customers only the slots that are actually available — this helps prevent bookings outside working hours while still letting customers choose a convenient time themselves.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Host Group Meetings With Multiple People' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Need more than one person in the same meeting? Create a Group Meeting and allow multiple people to join the same booking instead of creating separate meetings for every attendee. This works well for group product demos, customer training sessions, onboarding sessions, workshops, team consultations, and meetings involving multiple stakeholders — all kept under one booking.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn how to choose a host and meeting type', href: 'https://help.aiengagecrm.com/article/choose-the-host-and-meeting-type', external: true }],
+      },
+      { type: 'heading', text: 'Share Booking Links Anywhere' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Once an event is ready, share its booking link wherever customers already interact with your business — WhatsApp messages, emails, website CTAs, sales follow-ups, team signatures, campaigns, or customer conversations. Instead of asking back and forth about availability, customers can open the link and choose from the available time slots themselves. You can also create separate booking links for different events, hosts, or teams.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn how to share your booking link', href: 'https://help.aiengagecrm.com/article/share-your-booking-link', external: true }],
+      },
+      { type: 'heading', text: 'Manage All Meetings From Your Calendar' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'See your scheduled meetings in one place inside AiEngage. Use Day, Week, or Month views to quickly understand today’s meetings, upcoming bookings, busy days, available time, weekly schedules, and monthly meeting activity, so your team can immediately understand what is scheduled, who they are meeting, and what is coming up next.',
+          },
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Less Scheduling Back-and-Forth: let customers choose an available slot themselves.',
+          'One Link to Book: share booking links across WhatsApp, email, websites, and customer conversations.',
+          'Control Weekly Availability: decide exactly when people can book time with you.',
+          'Bring Multiple People Together: run group meetings without creating separate bookings for every attendee.',
+          'Keep Meeting Platforms Connected: use Zoom, Google Meet, phone, in-person, or other meeting options.',
+          'See Your Complete Schedule: view bookings by day, week, or month from one calendar.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Product Demos: let prospects choose an available demo slot themselves.',
+          'Group Product Demos: allow multiple prospects or stakeholders to attend the same session.',
+          'Sales Consultations: let leads book directly with the right salesperson.',
+          'Customer Onboarding: create dedicated booking events for implementation and onboarding calls.',
+          'Website Book-a-Demo: add a booking link directly to your website CTA.',
+          'WhatsApp Follow-Ups: send a booking link instead of manually coordinating dates and times.',
+          'Multi-Team Scheduling: create separate events and booking links for sales, support, onboarding, and customer success.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/c/meetings', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'auto-assign-whatsapp-chats-to-your-team',
+    title: 'Auto-Assign WhatsApp Chats to Your Team',
+    date: '2026-08-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Team Inbox', 'WhatsApp'],
+    image: '/whats-new/auto-assign-whatsapp-chats-to-your-team-dark.png',
+    teaser:
+      'Still manually checking every new WhatsApp conversation and deciding who should handle it? AiEngage CRM now gives you more control over how incoming WhatsApp conversations are assigned.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'When enquiries start coming in from multiple customers, manual assignment can quickly slow down response time and create confusion over ownership. AiEngage CRM now gives you more control over how incoming WhatsApp conversations are assigned.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Auto-Assign New WhatsApp Conversations' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Turn on Auto-Assign to automatically distribute new WhatsApp conversations among eligible team members instead of assigning each one manually. This helps new enquiries reach someone faster and keeps conversation ownership clear from the beginning.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Assign New Conversations to the Contact Owner' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Already have an owner assigned to the customer inside your CRM? Enable Assign to Owner so new WhatsApp conversations can automatically go to the existing contact owner — helping the same salesperson or account manager continue the conversation instead of having it picked up by someone else.',
+          },
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Faster Response: new WhatsApp enquiries can reach the right team member without waiting for manual assignment.',
+          'Clear Ownership: every incoming conversation has a clear person responsible for handling it.',
+          'Better Continuity: existing customers can continue speaking with the team member who already owns their CRM record.',
+          'Less Manual Work: reduce the need to review and assign every new WhatsApp conversation individually.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Sales Teams: automatically distribute new WhatsApp leads among available team members.',
+          'Existing Customers: route returning customers back to their current contact owner.',
+          'High Enquiry Volume: keep ownership organized when many WhatsApp conversations arrive throughout the day.',
+          'Multi-Team WhatsApp: make it easier to control who handles conversations coming through shared business numbers.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'enable-call-only-to-owner',
+    title: 'Enable Call Only to Owner',
+    date: '2026-08-24',
+    typeTag: 'enhancement',
+    moduleTags: ['Voice'],
+    image: '/whats-new/enable-call-only-to-owner-dark.png',
+    teaser:
+      'When an existing lead or contact calls, AiEngage CRM can now check the owner assigned to that CRM record and ring that person directly instead of routing the call to just anyone.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'With Call Only to Owner enabled, when an existing lead or contact calls, our CRM first checks the owner assigned to that CRM record and rings that person directly. If the owner is busy or unavailable, the call follows the fallback behavior you have configured, such as sending the call to voicemail or handling it through your selected routing setup.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'This works alongside your incoming call settings, including:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Assigned agents.',
+          'Simultaneous or sequential ringing.',
+          'Owner-based routing.',
+          'Busy or unavailable handling.',
+          'Voicemail fallback.',
+          'IVR routing when required.',
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Better Call Continuity: existing customers reach the person who already knows their history.',
+          'Less Repeating Context: customers do not have to explain everything again to a new team member.',
+          'Clear Ownership: calls stay aligned with the lead or contact owner already assigned in the CRM.',
+          'Faster Conversations: the right person gets the call without unnecessary transfers.',
+          'Reliable Fallback: calls can still follow your configured routing when the owner is unavailable.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Existing Sales Leads: route returning prospects directly to the salesperson already handling them.',
+          'Account Management: connect existing customers with their assigned account owner.',
+          'Follow-Up Calls: let leads call back and reach the same person they were already speaking with.',
+          'High-Value Opportunities: keep important incoming calls with the owner managing the deal.',
+          'Customer Support Handoffs: maintain continuity when a specific team member already owns the customer relationship.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'add-targets-to-your-reports',
+    title: 'Add Targets to Your Reports',
+    date: '2026-08-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Reports'],
+    image: '/whats-new/add-targets-to-your-reports-dark.png',
+    teaser:
+      'Still checking performance in reports, then opening another spreadsheet just to compare it against targets? With the new Target component in Reports, you can add target-based widgets directly to your dashboard.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'With the new Target component in Reports, you can now add target-based widgets directly to your dashboard and see actual performance against expected goals in one place.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Add Target Components to Your Reports' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Create target-based report components for the metrics your team actually works toward, such as:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'New installations.',
+          'Upsells.',
+          'MRR.',
+          'One-time revenue.',
+          'Qualified meetings.',
+          'New clients.',
+          'Calls completed.',
+          'Deals won.',
+          'Trial stores.',
+          'Other custom performance metrics.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Each target card can show the achieved value, target value, progress bar, and current position against the goal, making it easier to understand performance without manually calculating how far the team is from target.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn how to track progress with Target Meter', href: 'https://help.aiengagecrm.com/article/target-meter-track-progress-to-a-goal', external: true }],
+      },
+      { type: 'heading', text: 'Compare Performance Across Teams and Users' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Target components can be added to different dashboards for sales, customer success, or other teams. You can also build user-specific sections to compare individual performance against assigned targets, helping managers quickly see who is on track and where attention is needed.',
+          },
+        ],
+      },
+      { type: 'heading', text: 'Operator Corrections in Reports' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'We have also improved report operators so calculations, comparisons, and metric logic work more accurately across report components — helping ensure the numbers shown in dashboards reflect the intended conditions and calculations more consistently.',
+          },
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Track Goals in One Place: see actual performance and targets together inside the same dashboard.',
+          'Know What Needs Attention: quickly identify metrics that are still below target.',
+          'Measure Individual Performance: compare team-member results against assigned goals.',
+          'Reduce Manual Reporting: avoid maintaining separate spreadsheets just for target tracking.',
+          'More Reliable Reports: operator corrections improve the accuracy of report calculations and conditions.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Sales Targets: track meetings, deals, revenue, and new clients against monthly goals.',
+          'Customer Success Targets: monitor installations, upsells, MRR, and account-growth targets.',
+          'Individual Performance: create target components for each salesperson or team member.',
+          'Management Dashboards: see overall team performance and individual targets from one report.',
+          'Monthly Reviews: quickly compare achieved numbers with planned targets during performance reviews.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'manage-web-form-leads-with-utm-tracking',
+    title: 'Manage Web Form Leads With UTM Tracking',
+    date: '2026-08-24',
+    typeTag: 'enhancement',
+    moduleTags: ['Web Forms', 'Marketing'],
+    image: '/whats-new/manage-web-form-leads-with-utm-tracking-dark.png',
+    teaser:
+      'A form submission tells you who converted. UTM tracking tells you where that lead actually came from. Capture UTM parameters, map lead sources, and label submissions based on the campaign, page, or channel that generated them.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'With the latest Web Forms updates in AiEngage CRM, you can capture UTM parameters, map lead sources, and label submissions based on the campaign, page, or channel that generated them.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Create Web Forms for Lead Capture' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Create dedicated web forms for different lead-capture use cases such as Contact Us, Request a Demo, Talk to Sales, Request a Consultation, or General Enquiry. While creating the form, define the form name, URL slug, description, target CRM module, form fields, settings, notifications, and final preview before publishing it. Each submission can create a record in the selected CRM module, helping your team capture website enquiries directly inside AiEngage CRM instead of managing them separately.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn more about creating Web Forms', href: 'https://help.aiengagecrm.com/article/introduction-to-web-forms-capture-leads-directly-from-your-website', external: true }],
+      },
+      { type: 'heading', text: 'Notify Your Team and Auto-Respond to Web Form Submissions' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Notify the record owner or selected team members whenever a new form submission comes in, and automatically send a confirmation email to the person who submitted the form. You can notify the record owner instantly, add additional notification recipients, use system-generated or custom email templates, and choose the email field used for the auto-response.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn more about Web Form notifications and auto-response emails', href: 'https://help.aiengagecrm.com/article/web-form-notifications-and-auto-response-emails', external: true }],
+      },
+      { type: 'heading', text: 'View, Review & Manage Web Form Submissions' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Track every web form submission from one place and see exactly what each visitor submitted. The Submissions page gives you a clear view of Total, Pending, Approved, and Rejected entries — open any submission to review the full details, approve or reject entries when approval is enabled, and keep a record of every form response for future reference. Approved submissions can create records in the selected CRM module, helping your team keep lead data organized while filtering out unwanted or incomplete submissions.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'Learn more about managing Web Form submissions', href: 'https://help.aiengagecrm.com/article/view-and-manage-web-form-submissions', external: true }],
+      },
+      { type: 'heading', text: 'Track UTM Source Information With Contacts' },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'A lead may have filled out your form, but your team still needs to know — did they come from Meta Ads, Google, an email campaign, or a partner link? Web Form submissions can now retain UTM tracking information with the Contact record, so the marketing context stays connected with the lead inside the CRM. Instead of seeing only “New Contact Created”, your team gets a better idea of where that contact actually came from.',
+          },
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Know Where Leads Come From: keep UTM source and campaign information connected with CRM contacts.',
+          'Track Meeting Intent: understand which marketing sources are generating actual meeting bookings.',
+          'Reduce Manual Data Entry: let form submissions create structured CRM records automatically.',
+          'Keep Marketing and Sales Context Together: give sales teams the acquisition context behind the person they are speaking with.',
+          'Create Purpose-Built Forms: build separate forms for demos, consultations, contact requests, and other lead-capture flows.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'Book a Demo Forms: capture prospect details and meeting intent directly from your website.',
+          'Paid Campaign Tracking: see which Meta or Google campaign generated a contact or meeting request.',
+          'Landing Page Attribution: keep UTM information attached when visitors submit a campaign-specific form.',
+          'Sales Follow-Up: give sales reps both the contact details and source context before they reach out.',
+          'Campaign-to-Meeting Tracking: identify which campaigns are driving people beyond a lead submission and into booked conversations.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/c/web-forms-lead-capture', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'turn-every-call-into-a-clear-next-action',
+    title: 'Turn Every Call Into a Clear Next Action',
+    date: '2026-08-24',
+    typeTag: 'new-feature-update',
+    moduleTags: ['Voice'],
+    image: '/whats-new/turn-every-call-into-a-clear-next-action-dark.png',
+    teaser:
+      'How often does a customer say "Call me tomorrow", and the follow-up ends up in a notebook, personal reminder, or someone’s memory? Now you can create a follow-up task directly from the call record.',
+    body: [
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'Now, after a call in AiEngage CRM, you can create a follow-up task directly from the call record without switching to another screen or losing the call context.',
+          },
+        ],
+      },
+      { type: 'heading', text: '🆕 Features' },
+      { type: 'heading', text: 'Create a Follow-Up Task From the Call Record' },
+      {
+        type: 'paragraph',
+        segments: [{ text: 'If a call needs another action, create a task right from the same call screen. You can define:' }],
+      },
+      {
+        type: 'list',
+        items: [
+          'Task subject.',
+          'Task owner.',
+          'Status.',
+          'Due date.',
+          'Priority.',
+          'Description.',
+          'Reminder and reminder time.',
+          'Alert method.',
+          'Repeat settings.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          {
+            text: 'The task stays connected to the call and customer context, so the next action is clear to the person responsible for it. This is especially useful when the call is not answered, needs another follow-up, requires a callback, or ends with a specific next step.',
+          },
+        ],
+      },
+      { type: 'heading', text: '❤️ Why You’ll Love It' },
+      {
+        type: 'list',
+        items: [
+          'Never Miss a Callback: turn the next action into a task immediately after the call.',
+          'Keep Context Connected: create the follow-up from the same call record instead of adding it somewhere else.',
+          'Clear Ownership: assign the task to the person responsible for the next action.',
+          'Stay on Schedule: add due dates and reminders so follow-ups happen at the right time.',
+          'Prioritize Important Calls: set task priority based on how urgent the follow-up is.',
+        ],
+      },
+      { type: 'heading', text: '🎯 Use Cases' },
+      {
+        type: 'list',
+        items: [
+          'No Answer: create a callback task when a lead does not pick up.',
+          'Call Me Later: schedule the exact date and reminder requested by the customer.',
+          'Sales Follow-Up: assign the next call after a product discussion or demo.',
+          'Customer Callback: create a task when an existing customer needs another conversation.',
+          'Team Handoff: assign the follow-up to another team member with the required call context.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'For more details on enabling and using this feature, visit our ' },
+          { text: 'Help Center', href: 'https://help.aiengagecrm.com/', external: true },
+          { text: ' or contact our support team.' },
+        ],
+      },
+    ],
+  },
   {
     slug: 'turn-conversations-into-actionable-insights-with-ai-summaries',
     title: 'Turn Conversations into Actionable Insights with AI Summaries',

@@ -87,7 +87,7 @@ export const NP_PLANS = [
     trialNote: '14-days free trial',
     featuresHeading: 'Included in business',
     features: [
-      'Up to 10 Users/Seats',
+      'Up to 5 Users/Seats',
       'Full CRM + 10 Custom Modules',
       'Up to 20,000 Contacts',
       'Email, WhatsApp, Voice & Team Inbox',
@@ -110,7 +110,7 @@ export const NP_PLANS = [
     trialNote: '14-days free trial',
     featuresHeading: 'Included in business pro',
     features: [
-      'Up to 20 Users/Seats',
+      'Up to 10 Users/Seats',
       'Full CRM + 15 Custom Modules',
       'Up to 50,000 Contacts',
       'Email, WhatsApp, Voice & Team Inbox',
@@ -256,7 +256,7 @@ export const NP_FEATURE_TABLE = [
     icon: 'dashboard',
     title: 'Plan Limits & Capacity',
     rows: [
-      { label: 'Total Users/Seats', sub: null, solo: '1', business: 'Up to 10', businessPro: 'Up to 20' },
+      { label: 'Total Users/Seats', sub: null, solo: '1', business: 'Up to 5', businessPro: 'Up to 10' },
       { label: 'Total contacts', sub: 'Active + Inactive', solo: '5,000', business: '20,000', businessPro: '50,000' },
       { label: 'File storage', sub: null, solo: '2 GB', business: '5 GB', businessPro: '10 GB' },
       { label: 'API calls / month', sub: null, solo: '5,000', business: '10,000', businessPro: '25,000' },
