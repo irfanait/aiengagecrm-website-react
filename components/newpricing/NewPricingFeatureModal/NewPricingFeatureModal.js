@@ -4,18 +4,33 @@ import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import Icon from '../../atoms/Icon/Icon';
 import styles from './NewPricingFeatureModal.module.css';
 
-function Cell({ value }) {
+function Cell({ value, addon }) {
+  let content;
   if (value === true) {
-    return (
+    content = (
       <span className={styles.check}>
         <Icon name="check" size={15} weight={600} />
       </span>
     );
+  } else if (value === false) {
+    content = <span className={styles.dash}>—</span>;
+  } else {
+    content = value;
   }
-  if (value === false) {
-    return <span className={styles.dash}>—</span>;
-  }
-  return value;
+
+  if (!addon) return content;
+
+  return (
+    <span className={styles.cellWithAddon}>
+      {content}
+      <span className={styles.addonTrigger} tabIndex={0}>
+        <Icon name="help" size={13} />
+        <span className={styles.addonTooltip} role="tooltip">
+          {addon}
+        </span>
+      </span>
+    </span>
+  );
 }
 
 /**
@@ -178,13 +193,13 @@ export default function NewPricingFeatureModal({
                     {row.sub && <span className={styles.rowSub}>{row.sub}</span>}
                   </div>
                   <div className={styles.valueCell}>
-                    <Cell value={row.solo} />
+                    <Cell value={row.solo} addon={row.addon} />
                   </div>
                   <div className={styles.valueCell}>
-                    <Cell value={row.business} />
+                    <Cell value={row.business} addon={row.addon} />
                   </div>
                   <div className={styles.valueCell}>
-                    <Cell value={row.businessPro} />
+                    <Cell value={row.businessPro} addon={row.addon} />
                   </div>
                 </div>
               ))}
