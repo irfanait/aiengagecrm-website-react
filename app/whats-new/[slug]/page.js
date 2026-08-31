@@ -1,20 +1,32 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import WhatsNewHero from '../../../components/templates/WhatsNewHero/WhatsNewHero';
 import WhatsNewTypeTabs from '../../../components/molecules/WhatsNewTypeTabs/WhatsNewTypeTabs';
 import WhatsNewDetail from '../../../components/organisms/WhatsNewDetail/WhatsNewDetail';
 import JsonLd from '../../../components/common/JsonLd/JsonLd';
 import { buildMetadata, breadcrumbSchema } from '../../../utils/seo';
-import { WN_BANNER, WN_ENTRIES, getWhatsNewEntry } from '../../../data/whatsNew';
+import { WN_BANNER, WHATS_NEW_SOURCE } from '../../../data/whatsNew';
+import { getWhatsNewPost, getWhatsNewFacets } from '../../../utils/whatsNewApi';
+import { WN_MODULE_FILTERS, getWhatsNewEntry, getWhatsNewYears } from '../../../data/whatsNewEntries';
 
-export function generateStaticParams() {
-  return WN_ENTRIES.map((entry) => ({ slug: entry.slug }));
+async function loadEntry(slug) {
+  if (WHATS_NEW_SOURCE === 'static') {
+    const entry = getWhatsNewEntry(slug);
+    if (!entry) return { notFound: true, redirectTo: null };
+    return { data: entry, modules: WN_MODULE_FILTERS.map((m) => ({ name: m, slug: m })), years: getWhatsNewYears() };
+  }
+
+  const result = await getWhatsNewPost(slug);
+  if (result.notFound) return result;
+  const { modules, years } = await getWhatsNewFacets();
+  return { data: result.data, modules, years };
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const entry = getWhatsNewEntry(slug);
-  if (!entry) return {};
+  const result = await loadEntry(slug);
+  if (result.notFound) return {};
 
+  const entry = result.data;
   return buildMetadata({
     path: `/whats-new/${entry.slug}`,
     title: `${entry.title} | What’s New on AiEngage CRM`,
@@ -26,8 +38,14 @@ export async function generateMetadata({ params }) {
 
 export default async function WhatsNewDetailPage({ params }) {
   const { slug } = await params;
-  const entry = getWhatsNewEntry(slug);
-  if (!entry) notFound();
+  const result = await loadEntry(slug);
+
+  if (result.notFound) {
+    if (result.redirectTo) redirect(result.redirectTo);
+    notFound();
+  }
+
+  const entry = result.data;
 
   return (
     <>
@@ -42,7 +60,7 @@ export default async function WhatsNewDetailPage({ params }) {
       <WhatsNewHero banner={WN_BANNER}>
         <WhatsNewTypeTabs active={null} />
       </WhatsNewHero>
-      <WhatsNewDetail entry={entry} />
+      <WhatsNewDetail entry={entry} modules={result.modules} years={result.years} />
     </>
   );
 }

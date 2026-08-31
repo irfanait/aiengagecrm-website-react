@@ -8,7 +8,7 @@ export default function WhatsNewCard({ entry }) {
   return (
     <Link href={`/whats-new/${entry.slug}`} className={styles.card}>
       <div className={styles.imageWrap}>
-        <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} />
+        {entry.image && <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} />}
       </div>
       <div className={styles.content}>
         <div className={styles.tagDateRow}>
