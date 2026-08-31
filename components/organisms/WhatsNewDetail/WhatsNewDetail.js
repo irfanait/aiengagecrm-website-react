@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import WhatsNewSidebar from '../WhatsNewSidebar/WhatsNewSidebar';
 import Icon from '../../atoms/Icon/Icon';
-import { formatWhatsNewDate, getWhatsNewYears, WN_DETAIL_CTA } from '../../../data/whatsNew';
+import { formatWhatsNewDate, WN_DETAIL_CTA } from '../../../data/whatsNew';
 import styles from './WhatsNewDetail.module.css';
 
 function Segment({ seg }) {
@@ -41,14 +41,18 @@ function Block({ block, index }) {
   );
 }
 
-/** Single "What's New" article: image, tags/date, title, body blocks, the try/sign-up CTA row,
+/** Single "What's New" article: image, tags/date, title, body content, the try/sign-up CTA row,
  * and the promo banner — the last two share `.mainCol` so the banner sits below the article's
- * white card (same width as it) rather than inside it or spanning under the sidebar. */
-export default function WhatsNewDetail({ entry }) {
+ * white card (same width as it) rather than inside it or spanning under the sidebar.
+ * `entry.content` (CMS-sanitized HTML — API source, see utils/whatsNewApi.js) renders via the
+ * `.prose` tag selectors below; `entry.body` (the block-array shape — WHATS_NEW_SOURCE=static
+ * fallback, see data/whatsNewEntries.js) renders via the Block/Segment renderer instead. Only one
+ * of the two is ever present on a given entry. */
+export default function WhatsNewDetail({ entry, modules, years }) {
   return (
     <section className={styles.section}>
       <Container className={styles.body}>
-        <WhatsNewSidebar activeModule={null} activeYear={null} years={getWhatsNewYears()} />
+        <WhatsNewSidebar activeModule={null} activeYear={null} years={years} modules={modules} />
 
         <div className={styles.mainCol}>
           <article className={styles.article}>
@@ -58,7 +62,11 @@ export default function WhatsNewDetail({ entry }) {
             </Link>
 
             <div className={styles.imageWrap}>
-              <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} priority />
+              {entry.image ? (
+                <Image src={entry.image} alt={entry.title} fill sizes="(max-width: 900px) 100vw, 700px" className={styles.image} priority />
+              ) : (
+                <span className={styles.imagePlaceholder} aria-hidden="true" />
+              )}
             </div>
 
             <div className={styles.tagDateRow}>
@@ -75,11 +83,15 @@ export default function WhatsNewDetail({ entry }) {
 
             <h1 className={styles.title}>{entry.title}</h1>
 
-            <div className={styles.prose}>
-              {entry.body.map((block, i) => (
-                <Block key={i} block={block} index={i} />
-              ))}
-            </div>
+            {entry.content ? (
+              <div className={styles.prose} dangerouslySetInnerHTML={{ __html: entry.content }} />
+            ) : (
+              <div className={styles.prose}>
+                {entry.body.map((block, i) => (
+                  <Block key={i} block={block} index={i} />
+                ))}
+              </div>
+            )}
 
             <div className={styles.ctaRow}>
               <a href={WN_DETAIL_CTA.tryHref} target="_blank" rel="noopener noreferrer" className={styles.tryBtn}>

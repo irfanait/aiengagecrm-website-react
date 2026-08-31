@@ -1,14 +1,16 @@
 import Link from 'next/link';
-import { WN_MODULE_FILTERS, buildWhatsNewFilterUrl } from '../../../data/whatsNew';
+import { buildWhatsNewFilterUrl } from '../../../data/whatsNew';
 import styles from './WhatsNewSidebar.module.css';
 
 /**
- * Left column: "Modules" and "Years" filter links. These two combine with each other (module +
- * year is a sensible combination), but deliberately drop any active top-bar type filter — see
- * WhatsNewTypeTabs — so the sidebar always applies on its own instead of ANDing with the top
- * filter and potentially producing a 0-result combination.
+ * Left column: "Modules" and "Years" filter links. `modules` is the CMS's child categories under
+ * "What's New on AiEngage" ([{name, slug}, ...], fetched server-side — see utils/whatsNewApi.js);
+ * `activeModule`/the module filter URL param carry the category *slug*, matched against `m.slug`.
+ * Modules and Years combine with each other (a sensible pairing), but deliberately drop any active
+ * top-bar type filter — see WhatsNewTypeTabs — so the sidebar always applies on its own instead of
+ * ANDing with the top filter and potentially producing a 0-result combination.
  */
-export default function WhatsNewSidebar({ activeModule, activeYear, years }) {
+export default function WhatsNewSidebar({ activeModule, activeYear, years, modules }) {
   return (
     <aside className={styles.sidebar}>
       <h3 className={styles.heading}>Modules</h3>
@@ -21,13 +23,13 @@ export default function WhatsNewSidebar({ activeModule, activeYear, years }) {
             All Modules
           </Link>
         </li>
-        {WN_MODULE_FILTERS.map((m) => {
-          const isActive = activeModule === m;
-          const href = buildWhatsNewFilterUrl({ module: isActive ? null : m, year: activeYear });
+        {modules.map((m) => {
+          const isActive = activeModule === m.slug;
+          const href = buildWhatsNewFilterUrl({ module: isActive ? null : m.slug, year: activeYear });
           return (
-            <li key={m}>
+            <li key={m.slug}>
               <Link href={href} className={isActive ? styles.linkActive : styles.link}>
-                {m}
+                {m.name}
               </Link>
             </li>
           );

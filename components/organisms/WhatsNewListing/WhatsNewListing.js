@@ -3,34 +3,28 @@ import Container from '../../common/Container/Container';
 import WhatsNewCard from '../../molecules/WhatsNewCard/WhatsNewCard';
 import WhatsNewPagination from '../../molecules/WhatsNewPagination/WhatsNewPagination';
 import WhatsNewSidebar from '../WhatsNewSidebar/WhatsNewSidebar';
-import { getWhatsNewYears, WN_PAGE_SIZE } from '../../../data/whatsNew';
+import { WN_PAGE_SIZE } from '../../../data/whatsNew';
 import styles from './WhatsNewListing.module.css';
 
 /**
- * Sidebar (Modules/Years) + the filtered, paginated card grid. Filtering and pagination are done
- * here, from plain query-param values passed down by app/whats-new/page.js — no client JS involved.
+ * Sidebar (Modules/Years) + the card grid. `entries` arrives already filtered and paginated by
+ * app/whats-new/page.js (via getWhatsNewList, which does the filtering server-side against the
+ * CMS's full post set — see utils/whatsNewApi.js) — this component only renders what it's given,
+ * plus the pagination controls from `total`.
  */
-export default function WhatsNewListing({ entries, typeFilter, moduleFilter, yearFilter, page }) {
-  const filtered = entries.filter((e) => {
-    if (typeFilter && typeFilter !== 'all' && e.typeTag !== typeFilter) return false;
-    if (moduleFilter && !e.moduleTags.includes(moduleFilter)) return false;
-    if (yearFilter && e.date.slice(0, 4) !== yearFilter) return false;
-    return true;
-  });
-
-  const totalPages = Math.max(1, Math.ceil(filtered.length / WN_PAGE_SIZE));
+export default function WhatsNewListing({ entries, total, page, typeFilter, moduleFilter, yearFilter, modules, years }) {
+  const totalPages = Math.max(1, Math.ceil(total / WN_PAGE_SIZE));
   const currentPage = Math.min(Math.max(1, page), totalPages);
-  const pageEntries = filtered.slice((currentPage - 1) * WN_PAGE_SIZE, currentPage * WN_PAGE_SIZE);
 
   return (
     <section className={styles.section}>
       <Container className={styles.body}>
-        <WhatsNewSidebar activeModule={moduleFilter} activeYear={yearFilter} years={getWhatsNewYears()} />
+        <WhatsNewSidebar activeModule={moduleFilter} activeYear={yearFilter} years={years} modules={modules} />
 
         <div className={styles.grid}>
-          <p className={styles.count}>{filtered.length} update{filtered.length === 1 ? '' : 's'}</p>
-          {pageEntries.length ? (
-            pageEntries.map((entry) => <WhatsNewCard key={entry.slug} entry={entry} />)
+          <p className={styles.count}>{total} update{total === 1 ? '' : 's'}</p>
+          {entries.length ? (
+            entries.map((entry) => <WhatsNewCard key={entry.slug} entry={entry} />)
           ) : (
             <div className={styles.empty}>
               <p>No updates match these filters.</p>
