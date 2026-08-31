@@ -1,9 +1,9 @@
 // Server-only client for the "What's New on AiEngage" changelog — same Blog API as
-// utils/blogApi.js, scoped to the WHATS_NEW_ROOT_SLUG category and its children instead of
+// utils/blogApi.js, scoped to the WHATS_NEW_ROOT_NAME category and its children instead of
 // excluding them. Posts under that subtree never appear on the blog; every other category never
 // appears here.
 
-import { fetchAllRaw, fetchPostRaw, collectSubtreeSlugs, inSubtree, WHATS_NEW_ROOT_SLUG } from './blogApi';
+import { fetchAllRaw, fetchPostRaw, collectSubtreeSlugs, inSubtree, findWhatsNewRoot } from './blogApi';
 
 const EMPTY_LIST = { data: [], total: 0, page: 1, pageSize: 10, modules: [], years: [] };
 
@@ -37,9 +37,10 @@ function mapEntry(post) {
 
 async function getCatalog() {
   const { data: all, categories } = await fetchAllRaw({ sort: 'recent' });
-  const subtreeSlugs = collectSubtreeSlugs(categories, WHATS_NEW_ROOT_SLUG);
+  const subtreeSlugs = collectSubtreeSlugs(categories);
   const entries = all.filter((post) => inSubtree(post, subtreeSlugs));
-  const modules = categories.filter((c) => c.parent === WHATS_NEW_ROOT_SLUG);
+  const root = findWhatsNewRoot(categories);
+  const modules = root ? categories.filter((c) => c.parent === root.slug) : [];
   return { entries, modules };
 }
 
@@ -85,7 +86,7 @@ export async function getWhatsNewPost(slug) {
   if (result.notFound) return result;
 
   const { categories } = await fetchAllRaw({ sort: 'recent' });
-  const subtreeSlugs = collectSubtreeSlugs(categories, WHATS_NEW_ROOT_SLUG);
+  const subtreeSlugs = collectSubtreeSlugs(categories);
   if (!inSubtree(result.data, subtreeSlugs)) return { notFound: true, redirectTo: null };
 
   return { data: mapEntry(result.data) };

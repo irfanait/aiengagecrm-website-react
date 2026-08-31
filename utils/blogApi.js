@@ -8,8 +8,15 @@ const KEY = process.env.BLOG_API_KEY;
 
 // The category (and its child categories) that hold the "What's New" changelog content — those
 // posts are surfaced exclusively via /whats-new (see utils/whatsNewApi.js), never on the blog.
-// Matches the category's `slug` in the CMS; update here if that slug is ever renamed.
-export const WHATS_NEW_ROOT_SLUG = 'whats-new';
+// Matched by category *name*, not slug: the CMS auto-generates/versions slugs per workspace and
+// even per re-import (confirmed live — the dev workspace's root category is slug "whats-new", the
+// production workspace's is "whats-new-on-aiengage", and re-created child categories there picked
+// up "-2"/"-4" suffixes) — the display name is the only stable identifier across environments.
+export const WHATS_NEW_ROOT_NAME = "What's New on AiEngage";
+
+function normalizeName(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
 
 // The list endpoint caps pageSize server-side at 50 regardless of what's requested, so pulling
 // every post (needed to filter a whole category subtree in/out — the API has no single param for
@@ -29,11 +36,20 @@ function buildUrl(path, params = {}) {
   return url.toString();
 }
 
-/** A category's `parent` field references its parent's `slug` (not an id). Walks that chain to
- * collect `rootSlug` plus every descendant, so "is this post in category X or under it" is a
- * single Set lookup. */
-export function collectSubtreeSlugs(categories, rootSlug) {
-  const slugs = new Set([rootSlug]);
+/** Finds the What's New root category by name (see WHATS_NEW_ROOT_NAME above) — `null` if this
+ * workspace doesn't have it. */
+export function findWhatsNewRoot(categories) {
+  return categories.find((c) => normalizeName(c.name) === normalizeName(WHATS_NEW_ROOT_NAME)) || null;
+}
+
+/** Walks `parent` references (a category's `parent` field is its parent's *slug*, not an id) to
+ * collect the What's New root's slug plus every descendant's — so "is this post in category X or
+ * under it" is a single Set lookup. Empty Set if the category doesn't exist in this workspace. */
+export function collectSubtreeSlugs(categories) {
+  const root = findWhatsNewRoot(categories);
+  if (!root) return new Set();
+
+  const slugs = new Set([root.slug]);
   let grew = true;
   while (grew) {
     grew = false;
@@ -96,7 +112,7 @@ async function fetchPostRaw(slug) {
  * getBlogPost (sanitize prev/next/related so they never link into What's New) build on. */
 async function getCatalog() {
   const { data: all, categories, uncategorizedCount } = await fetchAllRaw({ sort: 'recent' });
-  const whatsNewCategorySlugs = collectSubtreeSlugs(categories, WHATS_NEW_ROOT_SLUG);
+  const whatsNewCategorySlugs = collectSubtreeSlugs(categories);
   const whatsNewPostSlugs = new Set(all.filter((p) => inSubtree(p, whatsNewCategorySlugs)).map((p) => p.slug));
   return { all, categories, uncategorizedCount, whatsNewCategorySlugs, whatsNewPostSlugs };
 }
