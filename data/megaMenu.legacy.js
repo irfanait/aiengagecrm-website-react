@@ -1,0 +1,222 @@
+// BACKUP — the original 15-flat-category Features mega menu, kept exactly as it was before the
+// 4-Suite restructure (see data/megaMenu.js). NOT imported by any component — this file exists
+// purely as an easy reference/revert point if the old design/structure is ever needed again.
+//
+// To actually revert the live site to this version, either:
+//   1. Copy this array back into data/megaMenu.js (rename the export back to MEGA_MENU), or
+//   2. Use git — see the revert command in the handoff notes for this change.
+//
+// Mirrors the design source's full 15-category mega menu (Home v2.dc.html `menu` data).
+// Feature tuples are [name, icon, description, href]. Only features with a real, built
+// page get a route; everything else points at '#' until that page exists.
+export const MEGA_MENU_LEGACY = [
+  {
+    name: 'WhatsApp Business',
+    icon: 'chat',
+    href: '/whatsapp',
+    features: [
+      ['WhatsApp Team Inbox', 'inbox', 'One shared inbox for your whole team.', '/whatsapp#team-inbox'],
+      ['Multiple WhatsApp Numbers', 'dialpad', 'Separate numbers for sales, support & teams.', '/whatsapp#multiple-numbers'],
+      ['WhatsApp Broadcast', 'campaign', 'Send approved messages to many contacts at once.', '/whatsapp#broadcast'],
+      ['WhatsApp Automation', 'bolt', 'Auto replies, follow-ups, reminders & updates.', '/whatsapp#automation'],
+      ['WhatsApp Analytics', 'monitoring', 'Track delivery, response rates & team performance.', '/whatsapp#analytics'],
+      ['AI Agent for WhatsApp', 'smart_toy', 'Answer inquiries & qualify leads automatically.', '/whatsapp#ai-agent'],
+    ],
+  },
+  {
+    name: 'Multichannel Communication',
+    icon: 'forum',
+    href: '/multichannel-communication',
+    features: [
+      ['Mass Email', 'outgoing_mail', 'Send targeted emails to large customer groups.', '/multichannel-communication#mass-email'],
+      ['Built-In Calling', 'call', 'Make and receive business calls from your CRM.', '/multichannel-communication#built-in-calling'],
+      ['WhatsApp Integration', 'chat', 'Manage chats, contacts and follow-ups in the CRM.', '/multichannel-communication#whatsapp-integration'],
+      ['Emails', 'mail', 'Send, receive and track emails from one workspace.', '/multichannel-communication#emails'],
+      ['Email & Message Templates', 'description', 'Reusable templates for faster communication.', '/multichannel-communication#templates'],
+      ['Automated Follow-Ups', 'update', 'Reconnect with leads at exactly the right time.', '/multichannel-communication#follow-ups'],
+      ['Communication Timeline', 'timeline', 'Every email, call and chat in one timeline.', '/multichannel-communication#timeline'],
+      ['Push Notifications', 'notifications', 'Timely alerts for customers and your team.', '/multichannel-communication#push-notifications'],
+      ['AI Sentiment Analysis', 'sentiment_satisfied', 'Understand customer tone and intent instantly.', '/multichannel-communication#sentiment-analysis'],
+    ],
+  },
+  {
+    name: 'Customer Management',
+    icon: 'group',
+    href: '/customer-management',
+    features: [
+      ['Contacts', 'person', 'Manage customer details, history and activities.', '/customer-management#contacts'],
+      ['Companies', 'domain', 'Organize contacts under companies and accounts.', '#'],
+      ['Customer Segments', 'donut_small', 'Group customers by behavior, profile & engagement.', '/customer-management#segments'],
+      ['360° Customer Profile', 'account_circle', 'Every detail, deal and interaction in one profile.', '/customer-management#customer-profile'],
+      ['Customer Timeline', 'history', 'The complete chronological customer history.', '/customer-management#customer-timeline'],
+    ],
+  },
+  {
+    name: 'Lead Management',
+    icon: 'person_search',
+    href: '/lead-management',
+    features: [
+      ['Lead Capture Forms', 'list_alt', 'Collect leads through customizable forms.', '/lead-management#lead-capture-forms'],
+      ['Lead Assignment', 'assignment_ind', 'Route leads to the right rep with rules.', '/lead-management#lead-assignment'],
+      ['Meta & Google Ads Sync', 'sync_alt', 'Ad leads flow into your CRM automatically.', '/lead-management#lead-sync'],
+      ['AI Lead Scoring', 'star', 'Rank leads by behavior and conversion potential.', '/lead-management#lead-scoring'],
+      ['Lead Sources', 'pie_chart', 'See which channels and campaigns bring the best leads.', '/lead-management#lead-sources'],
+      ['Import Leads', 'upload_file', 'Upload leads in bulk from CSV or spreadsheets.', '/lead-management#import-leads'],
+      ['Round-Robin Assignment', 'autorenew', 'Distribute new leads evenly across your team.', '/lead-management#round-robin'],
+      ['AI Lead Qualification', 'fact_check', 'Identify qualified opportunities automatically.', '/lead-management#ai-lead-qualification'],
+    ],
+  },
+  {
+    name: 'Sales Pipeline',
+    icon: 'account_tree',
+    href: '/sales-pipeline',
+    features: [
+      ['Pipeline Management', 'view_kanban', 'Track deals across every stage of your process.', '/sales-pipeline#pipeline-management'],
+      ['Deal Management', 'handshake', 'Manage values, closing dates and ownership.', '/sales-pipeline#deal-management'],
+      ['Task Management', 'task_alt', 'Create, assign and monitor sales tasks.', '/sales-pipeline#task-management'],
+      ['Follow-Up Management', 'event_repeat', 'Never miss a scheduled follow-up again.', '/sales-pipeline#follow-up-management'],
+      ['Connected Pipelines', 'swap_horiz', 'Every deal linked to its full customer story.', '/sales-pipeline#connected-pipelines'],
+      ['Team Pipelines', 'groups', 'Separate pipelines for teams and departments.', '/sales-pipeline#team-pipelines'],
+      ['Payment Tracking', 'payments', 'Track paid, pending and overdue amounts per deal.', '/sales-pipeline#payment-tracking'],
+      ['External Record Sharing', 'share', 'Share deal records with customers and partners.', '/sales-pipeline#external-sharing'],
+      ['Product Catalog', 'inventory_2', 'A structured catalog of products and pricing.', '/sales-pipeline#product-catalog'],
+      ['Stage Transition Rules', 'rule', 'Require actions before deals move forward.', '/sales-pipeline#stage-rules'],
+      ['AI Sales Forecasting', 'query_stats', 'Predict future sales from pipeline activity.', '/sales-pipeline#ai-forecasting'],
+    ],
+  },
+  {
+    name: 'Marketing Campaigns',
+    icon: 'campaign',
+    href: '/marketing-campaigns',
+    features: [
+      ['Email Campaigns', 'outgoing_mail', 'Create, send and track targeted email campaigns.', '/marketing-campaigns#email-campaigns'],
+      ['WhatsApp Campaigns', 'chat', 'Personalized campaigns with approved templates.', '/marketing-campaigns#whatsapp-campaigns'],
+      ['AI Campaign Insights', 'insights', 'Spot trends, engagement patterns & opportunities.', '/marketing-campaigns#campaign-insights'],
+      ['AI Campaign Builder', 'auto_awesome', 'Generate campaign content with AI assistance.', '/marketing-campaigns#ai-campaign-builder'],
+    ],
+  },
+  {
+    name: 'Automation',
+    icon: 'bolt',
+    href: '/automation',
+    features: [
+      ['Workflow Automation', 'account_tree', 'Build processes with triggers, conditions & actions.', '/automation#workflow-automation'],
+      ['Email Automation', 'mark_email_read', 'Personalized emails triggered by behavior.', '/automation#email-automation'],
+      ['WhatsApp Automation', 'chat', 'Trigger messages for leads, deals and events.', '/automation#whatsapp-automation'],
+      ['Appointment Reminders', 'alarm', 'Automatic reminders before every meeting.', '/automation#appointment-reminders'],
+      ['Lead Nurturing', 'trending_up', 'Guide leads through follow-up sequences.', '/automation#lead-nurturing'],
+      ['Customer Onboarding', 'waving_hand', 'Automate welcome messages and setup tasks.', '/automation#customer-onboarding'],
+      ['Deal Stage Automation', 'move_up', 'Trigger actions when a deal changes stage.', '/automation#deal-stage-automation'],
+      ['AI-Powered Automation', 'auto_awesome', 'Let AI decide actions and personalize responses.', '/automation#ai-automation'],
+    ],
+  },
+  {
+    name: 'AI',
+    icon: 'neurology',
+    href: '/ai',
+    features: [
+      ['Smart Summaries', 'summarize', 'Quick summaries of conversations and records.', '/ai#smart-summaries'],
+      ['AI Agent', 'smart_toy', 'Automate conversations and routine tasks.', '/whatsapp#ai-agent'],
+      ['AI Chatbot', 'forum', 'Answer website inquiries and capture leads.', '/ai#ai-chatbot'],
+      ['AI Lead Qualification', 'fact_check', 'Evaluate incoming leads automatically.', '/lead-management#ai-lead-qualification'],
+      ['AI Email Assistant', 'edit_note', 'Write, improve and personalize emails with AI.', '/ai#ai-email-assistant'],
+      ['AI Insights', 'insights', 'Discover patterns and risks across CRM data.', '/ai#ai-insights'],
+      ['AI Call Transcription', 'graphic_eq', 'Turn recorded calls into searchable transcripts.', '/ai#ai-call-transcription'],
+      ['AI Sales Insights', 'lightbulb', 'Deal activity, intent and next-step suggestions.', '/ai#ai-sales-insights'],
+      ['AI Forecasting', 'query_stats', 'Predict sales outcomes from historical data.', '/ai#ai-forecasting'],
+    ],
+  },
+  {
+    name: 'Calling',
+    icon: 'call',
+    href: '/calling',
+    features: [
+      ['Business Phone Numbers', 'dialpad', 'Local, international or department numbers.', '/calling#business-numbers'],
+      ['Outbound & Inbound Calling', 'phone_forwarded', 'Make and receive calls inside your CRM.', '/calling#one-click-calling'],
+      ['Smart Call Routing', 'alt_route', 'Direct calls to the right team or department.', '/calling#call-routing'],
+      ['Call Management', 'phone_in_talk', 'Track outcomes, notes, ownership & follow-ups.', '/calling#call-timeline'],
+      ['AI Call Transcription', 'graphic_eq', 'Readable transcripts of customer calls.', '/calling#call-monitoring'],
+      ['Recording, Logs & Analytics', 'monitoring', 'Record calls and monitor team performance.', '/calling#call-analytics'],
+    ],
+  },
+  {
+    name: 'Mobile App',
+    icon: 'smartphone',
+    href: '/mobile-app',
+    features: [
+      ['Android App', 'android', 'Manage leads and conversations on Android.', '/mobile-app#android-app'],
+      ['iOS App', 'phone_iphone', 'Secure CRM access from iPhone and iPad.', '/mobile-app#ios-app'],
+      ['Push Notifications', 'notifications_active', 'Instant alerts for leads, messages and tasks.', '/mobile-app#push-notifications'],
+      ['Mobile AI', 'auto_awesome', 'AI assistance and insights on the go.', '#'],
+    ],
+  },
+  {
+    name: 'Data Management',
+    icon: 'database',
+    href: '/data-management',
+    features: [
+      ['Import & Export', 'import_export', 'Move records using CSV or spreadsheets.', '/data-management#import-export'],
+      ['Products', 'inventory_2', 'Maintain product and service information.', '/data-management#products'],
+      ['Forms', 'list_alt', 'Structured forms to collect CRM information.', '/data-management#forms'],
+      ['Audit Logs', 'receipt_long', 'Track user actions and record changes.', '/data-management#audit-logs'],
+      ['Sheet View', 'table', 'Update records in a spreadsheet-style layout.', '/data-management#sheet-view'],
+      ['Data Mapping', 'swap_horiz', 'Match imported fields to CRM properties.', '/data-management#data-mapping'],
+      ['AI Data Cleanup', 'cleaning_services', 'Find duplicate or outdated records automatically.', '/data-management#ai-data-cleanup'],
+    ],
+  },
+  {
+    name: 'Reports & Analytics',
+    icon: 'monitoring',
+    href: '/reports-analytics',
+    features: [
+      ['Dashboards', 'dashboard', 'Key metrics on customizable visual dashboards.', '/reports-analytics#dashboards'],
+      ['Sales Reports', 'bar_chart', 'Revenue, conversions and pipeline performance.', '/reports-analytics#sales-reports'],
+      ['Campaign Reports', 'campaign', 'Delivery, engagement and conversion metrics.', '/reports-analytics#campaign-reports'],
+      ['Funnel Reports', 'filter_alt', 'How leads move through every stage.', '/reports-analytics#funnel-reports'],
+      ['Team Performance', 'groups', 'Compare activity, response times and results.', '/reports-analytics#team-performance'],
+      ['KPIs', 'speed', 'Track your most important indicators.', '/reports-analytics#kpis'],
+      ['Target Meters', 'track_changes', 'Progress against team and individual goals.', '/reports-analytics#target-meters'],
+      ['Charts', 'pie_chart', 'Visualize CRM data with clear charts.', '/reports-analytics#charts'],
+    ],
+  },
+  {
+    name: 'Integrations',
+    icon: 'extension',
+    href: '/integrations',
+    features: [
+      ['Meta Ads', 'sync_alt', 'Sync leads from Facebook & Instagram ads.', '/integrations#meta-ads'],
+      ['Google Ads', 'ads_click', 'Capture leads from Google campaigns.', '/integrations#google-ads'],
+      ['WhatsApp', 'chat', 'Inboxes, automation, broadcasts & AI chat.', '/integrations#whatsapp'],
+      ['Plivo', 'call', 'Cloud calling and messaging capabilities.', '/integrations#plivo'],
+      ['Twilio', 'sms', 'Calls, SMS and communication workflows.', '/integrations#twilio'],
+      ['Stripe', 'credit_card', 'Accept and track customer payments.', '/integrations#stripe'],
+      ['Razorpay', 'currency_rupee', 'Online payments linked to CRM records.', '/integrations#razorpay'],
+      ['APIs & Webhooks', 'api', 'Connect external apps and real-time updates.', '/integrations#api'],
+    ],
+  },
+  {
+    name: 'Customization',
+    icon: 'tune',
+    href: '/customization',
+    features: [
+      ['Custom Fields', 'edit_attributes', 'Store information specific to your business.', '/customization#custom-fields'],
+      ['Custom Modules', 'widgets', 'Dedicated modules for unique processes.', '/customization#custom-modules'],
+      ['Custom Pipelines', 'account_tree', 'Pipelines that match how you actually sell.', '/customization#custom-pipelines'],
+      ['Roles & Permissions', 'admin_panel_settings', 'Control what each user and team can manage.', '/customization#roles-permissions'],
+      ['Branding', 'palette', 'Apply your business identity to the CRM.', '/customization#branding'],
+      ['Custom Tags', 'sell', 'Flexible tags for organizing records.', '/customization#custom-tags'],
+      ['Custom Views', 'view_list', 'Saved views with your filters and layouts.', '/customization#custom-views'],
+    ],
+  },
+  {
+    name: 'Security & Compliance',
+    icon: 'shield',
+    href: '/security-compliance',
+    features: [
+      ['User Roles', 'badge', 'Structured access levels by responsibility.', '/security-compliance#user-roles'],
+      ['Audit Logs', 'receipt_long', 'A transparent history of account changes.', '/security-compliance#audit-logs'],
+      ['Data Backup', 'cloud_done', 'Secure and reliable business data backups.', '/security-compliance#data-backup'],
+      ['Two-Factor Authentication', 'lock', 'An extra verification step for every account.', '/security-compliance#two-factor-authentication'],
+    ],
+  },
+];

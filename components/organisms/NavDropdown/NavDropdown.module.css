@@ -20,7 +20,8 @@
   width: 240px;
   background: #fff;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  /* Square top (flush against the header above it), rounded bottom only — matches MegaMenu. */
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
   box-shadow: var(--shadow-menu);
   padding: 8px;
   opacity: 0;
