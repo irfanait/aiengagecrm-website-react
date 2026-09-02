@@ -1,5 +1,13 @@
 // Pricing page content. Kept deliberately data-only (no JSX) so plans, prices and the feature
 // comparison table can be updated without touching any component code.
+//
+// This page is archived (see data/newPricing.js's header) and its Growth/Advance tiers don't map
+// numerically to the live page's Solo/Business/Business Pro plans. When the pricing sheet's AI
+// feature rows (Team Inbox's 5 AI rows, the new "AI Features" section) were added to the live
+// page, the same rows were mirrored here too, all marked true/true for feature parity — the
+// sheet's new numeric limit rows (per-component report/dashboard counts, target meeting
+// components) were NOT mirrored here, since the sheet gives no Growth/Advance-specific numbers
+// for them and this page's tiers don't correspond to Solo/Business/Business Pro.
 
 export const PR_HERO = {
   titleLead: 'Plans Built for ',
@@ -283,6 +291,11 @@ export const PR_FEATURE_TABLE = [
       { label: 'Internal notes on conversations', sub: 'Private notes visible only to team', growth: true, advance: true },
       { label: 'Advanced chat filters', sub: 'Filter by status, tag, assignee, channel', growth: true, advance: true },
       { label: 'Media sharing', sub: 'Images, docs, voice notes', growth: true, advance: true },
+      { label: 'AI Agent Integration', sub: 'Chats, Support, Knowledge Base & Meeting Booking', growth: true, advance: true },
+      { label: 'Automatic AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', growth: true, advance: true },
+      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', growth: true, advance: true },
+      { label: 'AI Follow ups', sub: 'Automated Customer Follow-up', growth: true, advance: true },
+      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', growth: true, advance: true },
     ],
   },
   {
@@ -383,6 +396,21 @@ export const PR_FEATURE_TABLE = [
       { label: 'Drill-down', sub: 'Click any cell to underlying records', growth: true, advance: true },
       { label: 'Custom dashboards', sub: 'Per user', growth: '10', advance: '20' },
       { label: 'Per-dashboard sharing', sub: 'Share with users or team', growth: true, advance: true },
+    ],
+  },
+  {
+    icon: 'auto_awesome',
+    title: 'AI Features',
+    rows: [
+      { label: 'AI Agents', sub: 'WhatsApp, Chats, Support, Knowledge Base & Meeting Booking', growth: true, advance: true },
+      { label: 'AI Summary', sub: 'Leads, Deals, Chats & Custom Modules', growth: true, advance: true },
+      { label: 'AI Meeting Notetaker', sub: 'Recording, Transcription & Summary', growth: true, advance: true },
+      { label: 'Actionable AI', sub: 'Automatic follow ups, Ticket Closing, Scoring', growth: true, advance: true },
+      { label: 'AI Follow ups', sub: 'Automated Customer Follow-up', growth: true, advance: true },
+      { label: 'AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', growth: true, advance: true },
+      { label: 'AI Follow ups', sub: 'Recordings, Transcript, AI Summary', growth: true, advance: true },
+      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', growth: true, advance: true },
+      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', growth: true, advance: true },
     ],
   },
   {

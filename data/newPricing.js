@@ -296,10 +296,10 @@ export const NP_FEATURE_TABLE = [
     icon: 'group',
     title: 'Users, Roles & Permissions',
     rows: [
-      { label: 'Roles', sub: 'User role definitions', solo: '1', business: '5', businessPro: '10' },
-      { label: 'Profiles', sub: 'Permission sets', solo: '1', business: '5', businessPro: '10' },
-      { label: 'Sharing rules', sub: 'Record-level access control', solo: '1', business: '5', businessPro: '10' },
-      { label: 'Teams', sub: 'Group users into teams', solo: '1', business: '5', businessPro: '10' },
+      { label: 'Roles', sub: 'User role definitions', solo: '1', business: '5', businessPro: '15' },
+      { label: 'Profiles', sub: 'Permission sets', solo: '1', business: '5', businessPro: '15' },
+      { label: 'Sharing rules', sub: 'Record-level access control', solo: '1', business: '15', businessPro: '20' },
+      { label: 'Teams', sub: 'Group users into teams', solo: '1', business: '10', businessPro: '15' },
     ],
   },
   {
@@ -337,6 +337,11 @@ export const NP_FEATURE_TABLE = [
       { label: 'Internal notes on conversations', sub: 'Private notes visible only to team', solo: true, business: true, businessPro: true },
       { label: 'Advanced chat filters', sub: 'Filter by status, tag, assignee, channel', solo: true, business: true, businessPro: true },
       { label: 'Media sharing', sub: 'Images, docs, voice notes', solo: true, business: true, businessPro: true },
+      { label: 'AI Agent Integration', sub: 'Chats, Support, Knowledge Base & Meeting Booking', solo: true, business: true, businessPro: true },
+      { label: 'Automatic AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', solo: true, business: true, businessPro: true },
+      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', solo: true, business: true, businessPro: true },
+      { label: 'AI Follow ups', sub: 'Automated Customer Follow-up', solo: true, business: true, businessPro: true },
+      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', solo: true, business: true, businessPro: true },
     ],
   },
   {
@@ -372,6 +377,7 @@ export const NP_FEATURE_TABLE = [
     rows: [
       { label: 'Meeting Calendar', sub: null, solo: '2', business: '10', businessPro: '20' },
       { label: 'Third party integration', sub: 'Google Meet, Zoom etc..', solo: true, business: true, businessPro: true },
+      { label: 'AI Meeting Notetaker', sub: 'Recording, Transcription & Summary', solo: true, business: true, businessPro: true },
     ],
   },
   {
@@ -457,6 +463,22 @@ export const NP_FEATURE_TABLE = [
       { label: 'Comparator components', sub: 'Org level', solo: '15', business: '15', businessPro: '25' },
       { label: 'KPI components', sub: 'Org level', solo: '120', business: '120', businessPro: '150' },
       { label: 'Funnel components', sub: 'Org level', solo: '10', business: '10', businessPro: '15' },
+      { label: 'Target meeting components', sub: 'Org level', solo: '25', business: '50', businessPro: '100' },
+    ],
+  },
+  {
+    icon: 'auto_awesome',
+    title: 'AI Features',
+    rows: [
+      { label: 'AI Agents', sub: 'WhatsApp, Chats, Support, Knowledge Base & Meeting Booking', solo: true, business: true, businessPro: true },
+      { label: 'AI Summary', sub: 'Leads, Deals, Chats & Custom Modules', solo: true, business: true, businessPro: true },
+      { label: 'AI Meeting Notetaker', sub: 'Recording, Transcription & Summary', solo: true, business: true, businessPro: true },
+      { label: 'Actionable AI', sub: 'Automatic follow ups, Ticket Closing, Scoring', solo: true, business: true, businessPro: true },
+      { label: 'AI Follow ups', sub: 'Automated Customer Follow-up', solo: true, business: true, businessPro: true },
+      { label: 'AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', solo: true, business: true, businessPro: true },
+      { label: 'AI Follow ups', sub: 'Recordings, Transcript, AI Summary', solo: true, business: true, businessPro: true },
+      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', solo: true, business: true, businessPro: true },
+      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', solo: true, business: true, businessPro: true },
     ],
   },
   {
