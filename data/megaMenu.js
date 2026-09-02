@@ -10,9 +10,9 @@
 // were dropped to the page's top-level URL instead (verified against each page's own data file):
 //   - Platform Capabilities → "AI Agents & Automations": mockup used /ai#ai-agent, but data/ai.js
 //     has no `ai-agent` section id (it has ai-chatbot, ai-lead-qualification, etc.) → '/ai'.
-//   - "Quotations & Invoices" (appears in both Sales Suite and Service & Support Suite): mockup
-//     used /integrations#quotations-invoices, but data/integrationsPage.js has no
-//     `quotations-invoices` section id → '/integrations'.
+//   - "Quotations & Invoices" (Service & Support Suite): mockup used /integrations#quotations-invoices,
+//     but data/integrationsPage.js has no `quotations-invoices` section id → '/integrations'.
+//     Sales Suite's own "Quotations & Invoices" item was removed (was a duplicate of this one).
 // Ads & Analytics (/ads-analytics), Meeting Scheduler / AI Notes / Calendar, Meetings & AI
 // Notetaker (/meetings-calendars), and AI Support Agents / Inbox (/customer-service-support) now
 // point at their real pages — built from the "Ads Analytics" / "Meetings Calendars" /
@@ -20,7 +20,8 @@
 // /meetings-calendars' top (its copy spans the whole page, not one section); the other five use
 // #fragments verified against each page's own section ids in data/{adsAnalytics,meetingsCalendars,
 // customerServiceSupport}.js. /coming-soon is still used elsewhere for any future menu item whose
-// page isn't built yet.
+// page isn't built yet. "Customer AI Agent" was removed from the Marketing Suite (was a duplicate
+// of WhatsApp Marketing & AI Agent's own AI-agent capability).
 export const MEGA_MENU = [
   {
     name: 'Marketing Suite',
@@ -33,10 +34,9 @@ export const MEGA_MENU = [
       ['Voice Calling', 'call', 'Make, receive, record, and track customer calls directly from your CRM.', '/calling'],
       ['AI Chatbot', 'smart_toy', 'Capture website inquiries and answer customer questions automatically with AI.', '/ai#ai-chatbot'],
       ['Mobile CRM', 'smartphone', 'Manage leads, conversations, tasks, and customer activity while on the go.', '/mobile-app'],
-      ['Ads & Analytics', 'insights', 'Track Meta, Google, and offline ad performance — spend, leads, cost per lead, conversions, revenue, and ROAS.', '/ads-analytics'],
+      ['Ads & Analytics', 'insights', 'Track Google, Meta, and offline ad performance — spend, leads, cost per lead, conversions, revenue, and ROAS.', '/ads-analytics'],
       ['Social Communication', 'forum', 'Keep customer conversations and social media channels connected in one CRM.', '/multichannel-communication'],
-      ['Web Forms', 'list_alt', 'Create lead capture forms for websites, landing pages, campaigns, and inquiries — every submission into AiEngage CRM.', '/lead-management#lead-capture-forms'],
-      ['Customer AI Agent', 'support_agent', 'Automatically answer inquiries, collect information, and qualify customers.', '/whatsapp#ai-agent'],
+      ['Web Forms', 'list_alt', 'Create lead capture forms for website, landing pages, campaigns, and inquiries.', '/lead-management#lead-capture-forms'],
       ['Audience Segmentation', 'donut_small', 'Create targeted customer audiences using profile, activity, and engagement data.', '/marketing-campaigns'],
       ['Marketing Analytics', 'monitoring', 'Track campaign engagement, performance, conversions, and marketing results.', '/marketing-campaigns#campaign-insights'],
       ['Dashboards & Reporting', 'dashboard', 'Monitor campaign, sales, team, and business performance using customizable reports.', '/reports-analytics#dashboards'],
@@ -57,7 +57,6 @@ export const MEGA_MENU = [
       ['Meeting Scheduler', 'event', 'Share booking links, manage availability, schedule meetings, and connect Zoom or Google Meet.', '/meetings-calendars#meeting-scheduler'],
       ['AI Notes', 'edit_note', 'Capture customer details, meeting takeaways, decisions, and follow-up points inside the CRM.', '/meetings-calendars#ai-notes'],
       ['Sales Analytics & Reporting', 'query_stats', 'Track pipeline performance, conversions, activities, targets, and sales outcomes.', '/sales-pipeline#ai-forecasting'],
-      ['Quotations & Invoices', 'receipt_long', 'Create and manage quotations, payments, and invoicing workflows through connected tools.', '/integrations'],
     ],
   },
   {
