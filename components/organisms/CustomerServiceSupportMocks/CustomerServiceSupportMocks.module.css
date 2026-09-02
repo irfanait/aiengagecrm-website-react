@@ -1,0 +1,234 @@
+/* Page-specific mock visuals for Customer Service & Support. Shared card/panel/avatar/tagPill
+   utility classes live in WhatsAppMocks.module.css and are reused here rather than duplicated. */
+
+.panelHead {
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg);
+}
+
+.panelHeadTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.colLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* AI Support Agent (dark) */
+.aiShell {
+  width: 95%;
+  background: #0b1530;
+  border: 1px solid var(--color-dark-border);
+  border-radius: 16px;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  left: 12px;
+}
+
+.aiHead {
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--color-dark-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aiHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aiHeadTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.aiHeadTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-whatsapp-light);
+  background: rgba(31, 175, 100, 0.16);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+.aiBody {
+  padding: 16px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-height: 200px;
+}
+
+.aiBubbleUser {
+  align-self: flex-end;
+  max-width: 82%;
+  background: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border-alt);
+  border-radius: 10px 10px 2px 10px;
+  padding: 9px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-dark-text);
+}
+
+.aiBubbleAI {
+  align-self: flex-start;
+  max-width: 82%;
+  background: var(--color-primary);
+  border-radius: 10px 10px 10px 2px;
+  padding: 9px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.aiHandoff {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border-top: 1px solid var(--color-dark-border);
+  background: var(--color-dark-card);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-primary-dark-accent);
+}
+
+/* Ticket & Issue Management */
+.ticketTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5px;
+}
+
+.ticketThead {
+  background: var(--color-bg);
+}
+
+.ticketTh {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--color-text-faint);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.ticketTr {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.ticketTd {
+  padding: 8px 6px;
+  color: var(--color-text-muted);
+}
+
+.ticketTdStrong {
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.statusTag {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+/* Omnichannel Customer Support */
+.channelRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.channelChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 6px 11px;
+}
+
+.statGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.statBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 9px 8px;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.workloadRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workloadName {
+  font-size: 10px;
+  font-weight: 600;
+  width: 56px;
+  flex-shrink: 0;
+}
+
+.workloadBarTrack {
+  flex: 1;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border-light);
+  overflow: hidden;
+}
+
+.workloadBarFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+}
+
+.workloadValue {
+  font-size: 10px;
+  font-weight: 700;
+  width: 24px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .aiShell {
+    width: 100%;
+    left: 0;
+  }
+
+  .statGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

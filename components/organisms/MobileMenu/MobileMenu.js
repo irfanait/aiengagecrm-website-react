@@ -9,9 +9,17 @@ import { MEGA_MENU } from '../../../data/megaMenu';
 import { CTA_LINKS } from '../../../utils/constants';
 import styles from './MobileMenu.module.css';
 
+/** A feature link's href may be an absolute external URL (e.g. the Knowledge Hub) — those need
+ * target="_blank"/rel="noopener" instead of client-side Link navigation. */
+function isExternalHref(href) {
+  return /^https?:\/\//.test(href);
+}
+
 /** Mobile navigation: Ant Design Drawer + Collapse accordion mirroring the desktop mega menu.
  * Renders NAV_LINKS in the same order as the desktop header — plain links stay plain links,
- * "Features" and "Why AiEngage" become their own collapsed-by-default accordion panels. */
+ * "Features" and "Why AiEngage" become their own collapsed-by-default accordion panels.
+ * Each Suite's own href is '#' (no overview page per-Suite — see data/megaMenu.js), so the
+ * "Complete Overview" link is only rendered when a Suite actually has a real page to send it to. */
 export default function MobileMenu({ open, onClose }) {
   const featureCollapseItems = MEGA_MENU.map((cat) => ({
     key: cat.name,
@@ -23,19 +31,31 @@ export default function MobileMenu({ open, onClose }) {
     ),
     children: (
       <div>
-        <Link href={cat.href} className={styles.catOverviewLink} onClick={onClose}>
-          Complete Overview
-          <Icon name="arrow_forward" size={16} />
-        </Link>
-        {cat.features.map(([name, icon, desc, href]) => (
-          <Link key={name} href={href} className={styles.catFeatureLink} onClick={onClose}>
-            <Icon name={icon} size={18} color="var(--color-primary)" />
-            <span>
-              <span className={styles.catFeatureName}>{name}</span>
-              <span className={styles.catFeatureDesc}>{desc}</span>
-            </span>
+        {cat.href && cat.href !== '#' && (
+          <Link href={cat.href} className={styles.catOverviewLink} onClick={onClose}>
+            Complete Overview
+            <Icon name="arrow_forward" size={16} />
           </Link>
-        ))}
+        )}
+        {cat.features.map(([name, icon, desc, href]) =>
+          isExternalHref(href) ? (
+            <a key={name} href={href} target="_blank" rel="noopener noreferrer" className={styles.catFeatureLink}>
+              <Icon name={icon} size={18} color="var(--color-primary)" />
+              <span>
+                <span className={styles.catFeatureName}>{name}</span>
+                <span className={styles.catFeatureDesc}>{desc}</span>
+              </span>
+            </a>
+          ) : (
+            <Link key={name} href={href} className={styles.catFeatureLink} onClick={onClose}>
+              <Icon name={icon} size={18} color="var(--color-primary)" />
+              <span>
+                <span className={styles.catFeatureName}>{name}</span>
+                <span className={styles.catFeatureDesc}>{desc}</span>
+              </span>
+            </Link>
+          )
+        )}
       </div>
     ),
   }));

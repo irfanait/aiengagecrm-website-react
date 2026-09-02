@@ -1,0 +1,430 @@
+/* Ads & Analytics feature-page mocks. Card chrome (.card/.cardFluid/.cardPadded), pills
+   (.tagPill), avatars (.avatarCircle) and bar-chart primitives (.miniChart/.miniBar) are
+   reused from WhatsAppMocks.module.css — this file only holds Ads-Analytics-specific layout. */
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.panelHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panelHeadTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.colLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.statGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.statGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.statBox {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.statLabel {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.4px;
+}
+
+.statValue {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.legendRow {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.footRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-top: 1px solid var(--color-border-light);
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.footRowSimple {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.viewAll {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.rowCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.rowIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rowTitle {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.rowMeta {
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+  margin-top: 1px;
+}
+
+.liveLeadRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-primary-tint-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.liveLeadTag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-whatsapp);
+}
+
+.fieldMapHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding: 0 2px;
+}
+
+.fieldMapRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+.fieldMapFrom {
+  flex: 1;
+  color: var(--color-text-muted);
+}
+
+.fieldMapTo {
+  flex: 1;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.addSourceBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.sourceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sourceCard {
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 11px 12px;
+}
+
+.sourceIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.sourceLeads {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+.darkShell {
+  width: 520px;
+  max-width: 100%;
+  background: var(--color-dark-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  padding: 18px;
+}
+
+.darkHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.darkSearch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-faint);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 7px 12px;
+}
+
+.darkShell .darkSearch {
+  background: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+  color: var(--color-dark-text-muted);
+  flex: 1;
+}
+
+.darkChip {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-dark-text-muted);
+  background: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--radius-pill);
+  padding: 7px 12px;
+  white-space: nowrap;
+}
+
+.darkRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.darkRowIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--color-dark-border-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.darkRowName {
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-dark-text);
+}
+
+.darkStatusOn {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.darkStatusMuted {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-dark-text-subtle);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  text-align: left;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.4px;
+  padding: 0 10px 8px;
+  white-space: nowrap;
+}
+
+.tr {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.td {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.tdStrong {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.trTotal {
+  border-top: 1.5px solid var(--color-border);
+}
+
+.barRowLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.barRowValue {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.barTrack {
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+}
+
+.tipBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: var(--color-yellow-tint);
+  border: 1px solid var(--color-yellow-border);
+  border-radius: 12px;
+  padding: 11px 13px;
+}
+
+.tipText {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--color-yellow-text);
+}
+
+.toolbarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.toolbarBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .darkShell {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .statGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .sourceGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -129,6 +129,30 @@ export const seoData = {
     keywords: ['CRM security', 'role-based access control', 'CRM audit log', 'CRM data backup', 'two-factor authentication CRM'],
     image: '/og/security-compliance.png',
   },
+  adsAnalytics: {
+    path: '/ads-analytics',
+    title: 'Ads & Analytics | Meta, Google & Offline Ad Tracking | AiEngage',
+    description:
+      'Connect Meta Lead Ads, Google Lead Form Ads, and offline campaigns to capture leads, track cost per lead, and measure revenue and ROAS — all in one CRM.',
+    keywords: ['Meta lead ads CRM', 'Google lead form ads', 'ad ROAS tracking', 'cost per lead reporting', 'offline campaign tracking', 'ad analytics CRM'],
+    image: '/og/ads-analytics.png',
+  },
+  meetingsCalendars: {
+    path: '/meetings-calendars',
+    title: 'Meetings & Calendars | Zoom, Google Meet & AI Notes | AiEngage',
+    description:
+      'Create Zoom and Google Meet meetings, share booking links, capture transcripts, and generate AI meeting summaries — all connected to the customer record inside AiEngage CRM.',
+    keywords: ['CRM meeting scheduler', 'booking calendar CRM', 'Zoom CRM integration', 'Google Meet CRM integration', 'AI meeting summary', 'meeting transcripts CRM'],
+    image: '/og/meetings-calendars.png',
+  },
+  customerServiceSupport: {
+    path: '/customer-service-support',
+    title: 'Customer Service & Support | Shared Inbox, AI Agents & Tickets | AiEngage',
+    description:
+      'Manage customer conversations, AI-handled FAQs, support tickets, and omnichannel service — all connected to the customer record — in AiEngage CRM.',
+    keywords: ['customer service software', 'shared support inbox', 'AI support agent', 'support ticket management', 'omnichannel customer support'],
+    image: '/og/customer-service-support.png',
+  },
   ai: {
     path: '/ai',
     title: 'AI CRM | Smart Summaries, AI Chatbot & Sales Insights | AiEngage',
