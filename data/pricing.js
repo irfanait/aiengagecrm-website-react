@@ -291,11 +291,6 @@ export const PR_FEATURE_TABLE = [
       { label: 'Internal notes on conversations', sub: 'Private notes visible only to team', growth: true, advance: true },
       { label: 'Advanced chat filters', sub: 'Filter by status, tag, assignee, channel', growth: true, advance: true },
       { label: 'Media sharing', sub: 'Images, docs, voice notes', growth: true, advance: true },
-      { label: 'AI Agent Integration', sub: 'Chats, Support, Knowledge Base & Meeting Booking', growth: true, advance: true },
-      { label: 'Automatic AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', growth: true, advance: true },
-      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', growth: true, advance: true },
-      { label: 'AI Follow ups', sub: 'Automated Customer Follow-up', growth: true, advance: true },
-      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', growth: true, advance: true },
     ],
   },
   {
@@ -411,6 +406,8 @@ export const PR_FEATURE_TABLE = [
       { label: 'AI Follow ups', sub: 'Recordings, Transcript, AI Summary', growth: true, advance: true },
       { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', growth: true, advance: true },
       { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', growth: true, advance: true },
+      { label: 'Integration with AI Platforms', sub: 'ChatGPT, Claude, Gemini and more', growth: true, advance: true },
+      { label: 'MCP for Custom AI Agent Integration', sub: null, growth: true, advance: true },
     ],
   },
   {
