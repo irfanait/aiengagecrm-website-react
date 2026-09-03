@@ -337,6 +337,10 @@ export const NP_FEATURE_TABLE = [
       { label: 'Internal notes on conversations', sub: 'Private notes visible only to team', solo: true, business: true, businessPro: true },
       { label: 'Advanced chat filters', sub: 'Filter by status, tag, assignee, channel', solo: true, business: true, businessPro: true },
       { label: 'Media sharing', sub: 'Images, docs, voice notes', solo: true, business: true, businessPro: true },
+      { label: 'AI Agent Integration', sub: 'Chats, Support, Knowledge Base & Meeting Booking', solo: true, business: true, businessPro: true },
+      { label: 'Automatic AI Scoring', sub: 'Automatically Identify Hot, Warm & Cold', solo: true, business: true, businessPro: true },
+      { label: 'AI Chat Closing', sub: 'Automatically Close Conversations', solo: true, business: true, businessPro: true },
+      { label: 'AI Inbox Intelligence', sub: 'Analyze, Prioritize & Respond Smarter', solo: true, business: true, businessPro: true },
     ],
   },
   {
