@@ -1,12 +1,19 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import NewPricingToggles from '../NewPricingToggles/NewPricingToggles';
 import NewPricingCard from '../NewPricingCard/NewPricingCard';
 import NewPricingFeatureModal from '../NewPricingFeatureModal/NewPricingFeatureModal';
+import NewPricingCompareSection from '../NewPricingCompareSection/NewPricingCompareSection';
 import Container from '../../common/Container/Container';
 import { NP_BILLING_LINES, NP_REGION_NOTE, buildNewSignupHref } from '../../../data/newPricing';
 import styles from './NewPricingPlansSection.module.css';
+
+// Id of the placeholder slot app/pricing/page.js renders further down the page (just above
+// NewPricingComparison) — NewPricingCompareSection portals into it so it can live in that spot
+// while still reading this component's live cycle/region price state below.
+const COMPARE_SECTION_SLOT_ID = 'pricing-compare-slot';
 
 /**
  * Hero + billing/region toggles + the 3 plan cards, all in one client component since the
@@ -22,7 +29,20 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
   const [cycle, setCycle] = useState('monthly');
   const [region, setRegion] = useState(initialRegion || 'india');
   const [modalOpen, setModalOpen] = useState(false);
+  const [compareOpen, setCompareOpen] = useState(false);
+  const [compareSlot, setCompareSlot] = useState(null);
   const regionTouchedRef = useRef(Boolean(initialRegion));
+
+  // The portal target lives in a server-rendered part of the page (app/pricing/page.js), so it
+  // only exists in the DOM once mounted on the client.
+  useEffect(() => {
+    setCompareSlot(document.getElementById(COMPARE_SECTION_SLOT_ID));
+  }, []);
+
+  const handleSeeAll = () => {
+    setCompareOpen(true);
+    document.getElementById(COMPARE_SECTION_SLOT_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const handleRegionChange = (next) => {
     regionTouchedRef.current = true;
@@ -82,7 +102,7 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
                 trialNote={plan.trialNote}
                 featuresHeading={plan.featuresHeading}
                 features={plan.features}
-                onSeeAll={() => setModalOpen(true)}
+                onSeeAll={handleSeeAll}
               />
             );
           })}
@@ -101,6 +121,22 @@ export default function NewPricingPlansSection({ hero, prices, plans, featureTab
           onClose={() => setModalOpen(false)}
         />
       )}
+
+      {compareSlot &&
+        createPortal(
+          <NewPricingCompareSection
+            soloPrice={`${regionPrices.solo}${cycleSuffix}`}
+            soloPriceOriginal={cycle === 'annual' ? originalAnnualPrices.solo : null}
+            businessPrice={`${regionPrices.business}${cycleSuffix}`}
+            businessPriceOriginal={cycle === 'annual' ? originalAnnualPrices.business : null}
+            businessProPrice={`${regionPrices.businessPro}${cycleSuffix}`}
+            businessProPriceOriginal={cycle === 'annual' ? originalAnnualPrices.businessPro : null}
+            categories={featureTable}
+            open={compareOpen}
+            onToggle={() => setCompareOpen((o) => !o)}
+          />,
+          compareSlot,
+        )}
     </section>
   );
 }
