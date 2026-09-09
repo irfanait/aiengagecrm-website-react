@@ -1,0 +1,391 @@
+.section {
+  padding: 0 40px 72px;
+  /* Offsets the sticky site header so a scroll-into-view from "See all features" doesn't land
+     with the title tucked underneath it. */
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+/* One card for both the toggle strip and (once expanded) the table below it, so they read as a
+   single section instead of two separate boxes with a gap between them — border/radius/background
+   live here once; .toggleStrip has no background of its own (the card's shows through), so it
+   needs no corner-rounding of its own. No `overflow: hidden` here either (that was the original
+   approach to clip square-cornered children to the card's rounded corners) — an ancestor with
+   non-visible overflow disables `position: sticky` for every descendant, which .header below
+   needs. Only the table's bottom edge has a background that could poke past the card's rounded
+   corner — rounded directly on `.scrollArea > *:last-child` instead. */
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.toggleStrip {
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  cursor: pointer;
+}
+
+.text {
+  flex: 1;
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.toggleBtn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-xs);
+  background: #fff;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.toggleStrip:hover .toggleBtn {
+  background: var(--color-primary-tint);
+  color: var(--color-primary-hover);
+}
+
+@media (max-width: 700px) {
+  /* Same value as every sibling section on this page's mobile override (start-free strip,
+     custom-plan strip, the comparison tiles) so the cards stay aligned at the same width — see
+     each of those files' own @media (max-width: 700px) block. */
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .toggleStrip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .toggleBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Below: the comparison table itself, once expanded — same grid-column/row rules as
+   NewPricingFeatureModal.module.css so the data reads identically, minus the popup-only chrome
+   (overlay, search bar, close button, fixed max-height/vertical scroll) that doesn't apply to an
+   inline page section that simply grows the page. */
+
+.scrollArea {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Rounds off whichever row ends up last (categories/rows are data-driven, so this can't be
+   targeted by a fixed class) to match the card's own bottom corners, now that .card no longer
+   clips its content — see the .card comment above. */
+.scrollArea > *:last-child {
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.header {
+  /* Stays pinned right below the sticky site header while the page scrolls past this section, so
+     the plan names/prices stay visible against a long list of rows. Desktop only: on mobile,
+     .scrollArea gets its own horizontal scroll box below, and `position: sticky` doesn't work
+     across that kind of ancestor boundary — see the media query at the bottom of this file. */
+  position: sticky;
+  top: var(--header-height);
+  z-index: 3;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 34fr 22fr 22fr 22fr;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 34px 18px 26px;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-text);
+  max-width: 20ch;
+  padding-right: 16px;
+}
+
+.headerPrice {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  padding: 12px 10px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(40, 24, 10, 0.06);
+}
+
+.headerPrice:nth-child(3) {
+  background: var(--color-primary-tint);
+  border-color: var(--color-primary-tint-border);
+}
+
+.headerPrice:nth-child(4) {
+  background: var(--color-primary-highlight);
+  border-color: var(--color-primary-dark-accent);
+}
+
+.headerPlanName {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 3px;
+}
+
+.headerPlanPrice {
+  display: block;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.headerPlanOriginal {
+  margin-left: 5px;
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+}
+
+.categoryRow {
+  background: var(--color-primary-tint);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-primary-tint-border);
+  padding: 12px 34px 12px 26px;
+}
+
+.categoryRowHighlight {
+  background: var(--color-primary-highlight);
+  border-bottom-color: var(--color-primary-dark-accent);
+}
+
+.categoryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.categoryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-primary-tint-border);
+  color: var(--color-primary);
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(40, 24, 10, 0.08);
+}
+
+.categoryRowHighlight .categoryIcon {
+  background: #fff;
+  border-color: var(--color-primary-highlight);
+  box-shadow: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 34fr 22fr 22fr 22fr;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 34px 12px 26px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+  transition: background-color 0.12s ease;
+}
+
+.row:hover {
+  background: var(--color-bg);
+}
+
+.rowHighlight {
+  background: var(--color-primary-tint);
+}
+
+.rowHighlight:hover {
+  background: var(--color-primary-tint-border);
+}
+
+.labelCell {
+  min-width: 0;
+  background: inherit;
+}
+
+.rowLabel {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.rowSub {
+  display: block;
+  font-size: 11.5px;
+  color: var(--color-text-faint);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.valueCell {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.dash {
+  color: var(--color-text-faint);
+}
+
+.cellWithAddon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.addonTrigger {
+  position: relative;
+  display: inline-flex;
+  color: var(--color-text-faint);
+  cursor: help;
+  outline: none;
+}
+
+.addonTrigger:hover,
+.addonTrigger:focus {
+  color: var(--color-primary);
+}
+
+.addonTooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 180px;
+  padding: 7px 10px;
+  border-radius: var(--radius-xs);
+  background: var(--color-text);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+  z-index: 5;
+}
+
+.addonTooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: var(--color-text);
+}
+
+.addonTrigger:hover .addonTooltip,
+.addonTrigger:focus .addonTooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 700px) {
+  /* `overflow-x: auto` alone (needed for the horizontal column scroll below) silently forces
+     `overflow-y` to compute as `auto` too — CSS doesn't allow one axis to be non-visible while
+     the other stays visible. That turns .scrollArea into its own scroll container, and since it
+     has no bounded height it never actually overflows vertically, so `.header`'s
+     `position: sticky` has nothing to stick within and goes inert relative to the page. Giving it
+     a real max-height here (same approach the original popup already uses successfully) makes it
+     a genuine scroll box, so sticky works within it — .header switches to `top: 0` below since
+     it's now sticking to this box's own top, not clearing the site nav above the page scroll. */
+  .scrollArea {
+    max-height: 65vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-dashed) transparent;
+    /* .scrollArea now clips its own content (it wasn't clipping anything on desktop, where the
+       `.scrollArea > *:last-child` rule above handles rounding instead) — with a real table taller
+       than 65vh, the row visually sitting at the bottom is whatever's mid-scroll, not necessarily
+       the true last row, so the corner has to be rounded on this box itself, not a specific row. */
+    border-bottom-left-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .header,
+  .row {
+    grid-template-columns: 150px 108px 108px 108px;
+    min-width: 542px;
+    gap: 10px;
+  }
+
+  .categoryRow {
+    min-width: 542px;
+  }
+
+  .headerTitle {
+    max-width: none;
+    padding-right: 12px;
+  }
+
+  .header {
+    padding-left: 16px;
+    padding-right: 22px;
+  }
+
+  .row,
+  .categoryRow {
+    padding: 12px 22px 12px 16px;
+  }
+}

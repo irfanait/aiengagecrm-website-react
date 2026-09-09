@@ -56,6 +56,11 @@ export default async function NewPricingPage() {
         ctaHref={NP_START_FREE.ctaHref}
       />
 
+      {/* NewPricingPlansSection (above) portals the collapsible "Compare plans and features"
+          section into this slot, so it can share that component's live cycle/region price state
+          while still sitting here, just above the "Why AiEngage..." section. */}
+      <div id="pricing-compare-slot" />
+
       <NewPricingComparison
         titleLead={NP_COMPARISON.titleLead}
         titleAccent={NP_COMPARISON.titleAccent}
