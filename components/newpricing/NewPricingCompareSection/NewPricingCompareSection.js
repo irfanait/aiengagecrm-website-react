@@ -60,7 +60,13 @@ export default function NewPricingCompareSection({
     <section id="pricing-compare" className={styles.section}>
       <Container>
         <div className={styles.card}>
-          <div className={styles.toggleStrip} onClick={onToggle} role="button" tabIndex={0} aria-expanded={open}>
+          <div
+            className={`${styles.toggleStrip} ${open ? styles.toggleStripOpen : ''}`}
+            onClick={onToggle}
+            role="button"
+            tabIndex={0}
+            aria-expanded={open}
+          >
             <div className={styles.text}>
               <div className={styles.title}>Compare plans and features</div>
               <p className={styles.desc}>See every feature and limit across Solo, Business and Business Pro, side by side.</p>

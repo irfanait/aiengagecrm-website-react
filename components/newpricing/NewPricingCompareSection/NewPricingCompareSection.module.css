@@ -6,25 +6,34 @@
 }
 
 /* One card for both the toggle strip and (once expanded) the table below it, so they read as a
-   single section instead of two separate boxes with a gap between them — border/radius/background
-   live here once; .toggleStrip has no background of its own (the card's shows through), so it
-   needs no corner-rounding of its own. No `overflow: hidden` here either (that was the original
-   approach to clip square-cornered children to the card's rounded corners) — an ancestor with
-   non-visible overflow disables `position: sticky` for every descendant, which .header below
-   needs. Only the table's bottom edge has a background that could poke past the card's rounded
-   corner — rounded directly on `.scrollArea > *:last-child` instead. */
+   single section instead of two separate boxes with a gap between them — border lives here once.
+   No `overflow: hidden` here (that was the original approach to clip square-cornered children to
+   the card's rounded corners) — an ancestor with non-visible overflow disables `position: sticky`
+   for every descendant, which .header below needs. .toggleStrip and the table's bottom edge each
+   have their own background now, so each rounds its own matching corners instead — see
+   .toggleStripOpen below and `.scrollArea > *:last-child` further down. */
 .card {
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
 }
 
+/* Orange fill (same as the site's primary-button color) so this bar doesn't read as a duplicate
+   of the white "Start Free" strip above it — shorter too (less vertical padding) for the same
+   reason. All 4 corners rounded to match the card exactly while collapsed (it's the whole card
+   then); .toggleStripOpen switches to just the top 2 once the table is showing below it. */
 .toggleStrip {
-  padding: 28px 32px;
+  background: var(--color-primary);
+  padding: 18px 32px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   gap: 28px;
   cursor: pointer;
+}
+
+.toggleStripOpen {
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .text {
@@ -34,7 +43,7 @@
 .title {
   font-size: 19px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #fff;
   margin-bottom: 8px;
 }
 
@@ -42,15 +51,17 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.6;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 1);
 }
 
+/* White pill on the orange strip — the inverse of the strip's own colors, same "filled button,
+   light label" contrast pattern as the site's primary buttons elsewhere. */
 .toggleBtn {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1.5px solid var(--color-primary);
+  border: 1.5px solid #fff;
   color: var(--color-primary);
   font-size: 14.5px;
   font-weight: 600;
@@ -77,7 +88,7 @@
   .toggleStrip {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 16px;
   }
 
   .toggleBtn {
