@@ -1,10 +1,10 @@
 // Content for the /partners page (AiEngage Partner Program).
 
 export const PARTNER_HERO = {
-  badge: 'AiEngage Partner Program',
+  badge: 'AiEngage CRM Partner Program',
   headingLine1: 'Build Your AI Business.',
   headingLine2: 'Grow With ',
-  headingAccent: 'AiEngage.',
+  headingAccent: 'AiEngage CRM.',
   description:
     'Help businesses automate sales, WhatsApp, calling, marketing and customer engagement with AI — while building your own recurring revenue.',
   highlight: 'Earn up to 35% commission for 1 year.',
@@ -44,7 +44,7 @@ export const PARTNER_ROLES = {
   paragraphs: [
     "Businesses need more than a CRM. They need someone who can help them understand how to use AI, automation and marketing to grow. That's where you come in.",
   ],
-  paragraphLead: 'AiEngage provides the technology. ',
+  paragraphLead: 'AiEngage CRM provides the technology. ',
   paragraphAccent: 'You become their trusted consultant.',
   items: [
     {
@@ -110,9 +110,9 @@ export const PARTNER_EARN = {
     },
     {
       icon: 'groups',
-      title: 'Get Leads From AiEngage',
+      title: 'Get Leads From AiEngage CRM',
       description:
-        'Grow your partner level and become eligible to receive consulting, implementation and marketing opportunities directly from AiEngage.',
+        'Grow your partner level and become eligible to receive consulting, implementation and marketing opportunities directly from AiEngage CRM.',
     },
   ],
   flow: [
@@ -150,7 +150,7 @@ export const PARTNER_TIERS = {
         'Priority demo support',
         'Joint customer meetings',
         'Co-marketing opportunities',
-        'Selected AiEngage leads',
+        'Selected AiEngage CRM leads',
       ],
       ctaLabel: 'Become a Growth Partner',
       ctaHref: '/partners/signup?tier=growth',
@@ -167,7 +167,7 @@ export const PARTNER_TIERS = {
         'Everything in Growth',
         'Priority sales support',
         'Advanced partner training',
-        'Priority AiEngage opportunities',
+        'Priority AiEngage CRM opportunities',
         'Consulting & implementation leads',
         'Marketing opportunities',
         'Joint GTM opportunities',
@@ -197,14 +197,14 @@ export const PARTNER_SUPPORT = {
   headingLine2Suffix: '.',
   items: [
     { icon: 'support_agent', title: 'Sales Support', description: 'Bring our team into important customer conversations.' },
-    { icon: 'play_circle', title: 'Live Demo Support', description: "We'll help demonstrate AiEngage based on the client's business." },
+    { icon: 'play_circle', title: 'Live Demo Support', description: "We'll help demonstrate AiEngage CRM based on the client's business." },
     { icon: 'build_circle', title: 'Technical Support', description: 'Get help with AI agents, CRM, integrations and automation.' },
     { icon: 'school', title: 'Partner Training', description: 'Learn how to identify AI and automation opportunities.' },
     { icon: 'folder_open', title: 'Marketing Resources', description: 'Get decks, use cases, creatives and sales material.' },
     {
       icon: 'workspace_premium',
       title: 'Business Opportunities',
-      description: 'Higher-level partners can receive relevant opportunities from AiEngage.',
+      description: 'Higher-level partners can receive relevant opportunities from AiEngage CRM.',
     },
   ],
 };
@@ -214,9 +214,9 @@ export const PARTNER_STEPS = {
   heading: 'Start Today. Grow With Us.',
   steps: [
     { icon: 'how_to_reg', title: 'Sign Up', description: 'Complete the partner application.' },
-    { icon: 'school', title: 'Get Trained', description: 'Understand AiEngage, use cases and how to pitch it.' },
+    { icon: 'school', title: 'Get Trained', description: 'Understand AiEngage CRM, use cases and how to pitch it.' },
     { icon: 'handshake', title: 'Refer & Consult', description: 'Introduce businesses or sell your own consulting services.' },
-    { icon: 'support_agent', title: 'We Help You Close', description: "Use AiEngage's sales, demo and technical support." },
+    { icon: 'support_agent', title: 'We Help You Close', description: "Use AiEngage CRM's sales, demo and technical support." },
     { icon: 'trending_up', title: 'Earn & Level Up', description: 'Build recurring commissions and unlock more opportunities.' },
   ],
 };
@@ -244,7 +244,7 @@ export const PARTNER_WHO = {
   headingLead: "Already Helping Businesses Grow? You're a ",
   headingAccent: 'Perfect Fit',
   headingSuffix: '.',
-  description: 'If you already advise, build for or market to businesses, you can add AiEngage to what you sell today.',
+  description: 'If you already advise, build for or market to businesses, you can add AiEngage CRM to what you sell today.',
   items: [
     { icon: 'campaign', label: 'Marketing Agencies' },
     { icon: 'dns', label: 'IT Companies' },
@@ -258,7 +258,7 @@ export const PARTNER_WHO = {
 };
 
 export const PARTNER_CTA = {
-  label: 'AiEngage Partner Program',
+  label: 'AiEngage CRM Partner Program',
   headingLine1: 'Your Network Has Value.',
   headingLine2: 'Turn It Into a ',
   headingAccent: 'Business',
@@ -267,13 +267,13 @@ export const PARTNER_CTA = {
     'Help businesses adopt AI.',
     'Build recurring income.',
     'Offer consulting & marketing services.',
-    'And unlock new business opportunities from AiEngage as you grow.',
+    'And unlock new business opportunities from AiEngage CRM as you grow.',
   ],
   earnLabel: 'Earn Up to 35% for 1 Year',
   ctaLabel: 'Sign Up as a Partner',
   ctaHref: '/partners/signup',
   note: 'Free to join · No technical expertise required',
-  footerNote: 'You build the relationship. AiEngage powers the technology.',
+  footerNote: 'You build the relationship. AiEngage CRM powers the technology.',
 };
 
 // --- /partners/signup ---------------------------------------------------
@@ -287,7 +287,7 @@ export const PARTNER_SIGNUP_BANDS = {
 };
 
 export const PARTNER_SIGNUP_HERO = {
-  title: 'Become an AiEngage Partner',
+  title: 'Become an AiEngage CRM Partner',
   description:
     'Help businesses automate sales, WhatsApp, calling and marketing with AI — while building your own recurring revenue.',
   highlight: 'Earn up to 35% commission for 1 year.',
@@ -296,7 +296,7 @@ export const PARTNER_SIGNUP_HERO = {
   exploreLevelsLabel: 'Explore all partner levels',
   exploreLevelsHref: '/partners#partner-levels',
   checks: ['Free to join', 'Partner training', 'Sales support', 'Business opportunities'],
-  termsNoteLead: 'By submitting, you agree to the AiEngage Partner Program Terms and ',
+  termsNoteLead: 'By submitting, you agree to the AiEngage CRM Partner Program Terms and ',
   termsNoteSuffix: '.',
 };
 
@@ -310,13 +310,13 @@ export const PARTNER_FAQS = [
     q: 'How do partner levels work?',
     a: 'Levels are based on active customers: 1–5 = Associate (20%), 6–15 = Growth (30%), 16+ = Elite (35%).',
   },
-  { q: 'Do I need technical expertise?', a: 'No — you get sales, live demo and technical support from AiEngage.' },
+  { q: 'Do I need technical expertise?', a: 'No — you get sales, live demo and technical support from AiEngage CRM.' },
   {
     q: 'What support do I get?',
     a: 'Partner training, sales support, live demo support, technical support and marketing resources.',
   },
   {
-    q: 'How are AiEngage leads and opportunities allocated?',
+    q: 'How are AiEngage CRM leads and opportunities allocated?',
     a: 'Higher levels get priority access to consulting, implementation and marketing opportunities; subject to program terms.',
   },
   { q: 'When and how do I get paid?', a: '[Placeholder — confirm payout schedule and method.]' },
