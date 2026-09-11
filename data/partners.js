@@ -1,7 +1,7 @@
 // Content for the /partners page (AiEngage Partner Program).
 
 export const PARTNER_HERO = {
-  badge: 'AiEngage CRM Partner Program',
+  badge: 'AiEngage Partner Program',
   headingLine1: 'Build Your AI Business.',
   headingLine2: 'Grow With ',
   headingAccent: 'AiEngage CRM.',
@@ -258,7 +258,7 @@ export const PARTNER_WHO = {
 };
 
 export const PARTNER_CTA = {
-  label: 'AiEngage CRM Partner Program',
+  label: 'AiEngage Partner Program',
   headingLine1: 'Your Network Has Value.',
   headingLine2: 'Turn It Into a ',
   headingAccent: 'Business',
