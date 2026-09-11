@@ -18,12 +18,13 @@
   border-radius: var(--radius-sm);
 }
 
-/* Orange fill (same as the site's primary-button color) so this bar doesn't read as a duplicate
-   of the white "Start Free" strip above it — shorter too (less vertical padding) for the same
-   reason. All 4 corners rounded to match the card exactly while collapsed (it's the whole card
-   then); .toggleStripOpen switches to just the top 2 once the table is showing below it. */
+/* Same background/text treatment as the "Need a Custom Plan?" strip elsewhere on this page
+   (--color-primary-tint) rather than a different shade of its own — consistent with that
+   established card style instead of introducing a new one. Shorter than a default strip too (less
+   vertical padding). All 4 corners rounded to match the card exactly while collapsed (it's the
+   whole card then); .toggleStripOpen switches to just the top 2 once the table is showing below. */
 .toggleStrip {
-  background: var(--color-primary);
+  background: var(--color-primary-tint);
   padding: 18px 32px;
   border-radius: var(--radius-sm);
   display: flex;
@@ -43,7 +44,7 @@
 .title {
   font-size: 19px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-primary);
   margin-bottom: 8px;
 }
 
@@ -51,17 +52,15 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-text-muted);
 }
 
-/* White pill on the orange strip — the inverse of the strip's own colors, same "filled button,
-   light label" contrast pattern as the site's primary buttons elsewhere. */
 .toggleBtn {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1.5px solid #fff;
+  border: 1.5px solid var(--color-primary);
   color: var(--color-primary);
   font-size: 14.5px;
   font-weight: 600;
