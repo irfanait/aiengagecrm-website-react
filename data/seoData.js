@@ -153,6 +153,22 @@ export const seoData = {
     keywords: ['customer service software', 'shared support inbox', 'AI support agent', 'support ticket management', 'omnichannel customer support'],
     image: '/og/customer-service-support.png',
   },
+  aiVoiceCallDemo: {
+    path: '/ai-voice-call-demo',
+    title: 'AI Voice Call Demo | Hear Our AI Voice Agent Call You | AiEngage',
+    description:
+      'Drop your number and our AI Voice Agent will call you within seconds — qualifying, answering questions and booking the next step, logged straight into your CRM.',
+    keywords: ['AI voice agent demo', 'AI voice call', 'AI calling CRM', 'AI phone agent', 'conversational AI voice'],
+    image: '/og/ai-voice-call-demo.png',
+  },
+  shopifyPartner: {
+    path: '/shopify-partner',
+    title: 'CRM for Shopify Apps & Agencies | AI-Powered CRM | AiEngage',
+    description:
+      'The AI-powered CRM built for Shopify apps and agencies — capture Meta & Google leads, run one shared inbox, qualify with AI, and automate the entire customer journey.',
+    keywords: ['CRM for Shopify apps', 'CRM for Shopify agencies', 'Shopify partner CRM', 'agency CRM', 'AI CRM for SaaS'],
+    image: '/og/shopify-partner.png',
+  },
   ai: {
     path: '/ai',
     title: 'AI CRM | Smart Summaries, AI Chatbot & Sales Insights | AiEngage',

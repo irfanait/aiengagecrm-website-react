@@ -14,6 +14,7 @@ export const NAV_LINKS = [
       { label: 'Finance', href: '/industries/finance', icon: 'account_balance' },
       { label: 'Education', href: '/industries/education', icon: 'school' },
       { label: 'IT & Technology', href: '/industries/it', icon: 'computer' },
+      { label: 'Shopify Apps & Agencies', href: '/shopify-partner', icon: 'storefront' },
     ],
   },
   {

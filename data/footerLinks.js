@@ -35,6 +35,7 @@ export const FOOTER_COLUMNS = [
       { label: 'Tours & Travels', href: '/industries/tours-travels' },
       { label: 'Finance', href: '/industries/finance' },
       { label: 'IT', href: '/industries/it' },
+      { label: 'Shopify Apps & Agencies', href: '/shopify-partner' },
     ],
   },
   {

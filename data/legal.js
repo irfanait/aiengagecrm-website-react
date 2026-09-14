@@ -415,6 +415,7 @@ export const TERMS_OF_SERVICE = {
 
 export const PRIVACY_POLICY = {
   title: 'Privacy Policy',
+  lastUpdated: '14 September 2026',
   sections: [
     {
       number: 1,
@@ -515,6 +516,16 @@ export const PRIVACY_POLICY = {
             'Conduct marketing where lawfully permitted.',
           ],
         },
+        {
+          type: 'paragraph',
+          parts: [
+            {
+              text: 'These purposes are limited where data is received from Google APIs. Data obtained through Google APIs is used only to provide and improve the user-facing features the user has requested, and is not used for product analytics, advertising or marketing. Such data is governed by the ',
+            },
+            { text: 'Google User Data and Limited Use Disclosure', href: '#google-limited-use' },
+            { text: ' in Section 6, which takes precedence over this Section.' },
+          ],
+        },
       ],
     },
     {
@@ -539,10 +550,99 @@ export const PRIVACY_POLICY = {
           type: 'paragraph',
           text: 'The applicable treatment of data by third-party AI providers will depend on AiEngage’s configuration and contractual arrangements with those providers.',
         },
+        {
+          type: 'paragraph',
+          parts: [
+            {
+              text: 'Where an AI feature processes data received from Google APIs, that data is transmitted solely to return the requested output to the user. Neither AiEngage nor any third-party AI provider retains such data beyond what is necessary to deliver that output, and neither uses it to develop, train, fine-tune or improve any artificial intelligence or machine learning model. See the ',
+            },
+            { text: 'Google User Data and Limited Use Disclosure', href: '#google-limited-use' },
+            { text: ' in Section 6.' },
+          ],
+        },
       ],
     },
     {
       number: 6,
+      heading: 'Google User Data and Limited Use Disclosure',
+      anchor: 'google-limited-use',
+      blocks: [
+        {
+          type: 'paragraph',
+          parts: [
+            { text: 'AiEngage’s access to, use of, and transfer of information received from Google APIs, including Google Workspace APIs, adheres to the ' },
+            {
+              text: 'Google API Services User Data Policy',
+              href: 'https://developers.google.com/terms/api-services-user-data-policy',
+              external: true,
+            },
+            { text: ', including the Limited Use requirements.' },
+          ],
+        },
+        {
+          type: 'paragraph',
+          text: 'The use of raw or derived user data received from Workspace APIs will adhere to the Google User Data Policy, including the Limited Use requirements.',
+        },
+        { type: 'subheading', text: 'No use for AI or machine learning model development' },
+        {
+          type: 'paragraph',
+          text: 'We do not use, transfer, or sell Google user data — whether raw, aggregated, or derived — to develop, train, fine-tune, or improve any foundational or generalized artificial intelligence or machine learning model. Google user data is processed solely to provide and improve the user-facing features that the user or Customer has explicitly enabled and requested.',
+        },
+        {
+          type: 'paragraph',
+          text: 'Where a user-facing feature requires processing Google user data through a third-party artificial intelligence or machine learning service provider, that data is transmitted only for the purpose of returning the requested output to the user. Such providers are contractually prohibited from retaining, reusing, or training any model on that data.',
+        },
+        { type: 'subheading', text: 'No advertising and limited transfer' },
+        { type: 'paragraph', text: 'Google user data is never used for advertising or ad targeting, and is not sold. It is not transferred to third parties except:' },
+        {
+          type: 'list',
+          items: [
+            'As necessary to provide or improve the user-facing features the user has requested;',
+            'To comply with applicable law; or',
+            'As part of a merger or acquisition, with prior notice to affected users.',
+          ],
+        },
+        { type: 'subheading', text: 'Human access' },
+        { type: 'paragraph', text: 'Humans do not read Google user data unless:' },
+        {
+          type: 'list',
+          items: [
+            'The user has given affirmative consent to access specific messages or items;',
+            'It is necessary for security purposes, such as investigating abuse;',
+            'It is required to comply with applicable law; or',
+            'The data has been aggregated and anonymized for internal operations.',
+          ],
+        },
+        { type: 'subheading', text: 'Retention and revocation' },
+        {
+          type: 'paragraph',
+          parts: [
+            {
+              text: 'Google user data is retained only for as long as necessary to provide the requested functionality. Users may revoke AiEngage’s access to their Google account at any time through ',
+            },
+            { text: 'Google Account permissions', href: 'https://myaccount.google.com/permissions', external: true },
+            {
+              text: ', or by disconnecting the integration within AiEngage. Following revocation or account deletion, associated Google user data is deleted from our systems, except where retention is required by law.',
+            },
+          ],
+        },
+        { type: 'subheading', text: 'Precedence' },
+        {
+          type: 'paragraph',
+          text: 'This Section governs data received from Google APIs specifically, and takes precedence over any more general statement elsewhere in this Privacy Policy.',
+        },
+        {
+          type: 'paragraph',
+          parts: [
+            { text: 'Questions regarding our handling of Google user data may be sent to ' },
+            { text: 'privacy@aiengagecrm.com', href: 'mailto:privacy@aiengagecrm.com' },
+            { text: '.' },
+          ],
+        },
+      ],
+    },
+    {
+      number: 7,
       heading: 'Cookies',
       blocks: [
         { type: 'paragraph', text: 'Our website may use cookies and similar technologies for:' },
@@ -551,7 +651,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 7,
+      number: 8,
       heading: 'Sharing of Information',
       blocks: [
         { type: 'paragraph', text: 'We may disclose data to authorized service providers supporting:' },
@@ -563,10 +663,14 @@ export const PRIVACY_POLICY = {
           type: 'paragraph',
           text: 'We may also disclose information when required by law or in connection with corporate transactions such as mergers or acquisitions.',
         },
+        {
+          type: 'paragraph',
+          text: 'Data received from Google APIs is not shared with analytics, advertising or marketing service providers, and is disclosed only to the service providers strictly necessary to deliver the user-facing feature the user has requested, as described in Section 6.',
+        },
       ],
     },
     {
-      number: 8,
+      number: 9,
       heading: 'International Processing',
       blocks: [
         { type: 'paragraph', text: 'Some service providers may process information in jurisdictions outside the Customer’s or individual’s country.' },
@@ -574,7 +678,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 9,
+      number: 10,
       heading: 'Data Security',
       blocks: [
         {
@@ -585,7 +689,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 10,
+      number: 11,
       heading: 'Retention',
       blocks: [
         {
@@ -596,7 +700,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 11,
+      number: 12,
       heading: 'Individual Rights',
       blocks: [
         {
@@ -604,12 +708,18 @@ export const PRIVACY_POLICY = {
           text: 'Depending on applicable law, individuals may have rights regarding their personal information, including rights to request access/correction or exercise other applicable data rights.',
         },
         { type: 'paragraph', text: 'Requests concerning data held by an AiEngage customer should ordinarily be directed to that customer.' },
-        { type: 'paragraph', text: 'Requests concerning information controlled directly by AiEngage can be sent to: privacy@aiengagecrm.com' },
+        {
+          type: 'paragraph',
+          parts: [
+            { text: 'Requests concerning information controlled directly by AiEngage can be sent to: ' },
+            { text: 'privacy@aiengagecrm.com', href: 'mailto:privacy@aiengagecrm.com' },
+          ],
+        },
         { type: 'paragraph', text: 'We may verify identity before responding.' },
       ],
     },
     {
-      number: 12,
+      number: 13,
       heading: 'Marketing Preferences',
       blocks: [
         { type: 'paragraph', text: 'Recipients may opt out of AiEngage’s own marketing communications through the applicable unsubscribe or preference mechanism.' },
@@ -617,7 +727,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 13,
+      number: 14,
       heading: 'Children',
       blocks: [
         { type: 'paragraph', text: 'AiEngage is designed primarily for businesses and is not intended as a consumer service for children.' },
@@ -628,7 +738,7 @@ export const PRIVACY_POLICY = {
       ],
     },
     {
-      number: 14,
+      number: 15,
       heading: 'Changes',
       blocks: [
         { type: 'paragraph', text: 'We may update this Privacy Policy periodically.' },

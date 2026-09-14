@@ -16,7 +16,12 @@ export default function PrivacyPolicyPage() {
         ])}
       />
 
-      <LegalPage title={PRIVACY_POLICY.title} sections={PRIVACY_POLICY.sections} meta={LEGAL_META} />
+      <LegalPage
+        title={PRIVACY_POLICY.title}
+        sections={PRIVACY_POLICY.sections}
+        meta={LEGAL_META}
+        lastUpdated={PRIVACY_POLICY.lastUpdated}
+      />
     </>
   );
 }

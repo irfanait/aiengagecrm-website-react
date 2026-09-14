@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import styles from './NewPricingCompareSection.module.css';
@@ -56,6 +56,15 @@ export default function NewPricingCompareSection({
   open,
   onToggle,
 }) {
+  // Accordion state for the category groups below — first category starts open, the rest
+  // collapsed; opening one closes whichever else was open (single-select), same convention as
+  // DashboardShowcaseV2's mobile accordion.
+  const [openCategory, setOpenCategory] = useState(0);
+
+  const toggleCategory = (i) => {
+    setOpenCategory((prev) => (prev === i ? -1 : i));
+  };
+
   return (
     <section id="pricing-compare" className={styles.section}>
       <Container>
@@ -106,37 +115,52 @@ export default function NewPricingCompareSection({
                 </div>
               </div>
 
-              {categories.map((cat) => (
-                <Fragment key={cat.title}>
-                  <div className={`${styles.categoryRow} ${cat.highlight ? styles.categoryRowHighlight : ''}`}>
-                    <span className={styles.categoryLabel}>
-                      <span className={styles.categoryIcon}>
-                        <Icon name={cat.icon} size={15} filled />
+              {categories.map((cat, i) => {
+                const isOpen = openCategory === i;
+                return (
+                  <Fragment key={cat.title}>
+                    <div
+                      className={`${styles.categoryRow} ${cat.highlight ? styles.categoryRowHighlight : ''}`}
+                      onClick={() => toggleCategory(i)}
+                      role="button"
+                      tabIndex={0}
+                      aria-expanded={isOpen}
+                    >
+                      <span className={styles.categoryLabel}>
+                        <span className={styles.categoryIcon}>
+                          <Icon name={cat.icon} size={15} filled />
+                        </span>
+                        {cat.title}
                       </span>
-                      {cat.title}
-                    </span>
-                  </div>
-                  {cat.rows.map((row) => (
-                    // `${label}-${sub}` rather than just label: a couple of rows in the source
-                    // sheet (e.g. two "AI Follow ups" entries with different `sub` text) share a label.
-                    <div key={`${row.label}-${row.sub}`} className={`${styles.row} ${cat.highlight ? styles.rowHighlight : ''}`}>
-                      <div className={styles.labelCell}>
-                        <span className={styles.rowLabel}>{row.label}</span>
-                        {row.sub && <span className={styles.rowSub}>{row.sub}</span>}
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.solo} addon={row.addon} />
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.business} addon={row.addon} />
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.businessPro} addon={row.addon} />
-                      </div>
+                      <Icon
+                        name={isOpen ? 'expand_less' : 'expand_more'}
+                        size={19}
+                        className={styles.categoryChevron}
+                      />
                     </div>
-                  ))}
-                </Fragment>
-              ))}
+                    {isOpen &&
+                      cat.rows.map((row) => (
+                        // `${label}-${sub}` rather than just label: a couple of rows in the source
+                        // sheet (e.g. two "AI Follow ups" entries with different `sub` text) share a label.
+                        <div key={`${row.label}-${row.sub}`} className={`${styles.row} ${cat.highlight ? styles.rowHighlight : ''}`}>
+                          <div className={styles.labelCell}>
+                            <span className={styles.rowLabel}>{row.label}</span>
+                            {row.sub && <span className={styles.rowSub}>{row.sub}</span>}
+                          </div>
+                          <div className={styles.valueCell}>
+                            <Cell value={row.solo} addon={row.addon} />
+                          </div>
+                          <div className={styles.valueCell}>
+                            <Cell value={row.business} addon={row.addon} />
+                          </div>
+                          <div className={styles.valueCell}>
+                            <Cell value={row.businessPro} addon={row.addon} />
+                          </div>
+                        </div>
+                      ))}
+                  </Fragment>
+                );
+              })}
             </div>
           )}
         </div>

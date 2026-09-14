@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Container from '../../common/Container/Container';
 import styles from './LegalPage.module.css';
 
@@ -14,6 +15,24 @@ function Block({ block }) {
       </ul>
     );
   }
+  // A paragraph can be a plain string (`text`) or, when it needs an inline link (e.g. pointing to
+  // another section's anchor, or an external policy page), a `parts` array mixing plain-text
+  // segments with `{ text, href, external }` link segments.
+  if (block.parts) {
+    return (
+      <p className={styles.paragraph}>
+        {block.parts.map((part, i) =>
+          part.href ? (
+            <a key={i} href={part.href} target={part.external ? '_blank' : undefined} rel={part.external ? 'noopener noreferrer' : undefined}>
+              {part.text}
+            </a>
+          ) : (
+            <Fragment key={i}>{part.text}</Fragment>
+          )
+        )}
+      </p>
+    );
+  }
   return <p className={styles.paragraph}>{block.text}</p>;
 }
 
@@ -23,14 +42,14 @@ function Block({ block }) {
  * company-details footer. Used by /terms-of-service and /privacy-policy — content lives in
  * data/legal.js so this component stays purely structural.
  */
-export default function LegalPage({ title, intro, sections, meta }) {
+export default function LegalPage({ title, intro, sections, meta, lastUpdated }) {
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.metaLine}>
-            Effective Date: {meta.effectiveDate} &middot; Last Updated: {meta.lastUpdated}
+            Effective Date: {meta.effectiveDate} &middot; Last Updated: {lastUpdated || meta.lastUpdated}
           </p>
         </header>
 
@@ -43,7 +62,7 @@ export default function LegalPage({ title, intro, sections, meta }) {
             ))}
           {sections.map((sec) => (
             <div key={sec.number} className={styles.sectionBlock}>
-              <h2 className={styles.sectionHeading}>
+              <h2 id={sec.anchor} className={styles.sectionHeading}>
                 {sec.number}. {sec.heading}
               </h2>
               {sec.blocks.map((block, i) => (

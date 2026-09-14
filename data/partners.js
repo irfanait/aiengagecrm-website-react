@@ -319,7 +319,7 @@ export const PARTNER_FAQS = [
     q: 'How are AiEngage CRM leads and opportunities allocated?',
     a: 'Higher levels get priority access to consulting, implementation and marketing opportunities; subject to program terms.',
   },
-  { q: 'When and how do I get paid?', a: '[Placeholder — confirm payout schedule and method.]' },
+  { q: 'When and how do I get paid?', a: 'Partner commissions are paid quarterly through PayPal.' },
 ];
 
 export const PARTNER_SIGNUP_TERMS = {
