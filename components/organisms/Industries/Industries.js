@@ -5,16 +5,19 @@ import SectionHeading from '../../molecules/SectionHeading/SectionHeading';
 import { INDUSTRIES } from '../../../data/homeContent';
 import styles from './Industries.module.css';
 
-export default function Industries() {
+export default function Industries({
+  title = 'Built for the way your industry sells.',
+  desc = 'Custom pipelines, fields and automations shape AiEngage around your business — not the other way round.',
+  showEyebrow = true,
+  white = false,
+}) {
   return (
-    <section id="industries" className={styles.section}>
+    <section id="industries" className={`${styles.section} ${white ? styles.sectionWhite : ''}`}>
       <Container className={styles.body}>
         <div className={styles.intro}>
-          <SectionHeading index="06" label="INDUSTRIES" title="" className={styles.tagOnly} />
-          <h2 className={styles.title}>Built for the way your industry sells.</h2>
-          <p className={styles.desc}>
-            Custom pipelines, fields and automations shape AiEngage around your business — not the other way round.
-          </p>
+          {showEyebrow && <SectionHeading index="06" label="INDUSTRIES" title="" className={styles.tagOnly} />}
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.desc}>{desc}</p>
         </div>
 
         <div className={styles.pills}>
