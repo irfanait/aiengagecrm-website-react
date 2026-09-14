@@ -3,6 +3,10 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.sectionWhite {
+  background: #fff;
+}
+
 .body {
   display: flex;
   gap: 70px;
