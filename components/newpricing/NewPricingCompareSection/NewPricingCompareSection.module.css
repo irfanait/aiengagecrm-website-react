@@ -185,6 +185,16 @@
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-primary-tint-border);
   padding: 12px 34px 12px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.categoryChevron {
+  flex-shrink: 0;
+  color: var(--color-primary);
 }
 
 .categoryRowHighlight {
