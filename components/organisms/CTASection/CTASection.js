@@ -19,7 +19,6 @@ export default function CTASection({
   note,
   centered = true,
   titleSize = 42,
-  stats,
 }) {
   return (
     <section className={`${styles.section} ${centered ? styles.sectionCompact : ''}`}>
@@ -54,16 +53,6 @@ export default function CTASection({
             {note && <span className={styles.note}>{note}</span>}
           </div>
         </div>
-
-        {stats && stats.length > 0 && (
-          <div className={styles.stats}>
-            {stats.map((s) => (
-              <span key={s.label} className={styles.statItem}>
-                <b className={styles.statValue}>{s.value}</b> {s.label}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );
