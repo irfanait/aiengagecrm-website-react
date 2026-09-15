@@ -225,6 +225,11 @@ const nextConfig = {
         hostname: 'aiengagecrm-kb-portal.s3.ap-south-1.amazonaws.com',
       },
     ],
+    // Next.js 16 defaults this to [75] only and silently clamps any other `quality` prop down to
+    // the nearest allowed value — every `quality={90..100}` prop anywhere on the site was being
+    // ignored (served at 75) until this was added. Keep 75 as the default for images where quality
+    // doesn't matter (thumbnails, icons) and allow higher values for detailed screenshots/photos.
+    qualities: [75, 90, 95, 100],
   },
 };
 

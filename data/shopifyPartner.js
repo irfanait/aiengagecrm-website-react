@@ -82,6 +82,7 @@ export const FEATURE_ROWS = [
     image: '/shopify-partner/lead-capture.webp',
     imageAlt: 'Meta & Google leads captured straight into AiEngage CRM',
     reverse: false,
+    rawImage: true, // Test: plain <img>, bypassing next/image — compare against the rest before deciding whether to switch site-wide.
   },
   {
     id: 'team-inbox',
