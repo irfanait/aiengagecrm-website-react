@@ -116,6 +116,15 @@
   .checks {
     grid-template-columns: 1fr;
   }
+
+  /* .art's `flex: 1 1 0` (set for the desktop side-by-side split) collapses its height to ~0 in
+     this column layout, since there's no fixed height on .card to grow into — with overflow:
+     hidden that clipped the image to a thin sliver instead of showing it at full size. */
+  .art {
+    flex: none;
+    width: 100%;
+    padding: 24px;
+  }
 }
 
 @media (max-width: 600px) {

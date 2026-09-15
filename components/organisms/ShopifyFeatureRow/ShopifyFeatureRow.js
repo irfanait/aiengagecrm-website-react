@@ -8,7 +8,20 @@ import styles from './ShopifyFeatureRow.module.css';
  * (`reverse` flips which side the image sits on). `groupHeading` renders the shared "One CRM to
  * Automate the Entire Customer Journey" heading above the card, passed only on the first row.
  */
-export default function ShopifyFeatureRow({ id, heading, accent, tail, desc, checks, flow, image, imageAlt, reverse = false, groupHeading }) {
+export default function ShopifyFeatureRow({
+  id,
+  heading,
+  accent,
+  tail,
+  desc,
+  checks,
+  flow,
+  image,
+  imageAlt,
+  reverse = false,
+  groupHeading,
+  rawImage = false,
+}) {
   return (
     <section id={id} className={styles.section}>
       <Container>
@@ -34,14 +47,23 @@ export default function ShopifyFeatureRow({ id, heading, accent, tail, desc, che
           </div>
 
           <div className={styles.art}>
-            <Image
-              src={image}
-              alt={imageAlt}
-              width={1484}
-              height={1060}
-              className={styles.image}
-              sizes="(max-width: 900px) 100vw, 555px"
-            />
+            {rawImage ? (
+              // Test path: serves the source file's bytes directly, bypassing next/image's
+              // resize/re-encode entirely — no responsive srcset, no format negotiation, no
+              // built-in CLS sizing, just the original file at whatever size CSS renders it.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={image} alt={imageAlt} className={styles.image} loading="lazy" />
+            ) : (
+              <Image
+                src={image}
+                alt={imageAlt}
+                width={1484}
+                height={1060}
+                className={styles.image}
+                sizes="(max-width: 900px) 100vw, 555px"
+                quality={95}
+              />
+            )}
           </div>
         </div>
       </Container>
