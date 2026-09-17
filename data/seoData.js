@@ -4,9 +4,9 @@
 export const seoData = {
   home: {
     path: '/',
-    title: 'AiEngage CRM | AI-Powered CRM to Automate Leads, Sales & WhatsApp',
+    title: 'AI CRM Software for Sales Teams | AiEngage CRM',
     description:
-      'Capture leads, engage customers on WhatsApp, email and calls, and let AI handle the follow-ups — all in one CRM your sales team will actually use.',
+      'AiEngage CRM is an AI-powered CRM software built for sales teams in India. Automate leads, WhatsApp, and pipelines — all in one platform.',
     keywords: [
       'AI CRM',
       'CRM software',
@@ -19,113 +19,113 @@ export const seoData = {
   },
   whatsappHub: {
     path: '/whatsapp',
-    title: 'WhatsApp Business CRM | Shared Inbox, Broadcast & AI Agent | AiEngage',
+    title: 'WhatsApp CRM Software for Business | AiEngage CRM',
     description:
-      'WhatsApp for smarter sales and stronger customer connections — shared team inbox, multiple numbers, broadcasts, automation, flows, segmentation and a 24/7 AI Agent, inside AiEngage CRM.',
+      'Manage leads and conversations with WhatsApp CRM integration. AI agent automates WhatsApp Business chats and sales follow-ups.',
     keywords: ['WhatsApp CRM', 'WhatsApp Business API', 'WhatsApp automation', 'WhatsApp AI agent'],
     image: '/og/whatsapp.png',
   },
   multichannelCommunication: {
     path: '/multichannel-communication',
-    title: 'Multichannel Communication CRM | Email, Calling & WhatsApp | AiEngage',
+    title: 'Omnichannel CRM Software | AiEngage CRM',
     description:
-      'Keep every call, email, WhatsApp chat, and follow-up connected in one CRM — mass email, built-in calling, templates, automated follow-ups and AI sentiment analysis.',
+      'Unify WhatsApp, email, and calls in one inbox with AiEngage’s multichannel customer engagement software.',
     keywords: ['multichannel communication', 'email and calling CRM', 'unified customer communication', 'communication timeline'],
     image: '/og/multichannel-communication.png',
   },
   customerManagement: {
     path: '/customer-management',
-    title: 'Customer Management CRM | Contacts, Segments & 360° Profiles | AiEngage',
+    title: 'Customer Management Software | AiEngage CRM',
     description:
-      'Manage every contact, customer segment, 360° profile, and interaction timeline from one connected CRM. Centralize customer data and personalize every conversation.',
+      'Store and manage your customer database in one place with AiEngage’s customer relationship management software.',
     keywords: ['customer management software', 'contact management CRM', 'customer segments', '360 customer profile', 'customer timeline'],
     image: '/og/customer-management.png',
   },
   leadManagement: {
     path: '/lead-management',
-    title: 'Lead Management Software | Capture, Assign & Score Leads | AiEngage',
+    title: 'Lead Management Software for Small Business | AiEngage CRM',
     description:
-      'Capture, assign, and convert every lead faster — lead capture forms, automatic assignment, AI lead scoring, Meta & Google Ads sync, round-robin routing and AI lead qualification.',
+      'Track, organize, and convert leads with AiEngage’s lead management system built for small businesses in India.',
     keywords: ['lead management software', 'lead capture forms', 'lead assignment', 'lead scoring', 'round robin lead distribution'],
     image: '/og/lead-management.png',
   },
   salesPipeline: {
     path: '/sales-pipeline',
-    title: 'Sales Pipeline Software | Deal, Task & Payment Tracking | AiEngage',
+    title: 'Sales Pipeline Software & Management Tool | AiEngage CRM',
     description:
-      'Manage every deal from enquiry to closure — custom sales pipelines, deal management, task and follow-up tracking, payment tracking, product catalog, stage transition rules and AI sales forecasting.',
+      'Visualize your sales funnel and manage deals stage-by-stage with AiEngage’s sales pipeline management tool.',
     keywords: ['sales pipeline software', 'deal management CRM', 'sales forecasting', 'kanban sales pipeline', 'payment tracking CRM'],
     image: '/og/sales-pipeline.png',
   },
   marketingCampaigns: {
     path: '/marketing-campaigns',
-    title: 'Marketing Campaigns Software | Email, WhatsApp & AI | AiEngage',
+    title: 'Marketing Campaign Software | AiEngage CRM',
     description:
-      'Create, send, and track marketing campaigns from one place — email campaigns, WhatsApp campaigns, an AI campaign builder and cross-channel campaign insights.',
+      'Run WhatsApp and email marketing campaigns directly from your CRM with AiEngage’s campaign management tools.',
     keywords: ['marketing campaign software', 'email marketing CRM', 'WhatsApp marketing campaigns', 'AI campaign builder', 'campaign analytics'],
     image: '/og/marketing-campaigns.png',
   },
   automation: {
     path: '/automation',
-    title: 'Automation Software | Workflows, Email & WhatsApp | AiEngage',
+    title: 'Sales Automation Software | AiEngage CRM',
     description:
-      'Automate routine communication, tasks, lead journeys, and deal actions — workflow automation, email and WhatsApp automation, appointment reminders, lead nurturing and AI-powered next-best-actions.',
+      'Automate lead follow-ups and workflows with AiEngage’s CRM automation tool — save time and never miss a lead.',
     keywords: ['CRM automation', 'workflow automation software', 'email automation', 'WhatsApp automation', 'lead nurturing automation'],
     image: '/og/automation.png',
   },
   calling: {
     path: '/calling',
-    title: 'Built-In Calling Software | Call, Record & Track | AiEngage',
+    title: 'CRM with Calling Feature | Cloud Telephony | AiEngage',
     description:
-      'Bring all your business calls into one CRM — multi-country business numbers, smart call routing, one-click calling, call recording and transcription, and calling analytics.',
+      'Click-to-call, call recording, and cloud telephony built into your CRM — manage every sales call with AiEngage.',
     keywords: ['CRM calling software', 'built-in calling', 'call recording CRM', 'call routing', 'business phone numbers'],
     image: '/og/calling.png',
   },
   mobileApp: {
     path: '/mobile-app',
-    title: 'Mobile CRM App | Android & iOS | AiEngage',
+    title: 'Mobile CRM App for Sales Teams | AiEngage CRM',
     description:
-      'AiEngage mobile app gives your team access to leads, customers, tasks, follow-ups, chats, and sales activity while they are away from their desk — Android, iOS and instant push notifications.',
+      'Manage leads and deals on the go with AiEngage’s mobile CRM app — built for field sales reps in India.',
     keywords: ['mobile CRM app', 'Android CRM app', 'iOS CRM app', 'CRM push notifications', 'sales app'],
     image: '/og/mobile-app.png',
   },
   dataManagement: {
     path: '/data-management',
-    title: 'Data Management Software | Import, Forms & Audit Logs | AiEngage',
+    title: 'CRM Data Management Software | AiEngage CRM',
     description:
-      'Import and export records, manage a product catalog and forms, track every change with audit logs, work in Sheet View, map imported fields, and clean up data with AI — all inside AiEngage CRM.',
+      'Clean up duplicate leads and migrate spreadsheets to CRM easily with AiEngage’s data management tools.',
     keywords: ['CRM data management', 'CRM import export', 'CRM audit logs', 'CRM sheet view', 'AI data cleanup'],
     image: '/og/data-management.png',
   },
   reportsAnalytics: {
     path: '/reports-analytics',
-    title: 'Reports & Analytics Software | Dashboards & KPIs | AiEngage',
+    title: 'Sales Reporting & Analytics Software | AiEngage CRM',
     description:
-      'Real-time dashboards, sales and campaign reports, funnel and team performance tracking, KPI scorecards, target meters, and visual charts — all inside AiEngage CRM.',
+      'Track sales performance, lead sources, and team activity with AiEngage’s CRM analytics dashboard.',
     keywords: ['CRM reports and analytics', 'sales dashboard software', 'funnel report', 'KPI tracking', 'CRM charts'],
     image: '/og/reports-analytics.png',
   },
   integrations: {
     path: '/integrations',
-    title: 'Integrations | Meta, Google, WhatsApp, Stripe & More | AiEngage',
+    title: 'CRM Integrations: Meta, Google Ads & Razorpay | AiEngage',
     description:
-      'Connect AiEngage CRM with Meta and Google Lead Ads, WhatsApp, Gmail, Plivo, Twilio, Stripe, Razorpay, Zapier, and your own systems via APIs and webhooks — all synced in real time.',
+      'Connect AiEngage CRM with Meta Ads, Google Ads, Razorpay, and WhatsApp API for a fully connected sales stack.',
     keywords: ['CRM integrations', 'Meta lead ads integration', 'WhatsApp CRM integration', 'Zapier CRM', 'CRM API and webhooks'],
     image: '/og/integrations.png',
   },
   customization: {
     path: '/customization',
-    title: 'CRM Customization | Fields, Modules, Roles & Branding | AiEngage',
+    title: 'Customizable CRM Software | AiEngage CRM',
     description:
-      'Customize AiEngage CRM to fit your business — custom fields, custom modules, custom pipelines, role-based permissions, branding, custom tags, and saved custom views.',
+      'Configure custom fields, pipelines, and workflows to match your business with AiEngage’s customizable CRM.',
     keywords: ['CRM customization', 'custom fields CRM', 'custom modules', 'role-based CRM permissions', 'CRM branding'],
     image: '/og/customization.png',
   },
   securityCompliance: {
     path: '/security-compliance',
-    title: 'Security & Compliance | Roles, Audit Logs & Backup | AiEngage',
+    title: 'CRM Data Security & DPDP Compliance | AiEngage CRM',
     description:
-      'Manage customer data with role-based access control, full audit trails, reliable data backup, and two-factor authentication — built into AiEngage CRM.',
+      'AiEngage CRM is a secure, DPDP-compliant CRM with role-based access control built for Indian businesses.',
     keywords: ['CRM security', 'role-based access control', 'CRM audit log', 'CRM data backup', 'two-factor authentication CRM'],
     image: '/og/security-compliance.png',
   },
@@ -171,26 +171,26 @@ export const seoData = {
   },
   ai: {
     path: '/ai',
-    title: 'AI CRM | Smart Summaries, AI Chatbot & Sales Insights | AiEngage',
+    title: 'AI CRM Features: Lead Scoring & Sales Assistant | AiEngage',
     description:
-      'AI built into your CRM — smart conversation summaries, an AI chatbot, lead qualification, AI insights, mobile AI, an email assistant, call transcription, sales insights, and forecasting.',
+      'Explore AI lead qualification, an AI sales assistant, and AI chatbot tools built into AiEngage CRM.',
     keywords: ['AI CRM', 'AI chatbot', 'AI lead qualification', 'AI sales insights', 'AI sales forecasting', 'CRM email assistant'],
     image: '/og/ai.png',
   },
   about: {
     path: '/about',
-    title: 'About AiEngage CRM | AI-Powered CRM For Every Lead & Sale',
+    title: 'About AiEngage CRM | AI CRM Company India',
     description:
-      'AiEngage CRM brings AI into the complete customer journey — answering questions, qualifying leads, summarizing conversations, and automating follow-ups so no opportunity is missed.',
+      'Learn about AiEngage CRM, the AI-powered CRM company helping Indian businesses manage leads and sales smarter.',
     keywords: ['about AiEngage CRM', 'AI powered CRM', 'CRM mission', 'AI sales assistant'],
     image: '/og/about.png',
   },
   // Live pricing page — Solo / Business / Business Pro plan structure (app/pricing/page.js).
   pricing: {
     path: '/pricing',
-    title: 'Pricing | Plans for WhatsApp, Email, Voice & AI CRM | AiEngage',
+    title: 'AiEngage CRM Pricing | Affordable CRM for India',
     description:
-      'Simple, transparent pricing for AiEngage CRM. Compare Solo, Business and Business Pro plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
+      'See AiEngage CRM pricing plans and cost per user. Compare against HubSpot and Zoho pricing for Indian businesses.',
     keywords: ['AiEngage CRM pricing', 'CRM plans', 'WhatsApp CRM pricing', 'AI CRM cost'],
     image: '/og/pricing.png',
   },
@@ -215,80 +215,80 @@ export const seoData = {
   },
   industryRealEstate: {
     path: '/industries/real-estate',
-    title: 'Real Estate CRM | AI-Powered Lead & Site Visit Automation | AiEngage',
+    title: 'CRM for Real Estate India | AiEngage CRM',
     description:
-      'AI-powered CRM for real estate — capture property leads from portals, Meta Ads and WhatsApp, qualify buyers with AI, schedule site visits and automate follow-ups.',
+      'Manage property leads and buyer follow-ups with AiEngage, the CRM built for real estate agents and dealers in India.',
     keywords: ['real estate CRM', 'property lead management', 'real estate AI CRM', 'site visit scheduling software'],
     image: '/og/industries-real-estate.png',
   },
   industryHealthcare: {
     path: '/industries/healthcare',
-    title: 'Healthcare CRM | AI-Powered Patient Inquiry & Appointment Automation | AiEngage',
+    title: 'CRM for Healthcare & Clinics | AiEngage CRM',
     description:
-      'AI-powered CRM for healthcare providers — capture patient inquiries, respond instantly with AI, schedule appointments and automate follow-ups across every channel.',
+      'Manage patient enquiries and appointments with AiEngage’s CRM built for hospitals, doctors, and clinics.',
     keywords: ['healthcare CRM', 'patient inquiry management', 'appointment scheduling software', 'healthcare AI CRM'],
     image: '/og/industries-healthcare.png',
   },
   industryToursTravels: {
     path: '/industries/tours-travels',
-    title: 'Travel Agency CRM | AI-Powered Booking & Inquiry Automation | AiEngage',
+    title: 'CRM for Travel Agencies | AiEngage CRM',
     description:
-      'AI-powered CRM for travel agencies and tour operators — capture travel inquiries, respond instantly with AI, share packages, schedule consultations and automate booking follow-ups.',
+      'Manage tour package enquiries and bookings with AiEngage’s CRM built for travel agencies and tour operators.',
     keywords: ['travel agency CRM', 'tour operator software', 'travel booking automation', 'travel CRM software'],
     image: '/og/industries-tours-travels.png',
   },
   industryFinance: {
     path: '/industries/finance',
-    title: 'Finance & Insurance CRM | AI-Powered Advisory Automation | AiEngage',
+    title: 'CRM for Insurance & Loan Agents | AiEngage CRM',
     description:
-      'AI-powered CRM for finance, insurance and wealth advisory businesses — capture inquiries, qualify opportunities, assign advisors, track documents and automate follow-ups.',
+      'Manage leads for insurance, loans, and financial advisory with AiEngage’s CRM built for finance companies.',
     keywords: ['finance CRM', 'insurance CRM software', 'financial advisor CRM', 'loan and insurance lead management'],
     image: '/og/industries-finance.png',
   },
   industryIT: {
     path: '/industries/it',
-    title: 'IT & Technology CRM | AI-Powered Sales Automation | AiEngage',
+    title: 'CRM for IT & Software Companies | AiEngage CRM',
     description:
-      'AI-powered CRM for IT and technology businesses — capture inquiries, qualify leads, assign sales reps, schedule discovery calls and automate proposal follow-ups.',
+      'Manage B2B leads and client relationships with AiEngage’s CRM built for IT services and software businesses.',
     keywords: ['IT CRM software', 'software company CRM', 'IT sales automation', 'IT lead management'],
     image: '/og/industries-it.png',
   },
   industryEducation: {
     path: '/industries/education',
-    title: 'Education CRM | AI-Powered Admission Automation | AiEngage',
+    title: 'CRM for Coaching Institutes & Education | AiEngage CRM',
     description:
-      'AI-powered CRM for schools, colleges and training institutes — capture admission inquiries, automate follow-ups, schedule counselling sessions and grow enrollments.',
+      'Manage student enquiries and admissions with AiEngage’s CRM built for coaching institutes and schools in India.',
     keywords: ['education CRM', 'admission management software', 'student enquiry management', 'school and college CRM'],
     image: '/og/industries-education.png',
   },
   vsHubspot: {
     path: '/hubspot-alternative',
-    title: 'AiEngage vs HubSpot | Simpler All-In-One CRM Alternative | AiEngage',
+    title: 'HubSpot Alternative for Small Business India | AiEngage',
     description:
-      'See how AiEngage compares to HubSpot — built-in WhatsApp and SMS marketing, native automation, and one connected platform instead of multiple tools.',
+      'Looking for an affordable HubSpot alternative? Compare AiEngage CRM vs HubSpot on features, pricing, and ease of use.',
     keywords: ['AiEngage vs HubSpot', 'HubSpot alternative', 'HubSpot CRM comparison'],
     image: '/og/vs-hubspot.png',
   },
   vsZoho: {
     path: '/zoho-alternative',
-    title: 'AiEngage vs Zoho CRM | A Simpler Alternative to Zoho | AiEngage',
+    title: 'Zoho CRM Alternative | AiEngage vs Zoho',
     description:
-      'See how AiEngage compares to Zoho CRM — ready-to-use workflows, built-in WhatsApp and SMS marketing, and no need to manage multiple Zoho apps.',
+      'See how AiEngage CRM compares to Zoho as an affordable, easy-to-use alternative for Indian businesses.',
     keywords: ['AiEngage vs Zoho', 'Zoho CRM alternative', 'Zoho CRM comparison'],
     image: '/og/vs-zoho.png',
   },
   vsKeap: {
     path: '/keap-alternative',
-    title: 'AiEngage vs Keap | A Smarter, More Predictable CRM | AiEngage',
+    title: 'Keap Alternative | AiEngage vs Keap CRM',
     description:
-      'See how AiEngage compares to Keap — cost-efficient pricing that does not scale with your contact list, plus built-in AI, WhatsApp and SMS marketing.',
+      'Compare AiEngage CRM to Keap and see why it’s an affordable, simpler alternative for growing businesses.',
     keywords: ['AiEngage vs Keap', 'Keap alternative', 'Keap CRM comparison'],
     image: '/og/vs-keap.png',
   },
   bookADemo: {
     path: '/book-a-demo',
-    title: 'Book a Free AiEngage CRM Demo | AiEngage',
-    description: 'Book your free AiEngage CRM demo and see lead capture, pipeline management, and AI-powered engagement live, tailored to your business.',
+    title: 'Book a Free CRM Demo | AiEngage CRM',
+    description: 'Book a free AiEngage CRM demo or start a free trial — no credit card required.',
     keywords: ['book a CRM demo', 'AiEngage demo', 'CRM demo request'],
     image: '/og/book-a-demo.png',
   },
@@ -343,8 +343,8 @@ export const seoData = {
   },
   trust: {
     path: '/trust',
-    title: 'Trust Center | AiEngage CRM',
-    description: 'AiEngage CRM’s Trust Center — Terms of Service, Privacy Policy, Data Processing Agreement, Acceptable Use Policy and AI & Responsible Automation Policy.',
+    title: 'Trust Center | AiEngage CRM Data Privacy & Security',
+    description: 'Explore AiEngage CRM’s trust center for data privacy practices, security measures, and compliance certifications.',
     keywords: ['AiEngage trust center', 'AiEngage legal', 'AiEngage compliance documents'],
     image: '/og/default.png',
   },

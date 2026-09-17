@@ -9,8 +9,6 @@ export const HERO_STATS = [
   { image: '/shopify-partner/stat-scale-growth.png', label: 'Scale Growth' },
 ];
 
-export const HERO_CHECKS = ['All-in-one CRM', 'Cancel Anytime', 'Setup in Minutes'];
-
 export const CONNECTED_COLUMNS = [
   {
     icon: 'campaign',
@@ -82,7 +80,6 @@ export const FEATURE_ROWS = [
     image: '/shopify-partner/lead-capture.webp',
     imageAlt: 'Meta & Google leads captured straight into AiEngage CRM',
     reverse: false,
-    rawImage: true, // Test: plain <img>, bypassing next/image — compare against the rest before deciding whether to switch site-wide.
   },
   {
     id: 'team-inbox',
@@ -149,11 +146,11 @@ export const FEATURE_ROWS = [
 ];
 
 export const REPLACE_TOOLS = [
-  { logo: '/homev2/tools/hubspot.png', label: 'HubSpot', sub: 'CRM' },
-  { logo: '/homev2/tools/zoho.png', label: 'Zoho', sub: 'Sales' },
-  { logo: '/homev2/tools/intercom.png', label: 'Intercom', sub: 'Support' },
-  { logo: '/homev2/tools/wati.png', label: 'WATI', sub: 'WhatsApp' },
-  { logo: '/homev2/tools/calendly.png', label: 'Calendly', sub: 'Meetings' },
+  { logo: '/shopify-partner/tools/hubspot.png', label: 'HubSpot', sub: 'CRM' },
+  { logo: '/shopify-partner/tools/zoho.png', label: 'Zoho', sub: 'Sales' },
+  { logo: '/shopify-partner/tools/intercom.png', label: 'Intercom', sub: 'Support' },
+  { logo: '/shopify-partner/tools/wati.png', label: 'WATI', sub: 'WhatsApp' },
+  { logo: '/shopify-partner/tools/calendly.png', label: 'Calendly', sub: 'Meetings' },
   { letter: 'M', bg: '#ffe01b', color: '#241c15', label: 'Mailchimp', sub: 'Email' },
   { letter: 'Z', bg: '#ff4a00', color: '#fff', label: 'Zapier', sub: 'Automation' },
   { letter: 'K', bg: '#000', color: '#fff', label: 'Klaviyo', sub: 'Email' },

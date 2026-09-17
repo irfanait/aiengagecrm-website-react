@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import { REPLACE_TOOLS, REPLACE_BENEFITS } from '../../../data/shopifyPartner';
@@ -26,7 +25,8 @@ export default function ShopifyReplaceTools() {
                 <div key={t.label} className={styles.tool}>
                   <div className={styles.toolIcon}>
                     {t.logo ? (
-                      <Image src={t.logo} alt={t.label} width={30} height={30} className={styles.toolImg} />
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={t.logo} alt={t.label} className={styles.toolImg} loading="lazy" />
                     ) : (
                       <span className={styles.toolLetter} style={{ background: t.bg, color: t.color }}>
                         {t.letter}
@@ -47,7 +47,8 @@ export default function ShopifyReplaceTools() {
           </div>
 
           <div className={styles.after}>
-            <Image src="/brand/logo.svg" alt="AiEngage CRM" width={180} height={44} className={styles.afterLogo} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/logo.svg" alt="AiEngage CRM" className={styles.afterLogo} />
             <div className={styles.benefits}>
               {REPLACE_BENEFITS.map((b) => (
                 <div key={b} className={styles.benefit}>

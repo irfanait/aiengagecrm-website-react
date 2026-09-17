@@ -190,7 +190,12 @@
     padding: 40px 28px;
   }
 
+  /* .art's `flex: 1 1 0` (set for the desktop side-by-side split) collapses its height to ~0 in
+     this column layout, since there's no fixed height on .card to grow into — with overflow:
+     hidden that clipped the plan card to a thin sliver instead of showing it at full size. */
   .art {
+    flex: none;
+    width: 100%;
     padding: 40px 28px;
   }
 }

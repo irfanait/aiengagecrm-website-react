@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { TESTIMONIAL } from '../../../data/shopifyPartner';
 import styles from './ShopifyTestimonial.module.css';
@@ -12,7 +11,8 @@ export default function ShopifyTestimonial() {
           <h3 className={styles.heading}>{TESTIMONIAL.heading}</h3>
           <div className={styles.logos}>
             {TESTIMONIAL.logos.map((l) => (
-              <Image key={l.name} src={l.logo} alt={l.name} width={130} height={38} className={styles.logoImg} />
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={l.name} src={l.logo} alt={l.name} className={styles.logoImg} loading="lazy" />
             ))}
           </div>
         </div>

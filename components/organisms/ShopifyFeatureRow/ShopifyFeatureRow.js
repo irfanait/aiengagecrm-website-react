@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import styles from './ShopifyFeatureRow.module.css';
@@ -20,7 +19,6 @@ export default function ShopifyFeatureRow({
   imageAlt,
   reverse = false,
   groupHeading,
-  rawImage = false,
 }) {
   return (
     <section id={id} className={styles.section}>
@@ -47,23 +45,10 @@ export default function ShopifyFeatureRow({
           </div>
 
           <div className={styles.art}>
-            {rawImage ? (
-              // Test path: serves the source file's bytes directly, bypassing next/image's
-              // resize/re-encode entirely — no responsive srcset, no format negotiation, no
-              // built-in CLS sizing, just the original file at whatever size CSS renders it.
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={image} alt={imageAlt} className={styles.image} loading="lazy" />
-            ) : (
-              <Image
-                src={image}
-                alt={imageAlt}
-                width={1484}
-                height={1060}
-                className={styles.image}
-                sizes="(max-width: 900px) 100vw, 555px"
-                quality={95}
-              />
-            )}
+            {/* Plain <img>, not next/image — serves the source file's real bytes directly with no
+                resize/re-encode. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={image} alt={imageAlt} className={styles.image} loading="lazy" />
           </div>
         </div>
       </Container>
