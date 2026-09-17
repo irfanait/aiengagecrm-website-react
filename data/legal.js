@@ -415,7 +415,7 @@ export const TERMS_OF_SERVICE = {
 
 export const PRIVACY_POLICY = {
   title: 'Privacy Policy',
-  lastUpdated: '14 September 2026',
+  lastUpdated: '17 September 2026',
   sections: [
     {
       number: 1,
@@ -481,7 +481,16 @@ export const PRIVACY_POLICY = {
         { type: 'paragraph', text: 'Where enabled:' },
         {
           type: 'list',
-          items: ['WhatsApp conversations', 'SMS activity', 'Emails', 'Call metadata', 'Call recordings', 'Transcriptions', 'AI summaries'],
+          items: [
+            'WhatsApp conversations',
+            'SMS activity',
+            'Emails',
+            'Call metadata',
+            'Device call log data (Android only) — phone number dialled, call duration, call status (answered, missed, or rejected), and call timestamp, accessed once in the foreground immediately after a native dialer call ends, used solely to log the call activity on the relevant CRM contact record',
+            'Call recordings',
+            'Transcriptions',
+            'AI summaries',
+          ],
         },
         { type: 'subheading', text: 'Usage Information' },
         { type: 'list', items: ['IP address', 'Browser', 'Device', 'Login activity', 'Feature usage', 'Technical logs', 'Error reports'] },
@@ -504,6 +513,7 @@ export const PRIVACY_POLICY = {
             'Process payments;',
             'Provide customer support;',
             'Deliver configured communications;',
+            'Auto-log native dialer call activity (duration, status, timestamp) to the CRM contact record on Android devices, using device call log data accessed solely in the foreground after a call ends;',
             'Operate AI functionality;',
             'Prevent fraud;',
             'Protect security;',
@@ -666,6 +676,10 @@ export const PRIVACY_POLICY = {
         {
           type: 'paragraph',
           text: 'Data received from Google APIs is not shared with analytics, advertising or marketing service providers, and is disclosed only to the service providers strictly necessary to deliver the user-facing feature the user has requested, as described in Section 6.',
+        },
+        {
+          type: 'paragraph',
+          text: "Device call log data accessed on Android is never transmitted to telephony providers or any third party — it is read locally on the device and written only to the user's own CRM workspace.",
         },
       ],
     },
