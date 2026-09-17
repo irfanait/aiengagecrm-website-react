@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Button from '../../atoms/Button/Button';
 import { CTA_LINKS } from '../../../utils/constants';
@@ -37,14 +36,14 @@ export default function HeroV2() {
         </div>
 
         <div className={styles.right}>
-          <Image
+          {/* Plain <img>, not next/image — serves the source file's real bytes directly with no
+              resize/re-encode. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/homev2/hero-dashboard-mock.png"
             alt="AiEngage CRM dashboard — new lead captured from Meta Ads, AI follow-up sent on WhatsApp, meeting booked"
-            width={952}
-            height={664}
             className={styles.mockImage}
-            sizes="(max-width: 900px) 100vw, 640px"
-            priority
+            fetchPriority="high"
           />
         </div>
       </div>

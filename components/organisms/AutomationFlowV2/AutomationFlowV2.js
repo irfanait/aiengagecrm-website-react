@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import { LinkButton } from '../../atoms/Button/Button';
@@ -32,13 +31,14 @@ export default function AutomationFlowV2() {
 
         <div className={styles.frame}>
           <button type="button" className={styles.imageWrap} onClick={() => setVideoOpen(true)} aria-label="Play video: Meta Lead Ads integration">
-            <Image
+            {/* Plain <img>, not next/image — serves the source file's real bytes directly with no
+                resize/re-encode. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/homev2/automation-flow.png"
               alt="From Meta Ad to Booked Meeting, Zero Human Touch — Meta Ad, WhatsApp, AI Calling, AI Qualified, Meeting Booked"
-              width={1920}
-              height={1080}
               className={styles.image}
-              sizes="(max-width: 1360px) 100vw, 1280px"
+              loading="lazy"
             />
             <span className={styles.playButton}>
               <Icon name="play_arrow" size={42} color="var(--color-primary)" />

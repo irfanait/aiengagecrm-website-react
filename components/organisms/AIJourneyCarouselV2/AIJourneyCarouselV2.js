@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Carousel } from 'antd';
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import { LinkButton } from '../../atoms/Button/Button';
 import Container from '../../common/Container/Container';
@@ -46,14 +45,10 @@ export default function AIJourneyCarouselV2() {
               <div key={card.title} className={styles.slide}>
                 <div className={styles.card}>
                   <div className={styles.cardImageWrap}>
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      width={534}
-                      height={334}
-                      className={styles.cardImage}
-                      sizes="(max-width: 700px) 90vw, 420px"
-                    />
+                    {/* Plain <img>, not next/image — serves the source file's real bytes directly
+                        with no resize/re-encode. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={card.image} alt={card.title} className={styles.cardImage} loading="lazy" />
                   </div>
                   <h3 className={styles.cardTitle}>{card.title}</h3>
                   <p className={styles.cardDesc}>{card.desc}</p>

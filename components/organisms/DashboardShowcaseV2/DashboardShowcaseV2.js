@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import { DASHBOARD_SIDEBAR } from '../../../data/homeV2Discovery';
@@ -39,13 +38,16 @@ export default function DashboardShowcaseV2() {
           </div>
 
           <div className={styles.main}>
-            <Image
+            {/* Plain <img>, not next/image — serves the source file's real bytes directly with
+                no resize/re-encode, avoiding the softness that came from the optimizer's resize
+                pipeline. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               key={activeTab.image}
               src={activeTab.image}
               alt={`AiEngage CRM — ${activeTab.label}`}
-              fill
               className={styles.mainImage}
-              sizes="(max-width: 900px) 100vw, 900px"
+              loading="lazy"
             />
           </div>
         </div>
@@ -68,13 +70,12 @@ export default function DashboardShowcaseV2() {
                 </button>
                 {isOpen && (
                   <div className={styles.accordionPanel}>
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={item.image}
                       alt={`AiEngage CRM — ${item.label}`}
-                      width={900}
-                      height={640}
                       className={styles.accordionImage}
-                      sizes="100vw"
+                      loading="lazy"
                     />
                   </div>
                 )}

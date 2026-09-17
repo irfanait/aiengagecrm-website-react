@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { ONE_CRM_JOURNEY_COPY } from '../../../data/homeV2Automation';
 import styles from './OneCrmJourneyV2.module.css';
@@ -8,13 +7,14 @@ export default function OneCrmJourneyV2() {
     <section className={styles.section}>
       <Container className={styles.body}>
         <div className={styles.imageWrap}>
-          <Image
+          {/* Plain <img>, not next/image — serves the source file's real bytes directly with no
+              resize/re-encode. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/homev2/one-crm-journey.png"
             alt="One CRM connecting every customer touchpoint — ads, WhatsApp, calls, meetings and follow-ups"
-            width={1372}
-            height={980}
             className={styles.image}
-            sizes="(max-width: 900px) 100vw, 640px"
+            loading="lazy"
           />
         </div>
 

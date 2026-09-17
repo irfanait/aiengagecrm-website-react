@@ -21,31 +21,31 @@
     "index": 3,
     "label": "Deals",
     "file": "/homev2/dashboard-tabs/3-deals.webp",
-    "bytes": 87988
+    "bytes": 109108
   },
   {
     "index": 4,
     "label": "WhatsApp Team Inbox",
     "file": "/homev2/dashboard-tabs/4-whatsapp-team-inbox.webp",
-    "bytes": 224896
+    "bytes": 110114
   },
   {
     "index": 5,
     "label": "Calling",
     "file": "/homev2/dashboard-tabs/5-calling.webp",
-    "bytes": 239642
+    "bytes": 120956
   },
   {
     "index": 6,
     "label": "Meetings",
     "file": "/homev2/dashboard-tabs/6-meetings.webp",
-    "bytes": 79552
+    "bytes": 97674
   },
   {
     "index": 7,
     "label": "Calendar",
     "file": "/homev2/dashboard-tabs/7-calendar.webp",
-    "bytes": 72424
+    "bytes": 107888
   },
   {
     "index": 8,
@@ -57,24 +57,24 @@
     "index": 9,
     "label": "AI",
     "file": "/homev2/dashboard-tabs/9-ai.webp",
-    "bytes": 997780
+    "bytes": 173222
   },
   {
     "index": 10,
     "label": "Webforms",
     "file": "/homev2/dashboard-tabs/10-webforms.webp",
-    "bytes": 83800
+    "bytes": 60774
   },
   {
     "index": 11,
     "label": "Reports",
     "file": "/homev2/dashboard-tabs/11-reports.webp",
-    "bytes": 53838
+    "bytes": 86676
   },
   {
     "index": 12,
     "label": "Invoices and Billing",
     "file": "/homev2/dashboard-tabs/12-invoices-and-billing.webp",
-    "bytes": 75006
+    "bytes": 98904
   }
 ]
