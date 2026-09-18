@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import { INTEGRATIONS } from '../../../data/homeContent';
@@ -21,7 +20,8 @@ export default function IntegrationsV2() {
             <div key={item.label} className={styles.item}>
               {item.logo ? (
                 <span className={styles.logoMark}>
-                  <Image src={item.logo} alt={item.label} width={22} height={22} className={styles.logoImg} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.logo} alt={item.label} className={styles.logoImg} loading="lazy" />
                 </span>
               ) : (
                 <span className={styles.mark} style={{ background: item.bg, color: item.color }}>

@@ -2,17 +2,6 @@
 // Needs" dashboard showcase, and the AI journey carousel. Kept separate from data/homeContent.js,
 // which is the current live homepage's (v1) data file and must stay untouched.
 
-export const HERO_CHANNELS = [
-  { icon: 'chat', label: 'WhatsApp' },
-  { icon: 'mail', label: 'Email' },
-  { icon: 'call', label: 'Calling' },
-  { icon: 'groups', label: 'Meetings' },
-  { icon: 'calendar_month', label: 'Calendar' },
-  { icon: 'bolt', label: 'AI' },
-  { icon: 'headset_mic', label: 'Support' },
-  { icon: 'insights', label: 'Ads & Analytics' },
-];
-
 // Real client logos, extracted from the design mockup itself — same 14 logos it scrolls as a
 // marquee (duplicated once in the component for a seamless loop).
 export const TRUSTED_LOGOS = [
@@ -35,19 +24,18 @@ export const TRUSTED_LOGOS = [
 // Each tab's own screenshot, extracted from the design source — clicking a sidebar item swaps
 // the panel image, same interactive "product tour" the mockup itself has.
 export const DASHBOARD_SIDEBAR = [
-  { icon: 'home', label: 'Home', image: '/homev2/dashboard-tabs/0-home.webp' },
   { icon: 'dashboard', label: 'Dashboard', image: '/homev2/dashboard-tabs/1-dashboard.webp' },
   { icon: 'trending_up', label: 'Lead Management', image: '/homev2/dashboard-tabs/2-lead-management.webp' },
   { icon: 'handshake', label: 'Deals', image: '/homev2/dashboard-tabs/3-deals.webp' },
   { icon: 'chat', label: 'WhatsApp Team Inbox', image: '/homev2/dashboard-tabs/4-whatsapp-team-inbox.webp' },
   { icon: 'call', label: 'Calling', image: '/homev2/dashboard-tabs/5-calling.webp' },
-  { icon: 'groups', label: 'Meetings', image: '/homev2/dashboard-tabs/6-meetings.webp' },
+  { icon: 'groups', label: 'Meetings & AI Notetaker', image: '/homev2/dashboard-tabs/6-meetings.webp' },
   { icon: 'calendar_month', label: 'Calendar', image: '/homev2/dashboard-tabs/7-calendar.webp' },
   { icon: 'insights', label: 'Ads & Analytics', image: '/homev2/dashboard-tabs/8-ads-analytics.webp' },
-  { icon: 'smart_toy', label: 'AI', image: '/homev2/dashboard-tabs/9-ai.webp' },
+  { icon: 'smart_toy', label: 'AI & AI Agents', image: '/homev2/dashboard-tabs/9-ai.webp' },
   { icon: 'auto_awesome', label: 'Webforms', image: '/homev2/dashboard-tabs/10-webforms.webp' },
   { icon: 'bar_chart', label: 'Reports', image: '/homev2/dashboard-tabs/11-reports.webp' },
-  { icon: 'receipt_long', label: 'Invoices and Billing', image: '/homev2/dashboard-tabs/12-invoices-and-billing.webp' },
+  { icon: 'receipt_long', label: 'Quotes & Invoices', image: '/homev2/dashboard-tabs/12-invoices-and-billing.webp' },
 ];
 
 export const AI_JOURNEY_CARDS = [

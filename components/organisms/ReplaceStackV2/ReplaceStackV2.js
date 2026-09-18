@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import { SCATTERED_STACK_TOOLS, AIENGAGE_REPLACES } from '../../../data/homeV2Automation';
@@ -18,7 +17,10 @@ export default function ReplaceStackV2() {
             <div className={styles.toolGrid}>
               {SCATTERED_STACK_TOOLS.map((tool) => (
                 <div key={tool.name} className={styles.toolChip}>
-                  <Image src={tool.logo} alt={tool.name} width={28} height={28} className={styles.toolLogo} />
+                  {/* Plain <img>, not next/image — serves the source file's real bytes directly
+                      with no resize/re-encode, which was reading as blur on these small logos. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={tool.logo} alt={tool.name} className={styles.toolLogo} loading="lazy" />
                   <span className={styles.toolName}>{tool.name}</span>
                   <span className={styles.toolCategory}>{tool.category}</span>
                 </div>

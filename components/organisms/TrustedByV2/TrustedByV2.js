@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { TRUSTED_LOGOS } from '../../../data/homeV2Discovery';
 import styles from './TrustedByV2.module.css';
 
@@ -13,7 +12,10 @@ export default function TrustedByV2() {
         <div className={styles.track}>
           {logos.map((client, i) => (
             <span key={`${client.name}-${i}`} className={styles.logoSlot}>
-              <Image src={client.logo} alt={client.name} width={150} height={44} className={styles.logoImg} />
+              {/* Plain <img>, not next/image — serves the source file's real bytes directly with
+                  no resize/re-encode, which was reading as blur on these small logo files. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={client.logo} alt={client.name} className={styles.logoImg} loading="lazy" />
             </span>
           ))}
         </div>

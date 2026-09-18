@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Icon from '../../atoms/Icon/Icon';
-import Container from '../../common/Container/Container';
 import { DASHBOARD_SIDEBAR } from '../../../data/homeV2Discovery';
 import styles from './DashboardShowcaseV2.module.css';
 
@@ -13,77 +12,78 @@ export default function DashboardShowcaseV2() {
 
   return (
     <section id="product-tour" className={styles.section}>
-      <Container>
-        <div className={styles.head}>
-          <h2 className={styles.title}>
-            Everything Your Team Needs Across <span className="textAccent">Marketing, Sales &amp; Support</span>
-          </h2>
-          <p className={styles.desc}>All the tools. One CRM. Smarter engagement at every stage of the customer journey.</p>
+      {/* No <Container> here — .head/.shell/.accordion below already manage their own
+          max-width/centering, and .section already provides the horizontal gutter; wrapping in
+          Container on top of that stacked a second, redundant left/right padding on mobile. */}
+      <div className={styles.head}>
+        <h2 className={styles.title}>
+          Everything Your Team Needs Across <span className="textAccent">Marketing, Sales &amp; Support</span>
+        </h2>
+        <p className={styles.desc}>All the tools. One CRM. Smarter engagement at every stage of the customer journey.</p>
+      </div>
+
+      {/* Desktop/tablet: side tabs + single preview image (hidden below 900px, see .shell) */}
+      <div className={styles.shell}>
+        <div className={styles.sidebar}>
+          {DASHBOARD_SIDEBAR.map((item, i) => (
+            <button
+              key={item.label}
+              type="button"
+              className={`${styles.sidebarItem} ${i === active ? styles.sidebarItemActive : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <Icon name={item.icon} size={16} />
+              <span className={styles.sidebarLabel}>{item.label}</span>
+            </button>
+          ))}
         </div>
 
-        {/* Desktop/tablet: side tabs + single preview image (hidden below 900px, see .shell) */}
-        <div className={styles.shell}>
-          <div className={styles.sidebar}>
-            {DASHBOARD_SIDEBAR.map((item, i) => (
+        <div className={styles.main}>
+          {/* Plain <img>, not next/image — serves the source file's real bytes directly with
+              no resize/re-encode, avoiding the softness that came from the optimizer's resize
+              pipeline. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            key={activeTab.image}
+            src={activeTab.image}
+            alt={`AiEngage CRM — ${activeTab.label}`}
+            className={styles.mainImage}
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Mobile: accordion instead of tabs — first item open by default (see .accordion) */}
+      <div className={styles.accordion}>
+        {DASHBOARD_SIDEBAR.map((item, i) => {
+          const isOpen = openIndex === i;
+          return (
+            <div key={item.label} className={styles.accordionItem}>
               <button
-                key={item.label}
                 type="button"
-                className={`${styles.sidebarItem} ${i === active ? styles.sidebarItemActive : ''}`}
-                onClick={() => setActive(i)}
+                className={`${styles.accordionHeader} ${isOpen ? styles.accordionHeaderActive : ''}`}
+                onClick={() => setOpenIndex(isOpen ? -1 : i)}
+                aria-expanded={isOpen}
               >
-                <Icon name={item.icon} size={16} />
-                <span className={styles.sidebarLabel}>{item.label}</span>
+                <Icon name={item.icon} size={16} color={isOpen ? 'var(--color-primary)' : undefined} />
+                <span className={styles.accordionLabel}>{item.label}</span>
+                <Icon name={isOpen ? 'expand_less' : 'expand_more'} size={19} className={styles.accordionChevron} />
               </button>
-            ))}
-          </div>
-
-          <div className={styles.main}>
-            {/* Plain <img>, not next/image — serves the source file's real bytes directly with
-                no resize/re-encode, avoiding the softness that came from the optimizer's resize
-                pipeline. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              key={activeTab.image}
-              src={activeTab.image}
-              alt={`AiEngage CRM — ${activeTab.label}`}
-              className={styles.mainImage}
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* Mobile: accordion instead of tabs — first item open by default (see .accordion) */}
-        <div className={styles.accordion}>
-          {DASHBOARD_SIDEBAR.map((item, i) => {
-            const isOpen = openIndex === i;
-            return (
-              <div key={item.label} className={styles.accordionItem}>
-                <button
-                  type="button"
-                  className={`${styles.accordionHeader} ${isOpen ? styles.accordionHeaderActive : ''}`}
-                  onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                  aria-expanded={isOpen}
-                >
-                  <Icon name={item.icon} size={16} color={isOpen ? 'var(--color-primary)' : undefined} />
-                  <span className={styles.accordionLabel}>{item.label}</span>
-                  <Icon name={isOpen ? 'expand_less' : 'expand_more'} size={19} className={styles.accordionChevron} />
-                </button>
-                {isOpen && (
-                  <div className={styles.accordionPanel}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.image}
-                      alt={`AiEngage CRM — ${item.label}`}
-                      className={styles.accordionImage}
-                      loading="lazy"
-                    />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </Container>
+              {isOpen && (
+                <div className={styles.accordionPanel}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={`AiEngage CRM — ${item.label}`}
+                    className={styles.accordionImage}
+                    loading="lazy"
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

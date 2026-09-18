@@ -1,7 +1,6 @@
 'use client';
 
 import { Carousel } from 'antd';
-import Image from 'next/image';
 import Container from '../../common/Container/Container';
 import { TESTIMONIALS_V2 } from '../../../data/homeV2Automation';
 import styles from './TestimonialV2.module.css';
@@ -36,7 +35,8 @@ export default function TestimonialV2() {
                 <p className={styles.quote}>{t.quote}</p>
                 <div className={styles.footer}>
                   {t.avatar ? (
-                    <Image src={t.avatar} alt={t.name} width={46} height={46} className={styles.avatarImg} />
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={t.avatar} alt={t.name} className={styles.avatarImg} loading="lazy" />
                   ) : (
                     <span className={styles.avatar}>{t.initials}</span>
                   )}

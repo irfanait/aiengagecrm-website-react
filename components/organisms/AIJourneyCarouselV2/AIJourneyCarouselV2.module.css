@@ -44,11 +44,11 @@
 }
 
 .arrowLeft {
-  left: -18px;
+  left: -40px;
 }
 
 .arrowRight {
-  right: -18px;
+  right: -40px;
 }
 
 .carousel :global(.slick-list) {
@@ -80,7 +80,7 @@
   border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 22px 22px 28px;
-  box-shadow: 0 30px 70px -46px rgba(40, 24, 10, 0.3);
+  /* box-shadow: 0 30px 70px -46px rgba(40, 24, 10, 0.3); */
 }
 
 .cardImageWrap {
