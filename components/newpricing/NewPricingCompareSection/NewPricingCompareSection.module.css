@@ -101,8 +101,24 @@
    (overlay, search bar, close button, fixed max-height/vertical scroll) that doesn't apply to an
    inline page section that simply grows the page. */
 
+/* Plain fade-in on mount (not a transition between two states) — .header inside .scrollArea is
+   `position: sticky`, and sticky breaks if any ancestor gets a non-`visible` overflow (it becomes
+   sticky's reference box instead of the page), so this deliberately avoids wrapping .scrollArea in
+   an overflow:hidden/grid-rows container to animate height. A keyframe animation property doesn't
+   touch overflow, so it can't cause that. Only fades in on open — .scrollArea still unmounts
+   instantly on close, same as before this was added. */
+@keyframes compareFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .scrollArea {
   border-top: 1px solid var(--color-border);
+  animation: compareFadeIn 0.4s ease;
 }
 
 /* Rounds off whichever row/pill ends up last and visible — every category can now be open or

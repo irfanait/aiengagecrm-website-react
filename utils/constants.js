@@ -1,6 +1,6 @@
 export const SITE_NAME = 'AiEngage CRM';
 export const SITE_TAGLINE = 'AI Powered CRM';
-export const SITE_URL = 'https://www.aiengagecrm.com';
+export const SITE_URL = 'https://aiengagecrm.com';
 export const SITE_BY = 'Aitrillion.com';
 
 export const CONTACT = {

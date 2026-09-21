@@ -111,7 +111,6 @@ export default function WhatsNewDetail({ entry, modules, years }) {
               width={1200}
               height={279}
               className={styles.promoBannerImage}
-              unoptimized
             />
           </Link>
         </div>
