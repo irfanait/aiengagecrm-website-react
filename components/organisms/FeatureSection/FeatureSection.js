@@ -25,8 +25,32 @@ export default function FeatureSection({
   keyBenefits,
   trailingParagraph,
   dark = false,
+  centered = false,
 }) {
   const checkColor = dark ? 'var(--color-primary-dark-accent)' : 'var(--color-primary)';
+
+  if (centered) {
+    return (
+      <section id={id} className={`${styles.section} ${reverse ? styles.alt : ''} ${dark ? styles.dark : ''}`}>
+        <Container>
+          <div className={styles.centeredWrap}>
+            <h2 className={`${styles.title} ${styles.centeredTitle} ${dark ? styles.titleDark : ''}`}>
+              {titleLead}
+              {titleAccent && <span className={dark ? styles.accentDark : styles.accent}>{titleAccent}</span>}
+              {titleTrail}
+            </h2>
+            {paragraphs.map((p) => (
+              <p key={p} className={`${styles.desc} ${styles.centeredDesc} ${dark ? styles.descDark : ''}`}>
+                {p}
+              </p>
+            ))}
+            <div className={styles.centeredMock}>{mock}</div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
+
   return (
     <section id={id} className={`${styles.section} ${reverse ? styles.alt : ''} ${dark ? styles.dark : ''}`}>
       <Container>

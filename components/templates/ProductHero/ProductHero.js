@@ -9,10 +9,20 @@ import styles from './ProductHero.module.css';
  * so an accent word can sit mid-sentence), description, an optional 2x2 feature checklist,
  * CTA row on the left; a bespoke visual mock (passed as children) on the right.
  */
-export default function ProductHero({ badge, title, description, checklist, dark = false, children }) {
+export default function ProductHero({ badge, title, description, checklist, dark = false, primaryCtaFirst = false, mockAlign = 'center', mockWidth, children }) {
+  const tryFreeBtn = (
+    <Button key="try-free" href={CTA_LINKS.tryFree} variant={dark ? 'outlineOnDark' : 'outline'} size="lg">
+      Try for Free
+    </Button>
+  );
+  const bookDemoBtn = (
+    <Button key="book-demo" href={CTA_LINKS.bookDemo} variant="primary" size="lg" shadow>
+      Book a Demo
+    </Button>
+  );
   return (
     <section className={`${styles.hero} ${dark ? styles.heroDark : ''}`}>
-      <Container className={styles.inner}>
+      <Container className={styles.inner} style={{ alignItems: mockAlign === 'start' ? 'flex-start' : 'center' }}>
         <div className={styles.content}>
           {badge && (
             <div className={styles.badge} style={{ background: badge.bg }}>
@@ -32,16 +42,9 @@ export default function ProductHero({ badge, title, description, checklist, dark
               ))}
             </div>
           )}
-          <div className={styles.ctaRow}>
-            <Button href={CTA_LINKS.tryFree} variant={dark ? 'outlineOnDark' : 'outline'} size="lg">
-              Try for Free
-            </Button>
-            <Button href={CTA_LINKS.bookDemo} variant="primary" size="lg" shadow>
-              Book a Demo
-            </Button>
-          </div>
+          <div className={styles.ctaRow}>{primaryCtaFirst ? [bookDemoBtn, tryFreeBtn] : [tryFreeBtn, bookDemoBtn]}</div>
         </div>
-        <div className={styles.mock}>{children}</div>
+        <div className={styles.mock} style={mockWidth ? { '--mock-width': mockWidth } : undefined}>{children}</div>
       </Container>
     </section>
   );

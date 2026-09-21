@@ -1,26 +1,16 @@
 // Content for the Meetings & Calendars page — Zoom/Google Meet meeting creation, shareable
-// booking calendars, automatic meeting links + customer notifications, meeting transcripts and
-// AI summaries, team-specific availability, a unified meeting calendar/kanban view, and meeting
-// history import. Sourced from the "AiEngage Meetings Calendars" design mockup; three sections
-// carry fixed ids because mega-menu items link to them directly (data/megaMenu.js):
-//   - 'meeting-scheduler' -> Sales Suite "Meeting Scheduler"
-//   - 'ai-notes'          -> Sales Suite "AI Notes"
-//   - 'calendar'          -> Service & Support Suite "Calendar, Meetings & AI Notetaker"
+// booking calendars, website embed, automatic meeting links + customer notifications, one-to-one
+// & group meetings, meeting transcripts and AI summaries, team-specific availability, a unified
+// meeting calendar/kanban view, and meeting history import. Sourced from the "AiEngage Meetings
+// Calendars" design mockup. One section id is fixed because a mega-menu item links to it directly
+// (data/megaMenu.js): 'ai-notes' -> Sales Suite "AI Notes".
 
 export const MC_HERO = {
-  badge: { icon: 'event', label: 'MEETINGS & CALENDARS', bg: '#fff3ea', iconColor: 'var(--color-primary)', textColor: 'var(--color-primary-hover)' },
   titleLead: 'Stop Switching Between Your CRM, Zoom, Google Meet & ',
   titleAccent: 'Calendar.',
   description:
     'Create meetings, share booking links, connect Zoom or Google Meet, notify customers, capture transcripts, generate AI summaries, and keep every meeting connected to the customer record.',
 };
-
-export const MC_TRUST_ITEMS = [
-  { icon: 'videocam', label: 'Zoom & Google Meet built-in', color: 'var(--color-primary)' },
-  { icon: 'link', label: 'Shareable booking links', color: 'var(--color-blue)' },
-  { icon: 'summarize', label: 'AI meeting summaries', color: 'var(--color-purple)' },
-  { icon: 'calendar_month', label: 'Unified team calendar', color: 'var(--color-whatsapp)' },
-];
 
 export const MC_SECTIONS = [
   {
@@ -60,62 +50,122 @@ export const MC_SECTIONS = [
     reverse: true,
     paragraphs: [
       "Scheduling shouldn't take five messages. Create availability, share your booking link, and let customers pick a time — once booked, it's automatically added to your AiEngage calendar.",
-      "Embed the booking calendar directly on your website, or share the same link over WhatsApp, email, and sales follow-ups — so you never have to ask a customer when they're free.",
     ],
     lists: [
       {
-        heading: 'Add Your Booking Link To',
-        items: ['Book a Demo pages', 'Contact Us pages', 'Landing pages', 'WhatsApp conversations', 'Email signatures', 'Sales follow-ups', 'Website CTAs', 'Marketing campaigns'],
+        heading: "What's Included",
+        items: [
+          'Create booking calendars',
+          'Set available days',
+          'Set working hours',
+          'Control bookable time slots',
+          'Share booking links',
+          'Automatically create appointments',
+          'Manage bookings inside the CRM',
+          'Create different calendars for different teams',
+        ],
       },
     ],
   },
   {
-    id: 'auto-links-notifications',
+    id: 'website-embed',
     index: '03',
-    eyebrow: 'AUTOMATIC NOTIFICATIONS',
-    titleLead: 'Automatically Generate Links & ',
-    titleAccent: 'Notify Customers',
+    eyebrow: 'WEBSITE EMBED',
+    titleLead: 'Put Your Booking Calendar Directly ',
+    titleAccent: 'on Your Website',
+    mockKey: 'WebsiteEmbedMock',
+    reverse: false,
+    paragraphs: [
+      "Don't make a ready-to-buy visitor fill a form and wait for a callback. Embed the AiEngage booking calendar on your site so visitors can book without leaving the page.",
+    ],
+    lists: [
+      {
+        heading: 'Add It To',
+        items: ['Book a Demo pages', 'Contact Us pages', 'Landing pages', 'Consultation pages', 'Product pages', 'Onboarding pages', 'Support pages'],
+      },
+    ],
+  },
+  {
+    id: 'share-booking-link',
+    index: '04',
+    eyebrow: 'SHARE ANYWHERE',
+    titleLead: 'Share One Booking Link ',
+    titleAccent: 'Anywhere',
+    mockKey: 'ShareLinkMock',
+    reverse: true,
+    paragraphs: ["Stop asking customers when they're available — send them your booking link instead."],
+    lists: [
+      {
+        heading: 'Share Your Booking Link Through',
+        items: ['WhatsApp', 'Email', 'Sales follow-ups', 'Website CTAs', 'Email signatures', 'Marketing campaigns', 'Customer conversations'],
+      },
+    ],
+  },
+  {
+    id: 'auto-links',
+    index: '05',
+    eyebrow: 'AUTOMATIC LINKS',
+    titleLead: 'Automatically Generate & ',
+    titleAccent: 'Save Meeting Links',
     mockKey: 'AutoLinksMock',
     reverse: false,
     paragraphs: [
-      'No copy-pasting links. When a Zoom or Google Meet meeting is created, AiEngage generates the join link and keeps it attached to the CRM meeting record.',
-      'Once the meeting is created, AiEngage can automatically email the customer everything they need to join — no manual follow-up required.',
+      'No copy-pasting links. When a Zoom or Google Meet meeting is created, AiEngage generates the join link and keeps it attached to the CRM meeting.',
     ],
     lists: [
       {
         heading: 'Automatically Handle',
-        items: ['Meeting creation', 'Meeting platform', 'Joining link', 'Meeting date and time', 'Meeting owner and customer', 'Participants', 'Related CRM record', 'Customer email notification'],
+        items: ['Meeting creation', 'Meeting platform', 'Joining link', 'Meeting date', 'Meeting time', 'Meeting owner', 'Customer', 'Participants', 'Related CRM record'],
+      },
+    ],
+  },
+  {
+    id: 'email-notifications',
+    index: '06',
+    eyebrow: 'CUSTOMER NOTIFICATIONS',
+    titleLead: 'Send Meeting Details Without ',
+    titleAccent: 'the Extra Follow-Up',
+    mockKey: 'EmailNotificationMock',
+    reverse: true,
+    paragraphs: ['Once the meeting is created, AiEngage can automatically email the customer everything they need to join.'],
+    lists: [
+      {
+        heading: 'Customer Can Receive',
+        items: ['Meeting title', 'Date', 'Time', 'Meeting details', 'Zoom or Google Meet platform', 'Joining link'],
       },
     ],
   },
   {
     id: 'group-meetings',
-    index: '04',
+    index: '07',
     eyebrow: 'ONE-TO-ONE & GROUP',
     titleLead: 'Host One-to-One & ',
     titleAccent: 'Group Meetings',
     mockKey: 'GroupMeetingsMock',
-    reverse: true,
-    paragraphs: [
-      'Create meetings for one customer, multiple customers, internal team members, or a mix — sales demos, discovery calls, onboarding sessions, and training, all from the same place.',
-    ],
+    reverse: false,
+    paragraphs: ['Create meetings for one customer, multiple customers, internal team members, or a mix.'],
     lists: [
       {
         heading: 'Create',
         items: ['One-to-one meetings', 'Group meetings', 'Sales demos', 'Discovery meetings', 'Customer onboarding calls', 'Training sessions', 'Internal + customer meetings', 'Follow-up meetings'],
       },
+      {
+        heading: 'Add',
+        items: ['CRM contacts', 'Internal participants', 'Meeting owner', 'Zoom or Google Meet', 'Meeting details'],
+      },
     ],
   },
   {
     id: 'ai-notes',
-    index: '05',
+    index: '08',
     eyebrow: 'AI NOTES',
     titleLead: 'Get Meeting Transcripts & ',
     titleAccent: 'AI Summaries Instantly',
     mockKey: 'AiNotesMock',
-    reverse: false,
+    reverse: true,
+    dark: true,
     paragraphs: [
-      'The meeting ends, and someone forgets the next step. AiEngage keeps meeting context in the CRM with full transcripts and AI-generated summaries.',
+      "The meeting ends, and someone forgets the next step. AiEngage keeps meeting context in the CRM with transcripts and AI summaries.",
     ],
     lists: [
       {
@@ -126,71 +176,104 @@ export const MC_SECTIONS = [
   },
   {
     id: 'team-booking-calendars',
-    index: '06',
-    eyebrow: 'AVAILABILITY',
-    titleLead: 'Different Booking Calendars ',
+    index: '09',
+    eyebrow: 'TEAM AVAILABILITY',
+    titleLead: 'Create Different Booking Calendars ',
     titleAccent: 'for Different Teams',
     mockKey: 'TeamBookingCalendarsMock',
-    reverse: true,
+    reverse: false,
     paragraphs: [
-      "Sales, onboarding, and support shouldn't share the same availability. Create separate booking calendars per team and meeting type, and only show slots inside working hours.",
+      "Sales, onboarding, and support shouldn't share the same availability. Create separate booking calendars per team and meeting type.",
     ],
     lists: [
       {
         heading: 'For Example',
-        items: ['Book a Demo — Sales Team', 'Customer Onboarding — Customer Success', 'Support Call — Support Team', 'Talk to an Expert — Consulting Team', 'Product Training — Training Team'],
+        items: ['Book a Demo — Sales Team', 'Talk to an Expert — Consulting Team', 'Customer Onboarding — Customer Success', 'Support Call — Support Team', 'Product Training — Training Team'],
         columns: 1,
       },
     ],
-    trailingParagraph: "Stop getting requests outside working hours — set availability and only show the slots you want bookable.",
+  },
+  {
+    id: 'availability-hours',
+    index: '10',
+    eyebrow: 'WORKING HOURS',
+    titleLead: "Let Customers Book Only When ",
+    titleAccent: "You're Available",
+    mockKey: 'AvailabilityHoursMock',
+    reverse: true,
+    paragraphs: ['Stop getting requests outside working hours. Set availability and only show the slots you want bookable.'],
+    lists: [
+      {
+        heading: 'Set',
+        items: ['Available days', 'Working hours', 'Bookable slots', 'Calendar availability', 'Different schedules', 'Team-specific availability', 'Meeting types'],
+      },
+    ],
   },
   {
     id: 'calendar',
-    index: '07',
+    index: '11',
     eyebrow: 'UNIFIED CALENDAR',
-    titleLead: 'Manage Every Meeting ',
+    titleLead: 'Manage Every Upcoming Meeting ',
     titleAccent: 'From One Calendar',
     mockKey: 'UnifiedCalendarMock',
     reverse: false,
+    paragraphs: ['Stop checking separate calendars. Manage upcoming bookings inside AiEngage CRM.'],
+    lists: [
+      {
+        heading: 'See',
+        items: ["Today's meetings", 'Upcoming meetings', 'Weekly schedule', 'Monthly schedule', 'Meeting owners', 'Customer details', 'Meeting status', 'Busy days', 'Available slots'],
+      },
+    ],
+  },
+  {
+    id: 'kanban-views',
+    index: '12',
+    eyebrow: 'KANBAN VIEWS',
+    titleLead: 'Track Meetings the Way ',
+    titleAccent: 'Your Team Actually Works',
+    mockKey: 'KanbanViewMock',
+    reverse: true,
     paragraphs: [
-      "Stop checking separate calendars. See today's meetings, upcoming bookings, owners, and status inside AiEngage CRM — then build custom Kanban views around how your team actually works.",
+      'Sales cares about meeting status, CS about onboarding stage, management about owner. Create custom Kanban views around your process.',
     ],
     lists: [
       {
-        heading: 'See & Customize',
-        items: ["Today's and upcoming meetings", 'Weekly and monthly schedule', 'Meeting owners and customer details', 'Meeting status', 'Kanban views by meeting stage', 'Private or shared views'],
+        heading: 'Customize',
+        items: ['Kanban view name', 'Meeting category', 'Meeting stage', 'Card title', 'Visible fields', 'Field order', 'Aggregation', 'Private or shared views'],
       },
     ],
   },
   {
     id: 'import-meeting-history',
-    index: '08',
+    index: '13',
     eyebrow: 'MIGRATION',
     titleLead: 'Bring Your Existing Meeting ',
     titleAccent: 'History With You',
     mockKey: 'ImportHistoryMock',
-    reverse: true,
-    paragraphs: [
-      "Moving CRMs shouldn't mean losing customer context. Import previous meetings and notes and keep the full history connected to each customer record.",
-    ],
+    reverse: false,
+    paragraphs: ["Moving CRMs shouldn't mean losing customer context. Import previous meetings and notes."],
     lists: [
       {
-        heading: 'Import & Track',
-        items: ['Past meetings', 'Historical meeting notes', 'Customer meeting history', 'Import status and progress'],
+        heading: 'Import',
+        items: ['Past meetings', 'Historical meeting notes', 'Customer meeting history', 'Existing records'],
+        columns: 1,
+      },
+      {
+        heading: 'Track',
+        items: ['Import status', 'Import progress', 'Previous imports', 'Historical context'],
         columns: 1,
       },
     ],
   },
   {
     id: 'unified-flow',
-    index: '09',
-    eyebrow: 'ONE MEETING, NO TOOL SWITCHING',
-    titleLead: 'From Booking To Follow-Up, ',
-    titleAccent: 'In One CRM',
+    titleLead: 'One Meeting. ',
+    titleAccent: 'No Tool Switching.',
     mockKey: 'MeetingFlowMock',
-    reverse: false,
+    reverse: true,
+    centered: true,
     paragraphs: [
-      'A customer books, AiEngage creates the meeting, Zoom or Meet generates the link, the customer is notified, your team runs it, the transcript and summary stay connected, and follow-up becomes clear.',
+      'A customer books, AiEngage creates the meeting, Zoom or Meet generates the link, the customer is notified, your team runs it, transcript and summary stay connected, and follow-up becomes clear.',
     ],
     lists: [],
   },
