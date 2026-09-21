@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "label": "Dashboard",
+    "file": "/homev2/dashboard-tabs/1-dashboard.webp",
+    "bytes": 114840
+  },
+  {
+    "index": 1,
+    "label": "Lead Management",
+    "file": "/homev2/dashboard-tabs/2-lead-management.webp",
+    "bytes": 110300
+  },
+  {
+    "index": 2,
+    "label": "Deals",
+    "file": "/homev2/dashboard-tabs/3-deals.webp",
+    "bytes": 109108
+  },
+  {
+    "index": 3,
+    "label": "WhatsApp Team Inbox",
+    "file": "/homev2/dashboard-tabs/4-whatsapp-team-inbox.webp",
+    "bytes": 110114
+  },
+  {
+    "index": 4,
+    "label": "Calling",
+    "file": "/homev2/dashboard-tabs/5-calling.webp",
+    "bytes": 120956
+  },
+  {
+    "index": 5,
+    "label": "Meetings & AI Notetaker",
+    "file": "/homev2/dashboard-tabs/6-meetings.webp",
+    "bytes": 97674
+  },
+  {
+    "index": 6,
+    "label": "Calendar",
+    "file": "/homev2/dashboard-tabs/7-calendar.webp",
+    "bytes": 107888
+  },
+  {
+    "index": 7,
+    "label": "Ads & Analytics",
+    "file": "/homev2/dashboard-tabs/8-ads-analytics.webp",
+    "bytes": 59194
+  },
+  {
+    "index": 8,
+    "label": "AI & AI Agents",
+    "file": "/homev2/dashboard-tabs/9-ai.webp",
+    "bytes": 173222
+  },
+  {
+    "index": 9,
+    "label": "Webforms",
+    "file": "/homev2/dashboard-tabs/10-webforms.webp",
+    "bytes": 60774
+  },
+  {
+    "index": 10,
+    "label": "Reports",
+    "file": "/homev2/dashboard-tabs/11-reports.webp",
+    "bytes": 67908
+  },
+  {
+    "index": 11,
+    "label": "Quotes & Invoices",
+    "file": "/homev2/dashboard-tabs/12-invoices-and-billing.webp",
+    "bytes": 98904
+  }
+]

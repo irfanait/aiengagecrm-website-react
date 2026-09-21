@@ -1,0 +1,102 @@
+.hero {
+  padding: 56px 40px 64px;
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 42/58 split matching the mockup, expressed as a flex-grow ratio (not a `flex-basis: 42%`
+   percentage) so the .inner `gap` is distributed out of the available space first — a basis of
+   42%+58% left no room for the gap and pushed .right past the container's right edge. */
+.left {
+  flex: 42 1 0;
+  min-width: 0;
+}
+
+.right {
+  flex: 58 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 3.2vw + 14px, 46px);
+  line-height: 1.16;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: var(--color-text);
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---- right-side mock image ---- */
+.mockImage {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: rgba(255, 95, 56, 0.1) 0px 4px 38px 9.5px;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    flex-direction: column;
+  }
+
+  /* .left/.right's desktop `flex: 0 0 42%/58%` sets a flex-basis meant for the row layout's width
+     split — in this column layout flex-basis maps to height instead, so it's reset to `none` here
+     (same fix pattern as the mobile flex-collapse bug elsewhere on this page) and width is set
+     directly. */
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctaRow {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 40px 16px 48px;
+  }
+
+  .title {
+    letter-spacing: -0.6px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

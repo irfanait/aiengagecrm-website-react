@@ -12,6 +12,8 @@ export default function TrustedByV2() {
         <div className={styles.track}>
           {logos.map((client, i) => (
             <span key={`${client.name}-${i}`} className={styles.logoSlot}>
+              {/* Plain <img>, not next/image — serves the source file's real bytes directly with
+                  no resize/re-encode, which was reading as blur on these small logo files. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={client.logo} alt={client.name} className={styles.logoImg} loading="lazy" />
             </span>

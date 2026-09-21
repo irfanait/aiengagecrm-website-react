@@ -1,0 +1,117 @@
+.section {
+  padding: 96px 40px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heading {
+  margin: 0 0 52px;
+  font-size: clamp(28px, 3vw + 12px, 42px);
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+.carousel {
+  max-width: 1200px;
+}
+
+.carousel :global(.slick-dots) {
+  position: static !important;
+  bottom: auto !important;
+  margin: 28px 0 0 !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px;
+}
+
+.carousel :global(.slick-dots li) {
+  width: auto !important;
+  height: 8px !important;
+  margin: 0 !important;
+}
+
+.carousel :global(.slick-dots li button) {
+  width: 8px !important;
+  height: 8px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: var(--color-border-dashed) !important;
+  opacity: 1 !important;
+  transition: width 0.15s ease, border-radius 0.15s ease;
+}
+
+.carousel :global(.slick-dots li button::before),
+.carousel :global(.slick-dots li button::after) {
+  display: none !important;
+}
+
+.carousel :global(.slick-dots li.slick-active button) {
+  width: 26px !important;
+  border-radius: 999px !important;
+  background: var(--color-primary) !important;
+}
+
+.quoteIcon {
+  display: block;
+  /* margin-bottom: -6px; */
+}
+
+.quote {
+  margin: 5px 0 32px;
+  font-size: clamp(19px, 1.4vw + 12px, 26px);
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  color: var(--color-text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.avatarImg {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.role {
+  margin-top: 2px;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 56px 16px;
+  }
+}
