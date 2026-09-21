@@ -9,9 +9,9 @@ import {
   CostPerLeadMock,
   RevenueRoasMock,
   PlatformComparisonMock,
+  ReportingSourcesMock,
   CampaignReportsMock,
 } from '../../components/organisms/AdsAnalyticsMocks/AdsAnalyticsMocks';
-import TrustStrip from '../../components/molecules/TrustStrip/TrustStrip';
 import FeatureSection from '../../components/organisms/FeatureSection/FeatureSection';
 import BenefitBand from '../../components/organisms/BenefitBand/BenefitBand';
 import IndustriesGrid from '../../components/organisms/IndustriesGrid/IndustriesGrid';
@@ -21,7 +21,6 @@ import { buildMetadata, breadcrumbSchema } from '../../utils/seo';
 import { seoData } from '../../data/seoData';
 import {
   AA_HERO,
-  AA_TRUST_ITEMS,
   AA_SECTIONS,
   AA_BENEFITS_HEADING,
   AA_BENEFITS,
@@ -40,6 +39,7 @@ const MOCKS = {
   CostPerLeadMock,
   RevenueRoasMock,
   PlatformComparisonMock,
+  ReportingSourcesMock,
   CampaignReportsMock,
 };
 
@@ -54,7 +54,6 @@ export default function AdsAnalyticsPage() {
       />
 
       <ProductHero
-        badge={AA_HERO.badge}
         title={
           <>
             {AA_HERO.titleLead}
@@ -62,11 +61,12 @@ export default function AdsAnalyticsPage() {
           </>
         }
         description={AA_HERO.description}
+        primaryCtaFirst
+        mockAlign="start"
+        mockWidth="560px"
       >
         <AdsOverviewMock />
       </ProductHero>
-
-      <TrustStrip items={AA_TRUST_ITEMS} />
 
       {AA_SECTIONS.map((section) => {
         const Mock = MOCKS[section.mockKey];
@@ -92,7 +92,7 @@ export default function AdsAnalyticsPage() {
 
       <BenefitBand heading={AA_BENEFITS_HEADING} items={AA_BENEFITS} columns={4} />
 
-      <IndustriesGrid eyebrow="WHO USES IT" heading="Trusted Across Industries" items={AA_INDUSTRIES} columns={4} showMoreCard />
+      <IndustriesGrid eyebrow="WHO USES IT" heading="Built For" items={AA_INDUSTRIES} columns={3} showMoreCard={false} />
 
       <CTASection
         title={

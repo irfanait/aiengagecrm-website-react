@@ -3,15 +3,19 @@ import {
   UpcomingMeetingsMock,
   ZoomMeetCreationMock,
   BookingSchedulerMock,
+  WebsiteEmbedMock,
+  ShareLinkMock,
   AutoLinksMock,
+  EmailNotificationMock,
   GroupMeetingsMock,
   AiNotesMock,
   TeamBookingCalendarsMock,
+  AvailabilityHoursMock,
   UnifiedCalendarMock,
+  KanbanViewMock,
   ImportHistoryMock,
   MeetingFlowMock,
 } from '../../components/organisms/MeetingsCalendarsMocks/MeetingsCalendarsMocks';
-import TrustStrip from '../../components/molecules/TrustStrip/TrustStrip';
 import FeatureSection from '../../components/organisms/FeatureSection/FeatureSection';
 import BenefitBand from '../../components/organisms/BenefitBand/BenefitBand';
 import IndustriesGrid from '../../components/organisms/IndustriesGrid/IndustriesGrid';
@@ -21,7 +25,6 @@ import { buildMetadata, breadcrumbSchema } from '../../utils/seo';
 import { seoData } from '../../data/seoData';
 import {
   MC_HERO,
-  MC_TRUST_ITEMS,
   MC_SECTIONS,
   MC_BENEFITS_HEADING,
   MC_BENEFITS,
@@ -34,11 +37,16 @@ export const metadata = buildMetadata(seoData.meetingsCalendars);
 const MOCKS = {
   ZoomMeetCreationMock,
   BookingSchedulerMock,
+  WebsiteEmbedMock,
+  ShareLinkMock,
   AutoLinksMock,
+  EmailNotificationMock,
   GroupMeetingsMock,
   AiNotesMock,
   TeamBookingCalendarsMock,
+  AvailabilityHoursMock,
   UnifiedCalendarMock,
+  KanbanViewMock,
   ImportHistoryMock,
   MeetingFlowMock,
 };
@@ -54,7 +62,6 @@ export default function MeetingsCalendarsPage() {
       />
 
       <ProductHero
-        badge={MC_HERO.badge}
         title={
           <>
             {MC_HERO.titleLead}
@@ -62,11 +69,12 @@ export default function MeetingsCalendarsPage() {
           </>
         }
         description={MC_HERO.description}
+        primaryCtaFirst
+        mockAlign="start"
+        mockWidth="560px"
       >
         <UpcomingMeetingsMock />
       </ProductHero>
-
-      <TrustStrip items={MC_TRUST_ITEMS} />
 
       {MC_SECTIONS.map((section) => {
         const Mock = MOCKS[section.mockKey];
@@ -74,7 +82,6 @@ export default function MeetingsCalendarsPage() {
           <FeatureSection
             key={section.id}
             id={section.id}
-            index={section.index}
             eyebrow={section.eyebrow}
             titleLead={section.titleLead}
             titleAccent={section.titleAccent}
@@ -83,6 +90,8 @@ export default function MeetingsCalendarsPage() {
             paragraphs={section.paragraphs}
             lists={section.lists}
             reverse={section.reverse}
+            dark={section.dark}
+            centered={section.centered}
             trailingParagraph={section.trailingParagraph}
             mock={<Mock />}
           />
@@ -91,7 +100,7 @@ export default function MeetingsCalendarsPage() {
 
       <BenefitBand heading={MC_BENEFITS_HEADING} items={MC_BENEFITS} columns={4} />
 
-      <IndustriesGrid eyebrow="WHO USES IT" heading="Trusted Across Industries" items={MC_INDUSTRIES} columns={4} showMoreCard />
+      <IndustriesGrid eyebrow="WHO USES IT" heading="Built For" items={MC_INDUSTRIES} columns={3} showMoreCard={false} />
 
       <CTASection
         title={

@@ -18,6 +18,26 @@
   align-items: center;
 }
 
+.centeredWrap {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centeredTitle {
+  text-wrap: balance;
+}
+
+.centeredDesc {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centeredMock {
+  margin-top: 40px;
+}
+
 .rowReverse {
   flex-direction: row-reverse;
 }
