@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Icon from '../../atoms/Icon/Icon';
 import Container from '../../common/Container/Container';
 import styles from './NewPricingCompareSection.module.css';
@@ -56,6 +56,21 @@ export default function NewPricingCompareSection({
   open,
   onToggle,
 }) {
+  // Accordion state for the category groups below — every category starts open (there's more
+  // value in showing the full table up front than hiding it behind a click), and each one toggles
+  // independently so any combination can be open at once, unlike a single-select accordion.
+  const [openCategories, setOpenCategories] = useState(() => categories.map(() => true));
+
+  const toggleCategory = (i) => {
+    setOpenCategories((prev) => prev.map((isOpen, idx) => (idx === i ? !isOpen : isOpen)));
+  };
+
+  // The category header pill is always rendered (only its rows collapse), so the last visible
+  // element in the table is always either the last category's last row (if it's open) or that
+  // category's own pill (if it's collapsed) — never an earlier category, regardless of which ones
+  // are open. Only the last category's own state needs checking, below, for the rounded bottom
+  // corners.
+
   return (
     <section id="pricing-compare" className={styles.section}>
       <Container>
@@ -106,37 +121,64 @@ export default function NewPricingCompareSection({
                 </div>
               </div>
 
-              {categories.map((cat) => (
-                <Fragment key={cat.title}>
-                  <div className={`${styles.categoryRow} ${cat.highlight ? styles.categoryRowHighlight : ''}`}>
-                    <span className={styles.categoryLabel}>
-                      <span className={styles.categoryIcon}>
-                        <Icon name={cat.icon} size={15} filled />
+              {categories.map((cat, i) => {
+                const isOpen = openCategories[i];
+                const isLastCategory = i === categories.length - 1;
+                return (
+                  <Fragment key={cat.title}>
+                    <div
+                      className={`${styles.categoryRow} ${cat.highlight ? styles.categoryRowHighlight : ''} ${
+                        isLastCategory && !isOpen ? styles.roundedBottom : ''
+                      }`}
+                      onClick={() => toggleCategory(i)}
+                      role="button"
+                      tabIndex={0}
+                      aria-expanded={isOpen}
+                    >
+                      <span className={styles.categoryLabel}>
+                        <span className={styles.categoryIcon}>
+                          <Icon name={cat.icon} size={15} filled />
+                        </span>
+                        {cat.title}
                       </span>
-                      {cat.title}
-                    </span>
-                  </div>
-                  {cat.rows.map((row) => (
-                    // `${label}-${sub}` rather than just label: a couple of rows in the source
-                    // sheet (e.g. two "AI Follow ups" entries with different `sub` text) share a label.
-                    <div key={`${row.label}-${row.sub}`} className={`${styles.row} ${cat.highlight ? styles.rowHighlight : ''}`}>
-                      <div className={styles.labelCell}>
-                        <span className={styles.rowLabel}>{row.label}</span>
-                        {row.sub && <span className={styles.rowSub}>{row.sub}</span>}
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.solo} addon={row.addon} />
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.business} addon={row.addon} />
-                      </div>
-                      <div className={styles.valueCell}>
-                        <Cell value={row.businessPro} addon={row.addon} />
+                      <Icon name="expand_more" size={19} className={`${styles.categoryChevron} ${isOpen ? styles.categoryChevronOpen : ''}`} />
+                    </div>
+                    {/* Always mounted (not `isOpen &&`) so the grid-template-rows transition below has
+                        something to animate between 0fr and 1fr — a slow ease instead of the old
+                        instant mount/unmount, reading as the panel unfurling/folding rather than
+                        popping. .categoryBodyInner's own `overflow: hidden` clips it mid-transition. */}
+                    <div className={`${styles.categoryBody} ${isOpen ? styles.categoryBodyOpen : ''}`}>
+                      <div className={styles.categoryBodyInner}>
+                        {cat.rows.map((row, rowIndex) => {
+                          const isLastRow = isLastCategory && isOpen && rowIndex === cat.rows.length - 1;
+                          return (
+                            // `${label}-${sub}` rather than just label: a couple of rows in the source
+                            // sheet (e.g. two "AI Follow ups" entries with different `sub` text) share a label.
+                            <div
+                              key={`${row.label}-${row.sub}`}
+                              className={`${styles.row} ${cat.highlight ? styles.rowHighlight : ''} ${isLastRow ? styles.roundedBottom : ''}`}
+                            >
+                              <div className={styles.labelCell}>
+                                <span className={styles.rowLabel}>{row.label}</span>
+                                {row.sub && <span className={styles.rowSub}>{row.sub}</span>}
+                              </div>
+                              <div className={styles.valueCell}>
+                                <Cell value={row.solo} addon={row.addon} />
+                              </div>
+                              <div className={styles.valueCell}>
+                                <Cell value={row.business} addon={row.addon} />
+                              </div>
+                              <div className={styles.valueCell}>
+                                <Cell value={row.businessPro} addon={row.addon} />
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
-                  ))}
-                </Fragment>
-              ))}
+                  </Fragment>
+                );
+              })}
             </div>
           )}
         </div>

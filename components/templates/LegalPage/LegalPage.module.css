@@ -78,6 +78,14 @@
   margin-bottom: 0;
 }
 
+.paragraph a {
+  color: var(--color-primary);
+}
+
+.paragraph a:hover {
+  color: var(--color-primary-hover);
+}
+
 .list {
   margin: 0 0 14px;
   padding-left: 20px;

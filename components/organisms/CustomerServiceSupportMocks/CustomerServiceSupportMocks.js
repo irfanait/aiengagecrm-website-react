@@ -117,7 +117,7 @@ export function TicketManagementMock() {
           ))}
         </tbody>
       </table>
-      <div className={waStyles.footRowSimple}>Ownership, status, and notes stay linked to the customer record</div>
+      {/* <div className={waStyles.footRowSimple}>Ownership, status, and notes stay linked to the customer record</div> */}
     </div>
   );
 }

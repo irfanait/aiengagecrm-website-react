@@ -1,0 +1,207 @@
+.section {
+  padding: 20px 40px;
+  background: var(--color-bg);
+}
+
+.card {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--color-border-light);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px -40px rgba(40, 24, 10, 0.22);
+}
+
+.copy {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #fdfbf7;
+  padding: 58px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 2.4vw + 16px, 44px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: var(--color-text);
+}
+
+.desc {
+  margin: 0 0 24px;
+  font-size: 16.5px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.checks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.ctaRow {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.art {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  background: radial-gradient(120% 130% at 85% 16%, #ffe7da 0%, #fff1e8 55%, #fff6f0 100%);
+  padding: 56px 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffd8c4;
+  opacity: 0.4;
+  right: -80px;
+  bottom: -100px;
+}
+
+.planCard {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 340px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 20px 46px -34px rgba(40, 24, 10, 0.2);
+  padding: 22px;
+}
+
+.planHead {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 16px;
+}
+
+.planIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.planName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.planTagline {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.planPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.priceValue {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--color-text);
+}
+
+.pricePeriod {
+  font-size: 13px;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.planFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.planFeature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.planCta {
+  display: block;
+  margin-top: 16px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius-pill);
+  padding: 11px;
+  transition: background-color 0.15s ease;
+}
+
+.planCta:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .copy {
+    padding: 40px 28px;
+  }
+
+  /* .art's `flex: 1 1 0` (set for the desktop side-by-side split) collapses its height to ~0 in
+     this column layout, since there's no fixed height on .card to grow into — with overflow:
+     hidden that clipped the plan card to a thin sliver instead of showing it at full size. */
+  .art {
+    flex: none;
+    width: 100%;
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 16px 20px;
+  }
+}

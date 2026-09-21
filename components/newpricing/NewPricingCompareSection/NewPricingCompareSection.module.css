@@ -101,14 +101,31 @@
    (overlay, search bar, close button, fixed max-height/vertical scroll) that doesn't apply to an
    inline page section that simply grows the page. */
 
-.scrollArea {
-  border-top: 1px solid var(--color-border);
+/* Plain fade-in on mount (not a transition between two states) — .header inside .scrollArea is
+   `position: sticky`, and sticky breaks if any ancestor gets a non-`visible` overflow (it becomes
+   sticky's reference box instead of the page), so this deliberately avoids wrapping .scrollArea in
+   an overflow:hidden/grid-rows container to animate height. A keyframe animation property doesn't
+   touch overflow, so it can't cause that. Only fades in on open — .scrollArea still unmounts
+   instantly on close, same as before this was added. */
+@keyframes compareFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Rounds off whichever row ends up last (categories/rows are data-driven, so this can't be
-   targeted by a fixed class) to match the card's own bottom corners, now that .card no longer
-   clips its content — see the .card comment above. */
-.scrollArea > *:last-child {
+.scrollArea {
+  border-top: 1px solid var(--color-border);
+  animation: compareFadeIn 0.4s ease;
+}
+
+/* Rounds off whichever row/pill ends up last and visible — every category can now be open or
+   closed independently, so which element that is depends on state; NewPricingCompareSection.js
+   works that out and applies this class rather than a fixed `:last-child` selector (the DOM's
+   actual last child is always the last category's .categoryBody wrapper, open or not). */
+.roundedBottom {
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
 }
@@ -185,11 +202,48 @@
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-primary-tint-border);
   padding: 12px 34px 12px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.categoryChevron {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: transform 0.35s ease;
+}
+
+.categoryChevronOpen {
+  transform: rotate(180deg);
 }
 
 .categoryRowHighlight {
   background: var(--color-primary-highlight);
   border-bottom-color: var(--color-primary-dark-accent);
+}
+
+/* Category rows/table cells stay mounted at all times (see the JS comment above this markup) and
+   animate open/closed via grid-template-rows — 0fr collapses the row track to nothing, 1fr grows
+   it to the content's natural height, and the `ease` timing plus half-second duration is what gives
+   the "unfurl/fold" feel instead of an instant show/hide. `.categoryBodyInner`'s own
+   `overflow: hidden` is what actually clips the content while the track is mid-transition; the
+   outer element needs `overflow: hidden` too so nothing peeks past a 0fr row during the animation. */
+.categoryBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+  overflow: hidden;
+}
+
+.categoryBodyOpen {
+  grid-template-rows: 1fr;
+}
+
+.categoryBodyInner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .categoryLabel {
@@ -362,9 +416,9 @@
     scrollbar-width: thin;
     scrollbar-color: var(--color-border-dashed) transparent;
     /* .scrollArea now clips its own content (it wasn't clipping anything on desktop, where the
-       `.scrollArea > *:last-child` rule above handles rounding instead) — with a real table taller
-       than 65vh, the row visually sitting at the bottom is whatever's mid-scroll, not necessarily
-       the true last row, so the corner has to be rounded on this box itself, not a specific row. */
+       `.roundedBottom` class above handles rounding instead) — with a real table taller than 65vh,
+       the row visually sitting at the bottom is whatever's mid-scroll, not necessarily the true
+       last row, so the corner has to be rounded on this box itself, not a specific row. */
     border-bottom-left-radius: var(--radius-sm);
     border-bottom-right-radius: var(--radius-sm);
   }
@@ -381,6 +435,16 @@
   }
 
   .categoryRow {
+    min-width: 542px;
+  }
+
+  /* .categoryBody/.categoryBodyInner wrap .row for the open/close animation and both get
+     `overflow: hidden` (needed for the grid-template-rows trick — see the CSS above). Without an
+     explicit min-width here they'd default to .scrollArea's own (narrower, un-scrolled) width and
+     clip the 542px-wide .row inside them, instead of letting .scrollArea's horizontal scroll reveal
+     it like .header/.row/.categoryRow above already do via their own min-width. */
+  .categoryBody,
+  .categoryBodyInner {
     min-width: 542px;
   }
 

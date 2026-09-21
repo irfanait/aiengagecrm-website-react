@@ -30,10 +30,15 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Material Symbols isn't in next/font/google's manifest (icon fonts aren't supported there),
-            so it's loaded the same way the design source does. Applied once, globally, via the root layout. */}
+            so it's loaded the same way the design source does. Applied once, globally, via the root layout.
+            display=block (not swap): this is a ligature icon font, so the "fallback" text the browser
+            would show during a swap is the raw icon name (e.g. "arrow_drop_down") rendered in the body
+            font and clipped by the icon-sized container — visible as garbled text on first load. block
+            keeps icons invisible for a beat instead, then resolves straight to the glyph once the font
+            (a few KB) is ready. */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=block"
           rel="stylesheet"
           precedence="default"
         />

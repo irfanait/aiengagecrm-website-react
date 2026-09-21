@@ -3,11 +3,11 @@ import SectionHeading from '../../molecules/SectionHeading/SectionHeading';
 import { STATS } from '../../../data/homeContent';
 import styles from './Stats.module.css';
 
-export default function Stats({ showIndex = true }) {
+export default function Stats() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading index={showIndex ? '05' : undefined} label="THE RESULTS" className={styles.heading} />
+        <SectionHeading index="05" label="THE RESULTS" className={styles.heading} />
         <div className={styles.grid}>
           {STATS.map((stat) => (
             <div key={stat.label} className={styles.item}>
