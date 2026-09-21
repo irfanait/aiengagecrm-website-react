@@ -8,7 +8,7 @@ export default function HeroV2() {
       <div className={styles.inner}>
         <div className={styles.left}>
           <h1 className={styles.title}>
-            Bringing Sales,<br />Marketing &amp; Automation Into <span className="textAccent">One CRM</span>
+            Bringing Sales,<br />Marketing &amp; Automation<br /> Into <span className="textAccent">One CRM</span>
           </h1>
           <p className={styles.subtitle}>Manage leads, conversations, campaigns, and follow-ups from one AI-powered CRM.</p>
 

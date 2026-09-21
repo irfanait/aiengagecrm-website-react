@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 60px;
+  gap: 70px;
 }
 
 .imageWrap {

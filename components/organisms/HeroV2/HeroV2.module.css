@@ -7,7 +7,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 56px;
+  gap: 40px;
 }
 
 /* 42/58 split matching the mockup, expressed as a flex-grow ratio (not a `flex-basis: 42%`
@@ -36,7 +36,7 @@
 
 .subtitle {
   margin: 0 0 22px;
-  max-width: 460px;
+  max-width: 520px;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 300;

@@ -8,7 +8,7 @@ import TestimonialV2 from '../../../organisms/TestimonialV2/TestimonialV2';
 import IntegrationsV2 from '../../../organisms/IntegrationsV2/IntegrationsV2';
 import OneCrmJourneyV2 from '../../../organisms/OneCrmJourneyV2/OneCrmJourneyV2';
 import Stats from '../../../organisms/Stats/Stats';
-import Industries from '../../../organisms/Industries/Industries';
+import IndustriesV2 from '../../../organisms/IndustriesV2/IndustriesV2';
 import CTASection from '../../../organisms/CTASection/CTASection';
 import JsonLd from '../../../common/JsonLd/JsonLd';
 import { webPageSchema } from '../../../../utils/seo';
@@ -16,11 +16,13 @@ import { seoData } from '../../../../data/seoData';
 
 /**
  * The new "Home V5" mockup design — just the composition; every section is its own organism
- * (components/organisms/*V2), same as homepagev1 composes Hero/Stats/etc. Stats/Industries are
- * the existing v1 organisms reused (with their numbered eyebrow/index hidden via props — the new
- * design doesn't use that convention — see each component's `showIndex`/`showEyebrow` prop).
- * IntegrationsV2 is its own component (different layout/copy from v1's Integrations) but reuses
- * v1's INTEGRATIONS data (data/homeContent.js) for the real brand logos.
+ * (components/organisms/*V2), same as homepagev1 composes Hero/Stats/etc. Stats is the existing v1
+ * organism reused (with its numbered eyebrow/index hidden via the `showIndex` prop — the new
+ * design doesn't use that convention). IndustriesV2 is its own component (different card-grid
+ * layout from v1's pill-style Industries) so homepagev1 — which still uses the original Industries
+ * component — is unaffected. IntegrationsV2 is also its own component (different layout/copy from
+ * v1's Integrations) but reuses v1's INTEGRATIONS data (data/homeContent.js) for the real brand
+ * logos, since that data itself (not the rendering) is shared content.
  * See app/page.js for which homepage template is actually live.
  */
 export default function HomepageV2() {
@@ -34,7 +36,7 @@ export default function HomepageV2() {
       <ReplaceStackV2 />
       <AutomationFlowV2 />
       <Stats showIndex={false} />
-      <Industries title="Trusted Across the Industries" showEyebrow={false} white />
+      <IndustriesV2 />
       <TestimonialV2 />
       <IntegrationsV2 />
       <OneCrmJourneyV2 />
