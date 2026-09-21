@@ -131,7 +131,7 @@ export const seoData = {
   },
   adsAnalytics: {
     path: '/ads-analytics',
-    title: 'Ads & Analytics | Meta, Google & Offline Ad Tracking | AiEngage',
+    title: 'Ads & Analytics: Meta, Google & Offline Tracking | AiEngage',
     description:
       'Connect Meta Lead Ads, Google Lead Form Ads, and offline campaigns to capture leads, track cost per lead, and measure revenue and ROAS — all in one CRM.',
     keywords: ['Meta lead ads CRM', 'Google lead form ads', 'ad ROAS tracking', 'cost per lead reporting', 'offline campaign tracking', 'ad analytics CRM'],
@@ -139,15 +139,15 @@ export const seoData = {
   },
   meetingsCalendars: {
     path: '/meetings-calendars',
-    title: 'Meetings & Calendars | Zoom, Google Meet & AI Notes | AiEngage',
+    title: 'Meetings & Calendars | Zoom, Meet & AI Notes | AiEngage',
     description:
-      'Create Zoom and Google Meet meetings, share booking links, capture transcripts, and generate AI meeting summaries — all connected to the customer record inside AiEngage CRM.',
+      'Create Zoom or Google Meet meetings, share booking links, capture transcripts, and get AI summaries — all inside AiEngage CRM.',
     keywords: ['CRM meeting scheduler', 'booking calendar CRM', 'Zoom CRM integration', 'Google Meet CRM integration', 'AI meeting summary', 'meeting transcripts CRM'],
     image: '/og/meetings-calendars.png',
   },
   customerServiceSupport: {
     path: '/customer-service-support',
-    title: 'Customer Service & Support | Shared Inbox, AI Agents & Tickets | AiEngage',
+    title: 'Customer Support Software | Inbox & AI Agents | AiEngage',
     description:
       'Manage customer conversations, AI-handled FAQs, support tickets, and omnichannel service — all connected to the customer record — in AiEngage CRM.',
     keywords: ['customer service software', 'shared support inbox', 'AI support agent', 'support ticket management', 'omnichannel customer support'],
@@ -155,9 +155,9 @@ export const seoData = {
   },
   aiVoiceCallDemo: {
     path: '/ai-voice-call-demo',
-    title: 'AI Voice Call Demo | Hear Our AI Voice Agent Call You | AiEngage',
+    title: 'AI Voice Call Demo | Hear Our AI Agent Call You | AiEngage',
     description:
-      'Drop your number and our AI Voice Agent will call you within seconds — qualifying, answering questions and booking the next step, logged straight into your CRM.',
+      'Drop your number and our AI Voice Agent calls you in seconds — qualifying, answering questions, and booking the next step in your CRM.',
     keywords: ['AI voice agent demo', 'AI voice call', 'AI calling CRM', 'AI phone agent', 'conversational AI voice'],
     image: '/og/ai-voice-call-demo.png',
   },
@@ -165,7 +165,7 @@ export const seoData = {
     path: '/shopify-partner',
     title: 'CRM for Shopify Apps & Agencies | AI-Powered CRM | AiEngage',
     description:
-      'The AI-powered CRM built for Shopify apps and agencies — capture Meta & Google leads, run one shared inbox, qualify with AI, and automate the entire customer journey.',
+      'The AI-powered CRM for Shopify apps and agencies — capture Meta & Google leads, run one shared inbox, and automate the customer journey.',
     keywords: ['CRM for Shopify apps', 'CRM for Shopify agencies', 'Shopify partner CRM', 'agency CRM', 'AI CRM for SaaS'],
     image: '/og/shopify-partner.png',
   },
@@ -198,9 +198,9 @@ export const seoData = {
   // reference but noindexed since /pricing now covers this ground with the current plans.
   pricingOld: {
     path: '/pricing-old',
-    title: 'Pricing | Plans for WhatsApp, Email, Voice & AI CRM | AiEngage',
+    title: 'Pricing | WhatsApp, Email, Voice & AI CRM Plans | AiEngage',
     description:
-      'Simple, transparent pricing for AiEngage CRM. Compare Growth, Advance and Custom plans — WhatsApp, email, voice calling, AI and automation, upgrade as you grow with no hidden costs.',
+      'Simple, transparent AiEngage CRM pricing. Compare Growth, Advance and Custom plans — WhatsApp, email, calling, AI and automation included.',
     keywords: ['AiEngage CRM pricing', 'CRM plans', 'WhatsApp CRM pricing', 'AI CRM cost'],
     image: '/og/pricing.png',
     noindex: true,

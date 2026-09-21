@@ -57,7 +57,7 @@ export default async function WhatsNewDetailPage({ params }) {
         ])}
       />
 
-      <WhatsNewHero banner={WN_BANNER}>
+      <WhatsNewHero banner={WN_BANNER} titleAs="h2">
         <WhatsNewTypeTabs active={null} />
       </WhatsNewHero>
       <WhatsNewDetail entry={entry} modules={result.modules} years={result.years} />

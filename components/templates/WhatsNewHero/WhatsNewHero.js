@@ -5,12 +5,14 @@ import styles from './WhatsNewHero.module.css';
 /**
  * Centered banner shared by the listing page and every detail page: title, subtitle, contact
  * note, and — via `children` — the type-filter tabs, so they sit inside the same tinted section.
+ * Detail pages pass titleAs="h2" since the post's own title (rendered elsewhere on that page) is
+ * the page's real H1 — a page should have exactly one.
  */
-export default function WhatsNewHero({ banner, children }) {
+export default function WhatsNewHero({ banner, children, titleAs: TitleTag = 'h1' }) {
   return (
     <section className={styles.hero}>
       <Container className={styles.inner}>
-        <h1 className={styles.title}>{banner.title}</h1>
+        <TitleTag className={styles.title}>{banner.title}</TitleTag>
         <p className={styles.subtitle}>
           {banner.subtitle}
           <br />
