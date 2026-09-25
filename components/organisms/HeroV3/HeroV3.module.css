@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(100deg, rgba(250, 247, 241, 0.92), rgb(255, 239, 228) 100%, rgba(250, 247, 241, 0.92));
+  padding: 72px 40px 115px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.left {
+  min-width: 0;
+  text-align: left;
+}
+
+.right {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  margin: 0 0 22px;
+  font-size: clamp(32px, 3.4vw + 14px, 54px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: var(--color-text);
+  text-wrap: balance;
+}
+
+.subtitle {
+  margin: 0 0 30px;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.subtitle strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.channelRow {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.channelIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 9, 35, 0.25) 0px 6px 16px -10px;
+}
+
+.channelLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.mockImage {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctaRow,
+  .channelRow {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 40px 16px 40px;
+  }
+
+  .title {
+    letter-spacing: -0.8px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
