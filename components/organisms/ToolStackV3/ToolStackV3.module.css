@@ -1,0 +1,136 @@
+.section {
+  padding: 72px 40px;
+  background: rgb(250, 247, 241);
+}
+
+.title {
+  margin: 0 0 48px;
+  font-size: clamp(28px, 3vw + 12px, 48px);
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  line-height: 1.15;
+  color: var(--color-text);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.grid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.panel {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid rgb(241, 234, 224);
+  border-radius: 22px;
+  padding: 30px 20px 22px;
+  background: #fff;
+  box-shadow: rgba(40, 24, 10, 0.28) 0px 30px 70px -54px;
+}
+
+.panelAccent {
+  border-color: rgb(251, 227, 214);
+  background: rgb(255, 250, 246);
+  box-shadow: rgba(255, 95, 56, 0.3) 0px 30px 70px -44px;
+}
+
+.panelTitle {
+  margin: 0 0 22px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(255, 95, 56, 0.5) 0px 14px 26px -12px;
+}
+
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.toolCard,
+.featureCard {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid rgb(243, 236, 226);
+  border-radius: 14px;
+  padding: 18px 8px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  box-shadow: rgba(40, 24, 10, 0.12) 0px 4px 14px -6px;
+  justify-content: center;
+}
+
+.toolLogoWrap {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolLogo {
+  max-height: 32px;
+  max-width: 80px;
+  object-fit: contain;
+}
+
+.featureIconWrap {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.toolSub {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--color-text-faint);
+  margin-top: 3px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 48px 16px;
+  }
+
+  .toolGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
