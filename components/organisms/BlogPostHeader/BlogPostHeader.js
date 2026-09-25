@@ -9,13 +9,17 @@ import styles from './BlogPostHeader.module.css';
 export default function BlogPostHeader({ post, url }) {
   const author = getAuthor(post);
   const readMinutes = getReadTime(post);
+  // The meta description is written by hand for SEO, so it isn't subject to the CMS's auto-generated
+  // excerpt sometimes getting cut off mid-word — prefer it here, falling back to the excerpt only
+  // when a post has no meta description at all.
+  const summary = post.seo?.description || post.excerpt;
 
   return (
     <header className={styles.section}>
       <Container className={styles.inner}>
         {post.category?.name && <span className={styles.categoryPill}>{post.category.name}</span>}
         <h1 className={styles.title}>{post.title}</h1>
-        {post.excerpt && <p className={styles.excerpt}>{post.excerpt}</p>}
+        {summary && <p className={styles.excerpt}>{summary}</p>}
 
         <div className={styles.meta}>
           <div className={styles.author}>

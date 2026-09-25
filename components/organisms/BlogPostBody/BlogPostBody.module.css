@@ -126,6 +126,47 @@
   border-top: 1px solid var(--color-border);
   margin: 32px 0;
 }
+/* Table styling — covers both formats blog content can be saved in:
+   the site's Tiptap-generated .kb-table markup, and any plain <table> */
+
+.kb-table,
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+}
+
+.kb-table th, .section table th {
+  background: #f5f1ea;
+  color: #2b2620;
+  padding: 11px 16px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #e2ddd2;
+}
+
+.kb-table td, .section table td {
+  padding: 11px 16px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #e2ddd2;
+}
+
+/* Optional: zebra striping for readability on long tables */
+.kb-table tbody tr:nth-child(even) td,
+.section table tbody tr:nth-child(even) td {
+  background: #faf8f4;
+}
+
+.kb-img {
+  margin-bottom: 10px;
+}
+.kb-table-wrapper,
+.section table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 @media (max-width: 600px) {
   .section {
@@ -135,4 +176,5 @@
   .content {
     font-size: 16px;
   }
+
 }
